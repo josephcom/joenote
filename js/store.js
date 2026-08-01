@@ -123,6 +123,15 @@
     return 'GitHub: ' + msg;
   }
 
+  /* Raised instead of overwriting a file that moved on underneath us. Carries
+     the repo's current text so the caller can show it or adopt it. */
+  function conflictError(remoteText) {
+    var e = new Error('This file changed on GitHub since JoeNote read it.');
+    e.conflict = true;
+    e.remoteText = remoteText;
+    return e;
+  }
+
   var Store = {
     mode: 'local',
     root: null,            /* FileSystemDirectoryHandle */
@@ -293,8 +302,16 @@
       return verb + ' ' + name + ' (JoeNote)';
     },
 
-    ghPut: function (path, contentB64, verb, name) {
+    /* GitHub refuses the write when the blob sha we hold is no longer current,
+       which is its way of saying the file changed underneath us - edited on
+       github.com, or saved from another browser. Re-reading the fresh sha and
+       committing anyway destroys whatever landed in between, silently, so the
+       default is to stop and hand the caller the repo's text to reconcile
+       against. opts.force is for the files JoeNote owns outright, where
+       last-write-wins is what we actually want. */
+    ghPut: function (path, contentB64, verb, name, opts) {
       var self = this;
+      var force = !!(opts && opts.force);
       return serial(function () {
         function attempt(sha) {
           var body = {
@@ -306,11 +323,16 @@
           return self.api(self.contentsPath(path, false), { method: 'PUT', body: body });
         }
         return attempt(self.shas[path]).catch(function (e) {
-          /* stale sha: re-read the file's current sha and commit once more */
           if (!/changed on GitHub/.test(e.message)) throw e;
           return self.api(self.contentsPath(path, true), { allow404: true }).then(function (meta) {
-              return attempt(meta && meta.sha);
-            });
+            if (!meta) return attempt(null);            /* deleted meanwhile - recreate it */
+            self.shas[path] = meta.sha;
+            if (force || meta.content == null) return attempt(meta.sha);
+            var remote = decodeText(meta.content);
+            /* someone already committed exactly this: nothing left to do */
+            if (remote === decodeText(contentB64)) return null;
+            throw conflictError(remote);
+          });
         }).then(function (res) {
           if (res && res.content) self.shas[path] = res.content.sha;
           return res;
@@ -425,10 +447,10 @@
       return v === null ? Promise.reject(new Error('Not found: ' + name)) : Promise.resolve(v);
     },
 
-    writeNote: function (name, text) {
+    writeNote: function (name, text, opts) {
       var self = this;
       if (self.mode === 'github') {
-        return self.ghPut(NOTES_DIR + '/' + name, encodeText(text), 'Update', name).then(function () { });
+        return self.ghPut(NOTES_DIR + '/' + name, encodeText(text), 'Update', name, opts).then(function () { });
       }
       if (self.mode === 'fs') {
         return self.root.getDirectoryHandle(NOTES_DIR, { create: true })
@@ -559,7 +581,9 @@
     writeTagsXML: function (xml) {
       var self = this;
       if (self.mode === 'github') {
-        return self.ghPut(TAGS_FILE, encodeText(xml), 'Update', TAGS_FILE).then(function () { });
+        /* the hashtag graph is rewritten from the whole note set on every
+           change, so the newest write is always the complete one */
+        return self.ghPut(TAGS_FILE, encodeText(xml), 'Update', TAGS_FILE, { force: true }).then(function () { });
       }
       if (self.mode === 'fs') {
         return self.root.getFileHandle(TAGS_FILE, { create: true })

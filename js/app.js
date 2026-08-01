@@ -544,6 +544,7 @@
     setView('view-note');
     $('note-file').textContent = note.name;
     setMode(mode);
+    resyncCurrent(true);   /* show what the repo has, not what boot happened to read */
   }
 
   function setMode(mode) {
@@ -645,6 +646,57 @@
     return span;
   }
 
+  /* ----------------------------- staying in sync -----------------------
+   * Every note is read once, at boot, and kept in App.notes from then on.
+   * That is fine until the file changes somewhere else - edited on
+   * github.com, saved from a phone, open in a second tab - at which point
+   * this tab goes on showing the copy it read at load and, worse, saves
+   * over the newer one. So re-read the open note whenever it is opened and
+   * whenever the tab comes back to the front.
+   * ------------------------------------------------------------------ */
+
+  var RESYNC_MIN_GAP = 2500;   /* alt-tabbing should not hammer the API */
+  var lastResync = 0;
+  var resyncing = false;
+
+  /* Replace a note's contents in place, so anything holding the object
+     (App.current, the map, a results list) follows along. */
+  function adoptRemote(note, raw) {
+    var fresh = indexNote(note.name, raw, Date.now());
+    ['raw', 'title', 'tags', 'plain', 'hasImage', 'meta',
+      'created', 'updated', 'stamped', 'mtime'].forEach(function (k) { note[k] = fresh[k]; });
+    reindex();
+    if (App.current === note) {
+      renderTagRow(note);
+      renderDates(note);
+      if (App.mode === 'edit') $('note-edit').value = note.raw;
+      else renderMarkdown(note.raw);
+    }
+    if (!$('view-home').hidden) renderMap();
+  }
+
+  function resyncCurrent(force) {
+    var note = App.current;
+    if (!note || resyncing) return Promise.resolve(false);
+    /* unsaved edits win: leave them alone and let the save detect the clash */
+    if (App.dirty) return Promise.resolve(false);
+    if (!force && Date.now() - lastResync < RESYNC_MIN_GAP) return Promise.resolve(false);
+
+    resyncing = true;
+    lastResync = Date.now();
+    return Store.readNote(note.name).then(function (raw) {
+      if (App.current !== note || App.dirty || raw === note.raw) return false;
+      adoptRemote(note, raw);
+      toast(note.name + ' changed elsewhere — showing the current version');
+      return true;
+    }).catch(function () {
+      return false;          /* offline, deleted, no permission: keep what we have */
+    }).then(function (changed) {
+      resyncing = false;
+      return changed;
+    });
+  }
+
   /* ------------------------------ saving ------------------------------ */
 
   function markDirty() {
@@ -724,10 +776,43 @@
         }, 1800);
       })
       .catch(function (e) {
+        if (e && e.conflict) return resolveConflict(note, raw, e.remoteText);
         App.dirty = true;
         $('note-status').textContent = 'save failed';
         toast(e.message || String(e), true);
       });
+  }
+
+  /* The file moved on GitHub while this tab held it open. Only the person
+     who wrote both versions can say which one is right, so ask - and never
+     drop either side without saying so. */
+  function resolveConflict(note, mine, theirs) {
+    $('note-status').textContent = 'changed on GitHub';
+    var keepMine = confirm(
+      note.name + ' was changed on GitHub while you had it open here.\n\n' +
+      'The two versions no longer match, so one has to win:\n\n' +
+      'OK  —  keep what is on this screen and overwrite GitHub\n' +
+      'Cancel  —  discard what is on this screen and load the GitHub version');
+
+    if (!keepMine) {
+      App.dirty = false;
+      adoptRemote(note, theirs);
+      $('note-status').textContent = '';
+      toast('Loaded the GitHub version of ' + note.name);
+      return;
+    }
+    $('note-status').textContent = 'committing…';
+    return Store.writeNote(note.name, mine, { force: true }).then(function () {
+      App.dirty = false;
+      adoptRemote(note, mine);
+      $('note-status').textContent = 'committed';
+      $('note-status').classList.add('saved');
+      toast('Overwrote the GitHub version of ' + note.name);
+    }).catch(function (err) {
+      App.dirty = true;
+      $('note-status').textContent = 'save failed';
+      toast(err.message || String(err), true);
+    });
   }
 
   /* ------------------------------ new/del ----------------------------- */
@@ -1232,6 +1317,13 @@
     window.addEventListener('resize', function () {
       if (App.graph && !$('view-home').hidden) App.graph.paint();
     });
+
+    /* coming back to the tab is the moment to check the note is still what
+       the repo says it is - see resyncCurrent */
+    document.addEventListener('visibilitychange', function () {
+      if (!document.hidden) resyncCurrent();
+    });
+    window.addEventListener('focus', function () { resyncCurrent(); });
   }
 
   /* ================================ boot =============================== */
