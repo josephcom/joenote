@@ -10,6 +10,7 @@
     <hashtag name="meeting">
       <parent name="work"/>
     </hashtag>
+    <hashtag name="mind"/>
     <hashtag name="money"/>
     <hashtag name="personal">
       <sibling name="work"/>
