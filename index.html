@@ -219,9 +219,13 @@
         <button class="btn tiny" type="button" id="btn-mode-view">View</button>
         <button class="btn tiny" type="button" id="btn-mode-edit">Edit</button>
       </div>
+      <button class="btn tiny" type="button" id="btn-image" title="Add an image">＋ Image</button>
       <button class="btn tiny" type="button" id="btn-download" title="Download this .md">↓ .md</button>
       <button class="btn tiny danger" type="button" id="btn-delete">Delete</button>
     </div>
+    <!-- phones have no clipboard-image paste and no drag-and-drop, so this is
+         the only way in on mobile; accept="image/*" offers camera + library -->
+    <input id="file-image" type="file" accept="image/*" multiple hidden />
 
     <div id="note-tags" class="note-tags"></div>
 
@@ -229,7 +233,7 @@
     <textarea id="note-edit" class="editor" spellcheck="true" hidden
               placeholder="# Title&#10;&#10;Write markdown. Tag it with #hashtags. Paste images straight in."></textarea>
     <p class="editor-hint" id="editor-hint" hidden>
-      Ctrl/⌘+S save · Ctrl/⌘+E toggle view · paste or drop an image to embed it
+      Ctrl/⌘+S save · Ctrl/⌘+E toggle view · paste, drop or ＋ Image to embed a picture
     </p>
   </section>
 

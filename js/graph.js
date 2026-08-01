@@ -120,11 +120,10 @@
       g.appendChild(n.circle);
       g.appendChild(n.label);
       g.addEventListener('pointerdown', function (e) { self.startDrag(e, n); });
-      g.addEventListener('click', function (e) {
-        e.stopPropagation();
-        if (self.dragged) { self.dragged = false; return; }
-        if (self.opts.onSelect) self.opts.onSelect(n.name, e);
-      });
+      /* selection is fired from the pointerup in startDrag, not from here: a
+         finger that slides a few pixels off a small circle lands its pointerup
+         on another element and no click is ever synthesised for the node */
+      g.addEventListener('click', function (e) { e.stopPropagation(); });
       g.addEventListener('dblclick', function (e) {
         e.stopPropagation();
         if (self.opts.onOpen) self.opts.onOpen(n.name);
@@ -267,29 +266,42 @@
     };
   };
 
+  /* A finger never holds still: a tap wanders a few pixels between pointerdown
+     and pointerup. Treating any movement at all as a drag swallowed the tap
+     that follows, so movement only counts as a drag past this much slop. */
+  function slop(e) { return e.pointerType === 'mouse' ? 3 : 12; }
+
   Graph.prototype.startDrag = function (e, n) {
     e.preventDefault();
     e.stopPropagation();
     var self = this;
     var p = this.toLocal(e.clientX, e.clientY);
     var ox = n.x - p.x, oy = n.y - p.y;
-    n.fixed = true;
-    self.dragged = false;
+    var sx = e.clientX, sy = e.clientY, limit = slop(e), id = e.pointerId;
+    var dragging = false;
     function move(ev) {
+      if (ev.pointerId !== id) return;
+      if (!dragging) {
+        if (Math.abs(ev.clientX - sx) < limit && Math.abs(ev.clientY - sy) < limit) return;
+        dragging = true;
+        n.fixed = true;
+      }
       var q = self.toLocal(ev.clientX, ev.clientY);
       n.x = q.x + ox; n.y = q.y + oy;
-      self.dragged = true;
       self.paint();
     }
-    function up() {
+    function up(ev) {
+      if (ev && ev.pointerId !== id) return;
       window.removeEventListener('pointermove', move);
       window.removeEventListener('pointerup', up);
+      window.removeEventListener('pointercancel', up);
       n.fixed = false;
-      self.kick(0.4);
-      setTimeout(function () { self.dragged = false; }, 0);
+      if (dragging) { self.kick(0.4); return; }
+      if (ev && ev.type === 'pointerup' && self.opts.onSelect) self.opts.onSelect(n.name, ev);
     }
     window.addEventListener('pointermove', move);
     window.addEventListener('pointerup', up);
+    window.addEventListener('pointercancel', up);
   };
 
   Graph.prototype.bindEvents = function () {
@@ -310,20 +322,29 @@
       if (e.target.closest && e.target.closest('.node')) return;
       var sx = e.clientX, sy = e.clientY;
       var vx = self.view.x, vy = self.view.y;
-      var moved = false;
+      var limit = slop(e), id = e.pointerId;
+      var panning = false;
       function move(ev) {
-        moved = true;
+        if (ev.pointerId !== id) return;
+        if (!panning) {
+          if (Math.abs(ev.clientX - sx) < limit && Math.abs(ev.clientY - sy) < limit) return;
+          panning = true;
+        }
         self.view.x = vx + (ev.clientX - sx);
         self.view.y = vy + (ev.clientY - sy);
         self.paint();
       }
-      function up() {
+      function up(ev) {
+        if (ev && ev.pointerId !== id) return;
         window.removeEventListener('pointermove', move);
         window.removeEventListener('pointerup', up);
-        if (!moved && self.opts.onBlank) self.opts.onBlank();
+        window.removeEventListener('pointercancel', up);
+        if (ev && ev.type === 'pointercancel') return;
+        if (!panning && self.opts.onBlank) self.opts.onBlank();
       }
       window.addEventListener('pointermove', move);
       window.addEventListener('pointerup', up);
+      window.addEventListener('pointercancel', up);
     });
   };
 

@@ -615,6 +615,24 @@
     }).catch(function (e) { toast(e.message || String(e), true); });
   }
 
+  /* Images chosen with the picker. Unlike paste and drop this can fire while
+     the note is in view mode, so put the editor up and the caret at the end
+     before anything is inserted. */
+  function pickImages(files) {
+    var imgs = files.filter(function (f) { return /^image\//.test(f.type); });
+    if (!imgs.length) {
+      if (files.length) toast('That file is not an image', true);
+      return;
+    }
+    if (!App.current) return;
+    if (App.mode !== 'edit') setMode('edit');
+    var ta = $('note-edit');
+    /* land the image in its own paragraph, not glued to the last line */
+    if (ta.value.length) ta.value = ta.value.replace(/\n*$/, '\n\n');
+    ta.selectionStart = ta.selectionEnd = ta.value.length;
+    imgs.forEach(embedImage);
+  }
+
   function filesFromEvent(e) {
     var out = [];
     var dt = e.clipboardData || e.dataTransfer;
@@ -919,6 +937,13 @@
     $('btn-mode-edit').addEventListener('click', function () { setMode('edit'); });
     $('btn-delete').addEventListener('click', deleteCurrent);
     $('btn-download').addEventListener('click', downloadCurrent);
+
+    $('btn-image').addEventListener('click', function () { $('file-image').click(); });
+    $('file-image').addEventListener('change', function (e) {
+      var picked = Array.prototype.slice.call(e.target.files || []);
+      e.target.value = '';                  /* so picking the same file twice fires */
+      pickImages(picked);
+    });
 
     var ta = $('note-edit');
     ta.addEventListener('input', markDirty);
