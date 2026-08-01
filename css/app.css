@@ -39,6 +39,10 @@ html[data-theme="dark"] {
 
 * { box-sizing: border-box; }
 
+/* Author styles beat the UA sheet, so any class that sets `display` would
+   otherwise defeat the hidden attribute. Settle it once, here. */
+[hidden] { display: none !important; }
+
 html, body { height: 100%; }
 
 body {
@@ -240,21 +244,57 @@ main { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
 
 /* ------------------------------ tag panel ----------------------------- */
 
-.tag-panel {
+/* Notes on the left, relations on the right; both float over the map. */
+.panels {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  inset: 46px 10px 10px;
+  display: flex;
+  gap: 10px;
+  pointer-events: none;
+}
+.panels > aside {
+  pointer-events: auto;
   width: 290px;
-  max-height: calc(100% - 20px);
-  overflow: auto;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
   background: var(--bg);
   border: 1px solid var(--line-strong);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 12px 14px 16px;
+  padding: 12px 14px 14px;
 }
-.tag-panel header { display: flex; align-items: center; gap: 8px; }
-.tag-panel h3 { margin: 0; font-size: 15px; flex: 1 1 auto; font-family: var(--mono); word-break: break-all; }
+.panels > #tag-panel { margin-left: auto; overflow: auto; }
+
+.notes-panel .np-opt {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 12px; color: var(--fg-soft); margin: 6px 0 2px;
+}
+.np-list {
+  list-style: none; margin: 6px 0 8px; padding: 0;
+  overflow-y: auto; flex: 1 1 auto; min-height: 40px;
+}
+.np-list li { border-bottom: 1px solid var(--line); }
+.np-list li:last-child { border-bottom: 0; }
+.np-list a {
+  display: block; padding: 7px 6px; border-radius: 7px;
+  text-decoration: none; color: inherit;
+}
+.np-list a:hover { background: var(--bg-soft); }
+.np-list .np-title { font-size: 13.5px; font-weight: 600; }
+.np-list .np-sub {
+  font-size: 11.5px; color: var(--fg-faint); font-family: var(--mono);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.np-list .np-via { color: var(--accent); }
+.np-empty { font-size: 12.5px; color: var(--fg-faint); margin: 8px 0; }
+#np-all { justify-content: center; }
+
+.tag-panel header, .notes-panel header { display: flex; align-items: center; gap: 8px; }
+.tag-panel h3, .notes-panel h3 {
+  margin: 0; font-size: 15px; flex: 1 1 auto; font-family: var(--mono); word-break: break-all;
+}
 .tag-panel h4 { margin: 14px 0 6px; font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-faint); }
 .tp-count { margin: 4px 0 0; font-size: 12.5px; color: var(--fg-soft); }
 .tag-panel .row { display: flex; gap: 6px; margin-top: 6px; }
@@ -422,7 +462,9 @@ mark { background: color-mix(in srgb, var(--accent) 28%, transparent); color: in
   .btn { font-size: 12px; padding: 5px 9px; }
   .search { padding: 12px 10px 4px; }
   .map-wrap { margin: 8px 10px 10px; min-height: 320px; }
-  .tag-panel { position: fixed; inset: auto 0 0 0; width: auto; max-height: 62vh; border-radius: var(--radius) var(--radius) 0 0; }
+  .panels { inset: auto 0 0 0; flex-direction: column; gap: 6px; max-height: 74%; }
+  .panels > aside { width: auto; max-height: 36vh; border-radius: var(--radius) var(--radius) 0 0; }
+  .panels > #tag-panel { margin-left: 0; }
   .markdown-body, .editor, .note-bar, .results, .results-bar, .note-tags { padding-left: 12px; padding-right: 12px; }
 }
 

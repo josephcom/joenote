@@ -560,10 +560,69 @@
 
   var panelTag = null;
 
+  /* Left pane: every note carrying this hashtag. */
+  function notesForTag(tag, withDescendants) {
+    var want = Object.create(null);
+    want[tag] = true;
+    if (withDescendants) {
+      Object.keys(Tags.descendants(tag)).forEach(function (d) { want[d] = true; });
+    }
+    return App.notes.filter(function (n) {
+      for (var i = 0; i < n.tags.length; i++) if (want[n.tags[i]]) return true;
+      return false;
+    }).map(function (n) {
+      var via = n.tags.filter(function (t) { return want[t] && t !== tag; });
+      return { note: n, via: via };
+    });
+  }
+
+  function renderNotesPanel() {
+    if (!panelTag) return;
+    var deep = $('np-descend').checked;
+    var rows = notesForTag(panelTag, deep);
+
+    $('notes-panel').hidden = false;
+    $('np-title').textContent = '#' + panelTag;
+    $('np-all').href = '#/q/' + encodeURIComponent(deep ? '#' + panelTag : 'tag:=' + panelTag);
+
+    var list = $('np-list');
+    list.innerHTML = '';
+    rows.forEach(function (row) {
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = '#/note/' + encodeURIComponent(row.note.name);
+
+      var t = document.createElement('div');
+      t.className = 'np-title';
+      t.textContent = row.note.title;
+      a.appendChild(t);
+
+      var s = document.createElement('div');
+      s.className = 'np-sub';
+      s.textContent = row.note.name;
+      if (row.via.length) {
+        var via = document.createElement('span');
+        via.className = 'np-via';
+        via.textContent = '  via #' + row.via.join(' #');
+        s.appendChild(via);
+      }
+      a.appendChild(s);
+
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+
+    $('np-empty').hidden = rows.length > 0;
+    $('np-empty').textContent = deep
+      ? 'No notes carry #' + panelTag + ' or anything below it yet.'
+      : 'No notes carry #' + panelTag + ' itself. Try including the hashtags below it.';
+  }
+
   function openTagPanel(name) {
     panelTag = Tags.normalize(name);
     if (App.graph) App.graph.select(panelTag);
     var rec = Tags.ensure(panelTag);
+    renderNotesPanel();
     $('tag-panel').hidden = false;
     $('tp-name').textContent = '#' + panelTag;
     $('tp-count').textContent = rec.count;
@@ -584,6 +643,7 @@
   function closeTagPanel() {
     panelTag = null;
     $('tag-panel').hidden = true;
+    $('notes-panel').hidden = true;
     if (App.graph) App.graph.select(null);
   }
 
@@ -741,6 +801,10 @@
       commitTags();
       openTagPanel(name);
     });
+
+    /* notes pane */
+    $('np-close').addEventListener('click', function () { $('notes-panel').hidden = true; });
+    $('np-descend').addEventListener('change', renderNotesPanel);
 
     /* tag panel */
     $('tp-close').addEventListener('click', closeTagPanel);

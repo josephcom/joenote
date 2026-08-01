@@ -82,6 +82,22 @@
         No hashtags yet. Create a note and type <code>#something</code> in it.
       </p>
 
+      <div class="panels">
+
+      <aside id="notes-panel" class="notes-panel" hidden>
+        <header>
+          <h3 id="np-title">#tag</h3>
+          <button class="btn icon" type="button" id="np-close" title="Close">×</button>
+        </header>
+        <label class="np-opt">
+          <input type="checkbox" id="np-descend" checked />
+          include hashtags below it
+        </label>
+        <ul id="np-list" class="np-list"></ul>
+        <p id="np-empty" class="np-empty" hidden>No notes carry this hashtag yet.</p>
+        <a class="btn tiny" id="np-all" href="#/">Open as a full search →</a>
+      </aside>
+
       <aside id="tag-panel" class="tag-panel" hidden>
         <header>
           <h3 id="tp-name">#tag</h3>
@@ -116,6 +132,8 @@
 
         <button class="btn tiny danger" type="button" id="tp-forget">Remove from map</button>
       </aside>
+
+      </div>
 
       <datalist id="tag-list"></datalist>
     </div>

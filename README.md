@@ -18,6 +18,9 @@ only**. Open `index.html` and it runs.
   `tags.xml` and is edited from the map.
 * **The home page is just the map and a search box.** Searching supports
   wildcards (`*`, `?`), `AND` / `OR` / `NOT`, and parentheses.
+* **Click a bubble and two panes open**: on the left, a scrollable list of every
+  note carrying that hashtag (with a toggle for hashtags below it in the map);
+  on the right, its parents, children and siblings, ready to edit.
 
 ## Where the notes live
 
