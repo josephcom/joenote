@@ -7,5 +7,3 @@
 - If two companies are exact mirrors of each other except one gives dividends that are fifty percent franked versus the other zero percent franked, the first one's price is higher — its P/E should be bigger.
 
 #stock
-
-![](../assets/pe-20260802-001126-2997.jpg)
