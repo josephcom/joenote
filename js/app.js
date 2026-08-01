@@ -111,28 +111,87 @@
   /* ============================== storage ============================== */
 
   function updateStoragePill() {
+    var d = Store.describe();
     var pill = $('storage-pill');
-    if (Store.mode === 'fs') {
-      pill.textContent = '📁 ' + Store.folderName + '/notes';
-      pill.title = 'Notes are real .md files inside ' + Store.folderName;
-      $('btn-connect').textContent = 'Change folder…';
-    } else {
-      pill.textContent = Store.supportsFS ? 'in this browser' : 'in this browser (no folder API)';
-      pill.title = 'Notes live in localStorage until you connect a folder.';
-      $('btn-connect').textContent = 'Connect folder…';
-    }
+    pill.textContent = d.label;
+    pill.title = d.detail + '  (click to change)';
+    pill.className = 'pill destination ' + d.kind;
+
+    $('btn-github').textContent = Store.mode === 'github' ? 'GitHub ✓' : 'GitHub…';
+    $('btn-connect').textContent = Store.mode === 'fs' ? 'Folder ✓' : 'Folder…';
+
+    var banner = $('storage-banner');
+    banner.hidden = d.safe;
+    if (!d.safe) $('storage-banner-text').textContent = d.detail;
   }
 
   function connectFolder() {
     Store.connect().then(function () {
       return loadAll();
     }).then(function () {
-      toast('Connected to ' + Store.folderName);
+      toast('Notes now live in ' + Store.folderName + '/notes on this computer');
       route();
     }).catch(function (e) {
       if (e && e.name === 'AbortError') return;
       toast(e.message || String(e), true);
     });
+  }
+
+  /* ------------------------------ github ------------------------------ */
+
+  function openGitHubSheet() {
+    var g = Store.github || Store.guessRepo();
+    $('gh-owner').value = g.owner || '';
+    $('gh-repo').value = g.repo || '';
+    $('gh-branch').value = g.branch || 'main';
+    $('gh-token').value = Store.github ? Store.github.token : '';
+    $('gh-msg').textContent = '';
+    $('gh-msg').classList.remove('ok');
+    $('gh-disconnect').hidden = Store.mode !== 'github';
+    $('gh-save').textContent = Store.mode === 'github' ? 'Save' : 'Connect';
+    $('gh-overlay').hidden = false;
+    setTimeout(function () { ($('gh-token').value ? $('gh-save') : $('gh-token')).focus(); }, 30);
+  }
+
+  function closeGitHubSheet() { $('gh-overlay').hidden = true; }
+
+  function submitGitHub() {
+    var msg = $('gh-msg');
+    msg.classList.remove('ok');
+    msg.textContent = 'Checking the token against GitHub…';
+    $('gh-save').disabled = true;
+
+    Store.connectGitHub({
+      owner: $('gh-owner').value,
+      repo: $('gh-repo').value,
+      branch: $('gh-branch').value,
+      token: $('gh-token').value
+    }).then(function () {
+      msg.textContent = 'Connected. Loading notes from the repo…';
+      msg.classList.add('ok');
+      return loadAll();
+    }).then(function () {
+      closeGitHubSheet();
+      toast('Saves now commit to ' + Store.github.owner + '/' + Store.github.repo);
+      route();
+    }).catch(function (e) {
+      msg.textContent = e.message || String(e);
+      msg.classList.remove('ok');
+    }).then(function () {
+      $('gh-save').disabled = false;
+    });
+  }
+
+  function disconnectGitHub() {
+    if (!confirm('Disconnect GitHub?\n\nThe notes stay in the repository — this browser just stops writing to it, ' +
+      'and the token is removed from local storage.')) return;
+    Store.disconnectGitHub()
+      .then(loadAll)
+      .then(function () {
+        closeGitHubSheet();
+        toast('Disconnected from GitHub');
+        route();
+      });
   }
 
   /* =============================== router ============================== */
@@ -411,7 +470,7 @@
     $('note-status').textContent = 'unsaved';
     $('note-status').classList.remove('saved');
     clearTimeout(App.saveTimer);
-    App.saveTimer = setTimeout(saveCurrent, 900);
+    App.saveTimer = setTimeout(saveCurrent, Store.autosaveDelay());
   }
 
   function flushSave() {
@@ -435,6 +494,7 @@
     }
 
     App.dirty = false;
+    $('note-status').textContent = Store.mode === 'github' ? 'committing…' : 'saving…';
     return Store.writeNote(note.name, raw)
       .then(function () {
         if (wantName !== note.name) {
@@ -460,7 +520,7 @@
         reindex();
         renderTagRow(note);
         if (tagsChanged) { saveTags(); if (!$('view-home').hidden) renderMap(); }
-        $('note-status').textContent = 'saved';
+        $('note-status').textContent = Store.mode === 'github' ? 'committed' : 'saved';
         $('note-status').classList.add('saved');
         setTimeout(function () {
           if (!App.dirty) $('note-status').textContent = '';
@@ -763,6 +823,21 @@
     });
 
     $('btn-connect').addEventListener('click', connectFolder);
+    $('btn-github').addEventListener('click', openGitHubSheet);
+    $('storage-pill').addEventListener('click', openGitHubSheet);
+    $('banner-github').addEventListener('click', openGitHubSheet);
+    $('gh-close').addEventListener('click', closeGitHubSheet);
+    $('gh-cancel').addEventListener('click', closeGitHubSheet);
+    $('gh-save').addEventListener('click', submitGitHub);
+    $('gh-disconnect').addEventListener('click', disconnectGitHub);
+    $('gh-overlay').addEventListener('click', function (e) {
+      if (e.target === $('gh-overlay')) closeGitHubSheet();
+    });
+    ['gh-owner', 'gh-repo', 'gh-branch', 'gh-token'].forEach(function (id) {
+      $(id).addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') { e.preventDefault(); submitGitHub(); }
+      });
+    });
     $('btn-new').addEventListener('click', newNote);
     $('btn-theme').addEventListener('click', cycleTheme);
     $('btn-import').addEventListener('click', function () { $('file-import').click(); });
@@ -878,6 +953,8 @@
       var inField = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName);
       var mod = e.ctrlKey || e.metaKey;
 
+      if (e.key === 'Escape' && !$('gh-overlay').hidden) { closeGitHubSheet(); return; }
+
       if (mod && e.key.toLowerCase() === 's') {
         e.preventDefault();
         flushSave();
@@ -906,28 +983,11 @@
 
   /* ================================ boot =============================== */
 
-  function seedIfEmpty() {
-    if (App.notes.length) return Promise.resolve();
-    if (typeof fetch !== 'function') return Promise.resolve();
-    /* first run: pull the sample note + tags shipped with the site, if reachable */
-    return fetch('notes/welcome.md').then(function (r) {
-      if (!r.ok) throw new Error('no seed');
-      return r.text();
-    }).then(function (text) {
-      return Store.writeNote('welcome.md', text);
-    }).then(function () {
-      return fetch('tags.xml').then(function (r) { return r.ok ? r.text() : null; });
-    }).then(function (xml) {
-      if (xml) return Store.writeTagsXML(xml);
-    }).then(loadAll).catch(function () { /* offline or file:// - fine */ });
-  }
-
   function boot() {
     applyTheme(Store.setting('theme') || 'auto');
     bind();
     Store.init()
       .then(loadAll)
-      .then(seedIfEmpty)
       .then(function () {
         App.booted = true;
         route();

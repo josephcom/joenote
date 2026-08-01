@@ -24,38 +24,46 @@ only**. Open `index.html` and it runs.
   note carrying that hashtag (with a toggle for hashtags below it in the map);
   on the right, its parents, children and siblings, ready to edit.
 
-## Where the notes live
+## Where the notes go
 
-| Browser | Storage |
+**The button in the top bar always names the destination.** There are three, and
+nothing is ever copied between them behind your back.
+
+| Destination | What it means |
 | --- | --- |
-| Chrome, Edge, Opera | **Connect folder…** picks a real directory. Notes are `notes/*.md`, images are `assets/*`, the map is `tags.xml`. Point it at your clone of this repo and `git commit` as usual. |
-| Firefox, Safari | Falls back to `localStorage`. Everything still works; use **↓ .md** and **Import** to move files in and out. |
+| **GitHub · owner/repo/notes** | Every save, delete and pasted image is a commit through the GitHub API. What you see in JoeNote *is* what is in the repo, from any browser on any machine. Needs a token — see below. |
+| **Folder · name/notes** | Real `.md` files on this computer via the File System Access API (Chrome/Edge). Nothing reaches GitHub until you `git push`. |
+| **This browser only** | `localStorage`. Nothing leaves the browser. Shown with a warning banner, because it is nobody's idea of a backup. |
 
-The folder handle is remembered between visits, so you only pick it once.
+### Connecting GitHub
 
-## Using it with this repository
+Click **GitHub…**, fill in owner / repo / branch, and paste a token:
 
-Nothing is built and nothing is served dynamically — the repo *is* the site, and
-the same repo is the folder you point JoeNote at locally:
+1. [github.com/settings/personal-access-tokens/new](https://github.com/settings/personal-access-tokens/new)
+2. **Repository access** → Only select repositories → this one repo
+3. **Permissions** → Repository permissions → **Contents: Read and write**. Nothing else.
+
+JoeNote checks the token can actually write before switching over. The token is
+kept in this browser's `localStorage` and sent only to `api.github.com` — there
+is no server to send it anywhere else. Scope it to the single repo so it can do
+nothing else, and revoke it on GitHub whenever you like.
+
+Saves are debounced to 4 seconds in GitHub mode, so a paragraph of typing is one
+commit rather than forty. The status next to the note title reads
+`committing… → committed`.
+
+> A public repository makes every committed note public. Use a private repo for
+> anything you would not post — the app works the same, only Pages hosting needs
+> a paid plan then.
+
+## Hosting your own copy
 
 ```bash
-git clone https://github.com/josephcom/joenote && cd joenote
+gh repo create <name> --public --source=. --push
 ```
 
-Open https://josephcom.github.io/joenote/, click **Connect folder…** and pick
-that clone — **the repository root**, not `notes/`. Write notes, then:
-
-```bash
-git add -A && git commit -m "notes" && git push
-```
-
-Pages redeploys and your notes travel with the app.
-
-> A public repository makes every committed note public. Keep private notes in a
-> folder outside the clone, or use a private repo (Pages then needs a paid plan).
-
-To host your own copy: `gh repo create <name> --public --source=. --push`, then
-**Settings → Pages → Deploy from a branch → `main` / `/ (root)`**.
+Then **Settings → Pages → Deploy from a branch → `main` / `/ (root)`**. Nothing
+is built and nothing is served dynamically — the repo *is* the site.
 
 ## Search syntax
 

@@ -16,13 +16,73 @@
 
   <div class="topbar-spacer"></div>
 
-  <span id="storage-pill" class="pill" title="Where your notes live"></span>
-  <button id="btn-connect" class="btn" type="button">Connect folder…</button>
+  <button id="storage-pill" class="pill destination" type="button" title="Where saves go — click to change"></button>
+  <button id="btn-github" class="btn" type="button">GitHub…</button>
+  <button id="btn-connect" class="btn" type="button">Folder…</button>
   <button id="btn-import" class="btn" type="button" title="Import .md files">Import</button>
   <input id="file-import" type="file" accept=".md,.markdown,text/markdown" multiple hidden />
   <button id="btn-new" class="btn primary" type="button" title="New note (n)">New note</button>
   <button id="btn-theme" class="btn icon" type="button" title="Light / dark">◐</button>
 </header>
+
+<div id="storage-banner" class="banner" hidden>
+  <span id="storage-banner-text"></span>
+  <button class="btn tiny" type="button" id="banner-github">Connect GitHub</button>
+</div>
+
+<!-- ======================= GITHUB CONNECT ======================== -->
+<div id="gh-overlay" class="overlay" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="gh-h">
+    <header>
+      <h2 id="gh-h">Store notes in a GitHub repository</h2>
+      <button class="btn icon" type="button" id="gh-close" title="Close">×</button>
+    </header>
+
+    <p class="sheet-lead">
+      Every save, delete and pasted image becomes a commit. What you see here is
+      exactly what is in the repo — from any browser, any machine.
+    </p>
+
+    <div class="field">
+      <label for="gh-owner">Owner</label>
+      <input id="gh-owner" spellcheck="false" placeholder="your-github-username" />
+    </div>
+    <div class="field">
+      <label for="gh-repo">Repository</label>
+      <input id="gh-repo" spellcheck="false" placeholder="joenote" />
+    </div>
+    <div class="field">
+      <label for="gh-branch">Branch</label>
+      <input id="gh-branch" spellcheck="false" placeholder="main" />
+    </div>
+    <div class="field">
+      <label for="gh-token">Fine-grained personal access token</label>
+      <input id="gh-token" type="password" spellcheck="false" autocomplete="off" placeholder="github_pat_…" />
+    </div>
+
+    <details class="sheet-help">
+      <summary>How to make the token (1 minute)</summary>
+      <ol>
+        <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener noreferrer">github.com/settings/personal-access-tokens/new</a>.</li>
+        <li><strong>Repository access</strong> → Only select repositories → pick this one repo.</li>
+        <li><strong>Permissions</strong> → Repository permissions → <strong>Contents: Read and write</strong>. Nothing else.</li>
+        <li>Generate, copy, paste it above.</li>
+      </ol>
+      <p>The token is kept in this browser's local storage and sent only to
+         <code>api.github.com</code>. JoeNote has no server. Scope it to the one
+         repo so it can do nothing else, and revoke it any time on GitHub.</p>
+    </details>
+
+    <p id="gh-msg" class="sheet-msg"></p>
+
+    <footer>
+      <button class="btn danger" type="button" id="gh-disconnect" hidden>Disconnect</button>
+      <div class="topbar-spacer"></div>
+      <button class="btn" type="button" id="gh-cancel">Cancel</button>
+      <button class="btn primary" type="button" id="gh-save">Connect</button>
+    </footer>
+  </div>
+</div>
 
 <main>
 
