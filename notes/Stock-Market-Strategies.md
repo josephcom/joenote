@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T23:35:17Z
-updated: 2026-08-01T23:35:17Z
+updated: 2026-08-01T23:36:32Z
 ---
 
 # Stock Market Strategies
@@ -403,3 +403,5 @@ For scale: Buffett's edge over the S&P was about 10 points a year across 60 year
 ## 20. One-line summary
 
 No strategy is safe; each has a characteristic way of failing, and knowing *your* strategy's failure mode is worth more than knowing ten strategies badly. Your edges are **structure, patience, tax and effort in ignored corners** — not speed, and not cleverness applied to the same information everyone else already has.
+
+#stock
