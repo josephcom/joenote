@@ -10,6 +10,7 @@
     <hashtag name="meeting">
       <parent name="work"/>
     </hashtag>
+    <hashtag name="money"/>
     <hashtag name="personal">
       <sibling name="work"/>
     </hashtag>
@@ -25,7 +26,9 @@
     <hashtag name="someday">
       <sibling name="inbox"/>
     </hashtag>
-    <hashtag name="stock"/>
+    <hashtag name="stock">
+      <parent name="money"/>
+    </hashtag>
     <hashtag name="work">
       <sibling name="personal"/>
     </hashtag>
