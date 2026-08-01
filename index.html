@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>JoeNote</title>
+<meta name="description" content="Markdown notes organised entirely by hashtags." />
+<meta name="color-scheme" content="light dark" />
+<link rel="stylesheet" href="css/app.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%23%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#/" title="Home — the hashtag map">Joe<span>Note</span></a>
+
+  <div class="topbar-spacer"></div>
+
+  <span id="storage-pill" class="pill" title="Where your notes live"></span>
+  <button id="btn-connect" class="btn" type="button">Connect folder…</button>
+  <button id="btn-import" class="btn" type="button" title="Import .md files">Import</button>
+  <input id="file-import" type="file" accept=".md,.markdown,text/markdown" multiple hidden />
+  <button id="btn-new" class="btn primary" type="button" title="New note (n)">New note</button>
+  <button id="btn-theme" class="btn icon" type="button" title="Light / dark">◐</button>
+</header>
+
+<main>
+
+  <!-- ============================ HOME ============================ -->
+  <section id="view-home" class="view">
+    <form id="search-form" class="search" autocomplete="off">
+      <input id="q" type="search" spellcheck="false"
+             placeholder="(#work OR #home) AND NOT draft*    —  wildcards * ?, AND OR NOT, ( )" />
+      <button class="btn primary" type="submit">Search</button>
+      <button class="btn icon" type="button" id="btn-help" title="Query syntax">?</button>
+    </form>
+    <p id="search-msg" class="search-msg"></p>
+
+    <div id="help" class="help" hidden>
+      <div class="help-grid">
+        <div>
+          <h4>Logic</h4>
+          <ul>
+            <li><code>a b</code> — both (implicit AND)</li>
+            <li><code>a AND b</code> · <code>&amp;&amp;</code> · <code>&amp;</code></li>
+            <li><code>a OR b</code> · <code>||</code> · <code>|</code></li>
+            <li><code>NOT a</code> · <code>!a</code> · <code>-a</code></li>
+            <li><code>(a OR b) AND !c</code></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Wildcards</h4>
+          <ul>
+            <li><code>proj*</code> — any run of characters</li>
+            <li><code>te?t</code> — exactly one character</li>
+            <li><code>"exact phrase"</code> — literal, no wildcards</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Fields</h4>
+          <ul>
+            <li><code>#work</code> / <code>tag:work</code> — #work or anything under it</li>
+            <li><code>tag:=work</code> — exactly #work</li>
+            <li><code>near:work</code> — #work, its siblings and their children</li>
+            <li><code>title:</code> <code>text:</code> <code>file:</code></li>
+            <li><code>is:untagged</code> <code>has:image</code> <code>has:link</code> <code>has:code</code></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-wrap">
+      <svg id="map" role="img" aria-label="Hashtag map"></svg>
+
+      <div class="map-tools">
+        <button class="btn tiny" type="button" id="btn-fit" title="Fit the map to the window">Fit</button>
+        <button class="btn tiny" type="button" id="btn-relayout" title="Shake the layout">Relayout</button>
+        <button class="btn tiny" type="button" id="btn-addtag">+ Hashtag</button>
+      </div>
+
+      <p id="map-empty" class="map-empty" hidden>
+        No hashtags yet. Create a note and type <code>#something</code> in it.
+      </p>
+
+      <aside id="tag-panel" class="tag-panel" hidden>
+        <header>
+          <h3 id="tp-name">#tag</h3>
+          <button class="btn icon" type="button" id="tp-close" title="Close">×</button>
+        </header>
+        <p class="tp-count"><span id="tp-count">0</span> notes ·
+          <a href="#" id="tp-open">show them</a></p>
+
+        <h4>Parents</h4>
+        <div id="tp-parents" class="chips"></div>
+        <div class="row">
+          <input id="tp-parent-input" list="tag-list" placeholder="add a parent…" />
+          <button class="btn tiny" type="button" id="tp-parent-add">Add</button>
+        </div>
+
+        <h4>Children</h4>
+        <div id="tp-children" class="chips muted"></div>
+
+        <h4>Siblings</h4>
+        <div id="tp-siblings" class="chips"></div>
+        <div class="row">
+          <input id="tp-sibling-input" list="tag-list" placeholder="add a sibling…" />
+          <button class="btn tiny" type="button" id="tp-sibling-add">Add</button>
+        </div>
+
+        <h4>Rename</h4>
+        <div class="row">
+          <input id="tp-rename-input" placeholder="new name" />
+          <button class="btn tiny" type="button" id="tp-rename">Rename</button>
+        </div>
+        <p class="hint">Renaming rewrites the hashtag in every note that uses it.</p>
+
+        <button class="btn tiny danger" type="button" id="tp-forget">Remove from map</button>
+      </aside>
+
+      <datalist id="tag-list"></datalist>
+    </div>
+  </section>
+
+  <!-- ========================== RESULTS =========================== -->
+  <section id="view-results" class="view" hidden>
+    <div class="results-bar">
+      <a class="btn tiny" href="#/">‹ Map</a>
+      <code id="results-query"></code>
+      <span id="results-count" class="pill"></span>
+    </div>
+    <ul id="results" class="results"></ul>
+    <p id="results-empty" class="empty" hidden>Nothing matched.</p>
+  </section>
+
+  <!-- ============================ NOTE ============================ -->
+  <section id="view-note" class="view" hidden>
+    <div class="note-bar">
+      <a class="btn tiny" href="#/" title="Back to the map">‹ Map</a>
+      <span id="note-file" class="pill" title="File name"></span>
+      <div class="topbar-spacer"></div>
+      <span id="note-status" class="save-status"></span>
+      <div class="segmented">
+        <button class="btn tiny" type="button" id="btn-mode-view">View</button>
+        <button class="btn tiny" type="button" id="btn-mode-edit">Edit</button>
+      </div>
+      <button class="btn tiny" type="button" id="btn-download" title="Download this .md">↓ .md</button>
+      <button class="btn tiny danger" type="button" id="btn-delete">Delete</button>
+    </div>
+
+    <div id="note-tags" class="note-tags"></div>
+
+    <article id="note-view" class="markdown-body"></article>
+    <textarea id="note-edit" class="editor" spellcheck="true" hidden
+              placeholder="# Title&#10;&#10;Write markdown. Tag it with #hashtags. Paste images straight in."></textarea>
+    <p class="editor-hint" id="editor-hint" hidden>
+      Ctrl/⌘+S save · Ctrl/⌘+E toggle view · paste or drop an image to embed it
+    </p>
+  </section>
+
+</main>
+
+<div id="toast" class="toast" hidden></div>
+
+<script src="js/md.js"></script>
+<script src="js/sanitize.js"></script>
+<script src="js/store.js"></script>
+<script src="js/tags.js"></script>
+<script src="js/search.js"></script>
+<script src="js/graph.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
