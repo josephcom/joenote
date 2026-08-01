@@ -25,6 +25,7 @@
     <hashtag name="someday">
       <sibling name="inbox"/>
     </hashtag>
+    <hashtag name="stock"/>
     <hashtag name="work">
       <sibling name="personal"/>
     </hashtag>
