@@ -1,5 +1,7 @@
 # JoeNote
 
+**Live: https://josephcom.github.io/joenote/**
+
 A note-taking app with no folders. Every note is a plain `.md` file; the only
 organising principle is hashtags, arranged into a map you can navigate and edit.
 
@@ -31,21 +33,29 @@ only**. Open `index.html` and it runs.
 
 The folder handle is remembered between visits, so you only pick it once.
 
-## Hosting on GitHub Pages
-
-```bash
-git init
-git add .
-git commit -m "JoeNote"
-gh repo create joenote --public --source=. --push
-```
-
-Then in the repository: **Settings → Pages → Source: Deploy from a branch →
-`main` / `/ (root)`**. The app appears at
-`https://<your-user>.github.io/joenote/`.
+## Using it with this repository
 
 Nothing is built and nothing is served dynamically — the repo *is* the site, and
-the same repo can be the folder you point JoeNote at locally.
+the same repo is the folder you point JoeNote at locally:
+
+```bash
+git clone https://github.com/josephcom/joenote && cd joenote
+```
+
+Open https://josephcom.github.io/joenote/, click **Connect folder…** and pick
+that clone — **the repository root**, not `notes/`. Write notes, then:
+
+```bash
+git add -A && git commit -m "notes" && git push
+```
+
+Pages redeploys and your notes travel with the app.
+
+> A public repository makes every committed note public. Keep private notes in a
+> folder outside the clone, or use a private repo (Pages then needs a paid plan).
+
+To host your own copy: `gh repo create <name> --public --source=. --push`, then
+**Settings → Pages → Deploy from a branch → `main` / `/ (root)`**.
 
 ## Search syntax
 
