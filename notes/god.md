@@ -1,3 +1,8 @@
+---
+created: 2026-08-01T15:01:52Z
+updated: 2026-08-01T15:02:38Z
+---
+
 # God
 
 1. Pile up of knowledge
