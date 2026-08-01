@@ -1,42 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  JoeNote hashtag map.
-
-  Every <hashtag> may declare any number of <parent> and <sibling> elements,
-  so a tag can sit under several parents at once. Sibling links are symmetric
-  and JoeNote writes them on both tags.
-
-  This file is the only place structure lives - the notes themselves just
-  contain plain #hashtags. Edit it here or from the map on the home page.
--->
 <joenote version="1">
   <hashtags>
     <hashtag name="inbox">
       <sibling name="someday"/>
     </hashtag>
-    <hashtag name="someday">
-      <sibling name="inbox"/>
+    <hashtag name="joenote">
+      <parent name="project"/>
     </hashtag>
-    <hashtag name="work">
-      <sibling name="personal"/>
+    <hashtag name="meeting">
+      <parent name="work"/>
     </hashtag>
     <hashtag name="personal">
       <sibling name="work"/>
     </hashtag>
     <hashtag name="project">
-      <parent name="work"/>
       <parent name="personal"/>
+      <parent name="work"/>
       <sibling name="reference"/>
     </hashtag>
     <hashtag name="reference">
       <parent name="work"/>
       <sibling name="project"/>
     </hashtag>
-    <hashtag name="meeting">
-      <parent name="work"/>
+    <hashtag name="someday">
+      <sibling name="inbox"/>
     </hashtag>
-    <hashtag name="joenote">
-      <parent name="project"/>
+    <hashtag name="work">
+      <sibling name="personal"/>
     </hashtag>
   </hashtags>
 </joenote>
