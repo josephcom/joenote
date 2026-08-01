@@ -9,6 +9,8 @@ updated: 2026-08-01T23:36:32Z
 
 **Not financial advice.** I'm not a licensed advisor. This is a map of how people think, so you can judge for yourself.
 
+SYNC-CHECK-MARKER: added on GitHub, removed again in a moment.
+
 ---
 
 ## 1. Asset plays — "a floor for the investor's feet"
