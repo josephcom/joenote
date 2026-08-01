@@ -70,6 +70,14 @@
   function encodeBlob(blob) {
     return blob.arrayBuffer().then(function (buf) { return toBase64(new Uint8Array(buf)); });
   }
+
+  /* raw.githubusercontent.com serves files with max-age=300, so a note read
+     back just after a commit can be the pre-commit copy. Key the URL on the
+     blob sha: it changes exactly when the content does. */
+  function bustCache(url, sha) {
+    if (!sha) return url;
+    return url + (url.indexOf('?') === -1 ? '?' : '&') + 'jn=' + encodeURIComponent(sha);
+  }
   function readBlobAsDataURL(blob) {
     return new Promise(function (resolve, reject) {
       var fr = new FileReader();
@@ -207,6 +215,9 @@
       return fetch('https://api.github.com/' + path, {
         method: opts.method || 'GET',
         headers: headers,
+        /* never replay a cached copy: a stale read hands back an old note and
+           an old sha, which then overwrites the newer commit */
+        cache: 'no-store',
         body: opts.body ? JSON.stringify(opts.body) : undefined
       }).then(function (res) {
         return res.text().then(function (raw) {
@@ -355,7 +366,8 @@
             var files = entries.filter(function (e) { return e.type === 'file' && /\.md$/i.test(e.name); });
             return Promise.all(files.map(function (e) {
               self.shas[NOTES_DIR + '/' + e.name] = e.sha;
-              return fetch(e.download_url).then(function (r) { return r.text(); })
+              return fetch(bustCache(e.download_url, e.sha), { cache: 'no-store' })
+                .then(function (r) { return r.text(); })
                 .then(function (text) { return { name: e.name, text: text, mtime: 0 }; })
                 .catch(function () { return { name: e.name, text: '', mtime: 0 }; });
             }));
@@ -500,8 +512,9 @@
       if (self.mode === 'github') {
         return self.api(self.contentsPath(clean, true), { allow404: true }).then(function (meta) {
             if (!meta || !meta.download_url) return null;
-            self.assetURLs[clean] = meta.download_url;
-            return meta.download_url;
+            var url = bustCache(meta.download_url, meta.sha);
+            self.assetURLs[clean] = url;
+            return url;
           }).catch(function () { return null; });
       }
       if (self.mode !== 'fs') return Promise.resolve(null);
