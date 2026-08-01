@@ -107,16 +107,6 @@
       return Object.keys(this.map).sort().map(function (n) { return self.map[n]; });
     },
 
-    remove: function (name) {
-      name = norm(name);
-      delete this.map[name];
-      var self = this;
-      Object.keys(this.map).forEach(function (n) {
-        delete self.map[n].parents[name];
-        delete self.map[n].siblings[name];
-      });
-    },
-
     rename: function (from, to) {
       from = norm(from); to = norm(to);
       if (!from || !to || from === to || !this.map[from]) return false;

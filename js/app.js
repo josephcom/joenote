@@ -182,9 +182,25 @@
         onBlank: function () { closeTagPanel(); }
       });
     }
-    App.graph.setData(Tags.map);
-    $('map-empty').hidden = Object.keys(Tags.map).length > 0;
+    var visible = visibleTags();
+    App.graph.setData(visible);
+    $('map-empty').hidden = Object.keys(visible).length > 0;
     applyLiveHighlight();
+  }
+
+  /* A hashtag earns a place on the map by leading to at least one note -
+     either directly, or through a hashtag below it. Anything that leads
+     nowhere stays in tags.xml but is not drawn. */
+  function visibleTags() {
+    var out = Object.create(null);
+    Object.keys(Tags.map).forEach(function (name) {
+      if (Tags.map[name].count > 0) { out[name] = Tags.map[name]; return; }
+      var below = Tags.descendants(name);
+      for (var k in below) {
+        if (Tags.map[k] && Tags.map[k].count > 0) { out[name] = Tags.map[name]; return; }
+      }
+    });
+    return out;
   }
 
   function applyLiveHighlight() {
@@ -792,16 +808,6 @@
       });
       App.graph.kick(1);
     });
-    $('btn-addtag').addEventListener('click', function () {
-      var name = prompt('New hashtag (letters, digits, _ - /):');
-      if (!name) return;
-      name = Tags.normalize(name);
-      if (!/^[\p{L}\p{N}][\p{L}\p{N}_\-\/]*$/u.test(name)) { toast('Invalid hashtag', true); return; }
-      Tags.ensure(name);
-      commitTags();
-      openTagPanel(name);
-    });
-
     /* notes pane */
     $('np-close').addEventListener('click', function () { $('notes-panel').hidden = true; });
     $('np-descend').addEventListener('change', renderNotesPanel);
@@ -833,15 +839,6 @@
       if (!panelTag) return;
       renameTagEverywhere(panelTag, $('tp-rename-input').value);
     });
-    $('tp-forget').addEventListener('click', function () {
-      if (!panelTag) return;
-      Tags.remove(panelTag);
-      var was = panelTag;
-      closeTagPanel();
-      commitTags();
-      if (Tags.has(was)) toast('#' + was + ' still appears in notes, so it stays on the map (relations cleared)');
-    });
-
     /* note surface */
     $('btn-mode-view').addEventListener('click', function () { flushSave(); setMode('view'); });
     $('btn-mode-edit').addEventListener('click', function () { setMode('edit'); });

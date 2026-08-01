@@ -116,7 +116,7 @@
       var g = el('g', { 'class': 'node', tabindex: '0', 'data-tag': n.name });
       n.circle = el('circle', { r: self.radius(n) });
       n.label = el('text', { 'class': 'node-label', dy: -self.radius(n) - 6 });
-      n.label.textContent = '#' + n.name + (n.count ? ' · ' + n.count : '');
+      n.label.textContent = '#' + n.name;
       g.appendChild(n.circle);
       g.appendChild(n.label);
       g.addEventListener('pointerdown', function (e) { self.startDrag(e, n); });

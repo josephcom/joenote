@@ -2,3 +2,10 @@
 Thumbs.db
 desktop.ini
 *.swp
+
+# Created when JoeNote is pointed at <repo>/notes instead of the repo root.
+# Your notes belong in notes/*.md - keep this junk out of the public repo.
+notes/notes/
+notes/tags.xml
+notes/assets/
+
