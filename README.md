@@ -19,7 +19,11 @@ only**. Open `index.html` and it runs.
 * **A hashtag can have many parents and many siblings.** That graph lives in
   `tags.xml` and is edited from the map.
 * **The home page is just the map and a search box.** Searching supports
-  wildcards (`*`, `?`), `AND` / `OR` / `NOT`, and parentheses.
+  wildcards (`*`, `?`), `AND` / `OR` / `NOT`, parentheses, and dates — either
+  typed (`updated:2026-08-01..2026-08-31`) or picked from the **Dates** panel.
+* **Every note records when it was made and last changed.** The two dates live
+  in the note's own front matter, so they travel with the `.md` file between
+  the three destinations, through a download and back through an import.
 * **Click a bubble and two panes open**: on the left, a scrollable list of every
   note carrying that hashtag (with a toggle for hashtags below it in the map);
   on the right, its parents, children and siblings, ready to edit.
@@ -84,10 +88,27 @@ near:work                    #work, its siblings, and their descendants
 title:foo  text:foo  file:foo
 is:untagged  is:tagged  is:empty
 has:image  has:tag  has:link  has:code
+
+updated:2026-08-02             modified that day
+created:2026-08   created:2026 that month, that year
+updated:2026-08-01..2026-08-31 a range; either end may be left off
+created:>=2026-08-01           >  >=  <  <=
+before:X  after:X              either date, outside X
+since:X   until:X              either date, from / up to X
+updated:today | yesterday | thisweek | thismonth | thisyear | 7d | 3w | 6m
+date:X                         matches whichever of the two dates fits
+is:undated  has:date
 ```
 
 `tag:work` matching everything *below* `#work` is what makes the parent links
 worth declaring: tag notes precisely, search broadly.
+
+Dates are read in local time, and a value is a *span*, not an instant — which
+is why `created:2026-08` means the whole of August and `before:2026-08` means
+everything finished before it started. The **Dates** button beside the search
+box is a front end for exactly these terms: it writes one into the box and
+reads it back out, so the query string stays the only thing that decides what
+matches.
 
 ## Layout
 

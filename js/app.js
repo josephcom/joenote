@@ -44,9 +44,68 @@
   }
 
   function pad(n) { return n < 10 ? '0' + n : '' + n; }
-  function today() {
-    var d = new Date();
-    return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+  function ymd(d) { return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
+  function today() { return ymd(new Date()); }
+
+  /* ================================ dates ==============================
+   * A note carries its own dates in its front matter, so they survive a
+   * move between the three backends, a download and a re-import:
+   *
+   *     ---
+   *     created: 2026-08-02T04:23:05Z
+   *     updated: 2026-08-02T05:01:44Z
+   *     ---
+   *
+   * Stored in UTC, shown in local time. Notes written before this existed
+   * have no stamp; they fall back to whatever the backend knows (the file's
+   * modified time on a folder, the recorded time in this browser) and are
+   * marked approximate until their next save.
+   * ------------------------------------------------------------------ */
+
+  var CREATED_KEYS = ['created', 'created_at', 'createdat', 'date'];
+  var UPDATED_KEYS = ['updated', 'updated_at', 'updatedat', 'modified', 'last_modified', 'lastmod'];
+
+  function iso(t) { return new Date(t).toISOString().replace(/\.\d{3}Z$/, 'Z'); }
+
+  function parseStamp(v) {
+    var s = String(v == null ? '' : v).trim();
+    if (!s) return 0;
+    /* a bare date means that day here, not that day in UTC */
+    var m = /^(\d{4})-(\d{1,2})-(\d{1,2})$/.exec(s);
+    if (m) return new Date(+m[1], +m[2] - 1, +m[3]).getTime();
+    var t = Date.parse(s);
+    return isNaN(t) ? 0 : t;
+  }
+
+  function metaTime(meta, keys) {
+    for (var i = 0; i < keys.length; i++) {
+      var t = parseStamp(meta[keys[i]]);
+      if (t) return t;
+    }
+    return 0;
+  }
+
+  var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+  function fmtDate(t) {
+    if (!t) return '—';
+    var d = new Date(t);
+    return d.getDate() + ' ' + MONTHS[d.getMonth()] + ' ' + d.getFullYear();
+  }
+  function fmtDateTime(t) {
+    if (!t) return '—';
+    var d = new Date(t);
+    return fmtDate(t) + ', ' + pad(d.getHours()) + ':' + pad(d.getMinutes());
+  }
+  function relTime(t) {
+    if (!t) return '';
+    var s = Math.round((Date.now() - t) / 1000);
+    if (s < 0) return '';
+    if (s < 60) return 'just now';
+    if (s < 3600) { var m = Math.round(s / 60); return m + ' minute' + (m === 1 ? '' : 's') + ' ago'; }
+    if (s < 86400) { var h = Math.round(s / 3600); return h + ' hour' + (h === 1 ? '' : 's') + ' ago'; }
+    if (s < 86400 * 30) { var d = Math.round(s / 86400); return d + ' day' + (d === 1 ? '' : 's') + ' ago'; }
+    return '';
   }
 
   function uniqueName(base) {
@@ -61,10 +120,20 @@
     var fm = MD.stripFrontMatter(raw);
     var title = (MD.firstHeading(raw) || fm.meta.title || name.replace(/\.md$/i, '')).trim();
     var tags = MD.extractTags(raw);
+
+    var created = metaTime(fm.meta, CREATED_KEYS);
+    var updated = metaTime(fm.meta, UPDATED_KEYS);
+    var stamped = !!(created || updated);
+    if (!updated) updated = mtime || created || 0;
+    if (!created) created = mtime || updated || 0;
+
     return {
       name: name,
       raw: raw,
       mtime: mtime || 0,
+      created: created,
+      updated: updated,
+      stamped: stamped,      /* false = guessed from the file, not recorded */
       title: title || name,
       tags: tags,
       expanded: Object.create(null),
@@ -87,7 +156,7 @@
       var files = res[0], xml = res[1];
       Tags.parse(xml || Tags.DEFAULT_XML);
       App.notes = files.map(function (f) { return indexNote(f.name, f.text, f.mtime); })
-        .sort(function (a, b) { return b.mtime - a.mtime; });
+        .sort(function (a, b) { return (b.updated || 0) - (a.updated || 0); });
       reindex();
       updateStoragePill();
       renderMap();
@@ -229,6 +298,7 @@
   function showHome() {
     flushSave();
     setView('view-home');
+    syncDateFilter();
     renderMap();
     setTimeout(function () { if (App.graph) App.graph.fit(); }, 30);
   }
@@ -281,12 +351,94 @@
     App.graph.setHighlight(Object.keys(hit));
   }
 
+  /* ============================ date filter ============================
+   * The pickers do not filter anything themselves. They write a term into
+   * the search box and read it back out, so the query string stays the one
+   * source of truth: the live count, the map highlight, the results view
+   * and the #/q/... URL all keep working without knowing they exist.
+   * ------------------------------------------------------------------ */
+
+  var DATE_FIELD_NAMES = Object.keys(Search.dateFields).join('|');
+  var RE_DATE_TERM = new RegExp('(^|\\s)-?(?:' + DATE_FIELD_NAMES + ')\\s*:\\s*\\S+', 'gi');
+  var RE_ONE_DATE_TERM = new RegExp('(?:^|\\s)(' + DATE_FIELD_NAMES + ')\\s*:\\s*(\\S+)', 'i');
+  var RE_PLAIN_RANGE = /^(\d{4}-\d{2}-\d{2})?(?:\.\.(\d{4}-\d{2}-\d{2})?)?$/;
+
+  function stripDateTerms(q) {
+    return String(q || '').replace(RE_DATE_TERM, '$1').replace(/\s{2,}/g, ' ').trim();
+  }
+
+  /* pickers -> query box */
+  function applyDateFilter() {
+    var field = $('df-field').value;
+    var from = $('df-from').value, to = $('df-to').value;
+    if (from && to && from > to) { var swap = from; from = to; to = swap; }
+    var term = '';
+    if (from && from === to) term = field + ':' + from;
+    else if (from || to) term = field + ':' + (from || '') + '..' + (to || '');
+
+    var base = stripDateTerms($('q').value);
+    $('q').value = base && term ? base + ' ' + term : (base || term);
+    $('q').dispatchEvent(new Event('input', { bubbles: true }));
+  }
+
+  function setPreset(range) {
+    var field = $('df-field').value;
+    var base = stripDateTerms($('q').value);
+    $('q').value = base ? base + ' ' + field + ':' + range : field + ':' + range;
+    $('q').dispatchEvent(new Event('input', { bubbles: true }));
+  }
+
+  function clearDateFilter() {
+    $('df-from').value = '';
+    $('df-to').value = '';
+    $('q').value = stripDateTerms($('q').value);
+    $('q').dispatchEvent(new Event('input', { bubbles: true }));
+  }
+
+  /* query box -> pickers. Only a term the two inputs can hold exactly is
+     read back into them; anything richer (7d, >=2026-08, before:) stays in
+     the box untouched and merely lights the button, so that opening the
+     panel can never quietly reinterpret what was typed. */
+  function syncDateFilter() {
+    var m = RE_ONE_DATE_TERM.exec($('q').value);
+    var btn = $('btn-dates');
+    var from = '', to = '';
+
+    if (m) {
+      var field = m[1].toLowerCase(), v = m[2];
+      $('df-field').value = aliasField(field);
+      if (RE_PLAIN_RANGE.test(v)) {
+        var half = v.split('..');
+        if (field === 'since') from = v;
+        else if (field === 'until') to = v;
+        else if (field === 'before' || field === 'after') { /* not a plain span */ }
+        else if (v.indexOf('..') === -1) { from = to = v; }
+        else { from = half[0] || ''; to = half[1] || ''; }
+      }
+    }
+    $('df-from').value = from;
+    $('df-to').value = to;
+
+    btn.setAttribute('aria-pressed', String(!!m));
+    btn.textContent = m ? 'Dates ✓' : 'Dates';
+    btn.title = m ? 'Filtering on ' + m[0].trim() + ' — click to change'
+      : 'Limit the search to a date or a date range';
+  }
+
+  /* the <select> only offers the three the pickers can write */
+  function aliasField(f) {
+    if (f === 'created') return 'created';
+    if (f === 'updated' || f === 'modified') return 'updated';
+    return 'date';
+  }
+
   /* ============================== results ============================== */
 
   function showResults(query) {
     flushSave();
     setView('view-results');
     $('q').value = query;
+    syncDateFilter();
     $('results-query').textContent = query;
 
     var compiled = Search.compile(query);
@@ -330,6 +482,12 @@
         c.textContent = '#' + t;
         meta.appendChild(c);
       });
+      var when = document.createElement('span');
+      when.className = 'when' + (n.stamped ? '' : ' approx');
+      when.textContent = fmtDate(n.updated);
+      when.title = datesTooltip(n);
+      meta.appendChild(when);
+
       var f = document.createElement('span');
       f.className = 'file';
       f.textContent = n.name;
@@ -400,6 +558,7 @@
     $('editor-hint').hidden = mode !== 'edit';
 
     renderTagRow(note);
+    renderDates(note);
 
     if (mode === 'edit') {
       var ta = $('note-edit');
@@ -411,6 +570,29 @@
 
     var want = '#/note/' + encodeURIComponent(note.name) + (mode === 'edit' ? '/edit' : '');
     if (location.hash !== want) history.replaceState(null, '', want);
+  }
+
+  function datesTooltip(note) {
+    return 'Created ' + fmtDateTime(note.created) +
+      '\nLast modified ' + fmtDateTime(note.updated) +
+      (note.stamped ? '' : '\n\nApproximate — this note has no recorded dates yet. ' +
+        'Saving it once writes them into the file.');
+  }
+
+  function renderDates(note) {
+    var el = $('note-dates');
+    el.hidden = !note || !(note.created || note.updated);
+    if (el.hidden) return;
+    el.textContent = '';
+    el.title = datesTooltip(note);
+
+    var line = document.createElement('span');
+    if (!note.stamped) line.className = 'approx';
+    var rel = relTime(note.updated);
+    line.textContent = 'Created ' + fmtDateTime(note.created) +
+      '  ·  Last modified ' + fmtDateTime(note.updated) + (rel ? ' (' + rel + ')' : '') +
+      (note.stamped ? '' : '  ·  approximate until the next save');
+    el.appendChild(line);
   }
 
   function renderTagRow(note) {
@@ -480,16 +662,26 @@
   function saveCurrent() {
     var note = App.current;
     if (!note) return Promise.resolve();
-    var raw = $('note-edit').hidden ? note.raw : $('note-edit').value;
+    var typed = $('note-edit').hidden ? note.raw : $('note-edit').value;
     var oldTitle = note.title;
     var oldTags = note.tags.slice();
+    var now = Date.now();
 
-    var updated = indexNote(note.name, raw, Date.now());
+    /* Stamp the file itself. The textarea is deliberately left alone: it is
+       refreshed on the next mode switch, and rewriting it here would jump
+       the caret mid-sentence, since autosave runs while you type. */
+    var typedCreated = metaTime(MD.stripFrontMatter(typed).meta, CREATED_KEYS);
+    var raw = MD.setFrontMatter(typed, {
+      created: iso(typedCreated || note.created || now),
+      updated: iso(now)
+    });
+
+    var fresh = indexNote(note.name, raw, now);
     var wantName = note.name;
 
     /* the file name follows the title (announced by a toast, never silent) */
-    if (updated.title !== oldTitle) {
-      var candidate = slug(updated.title) + '.md';
+    if (fresh.title !== oldTitle) {
+      var candidate = slug(fresh.title) + '.md';
       if (candidate !== note.name && !App.byName[candidate]) wantName = candidate;
     }
 
@@ -511,14 +703,19 @@
       })
       .then(function () {
         note.raw = raw;
-        note.title = updated.title;
-        note.tags = updated.tags;
-        note.plain = updated.plain;
-        note.hasImage = updated.hasImage;
-        note.mtime = Date.now();
+        note.title = fresh.title;
+        note.tags = fresh.tags;
+        note.plain = fresh.plain;
+        note.hasImage = fresh.hasImage;
+        note.meta = fresh.meta;
+        note.mtime = now;
+        note.created = fresh.created;
+        note.updated = fresh.updated;
+        note.stamped = true;
         var tagsChanged = oldTags.join('|') !== note.tags.join('|');
         reindex();
         renderTagRow(note);
+        renderDates(note);
         if (tagsChanged) { saveTags(); if (!$('view-home').hidden) renderMap(); }
         $('note-status').textContent = Store.mode === 'github' ? 'committed' : 'saved';
         $('note-status').classList.add('saved');
@@ -538,9 +735,11 @@
   function newNote() {
     var base = 'note-' + today();
     var name = uniqueName(base);
-    var raw = '# Untitled\n\n#inbox\n\n';
+    var now = Date.now();
+    var raw = MD.setFrontMatter('# Untitled\n\n#inbox\n\n', { created: iso(now), updated: iso(now) });
+    var at = raw.indexOf('# Untitled') + 2;
     Store.writeNote(name, raw).then(function () {
-      var note = indexNote(name, raw, Date.now());
+      var note = indexNote(name, raw, now);
       App.notes.unshift(note);
       reindex();
       saveTags();
@@ -548,7 +747,7 @@
       setTimeout(function () {
         var ta = $('note-edit');
         ta.focus();
-        ta.setSelectionRange(2, 10);   /* select "Untitled" */
+        ta.setSelectionRange(at, at + 8);   /* select "Untitled" */
       }, 40);
     }).catch(function (e) { toast(e.message || String(e), true); });
   }
@@ -693,7 +892,8 @@
 
       var s = document.createElement('div');
       s.className = 'np-sub';
-      s.textContent = row.note.name;
+      s.textContent = fmtDate(row.note.updated) + ' · ' + row.note.name;
+      s.title = datesTooltip(row.note);
       if (row.via.length) {
         var via = document.createElement('span');
         via.className = 'np-via';
@@ -780,13 +980,19 @@
 
     var re = new RegExp('(^|[\\s(\\[>,;])#' + escapeRe(from) + '(?![\\p{L}\\p{N}_\\-/])', 'gu');
     var jobs = [];
+    var now = Date.now();
     App.notes.forEach(function (n) {
       if (n.tags.indexOf(from) === -1) return;
-      var next = n.raw.replace(re, '$1#' + to);
-      if (next === n.raw) return;
+      var swapped = n.raw.replace(re, '$1#' + to);
+      if (swapped === n.raw) return;
+      /* the file really did change, so its modified date really did move */
+      var next = MD.setFrontMatter(swapped, {
+        created: iso(n.created || now), updated: iso(now)
+      });
       n.raw = next;
-      var upd = indexNote(n.name, next, Date.now());
+      var upd = indexNote(n.name, next, now);
       n.tags = upd.tags; n.plain = upd.plain; n.title = upd.title;
+      n.created = upd.created; n.updated = upd.updated; n.stamped = true;
       jobs.push(Store.writeNote(n.name, next));
     });
     Tags.rename(from, to);
@@ -794,7 +1000,7 @@
       panelTag = to;
       commitTags();
       if (App.current && App.mode === 'view') renderMarkdown(App.current.raw);
-      if (App.current) renderTagRow(App.current);
+      if (App.current) { renderTagRow(App.current); renderDates(App.current); }
       toast('#' + from + ' → #' + to + ' in ' + jobs.length + ' note' + (jobs.length === 1 ? '' : 's'));
     }).catch(function (e) { toast(e.message || String(e), true); });
   }
@@ -809,7 +1015,14 @@
         var name = f.name.replace(/\.(markdown|txt)$/i, '.md');
         var i = 2;
         while (App.byName[name]) { name = f.name.replace(/\.md$/i, '') + '-' + (i++) + '.md'; }
-        return Store.writeNote(name, text);
+        /* keep whatever dates the file already carries; otherwise the best
+           we know about it is when the file itself was last written */
+        var meta = MD.stripFrontMatter(text).meta;
+        var when = f.lastModified || Date.now();
+        return Store.writeNote(name, MD.setFrontMatter(text, {
+          created: iso(metaTime(meta, CREATED_KEYS) || when),
+          updated: iso(metaTime(meta, UPDATED_KEYS) || when)
+        }));
       });
     })).then(loadAll).then(function () {
       toast('Imported ' + files.length + ' note' + (files.length === 1 ? '' : 's'));
@@ -874,6 +1087,7 @@
     $('q').addEventListener('input', function () {
       var q = this.value.trim();
       var msg = $('search-msg');
+      syncDateFilter();
       if (!q) { msg.textContent = ''; msg.classList.remove('error'); applyLiveHighlight(); return; }
       var compiled = Search.compile(q);
       if (!compiled.ok) {
@@ -889,6 +1103,20 @@
     $('btn-help').addEventListener('click', function () {
       var h = $('help');
       h.hidden = !h.hidden;
+    });
+
+    /* date filter */
+    $('btn-dates').addEventListener('click', function () {
+      var d = $('date-filter');
+      d.hidden = !d.hidden;
+      if (!d.hidden) $('df-from').focus();
+    });
+    $('df-field').addEventListener('change', applyDateFilter);
+    $('df-from').addEventListener('change', applyDateFilter);
+    $('df-to').addEventListener('change', applyDateFilter);
+    $('df-clear').addEventListener('click', clearDateFilter);
+    Array.prototype.forEach.call($('date-filter').querySelectorAll('[data-range]'), function (b) {
+      b.addEventListener('click', function () { setPreset(b.getAttribute('data-range')); });
     });
 
     /* map tools */

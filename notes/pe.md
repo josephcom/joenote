@@ -1,3 +1,8 @@
+---
+created: 2026-08-01T13:27:06Z
+updated: 2026-08-01T13:56:40Z
+---
+
 # PE
 
 - E is objective but **P is subjective**.

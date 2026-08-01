@@ -8,6 +8,7 @@
  *   MD.extractTags(src)   -> ["tag", ...] (lowercased, de-duped, in order)
  *   MD.firstHeading(src)  -> string | null
  *   MD.stripFrontMatter(src) -> { meta: {}, body: "" }
+ *   MD.setFrontMatter(src, {k: v}) -> src with those keys written in
  */
 (function (global) {
   'use strict';
@@ -109,6 +110,34 @@
       });
     }
     return { meta: meta, body: body };
+  }
+
+  /* Upsert keys into the front matter and hand back the whole file. Every
+     other key, the key order, and the body survive untouched; a note with no
+     front matter gets one. This is how JoeNote records dates: in the .md
+     itself, so they travel with the file into any of the three backends. */
+  function setFrontMatter(src, patch) {
+    var text = String(src == null ? '' : src);
+    var keys = Object.keys(patch || {}).filter(function (k) {
+      return patch[k] !== null && patch[k] !== undefined && patch[k] !== '';
+    });
+    if (!keys.length) return text;
+
+    var m = /^---[ \t]*\r?\n([\s\S]*?)\r?\n---[ \t]*(?:\r?\n|$)/.exec(text);
+    if (!m) {
+      return '---\n' + keys.map(function (k) { return k + ': ' + patch[k]; }).join('\n') +
+        '\n---\n\n' + text.replace(/^\n+/, '');
+    }
+
+    var seen = Object.create(null);
+    var lines = m[1].split(/\r?\n/).map(function (line) {
+      var kv = /^([A-Za-z0-9_\-]+)[ \t]*:/.exec(line);
+      if (!kv || keys.indexOf(kv[1]) === -1) return line;
+      seen[kv[1]] = true;
+      return kv[1] + ': ' + patch[kv[1]];
+    });
+    keys.forEach(function (k) { if (!seen[k]) lines.push(k + ': ' + patch[k]); });
+    return '---\n' + lines.join('\n') + '\n---\n' + text.slice(m[0].length);
   }
 
   /* ================================================================
@@ -1118,6 +1147,7 @@
     extractTags: extractTags,
     firstHeading: firstHeading,
     stripFrontMatter: stripFrontMatter,
+    setFrontMatter: setFrontMatter,
     toPlainText: toPlainText,
     escapeHtml: escHtml,
     slugify: slugify

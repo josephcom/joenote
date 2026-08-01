@@ -15,6 +15,13 @@
  *   near:work          #work, its siblings, and everything under them
  *   title:foo  text:foo  file:foo
  *   is:untagged  has:image  has:tag  has:link  has:code
+ *
+ * Dates (local time, day granularity unless a time is given):
+ *   updated:2026-08-02      created:2026-08      date:2026
+ *   updated:2026-08-01..2026-08-31   open either end: updated:2026-08-01..
+ *   created:>=2026-08-01    before:2026-08  after:today  since:7d  until:2026
+ *   updated:today | yesterday | thisweek | thismonth | thisyear | 7d | 3w | 6m
+ *   date: matches either date; is:undated finds notes with neither.
  */
 (function (global) {
   'use strict';
@@ -22,7 +29,23 @@
   /* ---------------- tokenizer ---------------- */
 
   var T = { LP: 'LP', RP: 'RP', AND: 'AND', OR: 'OR', NOT: 'NOT', TERM: 'TERM', END: 'END' };
-  var FIELDS = ['tag', 'title', 'text', 'body', 'file', 'name', 'is', 'has', 'near', 'in'];
+
+  /* Which date a field asks about, and the comparison it implies.
+     'c' created, 'u' last modified, 'e' either of the two. */
+  var DATE_FIELDS = {
+    created: { which: 'c' },
+    updated: { which: 'u' },
+    modified: { which: 'u' },
+    date: { which: 'e' },
+    on: { which: 'e' },
+    before: { which: 'e', op: '<' },
+    after: { which: 'e', op: '>' },
+    since: { which: 'e', op: '>=' },
+    until: { which: 'e', op: '<=' }
+  };
+
+  var FIELDS = ['tag', 'title', 'text', 'body', 'file', 'name', 'is', 'has', 'near', 'in']
+    .concat(Object.keys(DATE_FIELDS));
 
   function tokenize(q) {
     var toks = [], i = 0, n = q.length;
@@ -126,6 +149,106 @@
     return ast;
   }
 
+  /* ---------------- dates ----------------
+   * Everything here works in local time and returns a half-open span
+   * [from, to). A bare "2026-08" is a whole month, not an instant, which is
+   * what makes "created:2026-08" and "before:2026-08" both read naturally.
+   */
+
+  var DAY = 86400000;
+
+  function dayStart(y, m, d) { return new Date(y, m, d, 0, 0, 0, 0).getTime(); }
+  function today0() {
+    var n = new Date();
+    return dayStart(n.getFullYear(), n.getMonth(), n.getDate());
+  }
+
+  /* "2026" | "2026-08" | "2026-08-02" | "2026-08-02T14:30" -> span */
+  function parsePoint(s) {
+    var m = /^(\d{4})(?:-(\d{1,2})(?:-(\d{1,2})(?:[t ](\d{1,2}):(\d{2})(?::(\d{2}))?)?)?)?$/.exec(s);
+    if (!m) return null;
+    var y = +m[1];
+    if (m[2] === undefined) return { from: dayStart(y, 0, 1), to: dayStart(y + 1, 0, 1) };
+    var mo = +m[2] - 1;
+    if (m[3] === undefined) return { from: dayStart(y, mo, 1), to: dayStart(y, mo + 1, 1) };
+    var d = +m[3];
+    if (m[4] === undefined) return { from: dayStart(y, mo, d), to: dayStart(y, mo, d + 1) };
+    var at = new Date(y, mo, d, +m[4], +m[5], m[6] ? +m[6] : 0, 0).getTime();
+    return { from: at, to: at + (m[6] ? 1000 : 60000) };
+  }
+
+  /* "today" | "yesterday" | "thisweek" | "7d" | "3w" | "6m" -> span */
+  function parseKeyword(s) {
+    var t0 = today0(), now = new Date(), m;
+    if (s === 'today') return { from: t0, to: t0 + DAY };
+    if (s === 'yesterday') return { from: t0 - DAY, to: t0 };
+    if (s === 'tomorrow') return { from: t0 + DAY, to: t0 + 2 * DAY };
+    if (s === 'week' || s === 'thisweek') {
+      var back = (now.getDay() + 6) % 7;                 /* weeks start Monday */
+      return { from: t0 - back * DAY, to: t0 - back * DAY + 7 * DAY };
+    }
+    if (s === 'month' || s === 'thismonth') {
+      return {
+        from: dayStart(now.getFullYear(), now.getMonth(), 1),
+        to: dayStart(now.getFullYear(), now.getMonth() + 1, 1)
+      };
+    }
+    if (s === 'year' || s === 'thisyear') {
+      return { from: dayStart(now.getFullYear(), 0, 1), to: dayStart(now.getFullYear() + 1, 0, 1) };
+    }
+    if ((m = /^(?:last)?(\d{1,4})d(?:ays?)?$/.exec(s))) {
+      return { from: t0 - (+m[1] - 1) * DAY, to: t0 + DAY };
+    }
+    if ((m = /^(?:last)?(\d{1,3})w(?:eeks?)?$/.exec(s))) {
+      return { from: t0 - (+m[1] * 7 - 1) * DAY, to: t0 + DAY };
+    }
+    if ((m = /^(?:last)?(\d{1,3})m(?:onths?)?$/.exec(s))) {
+      var back2 = new Date(t0);
+      back2.setMonth(back2.getMonth() - (+m[1]));
+      return { from: back2.getTime(), to: t0 + DAY };
+    }
+    if ((m = /^(?:last)?(\d{1,3})y(?:ears?)?$/.exec(s))) {
+      var back3 = new Date(t0);
+      back3.setFullYear(back3.getFullYear() - (+m[1]));
+      return { from: back3.getTime(), to: t0 + DAY };
+    }
+    return null;
+  }
+
+  function span(s) {
+    return parsePoint(s.replace(/\//g, '-')) || parseKeyword(s.replace(/[\s_\-]/g, ''));
+  }
+
+  /* The whole value grammar: a point, a a..b range, or a comparison. */
+  function parseDateRange(raw) {
+    var s = String(raw == null ? '' : raw).trim().toLowerCase();
+    if (!s) return null;
+
+    var i = s.indexOf('..');
+    if (i !== -1) {
+      var a = s.slice(0, i).trim(), b = s.slice(i + 2).trim();
+      if (!a && !b) return null;
+      var lo = a ? span(a) : null, hi = b ? span(b) : null;
+      if ((a && !lo) || (b && !hi)) return null;
+      return { from: lo ? lo.from : -Infinity, to: hi ? hi.to : Infinity };
+    }
+
+    var m = /^(>=|<=|=>|=<|>|<|=)\s*(.+)$/.exec(s);
+    if (m) {
+      var p = span(m[2].trim());
+      if (!p) return null;
+      var op = m[1] === '=>' ? '>=' : m[1] === '=<' ? '<=' : m[1];
+      if (op === '>') return { from: p.to, to: Infinity };
+      if (op === '>=') return { from: p.from, to: Infinity };
+      if (op === '<') return { from: -Infinity, to: p.from };
+      if (op === '<=') return { from: -Infinity, to: p.to };
+      return p;
+    }
+    return span(s);
+  }
+
+  function inSpan(t, r) { return !!t && t >= r.from && t < r.to; }
+
   /* ---------------- matching ---------------- */
 
   var RE_SPECIAL = '.+^${}()|[]\\';
@@ -156,7 +279,8 @@
     return quoted ? literalRe(value, anchored) : globToRe(value, anchored);
   }
 
-  /* note: { name, title, tags:[], expanded:{}, plain, raw, hasImage } */
+  /* note: { name, title, tags:[], expanded:{}, plain, raw, hasImage,
+             created, updated } - the two dates are ms, 0 when unknown */
   function evalNode(node, note) {
     switch (node.op) {
       case 'and': return evalNode(node.a, note) && evalNode(node.b, note);
@@ -180,6 +304,8 @@
       if (v === 'untagged') return note.tags.length === 0;
       if (v === 'tagged') return note.tags.length > 0;
       if (v === 'empty') return !note.plain.trim();
+      if (v === 'undated') return !(note.created || note.updated);
+      if (v === 'dated') return !!(note.created || note.updated);
       return false;
     }
     if (field === 'has') {
@@ -188,7 +314,19 @@
       if (h === 'tag') return note.tags.length > 0;
       if (h === 'link') return /\]\(|https?:\/\//.test(note.raw);
       if (h === 'code') return /```/.test(note.raw) || /^ {4,}\S/m.test(note.raw);
+      if (h === 'date') return !!(note.created || note.updated);
       return false;
+    }
+    if (DATE_FIELDS[field]) {
+      var spec = DATE_FIELDS[field], val = value;
+      /* before:/after:/since:/until: are sugar - they supply the comparison
+         the value does not carry itself */
+      if (spec.op && !/^(>=|<=|=>|=<|>|<|=)/.test(val) && val.indexOf('..') === -1) val = spec.op + val;
+      var range = parseDateRange(val);
+      if (!range) return false;
+      if (spec.which === 'c') return inSpan(note.created, range);
+      if (spec.which === 'u') return inSpan(note.updated, range);
+      return inSpan(note.created, range) || inSpan(note.updated, range);
     }
     if (field === 'title') return makeMatcher(value, node.quoted, false).test(note.title);
     if (field === 'file' || field === 'name') return makeMatcher(value, node.quoted, false).test(note.name);
@@ -226,7 +364,8 @@
     out = out || [];
     if (!node) return out;
     if (node.op === 'term') {
-      if (node.field !== 'is' && node.field !== 'has' && node.value) out.push(node.value.replace(/^=/, ''));
+      var skip = node.field === 'is' || node.field === 'has' || !!DATE_FIELDS[node.field];
+      if (!skip && node.value) out.push(node.value.replace(/^=/, ''));
     } else {
       if (node.a) highlights(node.a, out);
       if (node.b) highlights(node.b, out);
@@ -251,7 +390,10 @@
         }
       };
     },
-    globToRe: globToRe
+    globToRe: globToRe,
+    /* shared with the home-page date pickers, which build these terms */
+    dateFields: DATE_FIELDS,
+    parseDateRange: parseDateRange
   };
 
   global.Search = Search;
