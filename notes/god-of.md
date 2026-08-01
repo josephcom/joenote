@@ -1,4 +1,6 @@
-# God of 
+# God
 
-#inbox
+## 
+
+#mind
 
