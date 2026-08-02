@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-02T13:20:32Z
+updated: 2026-08-02T13:21:52Z
 ---
 
 # God
@@ -14,7 +14,7 @@ Is intelligence nothing but *feedback loops*? If so, we're trapped and doomed! W
 
 Even *neural networks* work based on feedback loops.
 
-What are **concepts and ideas"? 
+What are **concepts and ideas**? Are they just **multidimensional patterns**? If Einstein was blind and deaf since 2, then he would have remained as intelligent as a cat! 
 
 #mind
 
