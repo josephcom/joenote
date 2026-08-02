@@ -1,6 +1,6 @@
 ---
 created: 2026-08-02T21:05:09Z
-updated: 2026-08-02T21:06:44Z
+updated: 2026-08-02T21:08:07Z
 ---
 # List of Questions 
 
@@ -104,6 +104,106 @@ updated: 2026-08-02T21:06:44Z
 98. What would you do differently if you knew you'd live to 200?
 99. Why do we find some numbers "nicer" than others?
 100. Which of these ninety-nine questions did you skip, and why?
+101. Why is there no green star?
+102. How many keys are lost in the world each day?
+103. Should you be able to sell your own organs?
+104. Why does the same joke stop being funny the second time?
+105. What's the shape of a raindrop, really?
+106. Why did no ancient civilisation invent the zero except a couple?
+107. How would you divide an inheritance among three siblings who all want the house?
+108. Why is glass transparent when sand isn't?
+109. What's a belief you hold only because everyone around you holds it?
+110. Why do we walk on two legs when four is more stable?
+111. How much of the sea has anyone actually looked at?
+112. Is boredom useful?
+113. Why does a coin land on its edge so rarely, and how rarely?
+114. Why do we point telescopes at the past and call it the present?
+115. What's the minimum number of colours needed to colour any map?
+116. Why do dying languages die faster than they used to?
+117. Should a doctor lie to a patient who wants to be lied to?
+118. Why does bread go stale but crackers go soft?
+119. What's the largest thing you could throw?
+120. Why do we have eyebrows?
+121. How do you know you're not dreaming right now?
+122. Why does every list of "top ten films" contain the same films?
+123. Why is it so much easier to spend an hour than to save one?
+124. How many grains of sand would fill your bedroom?
+125. Why did stirrups change history more than most weapons?
+126. What's the difference between a habit and an addiction?
+127. Why do birds sing at dawn specifically?
+128. If a machine wrote a symphony nobody could distinguish from Bach's, what's missing?
+129. Why can't we remember faces we've never seen but recognise them instantly when we do?
+130. Why are there twenty-six letters and not eighteen?
+131. What's the best way to choose between two jobs when you can't test either?
+132. Why do bubbles pop?
+133. Is it possible to be too honest?
+134. Why do the biggest trees not grow taller than about 115 metres?
+135. What would you keep if you had to reduce your possessions to twenty items?
+136. Why do we round numbers to five and ten?
+137. How would you detect a lie without any technology?
+138. Why does staring at a word make it look wrong?
+139. Why is it easier to learn a language as a child than as an adult?
+140. Should juries be replaced by experts?
+141. Why do cats purr?
+142. How many of your beliefs came from a single source you never checked?
+143. Why do storms have eyes?
+144. What's a problem in your life you've stopped noticing?
+145. Why do we find the ocean calming and the desert lonely?
+146. Why does a stopped clock look wrong even before you check the time?
+147. How would you rank three restaurants without visiting any?
+148. Why did the Romans have concrete better than ours and then lose it?
+149. Why do we blush?
+150. What's the difference between complicated and complex?
+151. Why do all rivers end up in the sea but not all roads end up somewhere?
+152. Should you keep a promise made to someone who has since died?
+153. Why does music in a minor key sound sad to almost everyone?
+154. How many decisions have you made today?
+155. Why do we build cities near water and then complain about floods?
+156. What's the most expensive mistake you could make in the next hour?
+157. Why is it hard to draw a bicycle from memory?
+158. Why don't we itch where we can't reach?
+159. If everyone told the truth for one day, what would break?
+160. Why does dust always come back?
+161. How would you find the middle of a lake without a boat?
+162. Why do most inventions have several simultaneous inventors?
+163. What's the smallest thing you've ever noticed change over a year?
+164. Why do we sneeze in sunlight?
+165. Is there a difference between forgiving and forgetting?
+166. Why is a doughnut's hole part of the doughnut?
+167. Why do metals feel colder than wood at the same temperature?
+168. How would you design a school if you'd never seen one?
+169. Why did handwriting used to be more legible?
+170. What is the oldest thing you own?
+171. Why do arguments about words go on longer than arguments about facts?
+172. Why is the shortest route between two cities never a straight line on a map?
+173. Should children be allowed to vote?
+174. Why do we dream about people we haven't thought of in years?
+175. Why does one bad review outweigh nine good ones?
+176. Why do soap bubbles show colours?
+177. What would you need to know to predict tomorrow's weather yourself?
+178. Why did the printing press take 400 years to reach mass literacy?
+179. Why is a whisper harder to understand than a shout at the same volume?
+180. Why do people confess to crimes they didn't commit?
+181. How would you split a bill fairly when one person ordered much more?
+182. Why are there no purple flames in an ordinary fire?
+183. What's a thing you're good at that you can't explain how you do?
+184. Why do deserts get cold at night?
+185. Is a copy of you, atom for atom, you?
+186. Why do we knock on doors instead of shouting?
+187. Why does everything taste different when you have a cold?
+188. What would you sacrifice to know the truth about something you'd rather not know?
+189. Why do old photographs feel sadder than old paintings?
+190. Why is the first pancake always worse?
+191. How many people have to believe something before it becomes a fact socially?
+192. Why does spinning make you dizzy but walking doesn't?
+193. What would you do with a day nobody could observe?
+194. Why do some ideas feel obvious only after someone says them?
+195. Why is there sand in the desert and also on beaches, and are they the same?
+196. How would you know if your memory of an event was invented?
+197. Why do we trust things that are written more than things that are said?
+198. Why does a candle flame point up in gravity and become a sphere without it?
+199. What's the question you keep circling back to in your own life?
+200. Which three of these hundred did your mind refuse to engage with, and what do they have in common?
 
 #god_of_intelligence
 
