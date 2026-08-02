@@ -16,10 +16,12 @@
  *   title:foo  text:foo  file:foo
  *   is:untagged  has:image  has:tag  has:link  has:code
  *
- * Dates (local time, day granularity unless a time is given):
- *   updated:2026-08-02      created:2026-08      date:2026
- *   updated:2026-08-01..2026-08-31   open either end: updated:2026-08-01..
- *   created:>=2026-08-01    before:2026-08  after:today  since:7d  until:2026
+ * Dates (local time, day granularity unless a time is given). Written day
+ * first - dd-mm-yyyy or dd/mm/yyyy - and year-first ISO is read as well:
+ *   updated:02-08-2026      created:08-2026      date:2026
+ *   updated:02/08/2026      updated:2026-08-02
+ *   updated:01-08-2026..31-08-2026   open either end: updated:01-08-2026..
+ *   created:>01-08-2026  >=  <  <=   before:08-2026  after:today  since:7d
  *   updated:today | yesterday | thisweek | thismonth | thisyear | 7d | 3w | 6m
  *   date: matches either date; is:undated finds notes with neither.
  */
@@ -177,6 +179,29 @@
     return { from: at, to: at + (m[6] ? 1000 : 60000) };
   }
 
+  /* The day-first way dates are written here:
+     "02-08-2026" | "2-8-2026" | "08-2026" | "02-08-2026T14:30" -> span
+     The four-digit year sits at the end, and that alone tells this shape from
+     the year-first one above, so no date can ever be read for the other one.
+     A month past 12 is refused rather than quietly rolled into next year:
+     "08-13-2026" is a month-first date, and guessing at it would be worse
+     than saying nothing. */
+  function parsePointDayFirst(s) {
+    var m = /^(\d{1,2})(?:-(\d{1,2}))?-(\d{4})(?:[t ](\d{1,2}):(\d{2})(?::(\d{2}))?)?$/.exec(s);
+    if (!m) return null;
+    var y = +m[3];
+    if (m[2] === undefined) {                       /* mm-yyyy: a whole month */
+      var only = +m[1] - 1;
+      if (only > 11) return null;
+      return { from: dayStart(y, only, 1), to: dayStart(y, only + 1, 1) };
+    }
+    var d = +m[1], mo = +m[2] - 1;
+    if (mo > 11 || d < 1 || d > 31) return null;
+    if (m[4] === undefined) return { from: dayStart(y, mo, d), to: dayStart(y, mo, d + 1) };
+    var at = new Date(y, mo, d, +m[4], +m[5], m[6] ? +m[6] : 0, 0).getTime();
+    return { from: at, to: at + (m[6] ? 1000 : 60000) };
+  }
+
   /* "today" | "yesterday" | "thisweek" | "7d" | "3w" | "6m" -> span */
   function parseKeyword(s) {
     var t0 = today0(), now = new Date(), m;
@@ -215,8 +240,12 @@
     return null;
   }
 
+  /* Slashes and dashes say the same thing, so 02/08/2026 and 02-08-2026 are
+     one date written two ways. */
   function span(s) {
-    return parsePoint(s.replace(/\//g, '-')) || parseKeyword(s.replace(/[\s_\-]/g, ''));
+    var dated = s.replace(/\//g, '-');
+    return parsePoint(dated) || parsePointDayFirst(dated) ||
+      parseKeyword(s.replace(/[\s_\-\/]/g, ''));
   }
 
   /* The whole value grammar: a point, a a..b range, or a comparison. */

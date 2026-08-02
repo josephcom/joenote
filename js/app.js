@@ -361,7 +361,34 @@
   var DATE_FIELD_NAMES = Object.keys(Search.dateFields).join('|');
   var RE_DATE_TERM = new RegExp('(^|\\s)-?(?:' + DATE_FIELD_NAMES + ')\\s*:\\s*\\S+', 'gi');
   var RE_ONE_DATE_TERM = new RegExp('(?:^|\\s)(' + DATE_FIELD_NAMES + ')\\s*:\\s*(\\S+)', 'i');
-  var RE_PLAIN_RANGE = /^(\d{4}-\d{2}-\d{2})?(?:\.\.(\d{4}-\d{2}-\d{2})?)?$/;
+
+  /* The pickers can only speak ISO — that is the value an <input type="date">
+     holds, whatever it draws on screen. The query box speaks the way dates are
+     written here, day first, so the two are translated at the boundary. Both
+     spellings are read back, since a query typed by hand or arriving in a
+     #/q/... link may be in either. */
+  var RE_ONE_DAY = /^(?:\d{1,2}[-\/]\d{1,2}[-\/]\d{4}|\d{4}-\d{2}-\d{2})$/;
+
+  function auDate(isoDay) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(isoDay || '');
+    return m ? m[3] + '-' + m[2] + '-' + m[1] : (isoDay || '');
+  }
+  function isoDate(s) {
+    var m = /^(\d{1,2})[-\/](\d{1,2})[-\/](\d{4})$/.exec(s || '');
+    if (m) return +m[2] > 12 ? '' : m[3] + '-' + pad(+m[2]) + '-' + pad(+m[1]);
+    m = /^\d{4}-\d{2}-\d{2}$/.exec(s || '');
+    return m ? m[0] : '';
+  }
+
+  /* The two halves of a value the pickers could hold exactly, or null. */
+  function plainDays(v) {
+    var half = String(v).split('..');
+    if (half.length > 2) return null;
+    for (var i = 0; i < half.length; i++) {
+      if (half[i] && !RE_ONE_DAY.test(half[i])) return null;
+    }
+    return half;
+  }
 
   function stripDateTerms(q) {
     return String(q || '').replace(RE_DATE_TERM, '$1').replace(/\s{2,}/g, ' ').trim();
@@ -373,8 +400,8 @@
     var from = $('df-from').value, to = $('df-to').value;
     if (from && to && from > to) { var swap = from; from = to; to = swap; }
     var term = '';
-    if (from && from === to) term = field + ':' + from;
-    else if (from || to) term = field + ':' + (from || '') + '..' + (to || '');
+    if (from && from === to) term = field + ':' + auDate(from);
+    else if (from || to) term = field + ':' + auDate(from) + '..' + auDate(to);
 
     var base = stripDateTerms($('q').value);
     $('q').value = base && term ? base + ' ' + term : (base || term);
@@ -396,7 +423,7 @@
   }
 
   /* query box -> pickers. Only a term the two inputs can hold exactly is
-     read back into them; anything richer (7d, >=2026-08, before:) stays in
+     read back into them; anything richer (7d, >=08-2026, before:) stays in
      the box untouched and merely lights the button, so that opening the
      panel can never quietly reinterpret what was typed. */
   function syncDateFilter() {
@@ -407,13 +434,13 @@
     if (m) {
       var field = m[1].toLowerCase(), v = m[2];
       $('df-field').value = aliasField(field);
-      if (RE_PLAIN_RANGE.test(v)) {
-        var half = v.split('..');
-        if (field === 'since') from = v;
-        else if (field === 'until') to = v;
+      var half = plainDays(v);
+      if (half) {
+        if (field === 'since') from = isoDate(v);
+        else if (field === 'until') to = isoDate(v);
         else if (field === 'before' || field === 'after') { /* not a plain span */ }
-        else if (v.indexOf('..') === -1) { from = to = v; }
-        else { from = half[0] || ''; to = half[1] || ''; }
+        else if (half.length === 1) { from = to = isoDate(v); }
+        else { from = isoDate(half[0]); to = isoDate(half[1]); }
       }
     }
     $('df-from').value = from;

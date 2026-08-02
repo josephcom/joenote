@@ -20,7 +20,7 @@ only**. Open `index.html` and it runs.
   `tags.xml` and is edited from the map.
 * **The home page is just the map and a search box.** Searching supports
   wildcards (`*`, `?`), `AND` / `OR` / `NOT`, parentheses, and dates — either
-  typed (`updated:2026-08-01..2026-08-31`) or picked from the **Dates** panel.
+  typed (`updated:01-08-2026..31-08-2026`) or picked from the **Dates** panel.
 * **Every note records when it was made and last changed.** The two dates live
   in the note's own front matter, so they travel with the `.md` file between
   the three destinations, through a download and back through an import.
@@ -89,10 +89,11 @@ title:foo  text:foo  file:foo
 is:untagged  is:tagged  is:empty
 has:image  has:tag  has:link  has:code
 
-updated:2026-08-02             modified that day
-created:2026-08   created:2026 that month, that year
-updated:2026-08-01..2026-08-31 a range; either end may be left off
-created:>=2026-08-01           >  >=  <  <=
+updated:02-08-2026             modified that day (dd-mm-yyyy or dd/mm/yyyy)
+created:08-2026   created:2026 that month, that year
+updated:01-08-2026..31-08-2026 a range; either end may be left off
+created:>01-08-2026            >  >=  <  <=
+updated:2026-08-02             ISO is read as well, day first or year first
 before:X  after:X              either date, outside X
 since:X   until:X              either date, from / up to X
 updated:today | yesterday | thisweek | thismonth | thisyear | 7d | 3w | 6m
@@ -103,8 +104,12 @@ is:undated  has:date
 `tag:work` matching everything *below* `#work` is what makes the parent links
 worth declaring: tag notes precisely, search broadly.
 
+Dates are written the way they are written here — day first, `02-08-2026` or
+`02/08/2026` — and a four-digit year at the end is what tells that shape from
+ISO, so the two can never be mistaken for each other.
+
 Dates are read in local time, and a value is a *span*, not an instant — which
-is why `created:2026-08` means the whole of August and `before:2026-08` means
+is why `created:08-2026` means the whole of August and `before:08-2026` means
 everything finished before it started. The **Dates** button beside the search
 box is a front end for exactly these terms: it writes one into the box and
 reads it back out, so the query string stays the only thing that decides what

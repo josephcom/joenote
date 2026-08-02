@@ -259,6 +259,7 @@ main { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
 }
 .help-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
 .help h4 { margin: 0 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-faint); }
+.help-note { text-transform: none; letter-spacing: 0; font-weight: 400; color: var(--accent); }
 .help ul { margin: 0; padding-left: 16px; font-size: 13px; color: var(--fg-soft); }
 .help code { font-family: var(--mono); font-size: 12px; background: var(--bg-sunk); padding: 1px 5px; border-radius: 5px; color: var(--fg); }
 
