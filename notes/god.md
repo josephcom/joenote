@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-02T13:19:29Z
+updated: 2026-08-02T13:20:08Z
 ---
 
 # God
@@ -14,7 +14,7 @@ Is intelligence nothing but *feedback loops*? If so, we're trapped and doomed! W
 
 Even *neural networks* work based on feedback loops.
 
-
+What are **concepts and ideas"? 
 
 #mind
 
