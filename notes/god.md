@@ -1,8 +1,8 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-02T13:24:40Z
+updated: 2026-08-02T13:25:24Z
 ---
-# God
+# God of Intelligence
 
 1. Pile up of knowledge
 2. Exhaustive search 
