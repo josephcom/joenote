@@ -1,10 +1,8 @@
 ---
 created: 2026-08-02T21:05:09Z
-updated: 2026-08-02T21:06:31Z
+updated: 2026-08-02T21:06:44Z
 ---
 # List of Questions 
-
-A hundred, deliberately unsorted.
 
 1. What colour is a mirror?
 2. How much does the internet weigh?
