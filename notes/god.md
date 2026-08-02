@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-02T13:16:41Z
+updated: 2026-08-02T13:17:46Z
 ---
 
 # God
@@ -10,7 +10,7 @@ updated: 2026-08-02T13:16:41Z
 ---
 Are we humans intelligent because we've been receiving experience from previous generation, add to it, and transfer it to the next one? If so, an "overlap" between generations is necessary to provide enough time for the transfer. It's a millions-year-old **feedback loop**.
 
-Is intelligence nothing but *feedback" loops? If so, we're 
+Is intelligence nothing but *feedback loops*? If so, we're trapped and doomed! We have no choice but to *wait* until something happens for us to update our 
 
 #mind
 
