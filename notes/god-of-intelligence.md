@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-02T13:27:31Z
+updated: 2026-08-02T21:03:24Z
 ---
 # God of Intelligence
 
@@ -15,5 +15,5 @@ Even *neural networks* work based on feedback loops.
 
 What are *concepts and ideas*? Are they just *multidimensional patterns*? If Einstein was blind and deaf since 2, then he would have remained as intelligent as a cat! So, *the more we observe, the more abstract our thinking becomes* and we become more independent? Is that it? *Intelligence=Abstract thinking*?
 
-#mind
+#god_of_intelligence
 
