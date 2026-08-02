@@ -1,6 +1,6 @@
 ---
 created: 2026-08-02T03:53:27Z
-updated: 2026-08-02T03:53:27Z
+updated: 2026-08-02T03:55:25Z
 ---
 
 # Corporate Events: A Plain-English Guide
@@ -216,3 +216,5 @@ But here's the part that matters more than the classification, and it's what you
 Because these events are so visible and so easy to reason about, **the obvious money is gone before you can act.** What remains isn't a mispricing — it's residual risk that professionals have deliberately chosen not to hold. Your 4% upside isn't a discovery; it's the fee they're paying you to carry the 30% downside they don't want.
 
 That's a legitimate business. It's just not stock picking — it's insurance underwriting. And underwriters who haven't read the policy go broke, regardless of how sound the reasoning was that got them into the trade.
+
+#stock
