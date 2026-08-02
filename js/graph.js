@@ -271,6 +271,27 @@
      that follows, so movement only counts as a drag past this much slop. */
   function slop(e) { return e.pointerType === 'mouse' ? 3 : 12; }
 
+  /* A tap is not finished at pointerup: the browser still owes the page one
+     click, and it aims that click by hit-testing the spot a second time.
+     Selecting a hashtag opens the panels, which on a phone slide up over the
+     bottom of the map - over the very spot the finger just left. So the click
+     lands on whatever the panel has just put there, and a note opens on top of
+     the panel that was asked for. A mouse never does this: its click goes to
+     the common ancestor of mousedown and mouseup, never to something that
+     appeared in between. So after a tap that selects, swallow the one click
+     the tap has left in it. */
+  function eatNextClick() {
+    function eat(e) { e.stopPropagation(); e.preventDefault(); done(); }
+    function done() {
+      window.removeEventListener('click', eat, true);
+      clearTimeout(timer);
+    }
+    /* long enough for the click to arrive, short enough that a real second
+       tap - which no finger manages this fast - is never the one eaten */
+    var timer = setTimeout(done, 600);
+    window.addEventListener('click', eat, true);
+  }
+
   Graph.prototype.startDrag = function (e, n) {
     e.preventDefault();
     e.stopPropagation();
@@ -297,7 +318,10 @@
       window.removeEventListener('pointercancel', up);
       n.fixed = false;
       if (dragging) { self.kick(0.4); return; }
-      if (ev && ev.type === 'pointerup' && self.opts.onSelect) self.opts.onSelect(n.name, ev);
+      if (ev && ev.type === 'pointerup' && self.opts.onSelect) {
+        if (ev.pointerType !== 'mouse') eatNextClick();
+        self.opts.onSelect(n.name, ev);
+      }
     }
     window.addEventListener('pointermove', move);
     window.addEventListener('pointerup', up);
