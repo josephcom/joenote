@@ -1,8 +1,8 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-02T22:51:59Z
+updated: 2026-08-02T22:57:07Z
 ---
-# Findings
+# Core
 
 1. Pile up of knowledge
 2. Exhaustive search 
