@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-02T22:40:24Z
+updated: 2026-08-02T22:40:40Z
 ---
 # Findings
 
@@ -18,7 +18,7 @@ What are **concepts** and ideas? Are they just *multidimensional patterns*? If E
 ## Concepts
 
 - dashboard
-- tracking
+- tracking/recording/logging
 
 #god_of_intelligence
 
