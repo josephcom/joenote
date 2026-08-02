@@ -1,9 +1,9 @@
 ---
 created: 2026-08-02T03:53:27Z
-updated: 2026-08-02T03:55:25Z
+updated: 2026-08-02T03:56:26Z
 ---
 
-# Corporate Events: A Plain-English Guide
+# Company Events
 
 *Six special situations, what actually moves the price, and what to do about it.*
 
