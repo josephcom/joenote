@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-02T21:04:53Z
+updated: 2026-08-02T22:39:22Z
 ---
 # Findings
 
@@ -13,7 +13,7 @@ Is intelligence nothing but *feedback loops*? If so, we're trapped and doomed! W
 
 Even *neural networks* work based on feedback loops.
 
-What are *concepts and ideas*? Are they just *multidimensional patterns*? If Einstein was blind and deaf since 2, then he would have remained as intelligent as a cat! So, *the more we observe, the more abstract our thinking becomes* and we become more independent? Is that it? *Intelligence=Abstract thinking*?
+What are **concepts and ideas*? Are they just *multidimensional patterns*? If Einstein was blind and deaf since 2, then he would have remained as intelligent as a cat! So, *the more we observe, the more abstract our thinking becomes* and we become more independent? Is that it? *Intelligence=Abstract thinking*?
 
 #god_of_intelligence
 
