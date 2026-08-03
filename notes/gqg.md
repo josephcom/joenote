@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T10:26:36Z
-updated: 2026-08-03T12:24:21Z
+updated: 2026-08-03T12:24:55Z
 ---
 
 # GQG
@@ -102,7 +102,6 @@ The market pays 6× profit today *because* it's betting these don't happen. By t
 Certainty is expensive. Waiting for proof means paying up. That trade-off is the whole game — and it's yours to make, not mine.
 
 ### Where should I look?
-All four verified just now:
 
 | # | What to check | Link | When | What to open |
 |---|---|---|---|---|
