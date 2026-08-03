@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T10:26:36Z
-updated: 2026-08-03T10:50:25Z
+updated: 2026-08-03T10:50:50Z
 ---
 
 # GQG
@@ -10,6 +10,7 @@ Traditional active fund manager. GQG doesn't sell a thing you can touch. It rent
 ![](../assets/gqg-20260803-203531-7732.png)
 The shape worth seeing: a near-vertical climb from US$79bn (Sep 2022) to US$156bn by June 2024 — then two full years of going nowhere. It has wobbled between roughly US$153bn and US$173bn ever since, and today sits at US$156.0bn, within a rounding error of where it stood in June 2024. Two years of rising world markets, and the pile is the same size.
 ## Business Model
+**  **
 ![](../assets/gqg-20260803-204810-6674.jpg)
 FUM: $156B
 Revenue: 0.5% * FUM
