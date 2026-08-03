@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T10:26:36Z
-updated: 2026-08-03T12:17:35Z
+updated: 2026-08-03T12:17:44Z
 ---
 
 # GQG
@@ -87,8 +87,6 @@ No — it's a spectrum, and it's largely a choice the firm makes.
 **Index funds** (Vanguard, BlackRock): nobody decides anything — a computer copies a list. Zero key-man risk. Part of why they've hoovered up so much of the world's money.
 
 ## Bottom Line: When is the time to buy?
-I can't tell you to buy — I'm not licensed, and it's your money. But here's the scoreboard we built. Four things:
-
 **1. Money stops leaving.** *The* number. Twelve red months in a row right now. You want two or three green ones — or outflows shrinking hard. Free, monthly, around the 10th–13th.
 
 **2. The dividend stops shrinking.** It's gone 4.22c → 3.41c. Two quarters flat or rising means the bleeding stopped.
