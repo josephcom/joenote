@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T10:26:36Z
-updated: 2026-08-03T12:11:50Z
+updated: 2026-08-03T12:12:29Z
 ---
 
 # GQG
@@ -85,10 +85,6 @@ No — it's a spectrum, and it's largely a choice the firm makes.
 **Process firms** (Capital Group, Dimensional): deliberately no stars. Money is split across many managers, or run to fixed rules. Someone leaves, little changes.
 
 **Index funds** (Vanguard, BlackRock): nobody decides anything — a computer copies a list. Zero key-man risk. Part of why they've hoovered up so much of the world's money.
-
-The test: **is the edge a person, or a system?**
-
-A person raises money faster but earns a lower share price, because the market knows a person can walk. A system is harder to sell but worth more per dollar of profit.
 
 #fundamental_analysis
 
