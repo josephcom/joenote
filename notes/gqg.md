@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T10:26:36Z
-updated: 2026-08-03T12:10:27Z
+updated: 2026-08-03T12:10:44Z
 ---
 
 # GQG
@@ -63,7 +63,21 @@ Your bike is worth **$2,800**. You buy it a **$10** bell. Is that a bold stateme
 4. **If he goes, it breaks.** Clients hired *him*, not GQG. Illness, retirement, a falling-out — and the money walks out the door. One person is a single point of failure.
 
 ### What happens if he dies?!
+**Your shares don't change hands.** You still own exactly what you owned. His 70% passes to his estate and heirs. Nothing is confiscated.
 
+**But three things happen fast:**
+
+1. **The money runs.** Big institutional clients have *key person* clauses — if the named person stops managing, they can leave immediately. Consultants downgrade the same week. FUM falls, fees fall, dividend falls.
+
+2. **The price gaps down.** Likely a trading halt first, then a large fall on reopen.
+
+3. **The estate may become a forced seller.** A stake that size attracts a very large death-tax bill, payable within months. To find the cash, the estate may have to sell shares — into the same market you're holding. That's a lot of stock hanging over the price for years.
+
+**One path that could help you:** if someone buys the whole 70% block, Australian takeover rules would generally force them to bid for everyone's shares. You'd get bought out, possibly at a premium.
+
+So: nobody takes anything from you. You'd just be a passenger in a business losing its customers, with a big seller overhead — unless a buyer turns up for the lot.
+
+(Exact tax and legal mechanics depend on how his holding entity is structured, which isn't public.)
 
 #fundamental_analysis
 
