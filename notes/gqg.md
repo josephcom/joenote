@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T10:26:36Z
-updated: 2026-08-03T12:10:56Z
+updated: 2026-08-03T12:11:20Z
 ---
 
 # GQG
@@ -77,6 +77,7 @@ Your bike is worth **$2,800**. You buy it a **$10** bell. Is that a bold stateme
 
 So: nobody takes anything from you. You'd just be a passenger in a business losing its customers, with a big seller overhead — unless a buyer turns up for the lot.
 
+### Are all the fund managers hinged on one person?
 
 
 #fundamental_analysis
