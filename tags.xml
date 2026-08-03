@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <joenote version="1">
   <hashtags>
+    <hashtag name="fundamental_analysis"/>
     <hashtag name="funds">
       <parent name="stock"/>
     </hashtag>
