@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T10:26:36Z
-updated: 2026-08-03T10:50:10Z
+updated: 2026-08-03T10:50:25Z
 ---
 
 # GQG
@@ -16,7 +16,7 @@ Revenue: 0.5% * FUM
 Margin: 60% (tax, rent, staff etc.)
 dividend payout: 90%
 number of shares: 2,958,013,942
-pay
+pay frequency: 4 (quartely)
 
 #fundamental_analysis
 
