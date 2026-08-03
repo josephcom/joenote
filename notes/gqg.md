@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T10:26:36Z
-updated: 2026-08-03T12:23:56Z
+updated: 2026-08-03T12:24:21Z
 ---
 
 # GQG
@@ -102,7 +102,21 @@ The market pays 6× profit today *because* it's betting these don't happen. By t
 Certainty is expensive. Waiting for proof means paying up. That trade-off is the whole game — and it's yours to make, not mine.
 
 ### Where should I look?
+All four verified just now:
 
+| # | What to check | Link | When | What to open |
+|---|---|---|---|---|
+| **1** | **Net flows** | [GQG → ASX Announcements](https://investors.gqg.com/investor-centre/?page=asx-announcements) | Monthly, **10th–13th**. Next: ~10–13 Aug | PDF named **"FUM as at 31 July 2026"** |
+| **2** | **Dividend** | [Market Index → GQG](https://www.marketindex.com.au/asx/gqg) | Quarterly. Next: **21 Aug 2026** | No download — scroll to **"Dividend History"** table |
+| **3** | **Jain's trades** | [Market Index → GQG](https://www.marketindex.com.au/asx/gqg) | Ad hoc, within 5 business days | Same page, scroll to **"Director Transactions"** |
+| **4** | **Fee rate** | [GQG → Results Centre](https://investors.gqg.com/investor-centre/?page=results-centre) | Twice a year: **Feb & Aug** | **"2026 Half Year Financial Results"** → the **Presentation** column |
+
+Two notes:
+
+- **2 and 3 are the same page** — one visit covers both. Market Index is free, no login.
+- For **#4**, the fee number is buried: in the presentation, find *Consolidated Statements of Operations* (page 15 in the last edition) and look for **"fee realisation"**. It read 48.4 basis points last time.
+
+**Realistic routine:** Market Index once a month for 2 and 3, GQG's site around the 11th for 1, and set a reminder for **21 August** — that one gives you 2 and 4 together.
 
 #fundamental_analysis
 
