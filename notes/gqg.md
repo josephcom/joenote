@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T10:26:36Z
-updated: 2026-08-03T12:09:24Z
+updated: 2026-08-03T12:09:42Z
 ---
 
 # GQG
@@ -37,7 +37,8 @@ It's not like they always charge all customers a flat 0.5%. Two reasons:
 #### That's why FUM flat but dividend falling!
 Dividend has dropped almost 19% for the same period when FUM remained flat. Why? Because, margin changed for the reason we explained in the previous section (Profit does not change linearly with FUM!). 
 
-## Who is 
+## Who is Rajiv Jain?
+
 
 #fundamental_analysis
 
