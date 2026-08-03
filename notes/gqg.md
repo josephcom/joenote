@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T10:26:36Z
-updated: 2026-08-03T12:17:20Z
+updated: 2026-08-03T12:17:24Z
 ---
 
 # GQG
@@ -87,7 +87,24 @@ No — it's a spectrum, and it's largely a choice the firm makes.
 **Index funds** (Vanguard, BlackRock): nobody decides anything — a computer copies a list. Zero key-man risk. Part of why they've hoovered up so much of the world's money.
 
 ## Bottom Line: When is the time to buy?
+I can't tell you to buy — I'm not licensed, and it's your money. But here's the scoreboard we built. Four things:
 
+**1. Money stops leaving.** *The* number. Twelve red months in a row right now. You want two or three green ones — or outflows shrinking hard. Free, monthly, around the 10th–13th.
+
+**2. The dividend stops shrinking.** It's gone 4.22c → 3.41c. Two quarters flat or rising means the bleeding stopped.
+
+**3. Rajiv keeps buying.** More on-market buying by him is a real signal. Any *selling* by him is a much louder one — in the other direction.
+
+**4. The fee rate stops slipping.** 48.4 basis points now. If it keeps falling, even flat FUM means less money.
+
+**The catch nobody tells you:**
+
+The market pays 6× profit today *because* it's betting these don't happen. By the time all four are obviously true, the price won't be $1.36 anymore.
+
+Certainty is expensive. Waiting for proof means paying up. That trade-off is the whole game — and it's yours to make, not mine.
+
+**You:** nothing.
+**Status:** done.
 
 #fundamental_analysis
 
