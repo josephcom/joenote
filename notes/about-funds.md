@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T00:51:58Z
-updated: 2026-08-03T01:35:40Z
+updated: 2026-08-03T01:36:12Z
 ---
 
 # About Funds
@@ -22,8 +22,6 @@ A firm holding $156bn and charging 0.5% earns around $800m a year before it has 
 This is not one firm's quirk. It is the standard model for the entire traditional industry — BlackRock, Vanguard, Fidelity, Capital Group, T. Rowe Price, all of them. What varies is the rate, not the mechanism. Index funds might charge 0.03–0.20%, mainstream active equity funds 0.4–1.0%, specialists more. 
 
 The exception sits at the other end of the industry. Hedge funds and private equity firms add a performance fee on top — the classic "2 and 20" being 2% a year plus 20% of the gains, usually only above a hurdle and subject to a high-water mark so they can't be paid twice for recovering the same losses. 
-
-**Structural Risk**: A pension fund can withdraw a two-billion-dollar mandate with a committee vote and a month's notice. No penalty. No lock-in. Nothing to unwind. The asset that generates every dollar of GQG's revenue can leave whenever it likes, for any reason, or no reason at all.
 
 ### 3. The gatekeepers 
 
