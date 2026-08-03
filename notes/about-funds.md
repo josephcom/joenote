@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T00:51:58Z
-updated: 2026-08-03T01:13:07Z
+updated: 2026-08-03T01:13:32Z
 ---
 
 # About Funds
@@ -35,7 +35,7 @@ Two things worth knowing if you're tempted to lean on these ratings yourself. Th
 
 ![](../assets/about-funds-20260803-111152-9517.png)
 
-People put money in, for example, retirement funds, then these funds ask consultants "hey, excuse me, do you know which fund manager can take care of my money better", and the consultant goes "sure, GQG is a good one", then the retirement fund gives its money to GQG and GQG in return asks its own analysts "hey, where do you think we should put all this money". One nuance: the consultant advises the pension fund's investment committee, which makes the final call. So GQG must win over both — and since a few consultants steer most institutional money, their ratings largely determine whether GQG's pile grows or shrinks.
+People put money in, for example, retirement funds, then these funds ask consultants "hey, excuse me, do you know which fund manager can take care of my money better", and the consultant goes "sure, GQG is a good one", then the retirement fund gives its money to GQG and GQG in return asks its own analysts "hey, where do you think we should put all this money". One nuance: the consultant advises the pension fund's investment committee, which makes the final call. So GQG must win over both; and since a few consultants steer most institutional money, their ratings largely determine whether GQG's pile grows or shrinks.
 
 ---
 
