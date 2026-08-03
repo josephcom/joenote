@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T10:26:36Z
-updated: 2026-08-03T11:20:19Z
+updated: 2026-08-03T11:20:25Z
 ---
 
 # GQG
@@ -24,6 +24,7 @@ It's not like they always charge all customers a flat 0.5%. Two reasons:
 
 1. Harder work costs more. Picking companies in Brazil and India needs more analysts and travel than buying Apple. So, the emerging-markets fund charges 0.7%; the US fund charges 0.35% — that one's also competing with index funds at 0.05%, so it can't charge much.
 2. Bulk discount. A pension fund putting in $2bn doesn't pay retail price. Charge them 0.4% where a small investor pays 0.6%. Same fund, cheaper by the tonne.
+
 
 
 #fundamental_analysis
