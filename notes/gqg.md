@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T10:26:36Z
-updated: 2026-08-03T10:54:19Z
+updated: 2026-08-03T10:55:14Z
 ---
 
 # GQG
@@ -12,6 +12,7 @@ The shape worth seeing: a near-vertical climb from US$79bn (Sep 2022) to US$156b
 ## Business Model 
 **As of 03/08/2026**
 ![](../assets/gqg-20260803-204810-6674.jpg)
+<img src="../assets/gqg-20260803-204810-6674.jpg" alt="GQG Partners" width="50%">
 - FUM: $156B
 - Revenue: 0.5% * FUM
 - Margin: 60% (tax, rent, staff etc.)
