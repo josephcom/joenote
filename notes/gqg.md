@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T10:26:36Z
-updated: 2026-08-03T12:11:31Z
+updated: 2026-08-03T12:11:50Z
 ---
 
 # GQG
@@ -80,7 +80,7 @@ So: nobody takes anything from you. You'd just be a passenger in a business losi
 ### Are all the fund managers hinged on one person?
 No — it's a spectrum, and it's largely a choice the firm makes.
 
-**Star firms** (GQG, Magellan, Platinum, Pershing Square): one name *is* the product. Money arrives fast because people believe in a person. Same reason it leaves fast.
+**Star firms** (GQG, Magellan, Platinum, Pershing Square): one name (the *star*) *is* the product. Money arrives fast because people believe in a person. Same reason it leaves fast.
 
 **Process firms** (Capital Group, Dimensional): deliberately no stars. Money is split across many managers, or run to fixed rules. Someone leaves, little changes.
 
