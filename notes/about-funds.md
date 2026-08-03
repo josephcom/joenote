@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T00:51:58Z
-updated: 2026-08-03T01:36:12Z
+updated: 2026-08-03T04:08:07Z
 ---
 
 # About Funds
@@ -67,7 +67,7 @@ Finally, money is sold, not bought. Retail flows arrive through advisers and pla
 
 Picture three shops on one street. 
 
-**Shop One** sells index funds for almost nothing. Most people now shop here. It wins on customers, but charges so little that only giants like Vanguard and BlackRock can survive on the margins. 
+**Shop One (passive index management)** sells index funds for almost nothing. Most people now shop here. It wins on customers, but charges so little that only giants like Vanguard and BlackRock can survive on the margins. 
 
 **Shop Two** sells traditional stock-picking funds. Not cheap enough to compete with the first, not special enough to compete with the second. This is the shop being hollowed out, which is why these firms keep merging — Franklin buying Legg Mason, Standard Life with Aberdeen, Janus with Henderson. Scale or die. 
 
