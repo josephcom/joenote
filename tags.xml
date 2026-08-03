@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <joenote version="1">
   <hashtags>
+    <hashtag name="funds"/>
     <hashtag name="god_of_intelligence">
       <parent name="mind"/>
     </hashtag>
