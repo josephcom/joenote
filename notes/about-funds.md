@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T00:51:58Z
-updated: 2026-08-03T00:55:59Z
+updated: 2026-08-03T01:11:54Z
 ---
 
 # About Funds
@@ -32,6 +32,8 @@ Those institutions mostly don't choose managers themselves. They hire specialist
 So a fund manager's real customers are not the public. They are a few dozen investment committees and the consultants advising them. 
 
 Two things worth knowing if you're tempted to lean on these ratings yourself. They rate *funds and managers*, not individual stocks. And the serious institutional research is paywalled — only Morningstar and Lonsec are partly public. 
+
+![](../assets/about-funds-20260803-111152-9517.png)
 
 ---
 
