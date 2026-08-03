@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T10:26:36Z
-updated: 2026-08-03T12:17:28Z
+updated: 2026-08-03T12:17:35Z
 ---
 
 # GQG
@@ -102,7 +102,6 @@ I can't tell you to buy — I'm not licensed, and it's your money. But here's th
 The market pays 6× profit today *because* it's betting these don't happen. By the time all four are obviously true, the price won't be $1.36 anymore.
 
 Certainty is expensive. Waiting for proof means paying up. That trade-off is the whole game — and it's yours to make, not mine.
-
 
 #fundamental_analysis
 
