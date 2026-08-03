@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T00:51:58Z
-updated: 2026-08-03T08:49:06Z
+updated: 2026-08-03T08:49:40Z
 ---
 
 # About Funds
@@ -23,7 +23,7 @@ This is not one firm's quirk. It is the standard model for the entire traditiona
 
 The exception sits at the other end of the industry. Hedge funds and private equity firms add a performance fee on top — the classic "2 and 20" being 2% a year plus 20% of the gains, usually only above a hurdle and subject to a high-water mark so they can't be paid twice for recovering the same losses. 
 
-
+**It's all based on trust**! 
 
 ### 3. The gatekeepers 
 
