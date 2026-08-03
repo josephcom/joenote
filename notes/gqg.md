@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T10:26:36Z
-updated: 2026-08-03T11:16:26Z
+updated: 2026-08-03T11:18:19Z
 ---
 
 # GQG
@@ -19,7 +19,8 @@ The shape worth seeing: a near-vertical climb from US$79bn (Sep 2022) to US$156b
 - number of shares: 2,958,013,942
 - pay frequency: 4 (quarterly)
 
-****
+**Profit not linear with FUM**
+
 
 #fundamental_analysis
 
