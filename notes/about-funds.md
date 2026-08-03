@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T00:51:58Z
-updated: 2026-08-03T04:08:07Z
+updated: 2026-08-03T04:08:15Z
 ---
 
 # About Funds
@@ -69,7 +69,7 @@ Picture three shops on one street.
 
 **Shop One (passive index management)** sells index funds for almost nothing. Most people now shop here. It wins on customers, but charges so little that only giants like Vanguard and BlackRock can survive on the margins. 
 
-**Shop Two** sells traditional stock-picking funds. Not cheap enough to compete with the first, not special enough to compete with the second. This is the shop being hollowed out, which is why these firms keep merging — Franklin buying Legg Mason, Standard Life with Aberdeen, Janus with Henderson. Scale or die. 
+**Shop Two (()** sells traditional stock-picking funds. Not cheap enough to compete with the first, not special enough to compete with the second. This is the shop being hollowed out, which is why these firms keep merging — Franklin buying Legg Mason, Standard Life with Aberdeen, Janus with Henderson. Scale or die. 
 
 Three large caveats, because these numbers are the most flattered in finance. 
 
