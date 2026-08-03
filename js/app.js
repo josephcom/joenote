@@ -770,7 +770,9 @@
       .then(function () {
         if (wantName !== note.name) {
           var oldName = note.name;
-          return Store.renameNote(oldName, wantName).then(function () {
+          /* hand over the bytes just committed: the copy must never depend on
+             reading them back, or the retitle that caused the rename is lost */
+          return Store.renameNote(oldName, wantName, raw).then(function () {
             delete App.byName[oldName];
             note.name = wantName;
             $('note-file').textContent = wantName;

@@ -1,9 +1,9 @@
 ---
 created: 2026-08-03T00:51:58Z
-updated: 2026-08-03T00:53:15Z
+updated: 2026-08-03T00:55:59Z
 ---
 
-# Tutorial
+# About Funds
 
 ## Part One — What A Fund Manager Actually Sells 
 

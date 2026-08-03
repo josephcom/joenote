@@ -472,17 +472,29 @@
       if (self.mode === 'github') {
         var path = NOTES_DIR + '/' + name;
         return serial(function () {
-          return self.api(self.contentsPath(path, true))
-            .then(function (meta) {
-              return self.api(self.contentsPath(path, false), {
-                method: 'DELETE',
-                body: {
-                  message: self.commitMessage('Delete', name),
-                  sha: meta.sha,
-                  branch: self.github.branch
-                }
-              });
-            }).then(function () { delete self.shas[path]; });
+          function attempt(sha) {
+            return self.api(self.contentsPath(path, false), {
+              method: 'DELETE',
+              body: {
+                message: self.commitMessage('Delete', name),
+                sha: sha,
+                branch: self.github.branch
+              }
+            });
+          }
+          function askFirst() {
+            return self.api(self.contentsPath(path, true))
+              .then(function (meta) { return attempt(meta.sha); });
+          }
+          /* the sha our own last commit handed back is fresher than anything
+             a read can report, and a read this soon after a commit can still
+             be describing the version before it. Ask only when we hold no sha,
+             or when the one we hold is refused. */
+          var held = self.shas[path];
+          return (held ? attempt(held).catch(function (e) {
+            if (!/changed on GitHub/.test(e.message)) throw e;
+            return askFirst();
+          }) : askFirst()).then(function () { delete self.shas[path]; });
         });
       }
       if (self.mode === 'fs') {
@@ -494,11 +506,17 @@
       return Promise.resolve();
     },
 
-    renameNote: function (from, to) {
+    /* A rename is a copy followed by a delete, so the copy decides what the
+       note ends up saying. Pass in the text whenever the caller already holds
+       it: GitHub can still hand back the previous version of a file seconds
+       after a commit to it landed, and a copy made from that stale read
+       carries the old text to the new name, after which the delete takes the
+       only good copy with it. Reading is the fallback, not the default. */
+    renameNote: function (from, to, text) {
       var self = this;
       if (from === to) return Promise.resolve(to);
-      return self.readNote(from)
-        .then(function (text) { return self.writeNote(to, text); })
+      return Promise.resolve(text == null ? self.readNote(from) : text)
+        .then(function (t) { return self.writeNote(to, t); })
         .then(function () { return self.deleteNote(from); })
         .then(function () { return to; });
     },
