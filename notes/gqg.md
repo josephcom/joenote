@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T10:26:36Z
-updated: 2026-08-03T12:09:55Z
+updated: 2026-08-03T12:10:27Z
 ---
 
 # GQG
@@ -61,6 +61,9 @@ Your bike is worth **$2,800**. You buy it a **$10** bell. Is that a bold stateme
 3. **He can't mop up much anyway.** Australian rules limit how fast someone already above 20% can build their stake. So don't sit waiting for him to buy the whole market — he legally can't.
 
 4. **If he goes, it breaks.** Clients hired *him*, not GQG. Illness, retirement, a falling-out — and the money walks out the door. One person is a single point of failure.
+
+### What happens if he dies?!
+
 
 #fundamental_analysis
 
