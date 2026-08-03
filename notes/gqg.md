@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T10:26:36Z
-updated: 2026-08-03T12:11:26Z
+updated: 2026-08-03T12:11:31Z
 ---
 
 # GQG
@@ -89,9 +89,6 @@ No — it's a spectrum, and it's largely a choice the firm makes.
 The test: **is the edge a person, or a system?**
 
 A person raises money faster but earns a lower share price, because the market knows a person can walk. A system is harder to sell but worth more per dollar of profit.
-
-**You:** nothing.
-**Status:** done.
 
 #fundamental_analysis
 
