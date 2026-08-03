@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T10:26:36Z
-updated: 2026-08-03T11:24:17Z
+updated: 2026-08-03T11:24:23Z
 ---
 
 # GQG
@@ -19,7 +19,7 @@ The shape worth seeing: a near-vertical climb from US$79bn (Sep 2022) to US$156b
 - number of shares: 2,958,013,942
 - pay frequency: 4 (quarterly)
 
-### Profit not change linear with FUM!
+### Profit does not change linear with FUM!
 It's not like they always charge all customers a flat 0.5%. Two reasons:
 
 1. Harder work costs more. Picking companies in Brazil and India needs more analysts and travel than buying Apple. So, the emerging-markets fund charges 0.7%; the US fund charges 0.35% — that one's also competing with index funds at 0.05%, so it can't charge much.
