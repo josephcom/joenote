@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T10:26:36Z
-updated: 2026-08-03T12:17:44Z
+updated: 2026-08-03T12:23:56Z
 ---
 
 # GQG
@@ -100,6 +100,9 @@ No — it's a spectrum, and it's largely a choice the firm makes.
 The market pays 6× profit today *because* it's betting these don't happen. By the time all four are obviously true, the price won't be $1.36 anymore.
 
 Certainty is expensive. Waiting for proof means paying up. That trade-off is the whole game — and it's yours to make, not mine.
+
+### Where should I look?
+
 
 #fundamental_analysis
 
