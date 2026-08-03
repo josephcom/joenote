@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T10:26:36Z
-updated: 2026-08-03T10:51:44Z
+updated: 2026-08-03T10:52:11Z
 ---
 
 # GQG
@@ -12,12 +12,12 @@ The shape worth seeing: a near-vertical climb from US$79bn (Sep 2022) to US$156b
 ## Business Model
 ** As of 03/08/2026 **
 ![](../assets/gqg-20260803-204810-6674.jpg)
-FUM: $156B
-Revenue: 0.5% * FUM
-Margin: 60% (tax, rent, staff etc.)
-dividend payout: 90%
-number of shares: 2,958,013,942
-pay frequency: 4 (quartely)
+- FUM: $156B
+- Revenue: 0.5% * FUM
+- Margin: 60% (tax, rent, staff etc.)
+- dividend payout: 90%
+- number of shares: 2,958,013,942
+- pay frequency: 4 (quarterly)
 
 #fundamental_analysis
 
