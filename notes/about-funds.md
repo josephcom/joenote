@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T00:51:58Z
-updated: 2026-08-03T04:08:45Z
+updated: 2026-08-03T04:08:56Z
 ---
 
 # About Funds
@@ -77,7 +77,7 @@ Three large caveats, because these numbers are the most flattered in finance.
 - The firms value their own assets, quarterly, using their own models. So the returns look smooth and the risk looks low largely because nobody is marking them to a live market. Cliff Asness calls this volatility laundering. 
 - And much of the return is simply borrowed money amplifying an ordinary business. Ludovic Phalippou's research argues that, net of fees, private equity has roughly matched public small-cap indices since 2006 — while making a remarkable number of its managers billionaires. 
 
-**Shop Three** sells things you cannot buy off a shelf — private companies, toll roads, private loans. There is no index for these, so nobody can copy them cheaply. These firms still charge fat fees and are booming. Blackstone, Apollo and KKR live here. 
+**Shop Three (private market)** sells things you cannot buy off a shelf — private companies, toll roads, private loans. There is no index for these, so nobody can copy them cheaply. These firms still charge fat fees and are booming. Blackstone, Apollo and KKR live here. 
 
 So the industry is not dying. Total money invested keeps rising. It is shifting from the middle to the two ends. Passive overtook active in US equity funds around 2024, yet the overall pie grew because markets rose and savings grew faster than investors defected. 
 
