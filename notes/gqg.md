@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T10:26:36Z
-updated: 2026-08-03T11:24:29Z
+updated: 2026-08-03T11:24:47Z
 ---
 
 # GQG
@@ -26,6 +26,8 @@ It's not like they always charge all customers a flat 0.5%. Two reasons:
 2. Bulk discount. A pension fund putting in $2bn doesn't pay retail price. Charge them 0.4% where a small investor pays 0.6%. Same fund, cheaper by the tonne.
 
 **It's up to the client what product they buy**, so, don't assume GQG *decided* to shift the mixture. 
+
+
 
 #fundamental_analysis
 
