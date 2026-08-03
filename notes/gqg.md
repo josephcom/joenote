@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T10:26:36Z
-updated: 2026-08-03T10:48:57Z
+updated: 2026-08-03T10:49:15Z
 ---
 
 # GQG
@@ -13,7 +13,7 @@ The shape worth seeing: a near-vertical climb from US$79bn (Sep 2022) to US$156b
 ![](../assets/gqg-20260803-204810-6674.jpg)
 FUN: $156B
 Margin: 60% (tax, rent, staff etc.)
-
+dividend payout: 90%
 
 #fundamental_analysis
 
