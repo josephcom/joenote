@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T00:51:58Z
-updated: 2026-08-03T08:50:42Z
+updated: 2026-08-03T10:01:54Z
 ---
 
 # About Funds
@@ -15,7 +15,7 @@ You only discover whether that promise was worth anything years later — and ev
 
 ### 2. It gets paid rent, not a share of the winnings 
 
-This surprises most people. A fund manager does not mainly take a cut of the profits it makes for you. It charges a small percentage of however much money is sitting with it, every year, whether that year was good or bad. 
+This surprises most people. A fund manager does not mainly take a cut of the profits it makes for you. It charges a small percentage of however much money is sitting with it (aka **FUM** (**F**und **U**nder **M**anagement), every year, whether that year was good or bad. 
 
 A firm holding $156bn and charging 0.5% earns around $800m a year before it has proved anything. Think of a car park rather than a taxi company: you don't earn from where the cars go, only from how many are parked and how long they stay. 
 
