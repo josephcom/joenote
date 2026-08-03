@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T10:26:36Z
-updated: 2026-08-03T11:24:47Z
+updated: 2026-08-03T11:25:19Z
 ---
 
 # GQG
@@ -27,7 +27,7 @@ It's not like they always charge all customers a flat 0.5%. Two reasons:
 
 **It's up to the client what product they buy**, so, don't assume GQG *decided* to shift the mixture. 
 
-
+#### Why FUM almost flat, but divide
 
 #fundamental_analysis
 
