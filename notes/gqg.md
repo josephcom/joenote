@@ -1,12 +1,13 @@
 ---
 created: 2026-08-03T10:26:36Z
-updated: 2026-08-03T11:42:37Z
+updated: 2026-08-03T11:44:14Z
 ---
 
 # GQG
 ## Overview
 Traditional active fund manager. GQG doesn't sell a thing you can touch. It rents out trust: it earns a small yearly fee on the $156b people leave with it, and that money can walk out in a month. Trust broke when the Indian tycoon it famously backed was indicted for bribery in 2024. Advisers who steer big pension money got nervous, clients started leaving, $15.1b in six months. Worse, one man owns 70% and is the product, so nobody can outvote him or rescue the price. And investors already remember Magellan collapsing 80% the same way.
-## 
+## Adani drama
+GQG invested on Adani, Adani got charged with fraud, everybody escaped, GQG stayed and even added to their position, Adani got roasted, people started to doubt GQG's judgement, they started to withdraw their money from GQG.
 ## FUM changes
 ### What is FUM
 FUM does not mean what they have received from clients, but the market value of their investment + whatever cash they still have. Let's say GQG has received $10 from their client. They invest $8 and keep $2 cash for a rainy day. The investment goes up to $12. Now, it's time they take their 0.5% cut. 0.5% * ($12 + $2) = 7c. 
