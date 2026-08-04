@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-04T14:08:05Z
+updated: 2026-08-04T14:08:46Z
 ---
 # Core
 
@@ -11,7 +11,9 @@ updated: 2026-08-04T14:08:05Z
 
 ## what questions are we trying to answer? 
 1. Look at *Real cases* (*why is ice slippery?*). But, in summary: **how/why it does or does not occur to us**?
----
+
+## dirty notes
+
 Are we humans intelligent because we've been receiving experience from previous generation, add to it, and transfer it to the next one? If so, an "overlap" between generations is necessary to provide enough time for the transfer. It's a millions-year-old **feedback** loop.
 
 Is intelligence nothing but *feedback loops*? If so, we're trapped and doomed! We have no choice but to *wait* until something happens for us to update our knowledge or *add another dot to the emerging **pattern***.
