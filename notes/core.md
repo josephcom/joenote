@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-04T19:50:20Z
+updated: 2026-08-04T19:50:27Z
 ---
 # Core
 
@@ -10,7 +10,7 @@ updated: 2026-08-04T19:50:20Z
 3. loop
 
 ## what questions are we trying to answer? 
-1. Look at *Real cases* (*why is ice slippery?*). But, in summary: **why did **?
+1. Look at *Real cases* (*why is ice slippery?*). But, in summary: **why did (not**?
 
 ## dirty notes
 
