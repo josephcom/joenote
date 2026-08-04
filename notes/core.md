@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-04T20:36:16Z
+updated: 2026-08-04T20:37:23Z
 ---
 # Core
 
@@ -47,7 +47,7 @@ What are **concepts and ideas**? Are they just *multidimensional patterns*? If E
 - dashboard
 - tracking/recording/logging
 
-## Real cases
+## Real cases of thinking process
 
 ### why is ice slippery?
 Immediately something came to my mind (we call this **guess**), then I went into a loop to find any counterexample: if ... then why...? If ... then why ...? Once my theory answers all, then I accept it. 
