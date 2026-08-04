@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-04T14:01:47Z
+updated: 2026-08-04T14:02:06Z
 ---
 # Core
 
@@ -37,7 +37,8 @@ What are **concepts and ideas**? Are they just *multidimensional patterns*? If E
 Immediately something came to my mind (we call this **guess**), then I went into a loop to find any counterexample: if ... then why...? If ... then why ...? Once my theory answers all, then I accept it. 
 
 - how and why the initial guess was formed? Why doesn't it **occur** to some other people? 
-- we *temporarily* accept it until another counterexample shows up and we can't explain it. Then, we try to initiate another guess that, this time explains all the cases. Then, again, we *temporarily* accept it until another counterexample shows up and we can't explain it.
+- we *temporarily* accept it until another counterexample shows up and we can't explain it. Then, we try to initiate another guess that, this time explains all the cases. Then, again, we *temporarily* accept it until another counterexample shows up and we can't explain it. And this can go forever. 
+-
 
 #god_of_intelligence
 
