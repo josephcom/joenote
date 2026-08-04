@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-04T13:56:11Z
+updated: 2026-08-04T13:57:09Z
 ---
 # Core
 
@@ -33,7 +33,7 @@ What are **concepts and ideas**? Are they just *multidimensional patterns*? If E
 
 # Real cases
 
-- why is ice slippery? 
+- why is ice slippery? Immediately something came to my mind (we call this **guess**), then I went into a loop to find any
 
 #god_of_intelligence
 
