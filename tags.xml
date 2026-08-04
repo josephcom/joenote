@@ -25,6 +25,7 @@
     <hashtag name="personal">
       <sibling name="work"/>
     </hashtag>
+    <hashtag name="personal_development"/>
     <hashtag name="project">
       <parent name="personal"/>
       <parent name="work"/>
