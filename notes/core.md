@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-04T14:09:27Z
+updated: 2026-08-04T14:09:51Z
 ---
 # Core
 
@@ -40,7 +40,7 @@ What are **concepts and ideas**? Are they just *multidimensional patterns*? If E
 
 ## Real cases
 
-## why is ice slippery?
+### why is ice slippery?
 Immediately something came to my mind (we call this **guess**), then I went into a loop to find any counterexample: if ... then why...? If ... then why ...? Once my theory answers all, then I accept it. 
 
 - how and why the initial guess was formed? Why doesn't it **occur** to some other people? 
