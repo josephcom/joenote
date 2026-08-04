@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-04T20:49:25Z
+updated: 2026-08-04T20:49:32Z
 ---
 # Core
 
@@ -37,6 +37,8 @@ The "what else" version: after "I don't feel like working," ask what else this c
 
 ##### what else?
 Let's imagine I started to use the "what else" method and come up with: 1) **location** 2) **schedule** 3) **workload**
+
+
 
 
 #### have you ever count a sheep's call "ma a a a" to find out about his breed, gender, age, etc.?
