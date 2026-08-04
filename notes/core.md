@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-04T20:36:01Z
+updated: 2026-08-04T20:36:16Z
 ---
 # Core
 
@@ -20,6 +20,11 @@ Depending on who and what we are and what we already know, people put different 
 Then, we store it in our memory under that same label. Not only that, but, from that moment, everything else in our memory under the same label may pop up. Which one first? The loudest one — the one which has been repeated most often, or used most recently, or carries the strongest feeling.
 
 One excellent habit is to control the labels we put on the input data. But the first label isn't really a choice: it fires on its own, before we notice. What we can control is what comes after it. So the real move is to add a second and third label to the same data. Keep asking "what else" is an excellent strategy.
+
+### Real cases
+
+- who said I should go to work today? I can work from home today!
+- have you ever count a sheep's call "ma a a a" to find out about his breed, gender, age, etc.?
 
 ## Dirty notes
 
