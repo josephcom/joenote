@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-04T14:07:04Z
+updated: 2026-08-04T14:07:19Z
 ---
 # Core
 
@@ -10,7 +10,7 @@ updated: 2026-08-04T14:07:04Z
 3. loop
 
 ## what questions are we trying to answer? 
-1. Look at *Real cases* (*why is ice slippery?*). But, in summary 
+1. Look at *Real cases* (*why is ice slippery?*). But, in summary**how/why 
 ---
 Are we humans intelligent because we've been receiving experience from previous generation, add to it, and transfer it to the next one? If so, an "overlap" between generations is necessary to provide enough time for the transfer. It's a millions-year-old **feedback** loop.
 
