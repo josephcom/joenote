@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T10:26:36Z
-updated: 2026-08-03T12:24:55Z
+updated: 2026-08-04T03:27:57Z
 ---
 
 # GQG
@@ -118,4 +118,4 @@ Two notes:
 **Realistic routine:** Market Index once a month for 2 and 3, GQG's site around the 11th for 1, and set a reminder for **21 August** — that one gives you 2 and 4 together.
 
 #fundamental_analysis
-
+#fund
