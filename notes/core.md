@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-04T20:54:20Z
+updated: 2026-08-04T20:54:34Z
 ---
 # Core
 
@@ -53,8 +53,7 @@ First, each label doesn't give one idea. It gives a small cluster. Open the door
 
 Second, none of these needed new information. You already knew the WFH policy, your leave balance, your deadlines. The doors just hadn't been opened.
 
-
-#### have you ever count a sheep's call "ma a a a" to find out about his breed, gender, age, etc.?
+#### Example 2: have you ever count a sheep's call "ma a a a" to find out about his breed, gender, age, etc.?
 
 ## Dirty notes
 
