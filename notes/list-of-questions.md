@@ -1,14 +1,9 @@
 ---
 created: 2026-08-02T21:05:09Z
-updated: 2026-08-02T21:12:15Z
+updated: 2026-08-04T14:22:50Z
 ---
 # List of Questions
 
-1. What colour is a mirror?
-2. How much does the internet weigh?
-3. Should you tell a friend their partner is cheating?
-4. Why is ice slippery?
-5. When does a heap stop being a heap?
 6. Why did nobody invent the wheeled suitcase until 1970?
 7. How would you weigh your own head?
 8. Is a hot dog a sandwich?
