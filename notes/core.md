@@ -1,15 +1,15 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-04T20:34:41Z
+updated: 2026-08-04T20:35:10Z
 ---
 # Core
 
-## key concepts
+## Key concepts
 1. Pile up of knowledge
 2. Exhaustive search
 3. loop
 
-## what questions are we trying to answer? 
+## What questions are we trying to answer? 
 1. Look at *Real cases* (*why is ice slippery?*). But, in summary: **why didn't it occur to me**? (**how does occurrence work**?)
 2. List all the reasons **why we can't answer *evey* questions**.
 
