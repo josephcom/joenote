@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-04T14:08:46Z
+updated: 2026-08-04T14:09:27Z
 ---
 # Core
 
@@ -33,12 +33,12 @@ What are **concepts and ideas**? Are they just *multidimensional patterns*? If E
 - dashboard
 - tracking/recording/logging
 
-# راسی ها
+## راسی ها
 
 - who said I should go to work today? I can work from home today!
 - have you ever count a sheep's call "ma a a a" to find out about his breed, gender, age, etc.?
 
-# Real cases
+## Real cases
 
 ## why is ice slippery?
 Immediately something came to my mind (we call this **guess**), then I went into a loop to find any counterexample: if ... then why...? If ... then why ...? Once my theory answers all, then I accept it. 
