@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-04T14:02:06Z
+updated: 2026-08-04T14:02:11Z
 ---
 # Core
 
@@ -38,7 +38,7 @@ Immediately something came to my mind (we call this **guess**), then I went into
 
 - how and why the initial guess was formed? Why doesn't it **occur** to some other people? 
 - we *temporarily* accept it until another counterexample shows up and we can't explain it. Then, we try to initiate another guess that, this time explains all the cases. Then, again, we *temporarily* accept it until another counterexample shows up and we can't explain it. And this can go forever. 
--
+- 
 
 #god_of_intelligence
 
