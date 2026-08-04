@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-04T20:49:32Z
+updated: 2026-08-04T20:49:43Z
 ---
 # Core
 
@@ -38,7 +38,20 @@ The "what else" version: after "I don't feel like working," ask what else this c
 ##### what else?
 Let's imagine I started to use the "what else" method and come up with: 1) **location** 2) **schedule** 3) **workload**
 
+**Location** — "where does this have to happen?"
+Work from home. Or: go in but sit somewhere quieter. Or work from a café. Or do the morning at home and show up after lunch.
 
+**Schedule** — "when does this have to happen?"
+Take the day off — you may have leave sitting unused. Swap with tomorrow. Start at 11 instead of 9. Do the two things that are actually due today and push the rest. Or the reverse: go in, front-load everything, leave at 3.
+
+**Workload** — "what exactly am I dreading?"
+Often it's not the whole day, it's one task — one call, one meeting, one email. Cancel that one thing and the day becomes fine. Or hand it to someone. Or split it in half. Or notice you're low because there's *too little* to do, not too much.
+
+Two things worth seeing here.
+
+First, each label doesn't give one idea. It gives a small cluster. Open the door, several things are behind it.
+
+Second, none of these needed new information. You already knew the WFH policy, your leave balance, your deadlines. The doors just hadn't been opened.
 
 
 #### have you ever count a sheep's call "ma a a a" to find out about his breed, gender, age, etc.?
