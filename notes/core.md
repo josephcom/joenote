@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-04T20:47:38Z
+updated: 2026-08-04T20:47:54Z
 ---
 # Core
 
@@ -23,7 +23,18 @@ One excellent habit is to control the labels we put on the input data. But the f
 
 ### Real cases
 #### who said I should go to work today? I can work from home today!
-- have you ever count a sheep's call "ma a a a" to find out about his breed, gender, age, etc.?
+Textbook case.
+
+Your label fired first: **mood.** "I don't feel like working." That folder holds coffee, push through, quit, feel guilty. Loud items, all about fixing *you*.
+
+Your friend's label: **rules.** "What does today's policy allow?" Different folder entirely — and work-from-home was sitting right at the front of it.
+
+Notice: you *knew* about the WFH rule. Nothing new entered your head when he said it. Your knowledge was fine; your folder was wrong.
+
+Why his fired and yours didn't: he's probably been tracking the policy, so "rules" is loud for him. And he wasn't tired — tiredness itself is a strong feeling, and strong feelings drag everything into the mood folder.
+
+The "what else" version: after "I don't feel like working," ask what else this could be about. Not just my energy — the location? the schedule? the workload? Each is a different door.
+#### have you ever count a sheep's call "ma a a a" to find out about his breed, gender, age, etc.?
 
 ## Dirty notes
 
