@@ -5,7 +5,6 @@
       <parent name="stock"/>
     </hashtag>
     <hashtag name="funds">
-      <parent name="fundamental_analysis"/>
       <parent name="stock"/>
     </hashtag>
     <hashtag name="god_of_intelligence">
