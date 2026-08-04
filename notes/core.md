@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-02T22:57:07Z
+updated: 2026-08-04T13:13:29Z
 ---
 # Core
 
@@ -29,6 +29,7 @@ What are **concepts and ideas**? Are they just *multidimensional patterns*? If E
 # راسی ها
 
 - who said I should go to work today? I can work from home today!
+- 
 
 #god_of_intelligence
 
