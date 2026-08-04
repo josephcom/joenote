@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-04T20:47:54Z
+updated: 2026-08-04T20:48:01Z
 ---
 # Core
 
@@ -34,6 +34,8 @@ Notice: you *knew* about the WFH rule. Nothing new entered your head when he sai
 Why his fired and yours didn't: he's probably been tracking the policy, so "rules" is loud for him. And he wasn't tired — tiredness itself is a strong feeling, and strong feelings drag everything into the mood folder.
 
 The "what else" version: after "I don't feel like working," ask what else this could be about. Not just my energy — the location? the schedule? the workload? Each is a different door.
+
+
 #### have you ever count a sheep's call "ma a a a" to find out about his breed, gender, age, etc.?
 
 ## Dirty notes
