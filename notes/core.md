@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-04T19:55:24Z
+updated: 2026-08-04T20:34:29Z
 ---
 # Core
 
@@ -12,6 +12,14 @@ updated: 2026-08-04T19:55:24Z
 ## what questions are we trying to answer? 
 1. Look at *Real cases* (*why is ice slippery?*). But, in summary: **why didn't it occur to me**? (**how does occurrence work**?)
 2. List all the reasons **why we can't answer *evey* questions**.
+
+## Occurrence 
+
+Depending on who and what we are and what we already know, people put different labels on the same data. For example, we hear a sheep's call and we may put one of these labels on it: "noise" (soldier: "I can't sleep"), distress (farmer: "my sheep may be sick"), food (hungry man: "that sounds like milk!"), count/number (statistician: "oh, exactly 7 times! The other sheep was 5 times")
+
+Then, we store it in our memory under that same label. Not only that, but, from that moment, everything else in our memory under the same label may pop up. Which one first? The loudest one — the one which has been repeated most often, or used most recently, or carries the strongest feeling.
+
+One excellent habit is to control the labels we put on the input data. But the first label isn't really a choice: it fires on its own, before we notice. What we can control is what comes after it. So the real move is to add a second and third label to the same data. Keep asking "what else" is an excellent strategy — that's exactly what it does.
 
 ## dirty notes
 
