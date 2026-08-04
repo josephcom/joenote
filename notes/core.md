@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-04T13:58:36Z
+updated: 2026-08-04T13:59:06Z
 ---
 # Core
 
@@ -35,6 +35,8 @@ What are **concepts and ideas**? Are they just *multidimensional patterns*? If E
 
 ## why is ice slippery?
 Immediately something came to my mind (we call this **guess**), then I went into a loop to find any counterexample: if ... then why...? If ... then why ...? Once my theory answers all, then I accept it. 
+
+- how and why the initial guess was formed?
 
 #god_of_intelligence
 
