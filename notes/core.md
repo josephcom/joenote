@@ -1,11 +1,13 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-04T14:05:23Z
+updated: 2026-08-04T14:06:02Z
 ---
 # Core
 
+## key concepts
 1. Pile up of knowledge
-2. Exhaustive search 
+2. Exhaustive search
+3. loop
 
 ## what questions are we trying to answer? 
 1. 
