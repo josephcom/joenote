@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-04T20:35:42Z
+updated: 2026-08-04T20:36:01Z
 ---
 # Core
 
@@ -41,11 +41,6 @@ What are **concepts and ideas**? Are they just *multidimensional patterns*? If E
 
 - dashboard
 - tracking/recording/logging
-
-### Real cases
-
-- who said I should go to work today? I can work from home today!
-- have you ever count a sheep's call "ma a a a" to find out about his breed, gender, age, etc.?
 
 ## Real cases
 
