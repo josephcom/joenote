@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T04:04:41Z
-updated: 2026-08-05T04:19:27Z
+updated: 2026-08-05T04:19:59Z
 ---
 
 # The story of Airbnb
@@ -9,7 +9,7 @@ updated: 2026-08-05T04:19:27Z
 
 ## Day 0
 
-2007. Two broke designers in San Francisco, Brian Chesky and Joe Gebbia, can't make rent. A big design conference is in town and every hotel is full. So they blow up three air mattresses in their flat, throw up a crappy website called "Air Bed and Breakfast," and charge $80 a night.
+Year 2007. Two broke designers in San Francisco, Brian Chesky and Joe Gebbia, can't make rent. A big design conference is in town and every hotel is full. So they blow up three air mattresses in their flat, throw up a crappy website called "Air Bed and Breakfast," and charge $80 a night.
 
 Three strangers show up. That's it. That's the whole company on day 0 — three people sleeping on the floor.
 
