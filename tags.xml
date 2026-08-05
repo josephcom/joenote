@@ -4,6 +4,7 @@
     <hashtag name="business_stories">
       <parent name="money"/>
     </hashtag>
+    <hashtag name="english"/>
     <hashtag name="fund"/>
     <hashtag name="fundamental_analysis">
       <parent name="stock"/>
