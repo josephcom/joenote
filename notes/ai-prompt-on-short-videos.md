@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T09:28:24Z
-updated: 2026-08-05T09:29:26Z
+updated: 2026-08-05T09:30:19Z
 ---
 
 # AI Prompt on Short Videos
@@ -49,5 +49,5 @@ language — sharp and to the point.
 
 Say you're ready and wait for my first video.
 
-#english
+#english #prompt
 
