@@ -1,9 +1,9 @@
 ---
 created: 2026-08-05T09:28:24Z
-updated: 2026-08-05T09:28:47Z
+updated: 2026-08-05T09:29:08Z
 ---
 
-# AI Prompt on 
+# AI Prompt on Short Videos
 
-#inbox
+#English #personal_development
 
