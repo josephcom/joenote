@@ -82,6 +82,9 @@
     this.links = [];
     names.forEach(function (name) {
       var rec = tagMap[name];
+      /* a hashtag nobody hangs off is a root of the ontology, and is painted
+         green so the tops of the tree can be picked out at a glance */
+      self.index[name].root = Object.keys(rec.parents).length === 0;
       Object.keys(rec.parents).forEach(function (p) {
         if (self.index[p]) self.links.push({ a: self.index[p], b: self.index[name], kind: 'parent' });
       });
@@ -149,7 +152,7 @@
     });
 
     this.nodes.forEach(function (n) {
-      var g = el('g', { 'class': 'node', tabindex: '0', 'data-tag': n.name });
+      var g = el('g', { 'class': 'node' + (n.root ? ' root' : ''), tabindex: '0', 'data-tag': n.name });
       n.box = el('rect', { rx: 5, ry: 5 });
       n.label = el('text', { 'class': 'node-label', 'font-size': self.fontSize(n), dy: '0.34em' });
       n.label.textContent = '#' + n.name;

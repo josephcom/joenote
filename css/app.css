@@ -14,6 +14,9 @@
   --accent-fg: #ffffff;
   --danger: #c8342c;
   --ok: #14804a;
+  --root-bg: #e7f6ed;
+  --root-line: #4fac7d;
+  --root-fg: #14684a;
   --radius: 10px;
   --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -34,6 +37,9 @@ html[data-theme="dark"] {
   --accent-fg: #0d0f14;
   --danger: #ff7a70;
   --ok: #4ad07f;
+  --root-bg: #16301f;
+  --root-line: #3f9166;
+  --root-fg: #7fd7a5;
   --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 30px rgba(0, 0, 0, .35);
 }
 
@@ -301,6 +307,9 @@ main { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
   stroke-width: 2;
   transition: fill .12s, stroke .12s;
 }
+/* a hashtag with no parent above it - the top of a branch - goes green */
+.node.root rect { fill: var(--root-bg); stroke: var(--root-line); }
+.node.root .node-label { fill: var(--root-fg); }
 .node:hover rect { stroke: var(--accent); }
 .node.hi rect { fill: var(--accent); stroke: var(--accent); }
 .node.selected rect { stroke: var(--accent); stroke-width: 3.5; }
