@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-05T09:26:26Z
+updated: 2026-08-05T10:21:00Z
 ---
 # Core
 
@@ -32,7 +32,10 @@ Textbook case.
 
 Treat a question as a machine with four parts:
 
-**TARGET** — something definite to find. **SEARCH** — a route to it. **TEST** — a way to know you've arrived. **RECEIVER** — a mind that can hold the answer once it's got it.
+**TARGET** — something definite to find. 
+**SEARCH** — a route to it. 
+**TEST** — a way to know you've arrived. 
+**RECEIVER** — a mind that can hold the answer once it's got it.
 
 Break any one part and the question stays open forever. Four buckets. Everything fits.
 
