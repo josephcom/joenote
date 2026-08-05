@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-05T08:45:33Z
+updated: 2026-08-05T08:45:53Z
 ---
 # Core
 
@@ -13,7 +13,7 @@ updated: 2026-08-05T08:45:33Z
 1. Look at *Real cases of thinking process* (*why is ice slippery?*). But, in summary: **why didn't it occur to me**? (**how does occurrence work**?)
 2. List all the reasons **why can't we answer *every* questions**.
 
-## Occurrence 
+## Question 1: Occurrence 
 
 Depending on who and what we are and what we already know, people put different labels on the same data. For example, we hear a sheep's call and we may put one of these labels on it: "noise" (soldier: "I can't sleep"), distress (farmer: "my sheep may be sick"), food (hungry man: "that sounds like milk!"), count/number (statistician: "oh, exactly 7 times! The other sheep was 5 times")
 
