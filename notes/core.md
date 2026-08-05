@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-05T09:25:59Z
+updated: 2026-08-05T09:26:26Z
 ---
 # Core
 
@@ -26,7 +26,7 @@ One excellent habit is to control the labels we put on the input data. But the f
 Textbook case.
 2. Have you ever count a sheep's call "ma a a a" to find out about his breed, gender, age, etc.?
 
-# #Why can't we answer every question?
+## Question 2: Why can't we answer every question?
 
 **The frame**
 
