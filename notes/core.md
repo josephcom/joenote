@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-05T08:42:15Z
+updated: 2026-08-05T08:45:33Z
 ---
 # Core
 
@@ -11,7 +11,7 @@ updated: 2026-08-05T08:42:15Z
 
 ## What questions are we trying to answer? 
 1. Look at *Real cases of thinking process* (*why is ice slippery?*). But, in summary: **why didn't it occur to me**? (**how does occurrence work**?)
-2. List all the reasons **why we can't answer *evey* questions**.
+2. List all the reasons **why can't we answer *every* questions**.
 
 ## Occurrence 
 
