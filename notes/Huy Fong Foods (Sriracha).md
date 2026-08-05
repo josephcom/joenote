@@ -1,9 +1,9 @@
 ---
 created: 2026-08-05T04:04:45Z
-updated: 2026-08-05T04:04:45Z
+updated: 2026-08-05T04:18:28Z
 ---
 
-# Huy Fong Foods (Sriracha — the rooster sauce)
+# The story of Huy Fong Foods
 
 **The move: a bloke in a blue van, driving bottle by bottle to restaurants. And then — literally zero advertising. Ever.**
 
