@@ -295,31 +295,28 @@ main { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
 .arrowhead.hi { fill: var(--accent); }
 
 .node { cursor: pointer; }
-.node circle {
+.node rect {
   fill: var(--bg);
   stroke: var(--line-strong);
   stroke-width: 2;
   transition: fill .12s, stroke .12s;
 }
-.node:hover circle { stroke: var(--accent); }
-.node.hi circle { fill: var(--accent); stroke: var(--accent); }
-.node.selected circle { stroke: var(--accent); stroke-width: 3.5; }
+.node:hover rect { stroke: var(--accent); }
+.node.hi rect { fill: var(--accent); stroke: var(--accent); }
+.node.selected rect { stroke: var(--accent); stroke-width: 3.5; }
 .node.dim { opacity: .25; }
 .node-label {
   font-family: var(--sans);
-  font-size: 11.5px;
   fill: var(--fg-soft);
   text-anchor: middle;
-  paint-order: stroke;
-  stroke: var(--bg-soft);
-  stroke-width: 3px;
-  stroke-linejoin: round;
   pointer-events: none;
   user-select: none;
 }
-.node.hi .node-label, .node.selected .node-label { fill: var(--fg); font-weight: 600; }
+.node.selected .node-label { fill: var(--fg); font-weight: 600; }
+/* the box behind it has gone solid accent, so the word has to turn over */
+.node.hi .node-label { fill: var(--accent-fg); font-weight: 600; }
 .node:focus { outline: none; }
-.node:focus circle { stroke: var(--accent); stroke-width: 3.5; }
+.node:focus rect { stroke: var(--accent); stroke-width: 3.5; }
 
 /* ------------------------------ tag panel ----------------------------- */
 

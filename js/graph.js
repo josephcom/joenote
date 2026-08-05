@@ -1,5 +1,6 @@
 /* JoeNote - js/graph.js
  * The hashtag map: an SVG force-directed graph of the tag ontology.
+ * Every tag is a rectangle with its own hashtag written inside it.
  * Solid arrows point parent -> child. Dashed lines join siblings.
  */
 (function (global) {
@@ -69,7 +70,10 @@
         count: tagMap[name].count || 0,
         x: prev ? prev.x : w / 2 + Math.cos(angle) * (120 + (i % 5) * 40),
         y: prev ? prev.y : h / 2 + Math.sin(angle) * (120 + (i % 5) * 40),
-        vx: 0, vy: 0, fixed: false
+        vx: 0, vy: 0, fixed: false,
+        /* a placeholder box, so the simulation has sizes to work with even if
+           it is asked to run before the first measurement */
+        w: 60, h: 24, hw: 30, hh: 12, measured: false
       };
       self.nodes.push(node);
       self.index[name] = node;
@@ -93,9 +97,41 @@
   Graph.prototype.width = function () { return this.svg.clientWidth || this.svg.getBoundingClientRect().width; };
   Graph.prototype.height = function () { return this.svg.clientHeight || this.svg.getBoundingClientRect().height; };
 
-  Graph.prototype.radius = function (n) {
-    return 9 + Math.min(18, Math.sqrt(n.count) * 4.5);
+  /* ---------------- box geometry ---------------- */
+
+  var PAD_X = 11, PAD_Y = 6;
+
+  /* the box is as big as the word it holds; the busier tags get a little more
+     type, which is the only thing left to size them by */
+  Graph.prototype.fontSize = function (n) {
+    return 11.5 + Math.min(5, Math.sqrt(n.count) * 1.2);
   };
+
+  /* Text can only be measured once it is on screen, and the map is built
+     hidden whenever a note is deep-linked. So guess from the character count
+     and take the real reading the first time the map is given a size. */
+  Graph.prototype.measure = function (n) {
+    var fs = this.fontSize(n);
+    var w = 0;
+    if (n.label && this.width()) {
+      try { w = n.label.getComputedTextLength(); } catch (e) { w = 0; }
+    }
+    n.measured = w > 0;
+    if (!w) w = ('#' + n.name).length * fs * 0.58;
+    n.w = Math.round(w + PAD_X * 2);
+    n.h = Math.round(fs + PAD_Y * 2);
+    n.hw = n.w / 2;
+    n.hh = n.h / 2;
+  };
+
+  /* where a line leaving n's centre in direction (dx, dy) crosses its border */
+  function edge(n, dx, dy, pad) {
+    var hw = n.hw + pad, hh = n.hh + pad;
+    var sx = dx ? hw / Math.abs(dx) : Infinity;
+    var sy = dy ? hh / Math.abs(dy) : Infinity;
+    var s = Math.min(sx, sy);
+    return { x: dx * s, y: dy * s };
+  }
 
   /* ---------------- rendering ---------------- */
 
@@ -114,10 +150,10 @@
 
     this.nodes.forEach(function (n) {
       var g = el('g', { 'class': 'node', tabindex: '0', 'data-tag': n.name });
-      n.circle = el('circle', { r: self.radius(n) });
-      n.label = el('text', { 'class': 'node-label', dy: -self.radius(n) - 6 });
+      n.box = el('rect', { rx: 5, ry: 5 });
+      n.label = el('text', { 'class': 'node-label', 'font-size': self.fontSize(n), dy: '0.34em' });
       n.label.textContent = '#' + n.name;
-      g.appendChild(n.circle);
+      g.appendChild(n.box);
       g.appendChild(n.label);
       g.addEventListener('pointerdown', function (e) { self.startDrag(e, n); });
       /* selection is fired from the pointerup in startDrag, not from here: a
@@ -133,6 +169,7 @@
       });
       n.g = g;
       self.nodeLayer.appendChild(g);
+      self.measure(n); /* only once it is in the document can the text be read */
     });
 
     this.paint();
@@ -146,24 +183,27 @@
     this.links.forEach(function (l) {
       if (!l.el) return;
       var dx = l.b.x - l.a.x, dy = l.b.y - l.a.y;
-      var len = Math.sqrt(dx * dx + dy * dy) || 1;
-      var ra = self.radius(l.a) + 2, rb = self.radius(l.b) + 6;
-      l.el.setAttribute('x1', l.a.x + dx / len * ra);
-      l.el.setAttribute('y1', l.a.y + dy / len * ra);
-      l.el.setAttribute('x2', l.b.x - dx / len * rb);
-      l.el.setAttribute('y2', l.b.y - dy / len * rb);
+      if (!dx && !dy) dy = 0.001;
+      var pa = edge(l.a, dx, dy, 1), pb = edge(l.b, -dx, -dy, 5);
+      l.el.setAttribute('x1', l.a.x + pa.x);
+      l.el.setAttribute('y1', l.a.y + pa.y);
+      l.el.setAttribute('x2', l.b.x + pb.x);
+      l.el.setAttribute('y2', l.b.y + pb.y);
       var hot = self.highlight[l.a.name] && self.highlight[l.b.name];
       l.el.classList.toggle('hi', !!hot);
       if (l.kind === 'parent') l.el.setAttribute('marker-end', hot ? 'url(#arrow-hi)' : 'url(#arrow)');
     });
 
     this.nodes.forEach(function (n) {
+      if (!n.measured) self.measure(n);
       n.g.setAttribute('transform', 'translate(' + n.x + ',' + n.y + ')');
       n.g.classList.toggle('selected', self.selected === n.name);
       n.g.classList.toggle('hi', !!self.highlight[n.name]);
       n.g.classList.toggle('dim', self.hasHighlight && !self.highlight[n.name]);
-      n.circle.setAttribute('r', self.radius(n));
-      n.label.setAttribute('dy', -self.radius(n) - 6);
+      n.box.setAttribute('x', -n.hw);
+      n.box.setAttribute('y', -n.hh);
+      n.box.setAttribute('width', n.w);
+      n.box.setAttribute('height', n.h);
     });
   };
 
@@ -213,7 +253,8 @@
         if (d2 < 1) { d2 = 1; dx = (Math.random() - 0.5); dy = (Math.random() - 0.5); }
         if (d2 > 700 * 700) continue;
         d = Math.sqrt(d2);
-        f = 5200 / d2;
+        /* a long hashtag needs more room around it than a short one */
+        f = (2600 + (a.w + b.w) * 22) / d2;
         var ux = dx / d, uy = dy / d;
         a.vx -= ux * f; a.vy -= uy * f;
         b.vx += ux * f; b.vy += uy * f;
@@ -226,7 +267,9 @@
       a = l.a; b = l.b;
       dx = b.x - a.x; dy = b.y - a.y;
       d = Math.sqrt(dx * dx + dy * dy) || 0.01;
-      var rest = l.kind === 'parent' ? 130 : 95;
+      /* the rest length is measured between the two borders, so a pair of long
+         hashtags ends up as far apart as a pair of short ones looks */
+      var rest = (l.kind === 'parent' ? 110 : 80) + (a.hw + b.hw) * 0.5;
       var k = l.kind === 'parent' ? 0.035 : 0.02;
       f = (d - rest) * k;
       var vx = dx / d * f, vy = dy / d * f;
@@ -234,7 +277,7 @@
       b.vx -= vx; b.vy -= vy;
       /* parents sit above their children */
       if (l.kind === 'parent') {
-        var want = 70;
+        var want = a.hh + b.hh + 46;
         var gap = (b.y - a.y) - want;
         a.vy += gap * 0.012;
         b.vy -= gap * 0.012;
@@ -253,6 +296,34 @@
       if (speed > max) { a.vx = a.vx / speed * max; a.vy = a.vy / speed * max; }
       a.x += a.vx * this.alpha;
       a.y += a.vy * this.alpha;
+    }
+
+    /* Two boxes that overlap are unreadable in a way two overlapping circles
+       never were - one hashtag is written across another. Charge alone does
+       not prevent it, so any overlap left is pushed straight back out, along
+       whichever axis has the least of it to undo. */
+    var GAP_X = 16, GAP_Y = 10;
+    for (i = 0; i < nodes.length; i++) {
+      a = nodes[i];
+      for (j = i + 1; j < nodes.length; j++) {
+        b = nodes[j];
+        if (a.fixed && b.fixed) continue;
+        dx = b.x - a.x; dy = b.y - a.y;
+        var ox = (a.hw + b.hw + GAP_X) - Math.abs(dx);
+        if (ox <= 0) continue;
+        var oy = (a.hh + b.hh + GAP_Y) - Math.abs(dy);
+        if (oy <= 0) continue;
+        /* a node being dragged holds its ground; the other gives way for both */
+        var sa = a.fixed ? 0 : (b.fixed ? 1 : 0.5);
+        var sb = b.fixed ? 0 : (a.fixed ? 1 : 0.5);
+        if (ox < oy) {
+          f = (dx >= 0 ? 1 : -1) * ox * 0.6;
+          a.x -= f * sa; b.x += f * sb;
+        } else {
+          f = (dy >= 0 ? 1 : -1) * oy * 0.6;
+          a.y -= f * sa; b.y += f * sb;
+        }
+      }
     }
   };
 
@@ -376,10 +447,10 @@
     if (!this.nodes.length) return;
     var minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
     this.nodes.forEach(function (n) {
-      minX = Math.min(minX, n.x); maxX = Math.max(maxX, n.x);
-      minY = Math.min(minY, n.y); maxY = Math.max(maxY, n.y);
+      minX = Math.min(minX, n.x - n.hw); maxX = Math.max(maxX, n.x + n.hw);
+      minY = Math.min(minY, n.y - n.hh); maxY = Math.max(maxY, n.y + n.hh);
     });
-    var pad = 70;
+    var pad = 34;
     var w = this.width(), h = this.height();
     var bw = Math.max(1, maxX - minX + pad * 2), bh = Math.max(1, maxY - minY + pad * 2);
     var k = Math.max(0.2, Math.min(2, Math.min(w / bw, h / bh)));
