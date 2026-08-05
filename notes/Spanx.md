@@ -1,9 +1,9 @@
 ---
 created: 2026-08-05T04:04:43Z
-updated: 2026-08-05T04:04:43Z
+updated: 2026-08-05T04:18:48Z
 ---
 
-# Spanx
+# The story of Spanx
 
 **The move: she cold-called her way in, then did a live demo in a department store bathroom.**
 
