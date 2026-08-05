@@ -1,9 +1,9 @@
 ---
 created: 2026-08-05T04:04:41Z
-updated: 2026-08-05T04:04:41Z
+updated: 2026-08-05T04:19:27Z
 ---
 
-# Airbnb
+# The story of Airbnb
 
 **The move: they went and knocked on doors themselves. And sold breakfast cereal to stay alive.**
 
