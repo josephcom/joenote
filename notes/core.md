@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-05T08:42:01Z
+updated: 2026-08-05T08:42:15Z
 ---
 # Core
 
@@ -24,8 +24,7 @@ One excellent habit is to control the labels we put on the input data. But the f
 ### Why didn't occur to me? 
 1. Example 1: who said I should go to work today? I can work from home today!
 Textbook case.
-
-have you ever count a sheep's call "ma a a a" to find out about his breed, gender, age, etc.?
+2. Have you ever count a sheep's call "ma a a a" to find out about his breed, gender, age, etc.?
 
 ## Dirty notes
 
