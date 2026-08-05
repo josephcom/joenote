@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-04T20:54:34Z
+updated: 2026-08-05T08:41:33Z
 ---
 # Core
 
@@ -21,7 +21,7 @@ Then, we store it in our memory under that same label. Not only that, but, from 
 
 One excellent habit is to control the labels we put on the input data. But the first label isn't really a choice: it fires on its own, before we notice. What we can control is what comes after it. So the real move is to add a second and third label to the same data. Keep asking "what else" is an excellent strategy.
 
-### Real examples 
+### Why didn't occur to me? 
 #### Example 1: who said I should go to work today? I can work from home today!
 Textbook case.
 
