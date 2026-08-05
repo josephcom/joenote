@@ -1,9 +1,9 @@
 ---
 created: 2026-08-05T08:50:35Z
-updated: 2026-08-05T08:51:29Z
+updated: 2026-08-05T08:51:41Z
 ---
 
-# What is a 
+# What is a QUESTION?
 
 *A conversation, 15 June 2026*
 
