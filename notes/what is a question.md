@@ -1,9 +1,9 @@
 ---
 created: 2026-08-05T08:50:35Z
-updated: 2026-08-05T08:50:35Z
+updated: 2026-08-05T08:51:29Z
 ---
 
-# On Questions, Frames, and Concept-Space — A Dialogue
+# What is a 
 
 *A conversation, 15 June 2026*
 
