@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-06T10:19:53Z
+updated: 2026-08-06T10:20:14Z
 ---
 # Core
 
@@ -32,7 +32,7 @@ Three things have to work before you can answer anything.
 
 **1. TARGET**
 
-****
+**what EXACTLY are you looking for?**
 
 Fails when the question is fuzzy ("should I eat two meals?"), sneaks in something false ("why does moving need a reason?"), or is really about what you *want*, not what *is*.
 
