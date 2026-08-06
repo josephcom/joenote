@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-06T10:22:21Z
+updated: 2026-08-06T10:23:14Z
 ---
 # Core
 
@@ -30,13 +30,13 @@ Textbook case.
 
 Three things have to work before you can answer anything.
 
-**1. TARGET**
+### 1. TARGET
 
 **what EXACTLY are you looking for?**
 
 Fails when the question is fuzzy ("should I eat two meals?"), sneaks in something false ("why does moving need a reason?"), or is really about what you *want*, not what *is*.
 
-**2. PATHS**
+### 2. PATHS
 
 - **how many paths are there to take you to the answer?**
 - **how many paths will you have to walk to know the answer?**
@@ -46,7 +46,7 @@ Two cases where you'll not find the answer:
 - *0 path* — no route exists. Ever.
 - *Too many paths* — a route exists but would take longer than you've got.
 
-**3. VALIDATION**
+### 3. VALIDATION
 
 **how do you know this is the answer?**
 
