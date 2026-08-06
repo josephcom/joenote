@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-06T10:10:42Z
+updated: 2026-08-06T10:10:59Z
 ---
 # Core
 
@@ -46,7 +46,7 @@ Fails when the question is fuzzy ("should I eat two meals?"), sneaks in somethin
 
 Three flavours:
 
-- **Wall** — no route exists. Ever.
+- **** — no route exists. Ever.
 - **Too expensive** — a route exists but would take longer than you've got.
 - **Just unwalked** — the route is easy, nobody's bothered. *Most everyday questions live here.*
 
