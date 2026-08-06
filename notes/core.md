@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-06T10:21:45Z
+updated: 2026-08-06T10:21:53Z
 ---
 # Core
 
@@ -46,7 +46,7 @@ Two cases where you'll not find the answer:
 - *0 path* — no route exists. Ever.
 - *Too many paths* — a route exists but would take longer than you've got.
 
-**3. VALIDATION — can you tell if you got it right?**
+**3. VALIDATION**
 
 The sneakiest one. Sometimes you find an answer and have no way to check it. You'll never know whether two meals a day gives you longer life or three meals a day!
 
