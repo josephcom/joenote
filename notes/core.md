@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-06T10:21:53Z
+updated: 2026-08-06T10:22:21Z
 ---
 # Core
 
@@ -47,6 +47,8 @@ Two cases where you'll not find the answer:
 - *Too many paths* — a route exists but would take longer than you've got.
 
 **3. VALIDATION**
+
+**how do you know this is the answer?**
 
 The sneakiest one. Sometimes you find an answer and have no way to check it. You'll never know whether two meals a day gives you longer life or three meals a day!
 
