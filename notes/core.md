@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-06T10:12:26Z
+updated: 2026-08-06T10:12:33Z
 ---
 # Core
 
@@ -44,7 +44,7 @@ Fails when the question is fuzzy ("should I eat two meals?"), sneaks in somethin
 
 **2. PATHS — is there a way to get there, and what does it cost?**
 
-Two cases:
+Two cases where you'll:
 
 - **0 path** — no route exists. Ever.
 - **Too many paths** — a route exists but would take longer than you've got.
