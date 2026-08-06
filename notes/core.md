@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-06T10:20:50Z
+updated: 2026-08-06T10:21:45Z
 ---
 # Core
 
@@ -38,7 +38,8 @@ Fails when the question is fuzzy ("should I eat two meals?"), sneaks in somethin
 
 **2. PATHS**
 
-- **how many paths are there
+- **how many paths are there to take you to the answer?**
+- **how many paths will you have to walk to know the answer?**
 
 Two cases where you'll not find the answer:
 
