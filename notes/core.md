@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-06T10:16:51Z
+updated: 2026-08-06T10:19:42Z
 ---
 # Core
 
@@ -30,7 +30,7 @@ Textbook case.
 
 Three things have to work before you can answer anything.
 
-**1. TARGET — is there something real to find?**
+**1. TARGET**
 
 Fails when the question is fuzzy ("should I eat two meals?"), sneaks in something false ("why does moving need a reason?"), or is really about what you *want*, not what *is*.
 
