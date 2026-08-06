@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-06T10:11:21Z
+updated: 2026-08-06T10:12:13Z
 ---
 # Core
 
@@ -48,7 +48,7 @@ Three flavours:
 
 - **0 path** — no route exists. Ever.
 - **Too many paths** — a route exists but would take longer than you've got.
-- **Just unwalked** — the route is easy, nobody's bothered. *Most everyday questions live here.*
+- **Reasonabe number of ** — the route is easy, nobody's bothered. *Most everyday questions live here.*
 
 **Fix:** for a wall, stop. For a price, find a cheaper route or change the question.
 
