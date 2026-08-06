@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-06T10:13:58Z
+updated: 2026-08-06T10:14:19Z
 ---
 # Core
 
@@ -53,7 +53,7 @@ Two cases where you'll not find the answer:
 
 **3. VALIDATION — can you tell if you got it right?**
 
-The sneakiest one. Sometimes you find an answer and have no way to check it. You'll
+The sneakiest one. Sometimes you find an answer and have no way to check it. You'll never know whether two meals a day 
 
 ## Dirty notes
 
