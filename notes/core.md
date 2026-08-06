@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-06T10:14:40Z
+updated: 2026-08-06T10:15:13Z
 ---
 # Core
 
@@ -37,8 +37,6 @@ Three things have to work before you can answer anything.
 **1. TARGET — is there something real to find?**
 
 Fails when the question is fuzzy ("should I eat two meals?"), sneaks in something false ("why does moving need a reason?"), or is really about what you *want*, not what *is*.
-
-**Fix:** rewrite the question, or admit you're choosing, not finding.
 
 ---
 
