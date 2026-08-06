@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-06T11:43:59Z
+updated: 2026-08-06T11:44:30Z
 ---
 # Core
 
@@ -8,7 +8,7 @@ updated: 2026-08-06T11:43:59Z
 1. Pile up of knowledge
 2. Exhaustive search
 3. Loop (feedback)
-4. Multi-dimensional 
+4. Multi-dimensional (each dimension its own analysis)
 
 ## What questions are we trying to answer? 
 1. Look at *Real cases of thinking process* (*why is ice slippery?*). But, in summary: **why didn't it occur to me**? (**how does occurrence work**?)
