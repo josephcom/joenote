@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-06T10:15:13Z
+updated: 2026-08-06T10:16:13Z
 ---
 # Core
 
@@ -28,17 +28,11 @@ Textbook case.
 
 ## Question 2: Why can't we answer every question?
 
-# The Frame
-
 Three things have to work before you can answer anything.
-
----
 
 **1. TARGET — is there something real to find?**
 
 Fails when the question is fuzzy ("should I eat two meals?"), sneaks in something false ("why does moving need a reason?"), or is really about what you *want*, not what *is*.
-
----
 
 **2. PATHS — is there a way to get there, and what does it cost?**
 
@@ -46,8 +40,6 @@ Two cases where you'll not find the answer:
 
 - **0 path** — no route exists. Ever.
 - **Too many paths** — a route exists but would take longer than you've got.
-
----
 
 **3. VALIDATION — can you tell if you got it right?**
 
