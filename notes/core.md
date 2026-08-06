@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-06T10:28:30Z
+updated: 2026-08-06T10:28:37Z
 ---
 # Core
 
@@ -43,7 +43,7 @@ Fails when the question is fuzzy ("should I eat two meals?"), sneaks in somethin
 
 Two cases where you'll not find the answer:
 
-- *0 path* — no route exists **.
+- *0 path* — no route exists *as far as we know*.
 - *Too many paths* — a route exists but would take longer than you've got.
 
 #### Examples 
