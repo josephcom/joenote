@@ -1,13 +1,14 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-06T10:28:37Z
+updated: 2026-08-06T11:43:28Z
 ---
 # Core
 
 ## Key concepts
 1. Pile up of knowledge
 2. Exhaustive search
-3. loop
+3. loop (feedback)
+4. 
 
 ## What questions are we trying to answer? 
 1. Look at *Real cases of thinking process* (*why is ice slippery?*). But, in summary: **why didn't it occur to me**? (**how does occurrence work**?)
