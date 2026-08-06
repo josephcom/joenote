@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-06T10:23:14Z
+updated: 2026-08-06T10:27:43Z
 ---
 # Core
 
@@ -43,8 +43,24 @@ Fails when the question is fuzzy ("should I eat two meals?"), sneaks in somethin
 
 Two cases where you'll not find the answer:
 
-- *0 path* — no route exists. Ever.
+- *0 path* — no route exists *AS FAR AS WE KNOW*.
 - *Too many paths* — a route exists but would take longer than you've got.
+
+**0 path**
+
+1. What did Caesar eat on his thirty-first birthday?
+2. What is your friend's red like from inside?
+3. Will this program run forever, or eventually stop?
+4. What colour were most dinosaurs?
+5. Where exactly is this electron, and how fast?
+
+**Too many paths**
+
+1. What will the weather be in three months?
+2. What's the best possible move in Go?
+3. Which lottery numbers come up next Saturday?
+4. What's the shortest route through 10,000 cities?
+5. Which of ten billion molecules cures this disease?
 
 ### 3. VALIDATION
 
