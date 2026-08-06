@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-06T10:20:14Z
+updated: 2026-08-06T10:20:24Z
 ---
 # Core
 
@@ -36,7 +36,9 @@ Three things have to work before you can answer anything.
 
 Fails when the question is fuzzy ("should I eat two meals?"), sneaks in something false ("why does moving need a reason?"), or is really about what you *want*, not what *is*.
 
-**2. PATHS — is there a way to get there, and what does it cost?**
+**2. PATHS**
+
+
 
 Two cases where you'll not find the answer:
 
