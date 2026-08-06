@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-06T10:10:09Z
+updated: 2026-08-06T10:10:42Z
 ---
 # Core
 
@@ -57,14 +57,6 @@ Three flavours:
 **3. VALIDATION — can you tell if you got it right?**
 
 The sneakiest one. Sometimes you find an answer and have no way to check it. You only live once, so you can't run yourself twice. You can't hold your two-meal life against your three-meal life.
-
-**Fix:** find something you can watch change. If nothing does, accept you're guessing.
-
----
-
-**How to use it:** when stuck, ask which one is blocking you. Each needs a different move.
-
-Most of the time it's just unwalked — so go look.
 
 ## Dirty notes
 
