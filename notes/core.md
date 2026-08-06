@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-06T10:27:43Z
+updated: 2026-08-06T10:28:00Z
 ---
 # Core
 
@@ -45,6 +45,8 @@ Two cases where you'll not find the answer:
 
 - *0 path* — no route exists *AS FAR AS WE KNOW*.
 - *Too many paths* — a route exists but would take longer than you've got.
+
+#### Examples 
 
 **0 path**
 
