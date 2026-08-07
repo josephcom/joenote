@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T22:08:34Z
-updated: 2026-08-07T22:22:59Z
+updated: 2026-08-07T22:23:20Z
 ---
 
 # GEM
@@ -16,6 +16,7 @@ They rent rooms + educators, then accept kids to educate them. educator per room
 ## Bad news
 - Lower occupancy
   - Parents cutting a childcare day to save money
+  - Parents losing trust in GEM in particular
   - Falling birth rates
   - Competitors building centres next door
 
