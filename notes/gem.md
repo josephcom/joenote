@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T22:08:34Z
-updated: 2026-08-07T22:21:57Z
+updated: 2026-08-07T22:22:14Z
 ---
 
 # GEM
@@ -13,7 +13,8 @@ They rent rooms + educators, then accept kids to educate them. educator per room
   - Births going up
   - More parents take their kids to GEM
 
-
+## Bad news
+- 
 
 #fundamental_analysis
 
