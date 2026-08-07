@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T22:08:34Z
-updated: 2026-08-07T22:32:15Z
+updated: 2026-08-07T22:32:35Z
 ---
 
 # GEM
@@ -23,7 +23,7 @@ They rent rooms + educators, then accept kids to educate them. educator per room
   - Competitors building centres next door
 
 ## What happened?!
-In 2025 ABC's Four Corners program exposed a GEM educator had been raping kids. Parents panicked 
+In 2025 ABC's Four Corners program exposed a GEM educator had been raping kids. Parents panicked and occupancy went from 66% down to 56%. 
 
 #fundamental_analysis
 
