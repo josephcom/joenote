@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T22:08:34Z
-updated: 2026-08-07T22:34:37Z
+updated: 2026-08-07T22:45:52Z
 ---
 
 # GEM
@@ -24,6 +24,11 @@ They rent rooms + educators, then accept kids to educate them. educator per room
 
 ## What happened?!
 In 2025 ABC's Four Corners program exposed a GEM educator had been raping kids. Parents panicked and occupancy went from 66% down to 56%. 
+
+### What's goodwill write-down?
+You buy a building and pay $10 knowing it's only worth $6 because you believe this location makes your business so good that it will pay for itself. Then, later on, you'll realise you've messed it up! But, your *balance sheet* still shows that you have an asset worth $10. That's a lie. You have to fix it, and you have to admit it to the stake holders. That is called a ***goodwill write-down***.
+
+
 
 #fundamental_analysis
 
