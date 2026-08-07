@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T23:55:07Z
-updated: 2026-08-07T23:57:56Z
+updated: 2026-08-07T23:58:08Z
 ---
 
 # Accounting
@@ -15,7 +15,7 @@ So the two numbers differ. Profit = income earned minus costs incurred, *on pape
 
 Profit (EPS) tells you the story; cash tells you the truth. Check both.
 
-Operating cash flow = the slice from running the business itself — fees in, wages out. It excludes borrowing, share issues, or buying buildings. So operating cash is one type of cash flow.
+**Operating cash flow** = the slice from running the business itself — fees in, wages out. It excludes borrowing, share issues, or buying buildings. So operating cash is one type of cash flow.
 
 #fundamental_analysis
 
