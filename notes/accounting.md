@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T23:55:07Z
-updated: 2026-08-07T23:56:36Z
+updated: 2026-08-07T23:56:45Z
 ---
 
 # Accounting
@@ -13,7 +13,7 @@ Profit is a story, not a jar. Accountants don't just count coins. They add promi
 
 So the two numbers differ. Profit = income earned minus costs incurred, *on paper*. Operating cash flow = coins that actually entered and left the jar from selling lemonade.
 
-**Why it matters for GEM:** its "profit" showed a $303m loss, mostly a pretend cost (the write-down — no coins moved). Meanwhile the jar collected real cash. Profit tells you the story; cash tells you the truth. Check both.
+Why it matters for GEM: its "profit" showed a $303m loss, mostly a pretend cost (the write-down — no coins moved). Meanwhile the jar collected real cash. Profit tells you the story; cash tells you the truth. Check both.
 
 #fundamental_analysis
 
