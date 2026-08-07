@@ -4,6 +4,7 @@
     <hashtag name="business_stories">
       <parent name="money"/>
     </hashtag>
+    <hashtag name="consumer"/>
     <hashtag name="english">
       <parent name="personal_development"/>
     </hashtag>
