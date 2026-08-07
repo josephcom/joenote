@@ -1,13 +1,13 @@
 ---
 created: 2026-08-07T23:55:07Z
-updated: 2026-08-07T23:56:01Z
+updated: 2026-08-07T23:56:09Z
 ---
 
 # Accounting
 
 Imagine a lemonade stand.
 
-**Step 1 — Money in the jar.** Every day, coins come in from customers and go out for lemons. What's left in the jar is *cash*.
+Step 1 — Money in the jar. Every day, coins come in from customers and go out for lemons. What's left in the jar is *cash*.
 
 **Step 2 — Profit is a story, not a jar.** Accountants don't just count coins. They add promises ("Bob will pay me Tuesday" counts as income *today*) and subtract pretend costs ("my juicer got older, that's -$50" — but no coin left the jar).
 
