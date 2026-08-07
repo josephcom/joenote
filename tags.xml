@@ -9,6 +9,7 @@
     <hashtag name="english">
       <parent name="personal_development"/>
     </hashtag>
+    <hashtag name="finance"/>
     <hashtag name="fund"/>
     <hashtag name="fundamental_analysis">
       <parent name="stock"/>
