@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T22:08:34Z
-updated: 2026-08-07T22:50:01Z
+updated: 2026-08-07T22:52:01Z
 ---
 
 # GEM
@@ -31,7 +31,7 @@ You buy a building and pay $10 knowing it's only worth $6 because you believe th
 GEM management added a $349m goodwill write-down as a result of the damage to their reputation and fall in revenue and profit. That was a scary headline. 
 
 ### Which of GEM's competitors became happy?
-Nobody! This was a damage to the entire industry! 
+Nobody! This was a damage to the entire industry! Parents didn't switch childcare brands; they switched to grandma.
 
 #fundamental_analysis #Consumer_Services
 
