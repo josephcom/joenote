@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T22:08:34Z
-updated: 2026-08-07T22:21:33Z
+updated: 2026-08-07T22:21:41Z
 ---
 
 # GEM
@@ -11,7 +11,7 @@ They rent rooms + educators, then accept kids to educate them. educator per room
 - Government subsidies getting fatter
 - Higher occupancy
   - Births going up
-  - Parents 
+  - Parents take
 
 #fundamental_analysis
 
