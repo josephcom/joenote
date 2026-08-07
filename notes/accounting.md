@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T23:55:07Z
-updated: 2026-08-07T23:57:24Z
+updated: 2026-08-07T23:57:56Z
 ---
 
 # Accounting
@@ -14,6 +14,8 @@ Profit is a story, not a jar. Accountants don't just count coins. They add promi
 So the two numbers differ. Profit = income earned minus costs incurred, *on paper*. Operating cash flow = coins that actually entered and left the jar from selling lemonade.
 
 Profit (EPS) tells you the story; cash tells you the truth. Check both.
+
+Operating cash flow = the slice from running the business itself — fees in, wages out. It excludes borrowing, share issues, or buying buildings. So operating cash is one type of cash flow.
 
 #fundamental_analysis
 
