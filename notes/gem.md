@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T22:08:34Z
-updated: 2026-08-07T22:47:28Z
+updated: 2026-08-07T22:48:18Z
 ---
 
 # GEM
@@ -29,6 +29,8 @@ In 2025 ABC's Four Corners program exposed a GEM educator had been raping kids. 
 You buy a building and pay $10 knowing it's only worth $6 because you believe this location makes your business so good that it will pay for itself. Then, later on, you'll realise you've messed it up! But, your *balance sheet* still shows that you have an asset worth $10. That's a lie. You have to fix it, and you have to admit it to the stake holders. That is called a ***goodwill write-down***. It's like saying *I must admit my business isn't as good as I thought :(*. 
 
 GEM management added a $349m goodwill write-down as a result of the damage to their reputation and fall in revenue and profit. That was a scary headline. 
+
+### Which ASX competitors popped the champagne?
 
 #fundamental_analysis
 
