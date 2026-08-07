@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T22:08:34Z
-updated: 2026-08-07T22:52:47Z
+updated: 2026-08-07T22:58:08Z
 ---
 
 # GEM
@@ -12,7 +12,7 @@ They rent rooms + educators, then accept kids to educate them. educator per room
 ### Good for business
 - Government subsidies getting fatter
 - Higher occupancy
-  - Births going up
+  - Birth rate going up (remember, this may take **a decade** to 
   - More parents take their kids to GEM
 
 ### Bad news
