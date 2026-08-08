@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T23:55:07Z
-updated: 2026-08-08T00:04:25Z
+updated: 2026-08-08T00:04:48Z
 ---
 # Accounting
 
@@ -13,7 +13,7 @@ Money in the jar. Every day, coins come in from customers and go out for lemons.
 So the two numbers differ.
 
 - Profit = income earned minus costs incurred, *on paper*.
-- Operating cash flow = coins that actually entered and left the jar from selling lemonade.
+- Operating cash flow = coins that actually entered and left the jar *from selling lemonade*.
 
 **Operating cash flow** = the slice from running the business itself — fees in, wages out. It excludes borrowing, share issues, or buying buildings. So operating cash is one type of cash flow.
 
