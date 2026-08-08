@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T22:08:34Z
-updated: 2026-08-08T08:57:14Z
+updated: 2026-08-08T08:57:34Z
 ---
 
 # GEM
@@ -45,6 +45,12 @@ The wild swings aren't operational. **2020**'s $104m was COVID support ($263m of
 So your original claim, properly measured: 6.5c per share of real cash against a 14.5c price. About 2.2 years, not one — and only if next year matches this one, which management explicitly refuses to forecast.
 
 Light blue bars use the pre-2019 rules, where rent was already inside operating cash — not strictly comparable, shown for context.
+
+They usually paid out most of what they earned. In 2022 they handed over $33.7m from $4.0m of free cash. In 2016–2019 the payout ate 65–85% of it every year. Not much left over to strengthen the business.
+
+One caveat on the early years. Before 2021 a chunk of the dividend was paid in new shares instead of coins (a reinvestment plan). Declared totals were far bigger — $90.8m in 2016, $77.5m in 2017. Cheaper on the jar, but it quietly minted extra shares, which is why the share count kept climbing.
+
+2025 is the reckless one. $50.1m of free cash, and they sent out $43.0m of dividends plus $44.4m of buybacks — $87m against $50m earned, while occupancy was collapsing. That's why the jar shrank and why the dividend is now suspended and the buyback paused. The board spent 2025 money it didn't have, then stopped.
 
 #fundamental_analysis #Consumer_Services
 
