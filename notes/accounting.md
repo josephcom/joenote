@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T23:55:07Z
-updated: 2026-08-08T08:13:40Z
+updated: 2026-08-08T08:45:02Z
 ---
 # Accounting
 
@@ -29,7 +29,8 @@ Rule of thumb
 
 In the above example, $10, in total, genuinely came into my jar from my core business, $7 genuinely left my jar as a result of my core business: Lemons $2, wages $2, rent $1 and Interest and tax $2.
 
-Operating cash also can be faked by intentionally delaying paying the guy from whom I bought lemon, or I rented my stance etc. 
+Operating cash also can be fake:
+1. Intentionally delaying paying the guy from whom I bought lemon, or I rented my stance etc. 
 
 Also, loss means I have "claimed" my costs was bigger than my revenue. However, that, too, can be an accounting trick for example by writing $2 for juicer aging instead of $1; or I can do a goodwill write-down trick.
 
