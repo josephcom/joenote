@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T23:55:07Z
-updated: 2026-08-08T08:11:53Z
+updated: 2026-08-08T08:12:13Z
 ---
 # Accounting
 
@@ -23,6 +23,7 @@ Rule of thumb
 
 ### Example
 ![](../assets/accounting-20260808-180917-9989.png)
+
 **FCF**: Free Cash Flow (not a standard accounting term, but widely used)
 **Honest FCF**: just a made-up term in this chart. 
 
