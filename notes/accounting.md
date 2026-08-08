@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T23:55:07Z
-updated: 2026-08-08T00:02:13Z
+updated: 2026-08-08T00:02:45Z
 ---
 # Accounting
 
@@ -18,7 +18,6 @@ So the two numbers differ.
 **Operating cash flow** = the slice from running the business itself — fees in, wages out. It excludes borrowing, share issues, or buying buildings. So operating cash is one type of cash flow.
 
 > Profit (EPS) tells you the story; cash tells you the truth. Check both.
-
 Apart from expansion plans and other real reasons, is that why dividends per share are almost always different from EPS? I mean, E is story, D is truth.
 
 Rule of thumb: dividends consistently backed by cash flow = healthy. Dividends paid while cash shrinks = company borrowing to look generous — a classic red flag.
