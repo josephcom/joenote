@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T23:55:07Z
-updated: 2026-08-08T00:30:46Z
+updated: 2026-08-08T00:30:56Z
 ---
 # Accounting
 
@@ -20,5 +20,8 @@ Apart from expansion plans and other real reasons, is that why dividends per sha
 
 Rule of thumb
 > dividends consistently backed by cash flow = healthy. Dividends paid while cash shrinks = company borrowing to look generous — a classic red flag.
+
+### Example
+
 
 #fundamental_analysis
