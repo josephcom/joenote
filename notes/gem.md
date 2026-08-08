@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T22:08:34Z
-updated: 2026-08-08T08:39:04Z
+updated: 2026-08-08T08:39:12Z
 ---
 
 # GEM
@@ -35,8 +35,8 @@ Nobody! This was a damage to the entire industry! Parents didn't switch childcar
 
 ## Real Free Cash Flow
 By *real free cash flow* we mean operating cash − capex − lease principal
-
 ![](../assets/gem-20260808-183903-1760.png)
+
 
 #fundamental_analysis #Consumer_Services
 
