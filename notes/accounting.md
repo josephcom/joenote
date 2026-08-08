@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T23:55:07Z
-updated: 2026-08-08T00:31:45Z
+updated: 2026-08-08T00:31:52Z
 ---
 # Accounting
 
@@ -22,7 +22,7 @@ Rule of thumb
 > dividends consistently backed by cash flow = healthy. Dividends paid while cash shrinks = company borrowing to look generous — a classic red flag.
 
 ### Example
-$10, in total, genuinely came into my jar from my core business, $7 genuinely left my jar as a result of my core business: Lemons $2, wages $2, rent $1 and Interest and tax $2
+$10, in total, genuinely came into my jar from my core business, $7 genuinely left my jar as a result of my core business: Lemons $2, wages $2, rent $1 and Interest and tax $2:
 ![](../assets/accounting-20260808-103113-7946.png)
 
 #fundamental_analysis
