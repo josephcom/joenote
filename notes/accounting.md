@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T23:55:07Z
-updated: 2026-08-08T00:06:00Z
+updated: 2026-08-08T00:06:12Z
 ---
 # Accounting
 
@@ -10,11 +10,11 @@ Money in the jar. Every day, coins come in from customers and go out for lemons.
 
 **Operating cash flow** = coins that actually entered and left the jar *from selling lemonade*. It's the slice from running the business itself — fees in, wages out. It excludes borrowing, share issues, or buying buildings. So operating cash is one type of cash flow.
 
-**Profit** is a *story*, not a jar. Accountants don't just count coins. They add promises ("Bob will pay me Tuesday" counts as income *today*) and subtract pretend costs ("my juicer machine got older, that's -$50" — but no coin left the jar).
+**Profit** is a *story*, not a jar. income earned minus costs incurred, *on paper*. Accountants don't just count coins. They add promises ("Bob will pay me Tuesday" counts as income *today*) and subtract pretend costs ("my juicer machine got older, that's -$50" — but no coin left the jar).
 
 So the two numbers differ.
 
-- Profit = income earned minus costs incurred, *on paper*.
+- Profit = 
 - 
 
 > Profit (EPS) tells you the story; cash tells you the truth. Check both.
