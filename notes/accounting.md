@@ -1,10 +1,10 @@
 ---
 created: 2026-08-07T23:55:07Z
-updated: 2026-08-08T00:30:36Z
+updated: 2026-08-08T00:30:46Z
 ---
 # Accounting
 
-## 
+## Operating Cash Flow
 
 Imagine a lemonade stand.
 
