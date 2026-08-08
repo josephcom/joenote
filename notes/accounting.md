@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T23:55:07Z
-updated: 2026-08-08T08:45:35Z
+updated: 2026-08-08T08:45:42Z
 ---
 # Accounting
 
@@ -31,7 +31,8 @@ In the above example, $10, in total, genuinely came into my jar from my core bus
 
 Operating cash also can be fake:
 1. Intentionally delaying paying my suppliers
-2. Delaying paying the rent for my stance etc. 
+2. Delaying paying the rent for my stance
+3. I  
 
 Also, loss means I have "claimed" my costs was bigger than my revenue. However, that, too, can be an accounting trick for example by writing $2 for juicer aging instead of $1; or I can do a goodwill write-down trick.
 
