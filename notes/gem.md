@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T22:08:34Z
-updated: 2026-08-08T08:41:52Z
+updated: 2026-08-08T08:57:14Z
 ---
 
 # GEM
@@ -33,9 +33,9 @@ GEM management added a $349m goodwill write-down as a result of the damage to th
 ### Which of GEM's competitors became happy?
 Nobody! This was a damage to the entire industry! Parents didn't switch childcare brands; they switched to grandma.
 
-## Real Free Cash Flow
+## Real Free Cash Flow and Dividends
 By *real free cash flow* we mean operating cash − capex − lease principal
-![](../assets/gem-20260808-183903-1760.png)
+![](../assets/gem-20260808-185713-9776.png)
 This business has never been a cash machine. Ten-year average: $55m. Post-2019 average: $46m. The $168m headline never once turned into $168m of real money.
 
 The wild swings aren't operational. **2020**'s $104m was COVID support ($263m of it) plus deferred rent. **2021**'s −$31m was paying that rent back plus peak capex. **2023**'s $80m was flattered by paying essentially zero tax that year. **2024** absorbed a $35m class action settlement (G8 got sued as a group, paid $35m compensation).
