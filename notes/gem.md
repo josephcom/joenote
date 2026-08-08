@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T22:08:34Z
-updated: 2026-08-08T08:39:33Z
+updated: 2026-08-08T08:40:11Z
 ---
 
 # GEM
@@ -38,7 +38,7 @@ By *real free cash flow* we mean operating cash − capex − lease principal
 ![](../assets/gem-20260808-183903-1760.png)
 This business has never been a cash machine. Ten-year average: $55m. Post-2019 average: $46m. The $168m headline never once turned into $168m of real money.
 
-The wild swings aren't operational. 2020's $104m was COVID support ($263m of it) plus deferred rent. 2021's −$31m was paying that rent back plus peak capex. 2023's $80m was flattered by paying essentially zero tax that year. 2024 absorbed a $35m class action settlement.
+The wild swings aren't operational. 2020's $104m was COVID support ($263m of it) plus deferred rent. 2021's −$31m was paying that rent back plus peak capex. 2023's $80m was flattered by paying essentially zero tax that year. 2024 absorbed a $35m class action settlement (G8 got sued as a group, paid $35m compensation).
 
 2025's $50.1m is roughly a normal year for this company — which is the uncomfortable part, because it's a normal year with occupancy collapsing.
 
