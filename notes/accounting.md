@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T23:55:07Z
-updated: 2026-08-08T08:13:06Z
+updated: 2026-08-08T08:13:40Z
 ---
 # Accounting
 
@@ -25,13 +25,6 @@ Rule of thumb
 ![](../assets/accounting-20260808-180917-9989.png)
 
 **FCF**: Free Cash Flow (not a standard accounting term, but widely used)
-
-
-
-
-
-
-
 **Honest FCF**: just a made-up term in this chart. 
 
 In the above example, $10, in total, genuinely came into my jar from my core business, $7 genuinely left my jar as a result of my core business: Lemons $2, wages $2, rent $1 and Interest and tax $2.
