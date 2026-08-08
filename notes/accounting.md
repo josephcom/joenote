@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T23:55:07Z
-updated: 2026-08-08T00:30:56Z
+updated: 2026-08-08T00:31:15Z
 ---
 # Accounting
 
@@ -22,6 +22,6 @@ Rule of thumb
 > dividends consistently backed by cash flow = healthy. Dividends paid while cash shrinks = company borrowing to look generous — a classic red flag.
 
 ### Example
-
+![](../assets/accounting-20260808-103113-7946.png)
 
 #fundamental_analysis
