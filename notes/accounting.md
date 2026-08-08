@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T23:55:07Z
-updated: 2026-08-08T07:35:25Z
+updated: 2026-08-08T08:09:19Z
 ---
 # Accounting
 
@@ -22,7 +22,7 @@ Rule of thumb
 > dividends consistently backed by cash flow = healthy. Dividends paid while cash shrinks = company borrowing to look generous — a classic red flag.
 
 ### Example
-![](../assets/accounting-20260808-173523-3705.png)
+![](../assets/accounting-20260808-180917-9989.png)
 In the above example, $10, in total, genuinely came into my jar from my core business, $7 genuinely left my jar as a result of my core business: Lemons $2, wages $2, rent $1 and Interest and tax $2.
 
 Operating cash also can be faked by intentionally delaying paying the guy from whom I bought lemon, or I rented my stance etc. 
