@@ -1,6 +1,6 @@
 ---
 created: 2026-08-02T03:53:27Z
-updated: 2026-08-02T03:56:26Z
+updated: 2026-08-08T09:10:41Z
 ---
 
 # Company Events
@@ -217,4 +217,4 @@ Because these events are so visible and so easy to reason about, **the obvious m
 
 That's a legitimate business. It's just not stock picking — it's insurance underwriting. And underwriters who haven't read the policy go broke, regardless of how sound the reasoning was that got them into the trade.
 
-#stock
+#stock #fundamental_analysis
