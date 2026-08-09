@@ -5,7 +5,9 @@
       <parent name="money"/>
     </hashtag>
     <hashtag name="consumer"/>
-    <hashtag name="consumer_services"/>
+    <hashtag name="consumer_services">
+      <parent name="fundamental_analysis"/>
+    </hashtag>
     <hashtag name="english">
       <parent name="personal_development"/>
     </hashtag>
