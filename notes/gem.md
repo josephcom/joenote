@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T22:08:34Z
-updated: 2026-08-08T08:57:34Z
+updated: 2026-08-09T06:44:06Z
 ---
 
 # GEM
@@ -33,7 +33,7 @@ GEM management added a $349m goodwill write-down as a result of the damage to th
 ### Which of GEM's competitors became happy?
 Nobody! This was a damage to the entire industry! Parents didn't switch childcare brands; they switched to grandma.
 
-## Real Free Cash Flow and Dividends
+## Real Free Cash Flow, Dividends and Occupancy
 By *real free cash flow* we mean operating cash − capex − lease principal
 ![](../assets/gem-20260808-185713-9776.png)
 This business has never been a cash machine. Ten-year average: $55m. Post-2019 average: $46m. The $168m headline never once turned into $168m of real money.
