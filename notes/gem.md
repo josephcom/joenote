@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T22:08:34Z
-updated: 2026-08-09T07:28:01Z
+updated: 2026-08-09T07:28:25Z
 ---
 
 # GEM
@@ -52,11 +52,11 @@ One caveat on the early years. Before 2021 a chunk of the dividend was paid in n
 
 2025 is the reckless one. $50.1m of free cash, and they sent out $43.0m of dividends plus $44.4m of buybacks — $87m against $50m earned, while occupancy was collapsing. That's why the jar shrank and why the dividend is now suspended and the buyback paused. The board spent 2025 money it didn't have, then stopped.
 
-# How Fragile Is GEM?
+## How Fragile Is GEM?
 
 Real numbers, CY25.
 
-## Fixed and variable costs
+### Fixed and variable costs
 
 Revenue **$947m**. Operating costs **$854m**. Operating EBIT **$93m**.
 
@@ -64,7 +64,7 @@ Roughly **$580m fixed** — rent, plus the minimum staff needed to keep a centre
 
 G8 doesn't publish that split. It's my estimate. Every number below moves if it's wrong.
 
-## Operating leverage
+### Operating leverage
 
 Contribution = revenue − variable costs = $947m − $275m = **$672m**
 
@@ -74,7 +74,7 @@ Degree of operating leverage = contribution ÷ operating EBIT
 
 Knock 1% off revenue, lose about 7% of EBIT.
 
-## Break-even revenue
+### Break-even revenue
 
 Contribution margin ratio = $672m ÷ $947m = **0.71**
 
@@ -82,13 +82,13 @@ Break-even revenue = fixed costs ÷ contribution margin ratio
 
 = $580m ÷ 0.71 = **$820m**
 
-## Margin of safety
+### Margin of safety
 
 $947m − $820m = $127m, or **13%**.
 
 Revenue can fall 13% before EBIT hits zero. That's the whole tank.
 
-## Where it's sitting now
+### Where it's sitting now
 
 Occupancy averaged 65.8% in 2025. By April 2026 it was **56.1%** — 15% fewer kids through the door.
 
@@ -96,7 +96,7 @@ $947m × 0.85 ≈ **$805m**. Below break-even.
 
 Fee rises soften that, and 40 centre closures pull fixed costs down. So it's not as clean as the sum. But it's not far off either.
 
-## Reality check
+### Reality check
 
 Actual 2025: revenue −7%, operating EBIT −19%. That's **2.7×**, not 7.2×.
 
