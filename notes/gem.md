@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T22:08:34Z
-updated: 2026-08-09T07:27:54Z
+updated: 2026-08-09T07:28:01Z
 ---
 
 # GEM
@@ -52,7 +52,7 @@ One caveat on the early years. Before 2021 a chunk of the dividend was paid in n
 
 2025 is the reckless one. $50.1m of free cash, and they sent out $43.0m of dividends plus $44.4m of buybacks — $87m against $50m earned, while occupancy was collapsing. That's why the jar shrank and why the dividend is now suspended and the buyback paused. The board spent 2025 money it didn't have, then stopped.
 
-# How Fragile Is It?
+# How Fragile Is GEM?
 
 Real numbers, CY25.
 
