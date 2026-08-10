@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-10T14:14:38Z
+updated: 2026-08-10T14:15:17Z
 ---
 # Core
 
@@ -69,7 +69,7 @@ Two cases where you'll not find the answer:
 
 **Note**: *CHAIN/TREE/CLUSTER OF QUESTIONS*. Think about this chain: "Should I sell my house now?" ← "Will prices drop?" ← "Will rates rise?" ← "Will inflation cool?" ← "What will oil do?" This whole chain is a *path*. Sometimes this chain comprises of hundreds of questions! You can think of that case we *too many pwths*; it's the same principle. Sometimes we have a *tree* of questions. What do affect share price? A, B, C and D. What do affect A? A1, A2 and A3. What do affect A1? ... Again, the same principle.
 
-**Note**: Applying mathematics tools to problems can be also thought of as *too many paths*. Imagine, for every problem, you go through the list of all the available tools in mathematics and ask yourself "can I use
+**Note**: Applying mathematics tools to problems can be also thought of as *too many paths*. Imagine, for every problem, you go through the list of all the available tools in mathematics and ask yourself "can I make use of this?", " what about this?", "what about that?" etc.
 
 ### 3. VALIDATION
 
