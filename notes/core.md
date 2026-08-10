@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-10T13:55:14Z
+updated: 2026-08-10T13:55:28Z
 ---
 # Core
 
@@ -65,7 +65,7 @@ Two cases where you'll not find the answer:
 4. What's the shortest route through 10,000 cities?
 5. Which of ten billion molecules cures this disease?
 
-**Note**: *CHAIN OF QUESTIONS
+**Note**: *CHAIN OF QUESTIONS*. Think about
 
 ### 3. VALIDATION
 
