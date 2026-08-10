@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-10T13:58:27Z
+updated: 2026-08-10T13:58:45Z
 ---
 # Core
 
@@ -57,7 +57,7 @@ Two cases where you'll not find the answer:
 4. What colour were most dinosaurs?
 5. Where exactly is this electron, and how fast?
 
-**Note**: As we said above, 0 path *as far as 
+**Note**: As we said above, 0 path *as far as we know*. Exahhgbgg
 
 **Too many paths**
 
