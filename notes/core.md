@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-06T11:44:57Z
+updated: 2026-08-10T13:54:57Z
 ---
 # Core
 
@@ -64,6 +64,8 @@ Two cases where you'll not find the answer:
 3. Which lottery numbers come up next Saturday?
 4. What's the shortest route through 10,000 cities?
 5. Which of ten billion molecules cures this disease?
+
+**Note
 
 ### 3. VALIDATION
 
