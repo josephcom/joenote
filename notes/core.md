@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-10T14:01:45Z
+updated: 2026-08-10T14:04:18Z
 ---
 # Core
 
@@ -67,7 +67,7 @@ Two cases where you'll not find the answer:
 4. What's the shortest route through 10,000 cities?
 5. Which of ten billion molecules cures this disease?
 
-**Note**: *CHAIN OF QUESTIONS*. Think about this chain: "Should I sell my house now?" ← "Will prices drop?" ← "Will rates rise?" ← "Will inflation cool?" ← "What will oil do?" This whole chain is a *path*. Sometimes this chain comprises of hundreds of questions! You can think of that case we *too many pwths*; it's the same principle.
+**Note**: *CHAIN/TREE OF QUESTIONS*. Think about this chain: "Should I sell my house now?" ← "Will prices drop?" ← "Will rates rise?" ← "Will inflation cool?" ← "What will oil do?" This whole chain is a *path*. Sometimes this chain comprises of hundreds of questions! You can think of that case we *too many pwths*; it's the same principle. Sometimes we have a *tree* of questions. What do affect share price? A, B, C and D. What do affect A? A1, A2 and A3. What do affect A1? ... Again, the same 
 
 ### 3. VALIDATION
 
