@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-10T13:58:45Z
+updated: 2026-08-10T14:00:52Z
 ---
 # Core
 
@@ -57,7 +57,7 @@ Two cases where you'll not find the answer:
 4. What colour were most dinosaurs?
 5. Where exactly is this electron, and how fast?
 
-**Note**: As we said above, 0 path *as far as we know*. Exahhgbgg
+**Note**: As we said above, 0 path *as far as we know*. Example: ask an uneducated person about the optimal dimensions of an aluminium can to hold the same volume with least amount of aluminium used to build the can. He wouldn't answer the question because he'd think there's *0 path*
 
 **Too many paths**
 
