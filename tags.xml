@@ -19,6 +19,7 @@
       <parent name="fundamental_analysis"/>
       <parent name="stock"/>
     </hashtag>
+    <hashtag name="god-of-intelligence"/>
     <hashtag name="god_of_intelligence">
       <parent name="mind"/>
     </hashtag>
