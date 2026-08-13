@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-13T21:56:13Z
+updated: 2026-08-13T21:56:30Z
 ---
 # Core
 
@@ -108,7 +108,8 @@ Immediately something came to my mind (we call this **guess**), then I went into
 - how and why some examples and counterexamples do or do not occur to us? Why does it take so long, maybe forever (!) to **come up** work another counterexample?
 - we stop as soon as we feel we've answered them all. We don't ask **what else** can answer them all. 
 
-## Real cases of thinking process
+## Food For Thought 
+
 
 #god_of_intelligence
 
