@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-13T22:00:18Z
+updated: 2026-08-13T22:00:34Z
 ---
 # Core
 
@@ -109,7 +109,7 @@ Immediately something came to my mind (we call this **guess**), then I went into
 - we stop as soon as we feel we've answered them all. We don't ask **what else** can answer them all. 
 
 ## Food For Thought 
-* I use the word *information* all the time, yet, when asked to define it, I have no idea what it is. It opposes idea->word or word-> idea dilemma, there is no idea! In this case I have no idea what information is. I just *use it in the same context and form I heard and I am hearing it*. The pattern is formed in my brain 
+* I use the word *information* all the time, yet, when asked to define it, I have no idea what it is. It opposes idea->word or word-> idea dilemma, there is no idea! In this case I have no idea what information is. I just *use it in the same context and form I heard and I am hearing it*. The pattern is formed in my brain but *backed by no idea*
 
 #god_of_intelligence
 
