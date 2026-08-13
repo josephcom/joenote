@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-13T21:57:53Z
+updated: 2026-08-13T21:58:37Z
 ---
 # Core
 
@@ -109,7 +109,7 @@ Immediately something came to my mind (we call this **guess**), then I went into
 - we stop as soon as we feel we've answered them all. We don't ask **what else** can answer them all. 
 
 ## Food For Thought 
-* I use the word *information* all the time, yet, when asked to define it, I have no idea what it is. It 
+* I use the word *information* all the time, yet, when asked to define it, I have no idea what it is. It opposes idea->word or word-> idea dilemma 
 
 #god_of_intelligence
 
