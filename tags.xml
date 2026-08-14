@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <joenote version="1">
   <hashtags>
-    <hashtag name="business_stories"/>
+    <hashtag name="business_stories">
+      <parent name="money"/>
+    </hashtag>
     <hashtag name="consumer_services">
       <parent name="fundamental_analysis"/>
     </hashtag>
