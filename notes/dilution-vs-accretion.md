@@ -1,6 +1,6 @@
 ---
 created: 2026-08-14T21:58:22Z
-updated: 2026-08-14T22:03:26Z
+updated: 2026-08-14T22:03:55Z
 ---
 
 # Dilution vs Accretion
@@ -15,7 +15,8 @@ Everybody should be happy 😊 Nothing wrong, we just described **accretive** is
 
 **Dilution** hurts in the reverse case: *shares issued cheap*. When companies needed money not for bargains but for survival! When the price has crushed each dollar of raised money now requires a mountain of shares. Profit later recovers, but divided across many more the slices. EPS permanently lower.
 
-Rule of : issuing expensive shares to buy cheap profit enriches you; issuing cheap shares to plug losses robs you. Price paid decides everything.
+## Rule of Thumb
+Issuing expensive shares to buy cheap profit enriches you; issuing cheap shares to plug losses robs you. Price paid decides everything.
 
 (100)
 
