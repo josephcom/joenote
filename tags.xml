@@ -7,7 +7,9 @@
     <hashtag name="consumer_services">
       <parent name="fundamental_analysis"/>
     </hashtag>
-    <hashtag name="english"/>
+    <hashtag name="english">
+      <parent name="personal_development"/>
+    </hashtag>
     <hashtag name="fundamental_analysis">
       <parent name="stock"/>
     </hashtag>
