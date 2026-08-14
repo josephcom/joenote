@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T22:08:34Z
-updated: 2026-08-14T22:48:53Z
+updated: 2026-08-14T22:49:32Z
 ---
 
 # GEM
@@ -31,7 +31,7 @@ One law covers all centres, so one change moves the whole machine:
 - **Wage awards.** The government mandates pay rises for educators. Every centre pays.
 - **Safety rules.** For example, mandatory CCTV. Every centre installs it.
 
-Notice: the first cuts revenue, the rest raise fixed costs. Both squeeze the profit machine from Foundation 1.
+Notice: the first cuts revenue, the rest raise fixed costs.
 
 ## What happened?!
 In 2025 ABC's Four Corners program exposed a GEM educator had been raping kids. Parents panicked and occupancy went from 66% down to 56%. 
