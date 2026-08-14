@@ -1,6 +1,6 @@
 ---
 created: 2026-08-14T21:58:22Z
-updated: 2026-08-14T22:07:33Z
+updated: 2026-08-14T22:08:04Z
 ---
 
 # Dilution vs Accretion
@@ -18,7 +18,8 @@ Everybody should be happy 😊 Nothing wrong, we just described **accretive** is
 ## Rule of Thumb
 Let's say A = the current P/E of the company, and B = the P/E of the business activity we want to buy/built
 
-A>B => cretive
+A>B => *Accretion*
+B>A => *Dilution*
 
 (100)
 
