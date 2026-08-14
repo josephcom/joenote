@@ -1,6 +1,6 @@
 ---
 created: 2026-08-14T21:58:22Z
-updated: 2026-08-14T21:59:50Z
+updated: 2026-08-14T22:00:00Z
 ---
 
 # Dilution vs Accretion
@@ -13,7 +13,7 @@ Now, GEM has got 20+2=22 shares, its profit went from $2 a year up to $2+$1=$3 a
 
 Everybody should be happy 😊 
 
-Nothing is wrong — you just described *accretive* issuance. Buy profit at 4×, pay with shares valued at 20×: everyone's slice gets richer. That was G8's 2014 machine.
+Nothing is wrong — we just described *accretive* issuance. Buy profit at 4×, pay with shares valued at 20×: everyone's slice gets richer. That was G8's 2014 machine.
 
 "Dilution" hurts in the reverse case: shares issued **cheap**. 2020: G8 needed $300m not for bargains but for survival, with the price crushed at $0.80. Same dollars now require a mountain of shares. Profit later recovers, but divided across double the slices — earnings per share permanently lower.
 
