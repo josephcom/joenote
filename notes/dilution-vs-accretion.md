@@ -1,6 +1,6 @@
 ---
 created: 2026-08-14T21:58:22Z
-updated: 2026-08-14T22:09:07Z
+updated: 2026-08-14T22:11:33Z
 ---
 
 # Dilution vs Accretion
@@ -18,7 +18,7 @@ Everybody should be happy. Nothing wrong, we just described **accretive** issuan
 ## Rule of Thumb
 Let's say A = the current P/E of the company, and B = the P/E of the business activity we want to buy/built
 
-A>B => **Accretion** 
+A>B => **Accretion**  
 B>A => **Dilution** 
 
 #fundamental_analysis
