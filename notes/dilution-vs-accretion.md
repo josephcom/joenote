@@ -1,6 +1,6 @@
 ---
 created: 2026-08-14T21:58:22Z
-updated: 2026-08-14T21:59:35Z
+updated: 2026-08-14T21:59:40Z
 ---
 
 # Dilution vs Accretion
@@ -12,6 +12,8 @@ The CEO says I have found a family-run centre which has $1 of profit each year a
 Now, GEM has got 20+2=22 shares, its profit went from $2 a year up to $2+$1=$3 a year. So, $3 / 22 = 13.6c > 10c
 
 Everybody should be happy 😊 
+
+
 
 (100)
 
