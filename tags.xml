@@ -10,7 +10,9 @@
     <hashtag name="funds">
       <parent name="fundamental_analysis"/>
     </hashtag>
-    <hashtag name="god_of_intelligence"/>
+    <hashtag name="god_of_intelligence">
+      <parent name="mind"/>
+    </hashtag>
     <hashtag name="inbox">
       <sibling name="someday"/>
     </hashtag>
