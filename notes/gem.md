@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T22:08:34Z
-updated: 2026-08-14T22:49:32Z
+updated: 2026-08-14T23:59:52Z
 ---
 
 # GEM
@@ -21,6 +21,9 @@ They rent rooms + educators, then accept kids to educate them. educator per room
   - Parents losing trust in GEM in particular
   - Falling birth rates
   - Competitors building centres next door
+
+#### Suburb Development
+
 
 #### Laws that hit every centre at once
 
