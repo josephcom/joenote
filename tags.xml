@@ -7,7 +7,9 @@
     <hashtag name="fundamental_analysis">
       <parent name="stock"/>
     </hashtag>
-    <hashtag name="funds"/>
+    <hashtag name="funds">
+      <parent name="fundamental_analysis"/>
+    </hashtag>
     <hashtag name="god_of_intelligence"/>
     <hashtag name="inbox">
       <sibling name="someday"/>
