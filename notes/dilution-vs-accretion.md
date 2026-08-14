@@ -1,6 +1,6 @@
 ---
 created: 2026-08-14T21:58:22Z
-updated: 2026-08-14T22:13:17Z
+updated: 2026-08-14T22:13:38Z
 ---
 
 # Dilution vs Accretion
@@ -19,8 +19,8 @@ Dilution hurts in the reverse case: *shares issued cheap*. When companies needed
 ## Rule of Thumb
 Let's say A = the current P/E of the company, and B = the P/E of the business activity we want to buy/built
 
-A>B => **Accretion**  
-B>A => **Dilution** 
+> A>B => **Accretion**  
+> B>A => **Dilution** 
 
 #fundamental_analysis
 
