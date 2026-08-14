@@ -1,6 +1,6 @@
 ---
 created: 2026-08-14T21:58:22Z
-updated: 2026-08-14T22:08:04Z
+updated: 2026-08-14T22:08:29Z
 ---
 
 # Dilution vs Accretion
@@ -20,8 +20,6 @@ Let's say A = the current P/E of the company, and B = the P/E of the business ac
 
 A>B => *Accretion*
 B>A => *Dilution*
-
-(100)
 
 #fundamental_analysis
 
