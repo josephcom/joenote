@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T22:08:34Z
-updated: 2026-08-14T22:47:54Z
+updated: 2026-08-14T22:48:13Z
 ---
 
 # GEM
@@ -36,23 +36,6 @@ One law covers all centres, so one change moves the whole machine:
 - **Safety rules.** For example, mandatory CCTV. Every centre installs it.
 
 Notice: the first cuts revenue, the rest raise fixed costs. Both squeeze the profit machine from Foundation 1.
-
-# 3) What happened to ABC Learning
-
-ABC was the world's biggest listed childcare company — over 2,000 centres across Australia, the US, and the UK. Same recipe as G8, but extreme: buy fast, fund with heavy debt, promise endless growth. Two rots grew inside. First, the debt mountain. Second, the profits were partly fake — padded by one-off payments from property developers and murky related-party deals, counted as if they were normal earnings. In 2008 the global financial crisis hit. Banks refused to refinance the debt. Auditors questioned the accounts. The founder's own shares were force-sold. ABC collapsed within months. The government had to step in with emergency money just to keep centres open for roughly 100,000 children. Lesson burned into every Australian investor: childcare roll-up + debt = remembered trauma. That memory is why G8's confidence number was always fragile.
-
-# 4) The failed Affinity takeover, 2015
-
-Affinity was a mini-G8: about 160 centres, same roll-up model, listed in 2013. In 2015 its price sagged after weak results. G8 pounced with a hostile bid — hostile means the target's board said no — offering mostly G8 *shares*, not cash. Affinity's board rejected it as too cheap. G8 raised the offer and bought a stake to pressure them, but the takeover regulator ruled part of that stake-building improper. Then a private equity firm, Anchorage, arrived with a clean **cash** offer. Cash beats paper. Affinity's board accepted, G8 sold its stake to Anchorage, and walked away with a consolation profit. Why it mattered: the machine had tried to swallow 160 centres in one bite because one-by-one buying was too slow. The failure told the market the machine was straining.
-
-# 5) The roll-up ending, decoded word by word
-
-**Buy the price gap:** purchase profit at 4×, get valued at 20×. Free paper value.
-**Neglect the base business:** management's hours go into deal-hunting, not into running the 400 centres it already owns. Quality drifts, occupancy sags.
-**Go ex-growth:** "ex-growth" simply means the growth is finished — cheap targets gone, sellers pricing up, funding tired.
-**Get re-rated down:** the market re-does its rating. The confidence number drops from growth-level 20× to boring-level 10×. Profit unchanged; price halved.
-
-Gap → gorge → neglect →
 
 ## What happened?!
 In 2025 ABC's Four Corners program exposed a GEM educator had been raping kids. Parents panicked and occupancy went from 66% down to 56%. 
