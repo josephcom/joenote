@@ -30,6 +30,7 @@
     <hashtag name="joenote">
       <parent name="project"/>
     </hashtag>
+    <hashtag name="laws"/>
     <hashtag name="meeting">
       <parent name="work"/>
     </hashtag>
