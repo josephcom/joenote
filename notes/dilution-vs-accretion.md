@@ -1,9 +1,10 @@
 ---
 created: 2026-08-14T21:58:22Z
-updated: 2026-08-14T22:12:27Z
+updated: 2026-08-14T22:12:38Z
 ---
 
 # Dilution vs Accretion
+## Accre
 
 Let's say GEM is generating $2 a year and has got 20 shares; so, 10c of profit for each share. Share price is currently 20x10c=$2
 
