@@ -1,6 +1,6 @@
 ---
 created: 2026-08-14T21:58:22Z
-updated: 2026-08-14T22:05:38Z
+updated: 2026-08-14T22:05:56Z
 ---
 
 # Dilution vs Accretion
@@ -16,7 +16,7 @@ Everybody should be happy 😊 Nothing wrong, we just described **accretive** is
 **Dilution** hurts in the reverse case: *shares issued cheap*. When companies needed money not for bargains but for survival! When the price has crushed each dollar of raised money now requires a mountain of shares. Profit later recovers, but divided across many more the slices. EPS permanently lower.
 
 ## Rule of Thumb
-Let's say A = the current P/E of the company
+Let's say A = the current P/E of the company, and B = the P/E of
 
 (100)
 
