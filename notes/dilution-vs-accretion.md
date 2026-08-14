@@ -1,6 +1,6 @@
 ---
 created: 2026-08-14T21:58:22Z
-updated: 2026-08-14T22:12:15Z
+updated: 2026-08-14T22:12:27Z
 ---
 
 # Dilution vs Accretion
@@ -9,7 +9,7 @@ Let's say GEM is generating $2 a year and has got 20 shares; so, 10c of profit f
 
 The CEO says I have found a family-run centre which has $1 of profit each year and is sold for $4. Bargain! But, we don't have money to buy it. Let's issue 2 new shares to raise $4.
 
-Now, GEM has got 20+2=22 shares, its profit went from $2 a year up to $2+$1=$3 a year. So, $3 / 22 = 13.6c > 10c
+Now, GEM has got 20+2=22 shares, its profit went from $2 a year up to $2+$1=$3 a year. So, $3 / 22 = 13.6c > 10c. 
 
 Everybody should be happy.
 
