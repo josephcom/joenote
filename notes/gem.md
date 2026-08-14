@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T22:08:34Z
-updated: 2026-08-14T22:48:21Z
+updated: 2026-08-14T22:48:42Z
 ---
 
 # GEM
@@ -26,7 +26,7 @@ They rent rooms + educators, then accept kids to educate them. educator per room
 
 The share price says it. The market paid 20× profit only because it expected fast growth. But G8's *existing* centres barely grew. All growth came from buying. So the moment G8 stops buying, growth stops, the confidence number collapses, and the price halves. The machine cannot idle — it must eat or die. Worse, management publicly promised the market it would spend $100–150 million per year on acquisitions. [ROGER MONTGOMERY](https://rogermontgomery.com/is-g8-education-worth-more-than-5-per-share/) Now picture the seller of a family centre. He reads that promise. He knows G8 is a forced buyer with a shopping deadline. So he asks 5× profit instead of 4×. Every seller does. The bargain slowly disappears.
 
-#Laws that hit every centre at once
+#### Laws that hit every centre at once
 
 One law covers all centres, so one change moves the whole machine:
 
