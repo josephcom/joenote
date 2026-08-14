@@ -1,6 +1,6 @@
 ---
 created: 2026-08-14T21:58:22Z
-updated: 2026-08-14T22:00:35Z
+updated: 2026-08-14T22:00:50Z
 ---
 
 # Dilution vs Accretion
@@ -11,9 +11,7 @@ The CEO says I have found a family-run centre which has $1 of profit each year a
 
 Now, GEM has got 20+2=22 shares, its profit went from $2 a year up to $2+$1=$3 a year. So, $3 / 22 = 13.6c > 10c
 
-Everybody should be happy 😊 
-
-Nothing is wrong — we just described **accretive** issuance. 
+Everybody should be happy 😊 Nothing wrong, we just described **accretive** issuance. 
 
 "Dilution" hurts in the reverse case: shares issued **cheap**. 2020: G8 needed $300m not for bargains but for survival, with the price crushed at $0.80. Same dollars now require a mountain of shares. Profit later recovers, but divided across double the slices — earnings per share permanently lower.
 
