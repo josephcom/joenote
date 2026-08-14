@@ -1,11 +1,9 @@
 ---
 created: 2026-08-14T21:58:22Z
-updated: 2026-08-14T21:59:00Z
+updated: 2026-08-14T21:59:12Z
 ---
 
 # Dilution vs Accretion
-
-Help me understand the concept of share dilution. 
 
 Let's say GEM is generating $2 a year and has got 20 shares; so, 10c of profit for each share. Share price is currently 20x10c=$2
 
