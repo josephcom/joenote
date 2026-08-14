@@ -2,7 +2,9 @@
 <joenote version="1">
   <hashtags>
     <hashtag name="business_stories"/>
-    <hashtag name="consumer_services"/>
+    <hashtag name="consumer_services">
+      <parent name="fundamental_analysis"/>
+    </hashtag>
     <hashtag name="english"/>
     <hashtag name="fundamental_analysis">
       <parent name="stock"/>
