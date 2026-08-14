@@ -1,51 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <joenote version="1">
   <hashtags>
-    <hashtag name="business_stories">
-      <parent name="money"/>
-    </hashtag>
-    <hashtag name="consumer"/>
-    <hashtag name="consumer_services">
-      <parent name="fundamental_analysis"/>
-    </hashtag>
-    <hashtag name="english">
-      <parent name="personal_development"/>
-    </hashtag>
-    <hashtag name="fund"/>
-    <hashtag name="fundamental"/>
-    <hashtag name="fundamental_analysis">
-      <parent name="stock"/>
-    </hashtag>
-    <hashtag name="funds">
-      <parent name="fundamental_analysis"/>
-      <parent name="stock"/>
-    </hashtag>
-    <hashtag name="god-of-intelligence"/>
-    <hashtag name="god_of_intelligence">
-      <parent name="mind"/>
-    </hashtag>
+    <hashtag name="fundamental_analysis"/>
     <hashtag name="inbox">
       <sibling name="someday"/>
     </hashtag>
     <hashtag name="joenote">
       <parent name="project"/>
     </hashtag>
-    <hashtag name="laws"/>
     <hashtag name="meeting">
       <parent name="work"/>
     </hashtag>
-    <hashtag name="mind"/>
     <hashtag name="money"/>
     <hashtag name="personal">
       <sibling name="work"/>
     </hashtag>
-    <hashtag name="personal_development"/>
     <hashtag name="project">
       <parent name="personal"/>
       <parent name="work"/>
       <sibling name="reference"/>
     </hashtag>
-    <hashtag name="prompt"/>
     <hashtag name="reference">
       <parent name="work"/>
       <sibling name="project"/>
@@ -56,7 +30,6 @@
     <hashtag name="stock">
       <parent name="money"/>
     </hashtag>
-    <hashtag name="why"/>
     <hashtag name="work">
       <sibling name="personal"/>
     </hashtag>
