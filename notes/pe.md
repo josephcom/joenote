@@ -1,6 +1,6 @@
 ---
 created: 2026-08-14T22:35:36Z
-updated: 2026-08-15T23:02:06Z
+updated: 2026-08-15T23:02:19Z
 ---
 
 # PE
@@ -21,8 +21,6 @@ Factors known to move the whole market's P/E:
 - **Gold/commodities** — fear or inflation shifts money there.
 - **Earnings growth expectations** — faster expected growth supports higher P/E.
 - **Risk appetite** — optimism lifts P/E; fear compresses it.
-
-In short: anything offering a competing return, or changing what future profits are worth, moves market-wide P/E.
 
 #fundamental_analysis
 
