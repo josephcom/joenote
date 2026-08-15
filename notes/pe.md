@@ -1,12 +1,12 @@
 ---
 created: 2026-08-14T22:35:36Z
-updated: 2026-08-15T23:20:12Z
+updated: 2026-08-15T23:20:16Z
 ---
 
 # PE
 **PE is your decision**. Company: *This is my profit and horizon, how much do you pay?*
 
-Usually when something negatively affects the profit, share price goes down harsher than arithmetics. It's because of two reasons: 1) profit it's less, so naturally share price must go lower 2) confidence is lost so share price goes ***even lower***. This can happen on the way up too
+Usually when something negatively affects the profit, share price goes down harsher than arithmetics. It's because of two reasons: 1) profit it's less, so naturally share price must go lower 2) confidence is lost so share price goes ***even lower***. This can happen on the way up too.
 
 ## Growth
 For a steady profit with no growth in horizon, people usually pay no more than *the market* (usually would x10). But, of growth is expected then x15, x20 or even more is normal. 
