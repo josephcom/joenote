@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T22:08:34Z
-updated: 2026-08-15T00:00:09Z
+updated: 2026-08-15T00:00:21Z
 ---
 
 # GEM
@@ -23,7 +23,7 @@ They rent rooms + educators, then accept kids to educate them. educator per room
   - Competitors building centres next door
 
 #### Suburb Development
-every time a new suburb is developed, GEM needs to make a decision: buy/lease the centre of 6 you'll lose a bit of market share. 
+every time a new suburb is developed, GEM needs to make a decision: buy/lease the centre of 6 you'll lose a bit of market share. Developers build regardless. If GEM refuses the lease, a rival takes it and splits the pie. If GEM accepts everywhere, it overpays rent and cannibalises its own centres. Trap!
 
 #### Laws that hit every centre at once
 
