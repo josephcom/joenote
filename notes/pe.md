@@ -1,6 +1,6 @@
 ---
 created: 2026-08-14T22:35:36Z
-updated: 2026-08-15T23:30:49Z
+updated: 2026-08-15T23:30:54Z
 ---
 
 # PE
@@ -30,6 +30,8 @@ Numbers reach investors through the company's own reports and forecasts. A manag
 
 ## Dilution vs Buybacks 
 The company creates new shares. The same profit divides across more shares, so each share earns less.
+
+Beginners look at a price that fell from $15 to $5 and feel that $15 is the "real" value, waiting to return. It is not. The old price was old profit multiplied by old confidence — two numbers that no longer exist. And there is a third number that may have changed too: the count of shares itself. When a wounded company creates millions of new shares, old prices stop meaning anything at all.
 
 #fundamental_analysis
 
