@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T22:08:34Z
-updated: 2026-08-15T00:00:21Z
+updated: 2026-08-15T00:00:48Z
 ---
 
 # GEM
@@ -46,6 +46,8 @@ GEM management added a $349m goodwill write-down as a result of the damage to th
 
 ### Which of GEM's competitors became happy?
 Nobody! This was a damage to the entire industry! Parents didn't switch childcare brands; they switched to grandma.
+
+### 
 
 ## Real Free Cash Flow, Dividends and Occupancy
 By *real free cash flow* we mean operating cash − capex − lease principal
