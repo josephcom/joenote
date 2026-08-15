@@ -1,6 +1,6 @@
 ---
 created: 2026-08-14T22:35:36Z
-updated: 2026-08-15T23:09:35Z
+updated: 2026-08-15T23:10:12Z
 ---
 
 # PE
@@ -24,7 +24,8 @@ Anything offering a competing return, or changing what future profits are worth,
 ## Trust in management
 Numbers reach investors through the company's own reports and forecasts. A management team that hits its forecasts earns a calm, steady multiple. A team that misses teaches the crowd to discount everything it says. Trust is slow to build and quick to lose, and the multiple records it.
 
-
+## Dilution 
+The company creates new shares. The same profit divides across more shares, so each share earns less.
 
 #fundamental_analysis
 
