@@ -1,6 +1,6 @@
 ---
 created: 2026-08-14T22:35:36Z
-updated: 2026-08-15T23:01:53Z
+updated: 2026-08-15T23:02:06Z
 ---
 
 # PE
@@ -12,7 +12,17 @@ For a steady profit with no growth in horizon, people usually pay no more than *
 ## Alternatives
 Higher interest rates pressure down PE across the whole market. *Some* people would say *I'll put my money in bank, I can't handle all the stress in stock market*. Sell pressure -> lower share price -> lower PE
 
-Any **alternatives to stock market** can affect PE.
+Factors known to move the whole market's P/E:
+
+- **Bond yields** — higher yields make bonds more attractive, so investors pay less for stocks.
+- **Inflation** — erodes the value of future profits, pushing P/E down.
+- **Cash/money-market rates** — when cash pays well, money exits stocks.
+- **Real estate** — strong rental returns pull money from equities.
+- **Gold/commodities** — fear or inflation shifts money there.
+- **Earnings growth expectations** — faster expected growth supports higher P/E.
+- **Risk appetite** — optimism lifts P/E; fear compresses it.
+
+In short: anything offering a competing return, or changing what future profits are worth, moves market-wide P/E.
 
 #fundamental_analysis
 
