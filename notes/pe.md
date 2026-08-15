@@ -1,6 +1,6 @@
 ---
 created: 2026-08-14T22:35:36Z
-updated: 2026-08-15T23:02:19Z
+updated: 2026-08-15T23:02:32Z
 ---
 
 # PE
@@ -9,7 +9,9 @@ updated: 2026-08-15T23:02:19Z
 ## Growth
 For a steady profit with no growth in horizon, people usually pay no more than *the market* (usually would x10). But, of growth is expected then x15, x20 or even more is normal. 
 
-## Alternatives
+## Alternatives  
+Anything offering a competing return, or changing what future profits are worth, moves market-wide P/E.
+
 Higher interest rates pressure down PE across the whole market. *Some* people would say *I'll put my money in bank, I can't handle all the stress in stock market*. Sell pressure -> lower share price -> lower PE
 
 Factors known to move the whole market's P/E:
