@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T10:26:36Z
-updated: 2026-08-07T22:51:24Z
+updated: 2026-08-15T12:46:34Z
 ---
 
 # GQG
@@ -119,3 +119,4 @@ Two notes:
 
 #fundamental_analysis
 #funds
+#GQG
