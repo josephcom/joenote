@@ -16,6 +16,7 @@
     <hashtag name="funds">
       <parent name="fundamental_analysis"/>
     </hashtag>
+    <hashtag name="gem"/>
     <hashtag name="god_of_intelligence">
       <parent name="mind"/>
     </hashtag>
