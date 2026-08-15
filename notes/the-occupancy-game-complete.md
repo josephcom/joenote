@@ -1,6 +1,6 @@
 ---
 created: 2026-08-15T12:37:21Z
-updated: 2026-08-15T12:39:10Z
+updated: 2026-08-15T12:39:22Z
 ---
 
 # THE OCCUPANCY GAME
@@ -4052,4 +4052,4 @@ Status codes: ☐ not started · ✍ drafting · ✔ drafted & self-reviewed · 
 
 ---
 
-#fundamental_analysis #
+#fundamental_analysis #GEM
