@@ -1,6 +1,6 @@
 ---
 created: 2026-08-14T22:35:36Z
-updated: 2026-08-15T23:03:14Z
+updated: 2026-08-15T23:03:22Z
 ---
 
 # PE
@@ -13,7 +13,6 @@ For a steady profit with no growth in horizon, people usually pay no more than *
 Anything offering a competing return, or changing what future profits are worth, moves market-wide P/E.
 
 - **Interest Rate**: higher interest rates pressure down PE across the whole market. *Some* people would say *I'll put my money in bank, I can't handle all the stress in stock market*. Sell pressure -> lower share price -> lower PE
-
 - **Bond yields** — higher yields make bonds more attractive, so investors pay less for stocks.
 - **Inflation** — erodes the value of future profits, pushing P/E down.
 - **Cash/money-market rates** — when cash pays well, money exits stocks.
