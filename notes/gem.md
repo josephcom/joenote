@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T22:08:34Z
-updated: 2026-08-15T00:00:48Z
+updated: 2026-08-15T00:03:15Z
 ---
 
 # GEM
@@ -48,6 +48,7 @@ GEM management added a $349m goodwill write-down as a result of the damage to th
 Nobody! This was a damage to the entire industry! Parents didn't switch childcare brands; they switched to grandma.
 
 ### 
+They recently closed 40 centres. They were underperforming centres; **occupancy** below break-even, losing cash, often in oversupplied areas. Closing them cuts fixed costs but shrinks revenue and signals weak local demand.
 
 ## Real Free Cash Flow, Dividends and Occupancy
 By *real free cash flow* we mean operating cash − capex − lease principal
