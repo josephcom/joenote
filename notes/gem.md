@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T22:08:34Z
-updated: 2026-08-15T00:03:34Z
+updated: 2026-08-15T12:40:47Z
 ---
 
 # GEM
@@ -119,5 +119,5 @@ Actual 2025: revenue −7%, operating EBIT −19%. That's **2.7×**, not 7.2×.
 
 The gap is management cutting. 7.2× is the number if you sit still. Nobody sits still — but you can only cut so fast.
 
-#fundamental_analysis #Consumer_Services
+#fundamental_analysis #Consumer_Services #GEM
 
