@@ -1,6 +1,6 @@
 ---
 created: 2026-08-16T03:33:33Z
-updated: 2026-08-16T03:33:56Z
+updated: 2026-08-16T03:34:05Z
 ---
 
 ## The Role of the Bank
@@ -48,7 +48,7 @@ Now apply this to G8 in 2020. Its cash position was weak. The directors sold **3
 
 ### In Short
 
-So the bank does not appear in the sale, but it controls the events. Its **doubt** starts the raising. Its **deadline** lowers the price. Its **legal power** makes dilution the better option.
+So the bank does not appear in the sale, but it controls the events. Its **doubt** starts the raising. Its **deadline** lowers the price. Its *legal power* makes dilution the better option.
 
 #fundamental_analysis
 
