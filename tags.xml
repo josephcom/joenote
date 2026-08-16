@@ -10,7 +10,9 @@
     <hashtag name="english">
       <parent name="personal_development"/>
     </hashtag>
-    <hashtag name="export"/>
+    <hashtag name="export">
+      <parent name="money"/>
+    </hashtag>
     <hashtag name="fundamental_analysis">
       <parent name="stock"/>
     </hashtag>
