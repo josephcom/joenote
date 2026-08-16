@@ -1,6 +1,6 @@
 ---
 created: 2026-08-14T21:58:22Z
-updated: 2026-08-16T01:24:48Z
+updated: 2026-08-16T06:47:28Z
 ---
 
 # Dilution, Accretion and Buybacks 
@@ -38,6 +38,9 @@ The company creates new shares. The same profit divides across more shares, so e
 Beginners look at a price that fell from $15 to $5 and feel that $15 is the "real" value, waiting to return. It is not. The old price was old profit multiplied by old confidence — two numbers that no longer exist. And there is a third number that may have changed too: the count of shares itself. When a wounded company creates millions of new shares, old prices stop meaning anything at all.
 
 Buybacks are the reverse. The company buys its own shares from the market and destroys them. The same profit now divides across fewer shares, so each share earns more. The crowd often reads it as a signal too: management believes the shares are cheap, and confidence lifts the multiple.
+
+## Word of Warning 
+The rule that follows is short: after any capital raising, throw away every old price. Value the company fresh: today's profit, today's share count, today's confidence. 
 
 #fundamental_analysis
 
