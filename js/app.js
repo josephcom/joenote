@@ -1237,11 +1237,8 @@
     $('btn-fit').addEventListener('click', function () { App.graph && App.graph.fit(); });
     $('btn-relayout').addEventListener('click', function () {
       if (!App.graph) return;
-      App.graph.nodes.forEach(function (n) {
-        n.x += (Math.random() - 0.5) * 160;
-        n.y += (Math.random() - 0.5) * 160;
-      });
-      App.graph.kick(1);
+      App.graph.relayout();
+      App.graph.fit();
     });
     /* notes pane */
     $('np-close').addEventListener('click', function () { $('notes-panel').hidden = true; });

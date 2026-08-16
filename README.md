@@ -125,7 +125,7 @@ js/sanitize.js      allow-list sanitiser for rendered HTML
 js/store.js         File System Access API / localStorage backends
 js/tags.js          the hashtag graph, read and written as XML
 js/search.js        query tokeniser, parser and evaluator
-js/graph.js         force-directed SVG map
+js/graph.js         layered SVG map (roots on top, tree below)
 js/app.js           routing and glue
 tags.xml            the hashtag map
 notes/*.md          your notes

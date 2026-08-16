@@ -1,7 +1,12 @@
 /* JoeNote - js/graph.js
- * The hashtag map: an SVG force-directed graph of the tag ontology.
+ * The hashtag map: an SVG drawing of the tag ontology, laid out as a tree.
  * Every tag is a rectangle with its own hashtag written inside it.
- * Solid arrows point parent -> child. Dashed lines join siblings.
+ * Solid arrows point parent -> child. Dashed arcs join siblings.
+ *
+ * The map used to be a force simulation, and read like one: boxes drifted
+ * wherever the springs left them, arrows crossed, and the same ontology
+ * looked different every time it was opened. It is a hierarchy, so it is
+ * now drawn as one - rows from the top down, in the same places every time.
  */
 (function (global) {
   'use strict';
@@ -20,11 +25,11 @@
     this.nodes = [];
     this.index = Object.create(null);
     this.links = [];
+    this.rows = [];
     this.view = { x: 0, y: 0, k: 1 };
     this.selected = null;
     this.highlight = Object.create(null);
     this.running = false;
-    this.alpha = 1;
     this.build();
     this.bindEvents();
   }
@@ -58,21 +63,23 @@
     var self = this;
     var names = Object.keys(tagMap).sort();
     var old = this.index;
+    var hadAny = this.nodes.length > 0;
     this.nodes = [];
     this.index = Object.create(null);
 
-    var w = this.width() || 800, h = this.height() || 500;
-    names.forEach(function (name, i) {
+    names.forEach(function (name) {
       var prev = old[name];
-      var angle = (i / Math.max(1, names.length)) * Math.PI * 2;
       var node = {
         name: name,
         count: tagMap[name].count || 0,
-        x: prev ? prev.x : w / 2 + Math.cos(angle) * (120 + (i % 5) * 40),
-        y: prev ? prev.y : h / 2 + Math.sin(angle) * (120 + (i % 5) * 40),
-        vx: 0, vy: 0, fixed: false,
-        /* a placeholder box, so the simulation has sizes to work with even if
-           it is asked to run before the first measurement */
+        /* a tag that was already on the map keeps its place until the new
+           layout is worked out, and then slides to it */
+        x: prev ? prev.x : 0,
+        y: prev ? prev.y : 0,
+        placed: !!prev,
+        fixed: false,
+        /* a placeholder box, so the layout has sizes to work with even if it
+           is asked to run before the first measurement */
         w: 60, h: 24, hw: 30, hh: 12, measured: false
       };
       self.nodes.push(node);
@@ -85,16 +92,16 @@
       /* a hashtag nobody hangs off is a root of the ontology, and is painted
          green so the tops of the tree can be picked out at a glance */
       self.index[name].root = Object.keys(rec.parents).length === 0;
-      Object.keys(rec.parents).forEach(function (p) {
-        if (self.index[p]) self.links.push({ a: self.index[p], b: self.index[name], kind: 'parent' });
+      Object.keys(rec.parents).sort().forEach(function (p) {
+        if (self.index[p]) self.links.push({ a: self.index[p], b: self.index[name], kind: 'parent', bend: [] });
       });
-      Object.keys(rec.siblings).forEach(function (s) {
-        if (self.index[s] && name < s) self.links.push({ a: self.index[name], b: self.index[s], kind: 'sibling' });
+      Object.keys(rec.siblings).sort().forEach(function (s) {
+        if (self.index[s] && name < s) self.links.push({ a: self.index[name], b: self.index[s], kind: 'sibling', bend: [] });
       });
     });
 
     this.render();
-    this.kick();
+    this.layout(hadAny);
   };
 
   Graph.prototype.width = function () { return this.svg.clientWidth || this.svg.getBoundingClientRect().width; };
@@ -136,6 +143,290 @@
     return { x: dx * s, y: dy * s };
   }
 
+  /* ---------------- layout ----------------
+   * Every hashtag sits on the row below its deepest parent. That puts the
+   * parentless green tags on one line along the top, and hangs the rest of
+   * the ontology underneath them, arrows always pointing down the page.
+   *
+   * Widths look after themselves: a row is packed left to right with a fixed
+   * gap, so a tag with a lot of branches under it takes up a lot of the row
+   * and the next trunk starts after them, however many there are.
+   *
+   * Tags with two or more parents are the awkward case, and get two things:
+   * the row is ordered to untangle their arrows, and their x is pulled to the
+   * average of everything they hang from, so they settle between their
+   * parents instead of under one of them. An arrow that has to cross a row on
+   * the way down is routed through an invisible waypoint on that row, which
+   * keeps it in the gutter between boxes rather than across their faces.
+   */
+
+  var GAP_X = 24;    /* clear air between two boxes on the same row */
+  var ROW_GAP = 58;  /* clear air between one row and the next */
+
+  Graph.prototype.layout = function (animate) {
+    var self = this, i, j;
+    if (!this.nodes.length) { this.rows = []; this.paint(); return; }
+    /* where each box is now, kept aside: the working out below overwrites x
+       and y, and the slide at the end has to start from where the eye last
+       saw them */
+    this.nodes.forEach(function (n) {
+      if (!n.measured) self.measure(n);
+      n.px = n.x; n.py = n.y;
+    });
+
+    var tree = this.links.filter(function (l) { return l.kind === 'parent'; });
+
+    /* -- 1. rows: the longest path down from any root ------------------ */
+    var kids = Object.create(null), pars = Object.create(null);
+    this.nodes.forEach(function (n) { kids[n.name] = []; pars[n.name] = []; n.row = 0; });
+    tree.forEach(function (l) { kids[l.a.name].push(l.b); pars[l.b.name].push(l.a); });
+
+    var indeg = Object.create(null), queue = [], order = [];
+    this.nodes.forEach(function (n) {
+      indeg[n.name] = pars[n.name].length;
+      if (!indeg[n.name]) queue.push(n);
+    });
+    while (queue.length) {
+      var n = queue.shift();
+      order.push(n);
+      kids[n.name].forEach(function (c) {
+        if (c.row < n.row + 1) c.row = n.row + 1;
+        if (--indeg[c.name] === 0) queue.push(c);
+      });
+    }
+    /* tags.xml is kept acyclic, but never trust the file: anything left over
+       is dropped on the row below its deepest known parent and carries on */
+    if (order.length < this.nodes.length) {
+      this.nodes.forEach(function (n) {
+        if (order.indexOf(n) === -1) {
+          pars[n.name].forEach(function (p) { if (n.row <= p.row) n.row = p.row + 1; });
+          order.push(n);
+        }
+      });
+    }
+
+    /* -- 2. cells: the real boxes plus waypoints for long arrows -------- */
+    var rows = [];
+    function row(i) { return rows[i] || (rows[i] = []); }
+    this.nodes.forEach(function (n) {
+      n.up = []; n.down = []; n.kidsT = []; n.cellW = n.hw;
+      row(n.row).push(n);
+    });
+    function join(a, b) { a.down.push(b); b.up.push(a); }
+    tree.forEach(function (l) {
+      l.bend = [];
+      var prev = l.a;
+      for (var r = l.a.row + 1; r < l.b.row; r++) {
+        var d = { dummy: true, row: r, x: 0, y: 0, hw: 0, hh: 0, cellW: 5, up: [], down: [], kidsT: [] };
+        row(r).push(d);
+        l.bend.push(d);
+        join(prev, d);
+        prev = d;
+      }
+      join(prev, l.b);
+    });
+    for (i = 0; i < rows.length; i++) if (!rows[i]) rows[i] = [];
+    this.rows = rows;
+
+    /* -- 3. order within each row: a tidy first guess, then untangling -- */
+    var seen = [], fresh = [];
+    for (i = 0; i < rows.length; i++) fresh[i] = [];
+    function walk(c) {
+      if (seen.indexOf(c) !== -1) return;
+      seen.push(c);
+      fresh[c.row].push(c);
+      c.down.slice().sort(byName).forEach(walk);
+    }
+    function byName(a, b) {
+      return String(a.name || '~').localeCompare(String(b.name || '~'));
+    }
+    rows[0].slice().sort(byName).forEach(walk);
+    for (i = 0; i < rows.length; i++) {
+      rows[i].forEach(function (c) { if (fresh[c.row].indexOf(c) === -1) fresh[c.row].push(c); });
+      rows[i] = fresh[i];
+    }
+    stamp(rows);
+
+    function stamp(rs) {
+      for (var a = 0; a < rs.length; a++) for (var b = 0; b < rs[a].length; b++) rs[a][b].ord = b;
+    }
+    function median(list) {
+      if (!list.length) return -1;
+      var v = list.map(function (c) { return c.ord; }).sort(function (p, q) { return p - q; });
+      var m = v.length >> 1;
+      return v.length % 2 ? v[m] : (v[m - 1] + v[m]) / 2;
+    }
+    function crossings(rs) {
+      var total = 0;
+      for (var r = 1; r < rs.length; r++) {
+        var pairs = [];
+        rs[r].forEach(function (c) { c.up.forEach(function (u) { pairs.push([u.ord, c.ord]); }); });
+        for (var a = 0; a < pairs.length; a++)
+          for (var b = a + 1; b < pairs.length; b++)
+            if ((pairs[a][0] - pairs[b][0]) * (pairs[a][1] - pairs[b][1]) < 0) total++;
+      }
+      return total;
+    }
+    function sweep(rs, downward) {
+      var from = downward ? 1 : rs.length - 2;
+      var to = downward ? rs.length : -1;
+      var step = downward ? 1 : -1;
+      for (var r = from; r !== to; r += step) {
+        var keys = [];
+        rs[r].forEach(function (c) {
+          var m = median(downward ? c.up : c.down);
+          keys.push({ c: c, k: m < 0 ? c.ord : m });
+        });
+        keys.sort(function (p, q) { return p.k - q.k; });
+        rs[r] = keys.map(function (p) { return p.c; });
+        stamp(rs);
+      }
+    }
+    var best = rows.map(function (r) { return r.slice(); }), bestCost = crossings(rows);
+    for (i = 0; i < 12 && bestCost > 0; i++) {
+      sweep(rows, i % 2 === 0);
+      var cost = crossings(rows);
+      if (cost < bestCost) { bestCost = cost; best = rows.map(function (r) { return r.slice(); }); }
+    }
+    rows = this.rows = best;
+    stamp(rows);
+
+    /* -- 4. x: hang each branch under its parent, then even it out ------ */
+    var roots = rows[0].slice();
+    rows.forEach(function (r) {
+      r.forEach(function (c) {
+        if (!c.up.length) { if (c.row > 0) roots.push(c); return; }
+        /* one parent is picked to hang from - the middle one, so a tag with
+           three parents starts under the middle of them */
+        var ups = c.up.slice().sort(function (p, q) { return p.ord - q.ord; });
+        ups[(ups.length - 1) >> 1].kidsT.push(c);
+      });
+    });
+    rows.forEach(function (r) {
+      r.forEach(function (c) { c.kidsT.sort(function (p, q) { return p.ord - q.ord; }); });
+    });
+
+    var ledger = [];
+    function place(c) {
+      if (!c.kidsT.length) {
+        c.x = Math.max(ledger[c.row] === undefined ? c.cellW : ledger[c.row] + c.cellW, c.cellW);
+      } else {
+        c.kidsT.forEach(place);
+        var mid = (c.kidsT[0].x + c.kidsT[c.kidsT.length - 1].x) / 2;
+        var min = Math.max(ledger[c.row] === undefined ? c.cellW : ledger[c.row] + c.cellW, c.cellW);
+        c.x = Math.max(mid, min);
+        /* if the row above pushed the parent past the middle of its children,
+           the whole branch moves with it rather than leaning */
+        if (c.x > mid + 0.01) c.kidsT.forEach(function (k) { shift(k, c.x - mid); });
+      }
+      ledger[c.row] = c.x + c.cellW + GAP_X;
+    }
+    function shift(c, dx) {
+      c.x += dx;
+      if (ledger[c.row] === undefined || c.x + c.cellW + GAP_X > ledger[c.row]) ledger[c.row] = c.x + c.cellW + GAP_X;
+      c.kidsT.forEach(function (k) { shift(k, dx); });
+    }
+    roots.sort(function (p, q) { return p.row - q.row || p.ord - q.ord; }).forEach(place);
+
+    /* the order in each row is now whatever the placement made of it */
+    rows.forEach(function (r) { r.sort(function (p, q) { return p.x - q.x; }); });
+    stamp(rows);
+
+    function separate(r) {
+      var i, min, max;
+      for (i = 1; i < r.length; i++) {
+        min = r[i - 1].x + r[i - 1].cellW + r[i].cellW + GAP_X;
+        if (r[i].x < min) r[i].x = min;
+      }
+      for (i = r.length - 2; i >= 0; i--) {
+        max = r[i + 1].x - r[i + 1].cellW - r[i].cellW - GAP_X;
+        if (r[i].x > max) r[i].x = max;
+      }
+      for (i = 1; i < r.length; i++) {  /* the pass back left can undo the first; settle it */
+        min = r[i - 1].x + r[i - 1].cellW + r[i].cellW + GAP_X;
+        if (r[i].x < min) r[i].x = min;
+      }
+    }
+    function pull(rs, downward) {
+      var from = downward ? 1 : rs.length - 2;
+      var to = downward ? rs.length : -1;
+      var step = downward ? 1 : -1;
+      for (var r = from; r !== to; r += step) {
+        rs[r].forEach(function (c) {
+          var near = downward ? c.up : c.down;
+          if (!near.length) return;
+          var sum = 0;
+          near.forEach(function (o) { sum += o.x; });
+          c.x += (sum / near.length - c.x) * 0.6;
+        });
+        separate(rs[r]);
+      }
+    }
+    for (i = 0; i < 8; i++) { pull(rows, true); pull(rows, false); }
+    rows.forEach(separate);
+
+    /* -- 5. y: one row under the next, each as tall as its tallest box -- */
+    var y = 0;
+    for (i = 0; i < rows.length; i++) {
+      var tallest = 0;
+      rows[i].forEach(function (c) { tallest = Math.max(tallest, c.hh); });
+      if (i) y += ROW_GAP + tallest;
+      rows[i].forEach(function (c) { c.ty = y; });
+      y += tallest;
+    }
+
+    /* -- 6. move everything there ------------------------------------- */
+    var minX = Infinity;
+    rows.forEach(function (r) { r.forEach(function (c) { minX = Math.min(minX, c.x - c.cellW); }); });
+    rows.forEach(function (r) {
+      r.forEach(function (c) {
+        c.tx = c.x - minX;
+        if (c.dummy) { c.x = c.tx; c.y = c.ty; }
+      });
+    });
+
+    /* a hashtag that has just appeared has nowhere to slide from, so it is
+       simply already where it belongs */
+    this.nodes.forEach(function (n) {
+      if (!n.placed) { n.px = n.tx; n.py = n.ty; n.placed = true; }
+    });
+    if (animate) this.glide(); else {
+      this.nodes.forEach(function (n) { n.x = n.tx; n.y = n.ty; });
+      this.paint();
+    }
+  };
+
+  /* Nothing jumps: after a re-layout every box slides from where it was to
+     where it now belongs, so the eye can follow what moved. */
+  Graph.prototype.glide = function () {
+    var self = this;
+    this.nodes.forEach(function (n) { n.x = n.px; n.y = n.py; });
+    this.running = false;
+    requestAnimationFrame(function () {
+      var t0 = null;
+      self.running = true;
+      requestAnimationFrame(function step(ts) {
+        if (!self.running) return;
+        if (t0 === null) t0 = ts;
+        var t = Math.min(1, (ts - t0) / 420);
+        var e = 1 - Math.pow(1 - t, 3);
+        self.nodes.forEach(function (n) {
+          if (n.fixed) return;
+          n.x = n.px + (n.tx - n.px) * e;
+          n.y = n.py + (n.ty - n.py) * e;
+        });
+        self.paint();
+        if (t >= 1) { self.running = false; return; }
+        requestAnimationFrame(step);
+      });
+    });
+  };
+
+  Graph.prototype.relayout = function () {
+    this.nodes.forEach(function (n) { n.fixed = false; });
+    this.layout(true);
+  };
+
   /* ---------------- rendering ---------------- */
 
   Graph.prototype.render = function () {
@@ -144,8 +435,9 @@
     while (this.nodeLayer.firstChild) this.nodeLayer.removeChild(this.nodeLayer.firstChild);
 
     this.links.forEach(function (l) {
-      l.el = el('line', {
+      l.el = el('path', {
         'class': 'link ' + l.kind,
+        fill: 'none',
         'marker-end': l.kind === 'parent' ? 'url(#arrow)' : null
       });
       self.linkLayer.appendChild(l.el);
@@ -174,31 +466,72 @@
       self.nodeLayer.appendChild(g);
       self.measure(n); /* only once it is in the document can the text be read */
     });
+  };
 
-    this.paint();
+  /* the line an arrow takes: down through its waypoints, clipped to the two
+     boxes at the ends so the head lands on the border and not in the text */
+  Graph.prototype.linkPath = function (l) {
+    if (l.kind === 'sibling') {
+      /* siblings sit on the same row as often as not, and a straight line
+         along a row runs through everything between them - so it hangs
+         underneath instead */
+      var sag = Math.max(22, Math.abs(l.b.x - l.a.x) * 0.11);
+      var ay = l.a.y + l.a.hh, by = l.b.y + l.b.hh;
+      var cy = Math.max(ay, by) + sag;
+      return 'M ' + l.a.x + ' ' + ay +
+             ' Q ' + ((l.a.x + l.b.x) / 2) + ' ' + cy + ' ' + l.b.x + ' ' + by;
+    }
+    var pts = [{ x: l.a.x, y: l.a.y }];
+    l.bend.forEach(function (d) { pts.push({ x: d.x, y: d.y }); });
+    pts.push({ x: l.b.x, y: l.b.y });
+
+    var d1x = pts[1].x - l.a.x, d1y = pts[1].y - l.a.y;
+    if (!d1x && !d1y) d1y = 0.001;
+    var s = edge(l.a, d1x, d1y, 1);
+    pts[0] = { x: l.a.x + s.x, y: l.a.y + s.y };
+
+    var last = pts.length - 1;
+    var d2x = pts[last - 1].x - l.b.x, d2y = pts[last - 1].y - l.b.y;
+    if (!d2x && !d2y) d2y = -0.001;
+    var e2 = edge(l.b, d2x, d2y, 5);
+    pts[last] = { x: l.b.x + e2.x, y: l.b.y + e2.y };
+
+    var d = 'M ' + pts[0].x + ' ' + pts[0].y;
+    for (var i = 1; i < pts.length; i++) d += ' L ' + pts[i].x + ' ' + pts[i].y;
+    return d;
   };
 
   Graph.prototype.paint = function () {
     var self = this;
+
+    /* the map is built hidden whenever a note is deep-linked, and text cannot
+       be measured until it is on screen. The first frame that can read the
+       boxes properly is also the first one that can place them properly. */
+    var late = false;
+    this.nodes.forEach(function (n) {
+      if (n.measured) return;
+      self.measure(n);
+      if (n.measured) late = true;
+    });
+    if (late && !this.relaying) {
+      this.relaying = true;
+      this.layout(false);
+      this.relaying = false;
+      return;
+    }
+
     this.root.setAttribute('transform',
       'translate(' + this.view.x + ',' + this.view.y + ') scale(' + this.view.k + ')');
 
     this.links.forEach(function (l) {
       if (!l.el) return;
-      var dx = l.b.x - l.a.x, dy = l.b.y - l.a.y;
-      if (!dx && !dy) dy = 0.001;
-      var pa = edge(l.a, dx, dy, 1), pb = edge(l.b, -dx, -dy, 5);
-      l.el.setAttribute('x1', l.a.x + pa.x);
-      l.el.setAttribute('y1', l.a.y + pa.y);
-      l.el.setAttribute('x2', l.b.x + pb.x);
-      l.el.setAttribute('y2', l.b.y + pb.y);
+      l.el.setAttribute('d', self.linkPath(l));
       var hot = self.highlight[l.a.name] && self.highlight[l.b.name];
       l.el.classList.toggle('hi', !!hot);
       if (l.kind === 'parent') l.el.setAttribute('marker-end', hot ? 'url(#arrow-hi)' : 'url(#arrow)');
     });
 
     this.nodes.forEach(function (n) {
-      if (!n.measured) self.measure(n);
       n.g.setAttribute('transform', 'translate(' + n.x + ',' + n.y + ')');
       n.g.classList.toggle('selected', self.selected === n.name);
       n.g.classList.toggle('hi', !!self.highlight[n.name]);
@@ -220,114 +553,6 @@
   Graph.prototype.select = function (name) {
     this.selected = name;
     this.paint();
-  };
-
-  /* ---------------- simulation ---------------- */
-
-  Graph.prototype.kick = function (alpha) {
-    this.alpha = alpha || 1;
-    if (!this.running) {
-      this.running = true;
-      var self = this;
-      requestAnimationFrame(function step() {
-        if (!self.running) return;
-        self.tick();
-        self.paint();
-        self.alpha *= 0.97;
-        if (self.alpha < 0.005) { self.running = false; return; }
-        requestAnimationFrame(step);
-      });
-    }
-  };
-
-  Graph.prototype.tick = function () {
-    var nodes = this.nodes, links = this.links;
-    var w = this.width(), h = this.height();
-    var cx = w / 2, cy = h / 2;
-    var i, j, a, b, dx, dy, d2, d, f;
-
-    /* repulsion */
-    for (i = 0; i < nodes.length; i++) {
-      a = nodes[i];
-      for (j = i + 1; j < nodes.length; j++) {
-        b = nodes[j];
-        dx = b.x - a.x; dy = b.y - a.y;
-        d2 = dx * dx + dy * dy;
-        if (d2 < 1) { d2 = 1; dx = (Math.random() - 0.5); dy = (Math.random() - 0.5); }
-        if (d2 > 700 * 700) continue;
-        d = Math.sqrt(d2);
-        /* a long hashtag needs more room around it than a short one */
-        f = (2600 + (a.w + b.w) * 22) / d2;
-        var ux = dx / d, uy = dy / d;
-        a.vx -= ux * f; a.vy -= uy * f;
-        b.vx += ux * f; b.vy += uy * f;
-      }
-    }
-
-    /* springs */
-    for (i = 0; i < links.length; i++) {
-      var l = links[i];
-      a = l.a; b = l.b;
-      dx = b.x - a.x; dy = b.y - a.y;
-      d = Math.sqrt(dx * dx + dy * dy) || 0.01;
-      /* the rest length is measured between the two borders, so a pair of long
-         hashtags ends up as far apart as a pair of short ones looks */
-      var rest = (l.kind === 'parent' ? 110 : 80) + (a.hw + b.hw) * 0.5;
-      var k = l.kind === 'parent' ? 0.035 : 0.02;
-      f = (d - rest) * k;
-      var vx = dx / d * f, vy = dy / d * f;
-      a.vx += vx; a.vy += vy;
-      b.vx -= vx; b.vy -= vy;
-      /* parents sit above their children */
-      if (l.kind === 'parent') {
-        var want = a.hh + b.hh + 46;
-        var gap = (b.y - a.y) - want;
-        a.vy += gap * 0.012;
-        b.vy -= gap * 0.012;
-      }
-    }
-
-    /* centring + integration */
-    for (i = 0; i < nodes.length; i++) {
-      a = nodes[i];
-      if (a.fixed) { a.vx = a.vy = 0; continue; }
-      a.vx += (cx - a.x) * 0.004;
-      a.vy += (cy - a.y) * 0.004;
-      a.vx *= 0.82; a.vy *= 0.82;
-      var speed = Math.sqrt(a.vx * a.vx + a.vy * a.vy);
-      var max = 24 * this.alpha + 1;
-      if (speed > max) { a.vx = a.vx / speed * max; a.vy = a.vy / speed * max; }
-      a.x += a.vx * this.alpha;
-      a.y += a.vy * this.alpha;
-    }
-
-    /* Two boxes that overlap are unreadable in a way two overlapping circles
-       never were - one hashtag is written across another. Charge alone does
-       not prevent it, so any overlap left is pushed straight back out, along
-       whichever axis has the least of it to undo. */
-    var GAP_X = 16, GAP_Y = 10;
-    for (i = 0; i < nodes.length; i++) {
-      a = nodes[i];
-      for (j = i + 1; j < nodes.length; j++) {
-        b = nodes[j];
-        if (a.fixed && b.fixed) continue;
-        dx = b.x - a.x; dy = b.y - a.y;
-        var ox = (a.hw + b.hw + GAP_X) - Math.abs(dx);
-        if (ox <= 0) continue;
-        var oy = (a.hh + b.hh + GAP_Y) - Math.abs(dy);
-        if (oy <= 0) continue;
-        /* a node being dragged holds its ground; the other gives way for both */
-        var sa = a.fixed ? 0 : (b.fixed ? 1 : 0.5);
-        var sb = b.fixed ? 0 : (a.fixed ? 1 : 0.5);
-        if (ox < oy) {
-          f = (dx >= 0 ? 1 : -1) * ox * 0.6;
-          a.x -= f * sa; b.x += f * sb;
-        } else {
-          f = (dy >= 0 ? 1 : -1) * oy * 0.6;
-          a.y -= f * sa; b.y += f * sb;
-        }
-      }
-    }
   };
 
   /* ---------------- interaction ---------------- */
@@ -390,8 +615,13 @@
       window.removeEventListener('pointermove', move);
       window.removeEventListener('pointerup', up);
       window.removeEventListener('pointercancel', up);
+      if (dragging) {
+        /* a hashtag dragged somewhere stays there - nothing springs back -
+           until the map is laid out again */
+        n.tx = n.x; n.ty = n.y; n.fixed = false;
+        return;
+      }
       n.fixed = false;
-      if (dragging) { self.kick(0.4); return; }
       if (ev && ev.type === 'pointerup' && self.opts.onSelect) {
         if (ev.pointerType !== 'mouse') eatNextClick();
         self.opts.onSelect(n.name, ev);
@@ -449,9 +679,11 @@
   Graph.prototype.fit = function () {
     if (!this.nodes.length) return;
     var minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+    /* fit to where the boxes are going, not to wherever the slide is up to */
     this.nodes.forEach(function (n) {
-      minX = Math.min(minX, n.x - n.hw); maxX = Math.max(maxX, n.x + n.hw);
-      minY = Math.min(minY, n.y - n.hh); maxY = Math.max(maxY, n.y + n.hh);
+      var x = n.tx === undefined ? n.x : n.tx, y = n.ty === undefined ? n.y : n.ty;
+      minX = Math.min(minX, x - n.hw); maxX = Math.max(maxX, x + n.hw);
+      minY = Math.min(minY, y - n.hh); maxY = Math.max(maxY, y + n.hh);
     });
     var pad = 34;
     var w = this.width(), h = this.height();
