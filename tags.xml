@@ -45,7 +45,9 @@
       <parent name="work"/>
       <sibling name="reference"/>
     </hashtag>
-    <hashtag name="prompt"/>
+    <hashtag name="prompt">
+      <parent name="business_stories"/>
+    </hashtag>
     <hashtag name="reference">
       <parent name="work"/>
       <sibling name="project"/>
