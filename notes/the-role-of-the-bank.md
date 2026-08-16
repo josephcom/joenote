@@ -1,6 +1,6 @@
 ---
 created: 2026-08-16T03:33:33Z
-updated: 2026-08-16T03:34:29Z
+updated: 2026-08-16T03:34:42Z
 ---
 
 # The Role of the Bank
@@ -11,7 +11,7 @@ The bank in this book is the company's **lender**. The company borrowed money fr
 
 A company gets cash from two groups. **Owners** give cash and receive shares. **Lenders** give cash and receive a loan contract. The contract promises interest and full repayment on set dates. The bank gets no benefit if the share price rises. It only wants its money back.
 
-### The Loan Contract Gives the Bank Power
+## The Loan Contract Gives the Bank Power
 
 The loan contract also contains conditions, called **covenants**. Examples:
 
@@ -21,11 +21,11 @@ The loan contract also contains conditions, called **covenants**. Examples:
 
 If the company breaks a condition, the bank gets strong rights. It can demand early repayment. It can refuse more credit.
 
-### Why the Bank "Grows Nervous"
+## Why the Bank "Grows Nervous"
 
 Now think of a company in trouble. Each month, it spends more cash than it earns. The bank sees the cash decrease, and it sees a broken condition come near. *"The bank grows nervous"* means this: the bank starts to doubt that it will get its loan back. So it applies pressure. It sets a deadline and says: **find new money, or we act.**
 
-### If the Company Fails
+## If the Company Fails
 
 What can the bank do if the company fails? **The law puts lenders before owners.** After a default, the bank can use its legal rights, appoint external managers (**receivers**), and sell the company's assets. The sale money follows a strict order:
 
