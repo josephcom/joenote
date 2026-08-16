@@ -698,14 +698,28 @@
     } catch (e) { return null; }
   }
 
+  /* An anchor is often an empty <a id="ch05"></a> in a paragraph of its own,
+     which has nothing to scroll to. What it marks is the heading after it. */
+  function scrollHost(el) {
+    var view = $('note-view');
+    if (el.getClientRects().length) return el;
+    var host = el.parentElement;
+    if (host && host !== view && host.textContent.trim()) return host;
+    var from = host && host !== view ? host : el;
+    var after = from.nextElementSibling;
+    while (after && !after.getClientRects().length) after = after.nextElementSibling;
+    return after || from;
+  }
+
   function jumpTo(id, smooth) {
     var el = anchorTarget(id);
     if (!el) return false;
-    /* an empty <a id> anchor has no height of its own to scroll to, so the
-       heading it sits above is what the reader is actually sent to */
-    var seen = el;
-    if (!el.getClientRects().length && el.nextElementSibling) seen = el.nextElementSibling;
-    seen.scrollIntoView({ behavior: smooth === false ? 'auto' : 'smooth', block: 'start' });
+    var seen = scrollHost(el);
+    /* Chrome quietly drops a smooth scroll that has to cross a very long
+       document, and a book-length note is exactly that - so anything but a
+       short hop goes straight there instead of not going at all */
+    var near = smooth !== false && Math.abs(seen.getBoundingClientRect().top) < 2400;
+    seen.scrollIntoView({ behavior: near ? 'smooth' : 'auto', block: 'start' });
     return true;
   }
 
