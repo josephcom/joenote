@@ -1,11 +1,11 @@
 ---
 created: 2026-08-16T03:33:33Z
-updated: 2026-08-16T03:34:16Z
+updated: 2026-08-16T03:34:29Z
 ---
 
-## The Role of the Bank
+# The Role of the Bank
 
-### A Lender, Not an Owner
+## A Lender, Not an Owner
 
 The bank in this book is the company's **lender**. The company borrowed money from it before the story starts. The bank is *not an owner*, and it holds no shares.
 
