@@ -1,6 +1,6 @@
 ---
 created: 2026-08-14T21:58:22Z
-updated: 2026-08-16T01:18:44Z
+updated: 2026-08-16T01:19:05Z
 ---
 
 # Dilution vs Accretion
@@ -26,6 +26,8 @@ B = the P/E of the business activity we want to buy/built
 > B>A => **Dilution** 
 
 Many times companies raise money to survive a crisis or pay a dept etc. That's *dilution* right away!
+
+## Placement vs Entitlement 
 
 In a **placement**, the company sells new shares directly to large institutions, fast and quietly. Ordinary shareholders find out afterwards. They were diluted without the chance to buy their share of the new slices.
 
