@@ -270,11 +270,22 @@
     else location.hash = hash;
   }
 
+  /* A note may carry a place in it as well as a name: the second # in
+     #/note/big.md#ch05 is a link into the document, not part of the route. */
+  function splitHash(hash) {
+    var h = String(hash || '').replace(/^#/, '');
+    var cut = h.indexOf('#');
+    return { route: cut === -1 ? h : h.slice(0, cut), anchor: cut === -1 ? '' : h.slice(cut + 1) };
+  }
+
   function route() {
-    var h = location.hash.replace(/^#/, '') || '/';
+    var split = splitHash(location.hash);
+    var h = split.route || '/';
     var parts = h.split('/').filter(function (s) { return s !== ''; });
 
     if (parts[0] === 'note' && parts[1]) {
+      pendingAnchor = split.anchor;
+      try { pendingAnchor = decodeURIComponent(pendingAnchor); } catch (e) { /* as written */ }
       showNote(decodeURIComponent(parts[1]), parts[2] === 'edit' ? 'edit' : 'view');
       return;
     }
@@ -596,7 +607,15 @@
       renderMarkdown(note.raw);
     }
 
-    var want = '#/note/' + encodeURIComponent(note.name) + (mode === 'edit' ? '/edit' : '');
+    /* a place inside this note survives a switch between reading and editing,
+       so the URL still points at the paragraph it was pointing at */
+    var here = splitHash(location.hash);
+    var hereParts = here.route.split('/').filter(function (s) { return s !== ''; });
+    var sameNote = hereParts[0] === 'note' && hereParts[1] &&
+      decodeURIComponent(hereParts[1]) === note.name;
+    var frag = sameNote && here.anchor ? '#' + here.anchor : '';
+
+    var want = '#/note/' + encodeURIComponent(note.name) + (mode === 'edit' ? '/edit' : '') + frag;
     if (location.hash !== want) history.replaceState(null, '', want);
   }
 
@@ -649,6 +668,64 @@
     var frag = Sanitize.toFragment(MD.render(raw));
     target.appendChild(frag);
     resolveImages(target);
+    if (pendingAnchor) {
+      var id = pendingAnchor;
+      pendingAnchor = '';
+      /* the note is in the document but has not been laid out yet */
+      setTimeout(function () { jumpTo(id, false); }, 0);
+    }
+  }
+
+  /* ------------------------- links within a note -----------------------
+   * A long note carries its own table of contents: [Chapter 5](#ch05)
+   * against an <a id="ch05"> further down. Left alone, the browser writes
+   * #ch05 into the address bar, the router reads it as a route it has never
+   * heard of, and the reader is thrown out to the map. So a link that points
+   * inside the open note is followed here instead - the page scrolls, and
+   * the address bar keeps the note it is in: #/note/big.md#ch05.
+   * ------------------------------------------------------------------ */
+
+  var pendingAnchor = '';
+
+  function anchorTarget(id) {
+    var view = $('note-view');
+    if (!id || !view) return null;
+    /* getElementById would find an id anywhere on the page - the panels and
+       the toolbar have their own - so only the note itself is searched */
+    var esc = window.CSS && CSS.escape ? CSS.escape(id) : id.replace(/["\\]/g, '\\$&');
+    try {
+      return view.querySelector('#' + esc) || view.querySelector('[name="' + esc + '"]');
+    } catch (e) { return null; }
+  }
+
+  function jumpTo(id, smooth) {
+    var el = anchorTarget(id);
+    if (!el) return false;
+    /* an empty <a id> anchor has no height of its own to scroll to, so the
+       heading it sits above is what the reader is actually sent to */
+    var seen = el;
+    if (!el.getClientRects().length && el.nextElementSibling) seen = el.nextElementSibling;
+    seen.scrollIntoView({ behavior: smooth === false ? 'auto' : 'smooth', block: 'start' });
+    return true;
+  }
+
+  function wireNoteLinks() {
+    $('note-view').addEventListener('click', function (e) {
+      var a = e.target.closest ? e.target.closest('a[href]') : null;
+      if (!a || !$('note-view').contains(a)) return;
+      var href = a.getAttribute('href') || '';
+      /* #/... is a route of its own - a hashtag chip, another note - and is
+         left to the router */
+      if (href.charAt(0) !== '#' || href.charAt(1) === '/' || href.length < 2) return;
+      var id = href.slice(1);
+      try { id = decodeURIComponent(id); } catch (err) { /* leave it as written */ }
+      e.preventDefault();
+      if (!jumpTo(id)) { toast('Nothing in this note is marked "' + id + '"', true); return; }
+      if (App.current) {
+        history.pushState(null, '',
+          '#/note/' + encodeURIComponent(App.current.name) + '#' + encodeURIComponent(id));
+      }
+    });
   }
 
   function resolveImages(root) {
@@ -1167,6 +1244,7 @@
       if (App.dirty) { flushSave(); e.preventDefault(); e.returnValue = ''; }
     });
 
+    wireNoteLinks();
     $('btn-connect').addEventListener('click', connectFolder);
     $('btn-github').addEventListener('click', openGitHubSheet);
     $('storage-pill').addEventListener('click', openGitHubSheet);
