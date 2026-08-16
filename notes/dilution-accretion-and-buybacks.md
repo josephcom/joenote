@@ -1,6 +1,6 @@
 ---
 created: 2026-08-14T21:58:22Z
-updated: 2026-08-16T06:49:10Z
+updated: 2026-08-16T06:49:34Z
 ---
 
 # Dilution, Accretion and Buybacks 
@@ -41,7 +41,7 @@ Buybacks are the reverse. The company buys its own shares from the market and de
 
 ## Word of Warning 
 1. After any capital raising, throw away every old price! Value the company fresh: today's profit, today's share count, today's confidence (PE).  
-2. The lesson for the analyst is not "raisings are evil". It is: the time to think about dilution is before it happens. A company with thin cash, heavy fixed costs, and falling occupancy is a raising waiting for a date. The shareholder who sees that combination early can decide with open eyes. The shareholder who ignores it wakes up one April morning owning half as much company.
+2. The time to think about dilution is *before* it happens. A company with thin cash, heavy fixed costs, and falling occupancy is a raising waiting for a date. The shareholder who sees that combination early can decide with open eyes. The shareholder who ignores it wakes up one April morning owning half as much company.
 
 #fundamental_analysis
 
