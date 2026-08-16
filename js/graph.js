@@ -365,6 +365,64 @@
     for (i = 0; i < 8; i++) { pull(rows, true); pull(rows, false); }
     rows.forEach(separate);
 
+    /* -- 4b. push the separate trees back together --------------------
+     * Nothing joins one tree to the next, so nothing stops them drifting
+     * apart. A deep tree pulls its own root sideways as the branches under
+     * it spread, while the tree beside it stays where it was first put, and
+     * the two end up with a page of empty grid between them - which is how
+     * #mind came to sit alone in a corner. So each tree is slid left until
+     * it is one gap clear of everything already placed, row by row: as close
+     * as it can go without two boxes touching. Nothing inside a tree moves,
+     * so its own shape survives the journey. */
+    var cid = Object.create(null), groups = [], adj = Object.create(null);
+    this.nodes.forEach(function (n) { cid[n.name] = -1; adj[n.name] = []; });
+    /* only parent edges make a tree; a dashed sibling line joins two tags
+       that may live at opposite ends of the map, and dragging one tree
+       against the other to shorten it would open a far worse hole */
+    tree.forEach(function (l) { adj[l.a.name].push(l.b.name); adj[l.b.name].push(l.a.name); });
+    this.nodes.forEach(function (n) {
+      if (cid[n.name] !== -1) return;
+      var id = groups.length, stack = [n.name], cells = [];
+      cid[n.name] = id;
+      while (stack.length) {
+        var cur = stack.pop();
+        cells.push(self.index[cur]);
+        adj[cur].forEach(function (m) { if (cid[m] === -1) { cid[m] = id; stack.push(m); } });
+      }
+      groups.push({ cells: cells });
+    });
+    /* a waypoint travels with the tree whose arrow it belongs to */
+    tree.forEach(function (l) {
+      if (!l.bend.length) return;
+      var g = groups[cid[l.a.name]];
+      l.bend.forEach(function (d) { g.cells.push(d); });
+    });
+
+    groups.forEach(function (g) {
+      g.left = Infinity;
+      g.cells.forEach(function (c) { g.left = Math.min(g.left, c.x - c.cellW); });
+    });
+    var skyline = [];
+    groups.slice().sort(function (p, q) { return p.left - q.left; }).forEach(function (g) {
+      var edgeOf = [], move = -Infinity, r;
+      g.cells.forEach(function (c) {
+        if (edgeOf[c.row] === undefined || c.x - c.cellW < edgeOf[c.row]) edgeOf[c.row] = c.x - c.cellW;
+      });
+      for (r = 0; r < edgeOf.length; r++) {
+        if (edgeOf[r] === undefined) continue;
+        move = Math.max(move, (skyline[r] === undefined ? 0 : skyline[r] + GAP_X) - edgeOf[r]);
+      }
+      if (move === -Infinity) move = 0;
+      g.cells.forEach(function (c) {
+        c.x += move;
+        if (skyline[c.row] === undefined || c.x + c.cellW > skyline[c.row]) skyline[c.row] = c.x + c.cellW;
+      });
+    });
+
+    rows.forEach(function (r) { r.sort(function (p, q) { return p.x - q.x; }); });
+    stamp(rows);
+    rows.forEach(separate);
+
     /* -- 5. y: one row under the next, each as tall as its tallest box -- */
     var y = 0;
     for (i = 0; i < rows.length; i++) {
