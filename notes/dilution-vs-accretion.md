@@ -1,6 +1,6 @@
 ---
 created: 2026-08-14T21:58:22Z
-updated: 2026-08-16T01:14:39Z
+updated: 2026-08-16T01:14:46Z
 ---
 
 # Dilution vs Accretion
@@ -25,7 +25,7 @@ B = the P/E of the business activity we want to buy/built
 > A>B => **Accretion**  
 > B>A => **Dilution** 
 
-Many times companies raise money to survive a crisis or pay a dept etc. That's *dilution* rightaw
+Many times companies raise money to survive a crisis or pay a dept etc. That's *dilution* right away!
 
 #fundamental_analysis
 
