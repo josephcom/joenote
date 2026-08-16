@@ -1,6 +1,6 @@
 ---
 created: 2026-08-15T12:37:21Z
-updated: 2026-08-16T11:48:09Z
+updated: 2026-08-16T11:48:18Z
 ---
 
 # THE OCCUPANCY GAME
@@ -942,7 +942,7 @@ A generation ago, most Australians called it "child minding" — a service you b
 
 This cultural force lifted both other forces. It pushed participation up, and it pushed hours up. And it changed the customer's mindset in a way that matters for crashes: a parent buying "education" compares centres on quality, not just price and distance. Chapter 17 shows what that did to old centres when shiny new rivals opened next door.
 
-### Force : migration
+### Force four: migration
 
 Honesty requires one more dial, smaller but real. Births are not the only source of children. Australia runs high migration, and migrants are disproportionately young adults — the exact group that has children and needs two incomes. Migration adds children directly, and it adds future parents constantly.
 
