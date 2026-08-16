@@ -1,6 +1,6 @@
 ---
 created: 2026-08-16T03:33:33Z
-updated: 2026-08-16T03:34:42Z
+updated: 2026-08-16T03:34:52Z
 ---
 
 # The Role of the Bank
@@ -34,7 +34,7 @@ What can the bank do if the company fails? **The law puts lenders before owners.
 
 Often, nothing remains for the shareholders. This is why the book says the bank *"takes control, and shareholders can lose everything."*
 
-### The Share Sale as the Rescue
+## The Share Sale as the Rescue
 
 The share sale solves this problem. The company sells new shares to investors, *not to the bank*. The new cash repays part of the debt, or it refills the cash reserve. The risk of default decreases, and the bank becomes calm again. The bank prefers this result, because a seizure is slow and costly for it also.
 
@@ -42,11 +42,11 @@ But see the bank's effect on the price. Its deadline makes the company a **force
 
 > One caution about names. A different type of bank, an **investment bank**, often manages the share sale for a fee. That is a separate role. The bank in your book is the **lender**.
 
-### The G8 Example
+## The G8 Example
 
 Now apply this to G8 in 2020. Its cash position was weak. The directors sold **376 million new shares at 80 cents** each. The new cash removed the risk that the lender would act. The owners lost a large part of the pizza, but *a pizza remained*.
 
-### In Short
+## In Short
 
 So the bank does not appear in the sale, but it controls the events. Its **doubt** starts the raising. Its **deadline** lowers the price. **Its *legal power* makes dilution the better option!**
 
