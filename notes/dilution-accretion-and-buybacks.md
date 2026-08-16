@@ -1,6 +1,6 @@
 ---
 created: 2026-08-14T21:58:22Z
-updated: 2026-08-16T06:47:42Z
+updated: 2026-08-16T06:47:55Z
 ---
 
 # Dilution, Accretion and Buybacks 
@@ -40,7 +40,7 @@ Beginners look at a price that fell from $15 to $5 and feel that $15 is the "rea
 Buybacks are the reverse. The company buys its own shares from the market and destroys them. The same profit now divides across fewer shares, so each share earns more. The crowd often reads it as a signal too: management believes the shares are cheap, and confidence lifts the multiple.
 
 ## Word of Warning 
-After any capital raising, throw away every old price! Value the company fresh: today's profit, today's share count, today's confidence. 
+After any capital raising, throw away every old price! Value the company fresh: today's profit, today's share count, today's confidence (PE). 
 
 #fundamental_analysis
 
