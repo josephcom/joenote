@@ -1,6 +1,6 @@
 ---
 created: 2026-08-15T12:37:21Z
-updated: 2026-08-15T12:39:22Z
+updated: 2026-08-16T00:12:39Z
 ---
 
 # THE OCCUPANCY GAME
@@ -94,10 +94,14 @@ updated: 2026-08-15T12:39:22Z
 ---
 
 
-# PART I — FOUNDATIONS: HOW A BUSINESS MAKES AND LOSES MONEY {#part1}
+<a id="part1"></a>
+
+# PART I — FOUNDATIONS: HOW A BUSINESS MAKES AND LOSES MONEY
 
 
-## Chapter 1 — The Profit Machine {#ch01}
+<a id="ch01"></a>
+
+## Chapter 1 — The Profit Machine
 
 *Every idea in this book stands on one simple picture. Here it is.*
 
@@ -248,7 +252,9 @@ One honest note before we continue. This book is education, not financial advice
 ---
 
 
-## Chapter 2 — Staircase Costs {#ch02}
+<a id="ch02"></a>
+
+## Chapter 2 — Staircase Costs
 
 *Chapter 1 showed that wages behave almost like rent. This chapter shows exactly how — and why "almost" matters.*
 
@@ -388,7 +394,9 @@ The staircase is not a flaw in the childcare business. It is the childcare busin
 ---
 
 
-## Chapter 3 — Operating Leverage: Small Dips, Big Crashes {#ch03}
+<a id="ch03"></a>
+
+## Chapter 3 — Operating Leverage: Small Dips, Big Crashes
 
 *Chapters 1 and 2 built a machine with heavy fixed costs and staircase wages. This chapter measures what that machine does to profit.*
 
@@ -517,7 +525,9 @@ Because so far, we have only studied the machine's profit. We have not asked the
 ---
 
 
-## Chapter 4 — The Price Formula {#ch04}
+<a id="ch04"></a>
+
+## Chapter 4 — The Price Formula
 
 *Chapter 3 showed how occupancy moves profit. This chapter shows how profit moves the share price — and why the price moves further.*
 
@@ -634,7 +644,9 @@ One warning before we move on. Beginners look at a price that fell from $15 to $
 ---
 
 
-## Chapter 5 — The Pizza Principle {#ch05}
+<a id="ch05"></a>
+
+## Chapter 5 — The Pizza Principle
 
 *Chapter 4 left one crash route unexplored: the share count itself. This chapter walks it.*
 
@@ -753,7 +765,9 @@ One question remains before we leave the foundations. Everything so far reacts t
 ---
 
 
-## Chapter 6 — Lagging vs Leading {#ch06}
+<a id="ch06"></a>
+
+## Chapter 6 — Lagging vs Leading
 
 *Chapters 1–5 showed everything that follows occupancy. This chapter asks the better question: what does occupancy follow?*
 
@@ -867,10 +881,14 @@ Next, Part II leaves the single company and studies the playing field: who build
 
 
 
-# PART II — THE PLAYING FIELD: AUSTRALIAN CHILDCARE {#part2}
+<a id="part2"></a>
+
+# PART II — THE PLAYING FIELD: AUSTRALIAN CHILDCARE
 
 
-## Chapter 7 — The Pie: Demand {#ch07}
+<a id="ch07"></a>
+
+## Chapter 7 — The Pie: Demand
 
 *Part I built the machine. Part II studies the field the machine stands on — starting with the families who feed it.*
 
@@ -977,7 +995,9 @@ Third: a growing pie hides sins. When demand rises every year, even a badly run 
 ---
 
 
-## Chapter 8 — The Seats: Supply {#ch08}
+<a id="ch08"></a>
+
+## Chapter 8 — The Seats: Supply
 
 *Chapter 7 measured how much care families want. This chapter counts the seats on offer — and meets the strange fact that nobody controls how many get built.*
 
@@ -1074,7 +1094,9 @@ What happens when the fast dial of demand — the subsidy — meets the ownerles
 ---
 
 
-## Chapter 9 — The Subsidy Engine {#ch09}
+<a id="ch09"></a>
+
+## Chapter 9 — The Subsidy Engine
 
 *Chapter 7 said the pie is policy-fed. This chapter opens the feeding machine and traces one dollar through it.*
 
@@ -1165,7 +1187,9 @@ Pump demand fast. Let supply answer slowly, massively, and without restraint. Do
 ---
 
 
-## Chapter 10 — The Double-Edged Sword {#ch10}
+<a id="ch10"></a>
+
+## Chapter 10 — The Double-Edged Sword
 
 *Chapter 9 showed the engine that pumps demand. This chapter shows what the pump does, two to four years later, to the people it helped.*
 
@@ -1268,7 +1292,9 @@ The sword is the playing field's master rhythm. But rhythms play through people,
 ---
 
 
-## Chapter 11 — Meet the Players: How Each Side Thinks {#ch11}
+<a id="ch11"></a>
+
+## Chapter 11 — Meet the Players: How Each Side Thinks
 
 *Chapter 10 showed a cycle that nobody plans. This chapter meets the nine players whose separate, sensible choices add up to it.*
 
@@ -1361,7 +1387,9 @@ Only one of the nine watches occupancy. That asymmetry *is* the childcare sector
 ---
 
 
-## Chapter 12 — Interest Rates: The Tide Under Everything {#ch12}
+<a id="ch12"></a>
+
+## Chapter 12 — Interest Rates: The Tide Under Everything
 
 *Chapter 11 met nine players, each with private arithmetic. This chapter shows the one number that sits inside all nine spreadsheets.*
 
@@ -1456,7 +1484,9 @@ One caution completes the honesty. The tide explains conditions, not outcomes. C
 ---
 
 
-## Chapter 13 — The Capital Cycle {#ch13}
+<a id="ch13"></a>
+
+## Chapter 13 — The Capital Cycle
 
 *Chapters 10 and 12 each showed a rhythm. This chapter names the master rhythm beneath both — and the childcare twist that makes it crueller here.*
 
@@ -1545,7 +1575,9 @@ One tool remains for Part II, and it is a story rather than a mechanism. The cap
 ---
 
 
-## Chapter 14 — Ghost Story: ABC Learning, 2008 {#ch14}
+<a id="ch14"></a>
+
+## Chapter 14 — Ghost Story: ABC Learning, 2008
 
 *Chapter 13 promised the capital cycle a face. Here it is — the company whose ghost has haunted every Australian childcare investor since.*
 
@@ -1631,10 +1663,14 @@ The playing field is mapped. Enter the player.
 
 
 
-# PART III — THE RUNNING EXAMPLE: G8 EDUCATION, A FULL HISTORY {#part3}
+<a id="part3"></a>
+
+# PART III — THE RUNNING EXAMPLE: G8 EDUCATION, A FULL HISTORY
 
 
-## Chapter 15 — The Roll-Up Machine (2010–2014) {#ch15}
+<a id="ch15"></a>
+
+## Chapter 15 — The Roll-Up Machine (2010–2014)
 
 *Part II ended with a magic trick and a new performer. Part III follows that performer for sixteen years. Here is the opening act.*
 
@@ -1713,7 +1749,9 @@ The machine did not know it yet, but it had already eaten its best meals. What b
 ---
 
 
-## Chapter 16 — Crash One (2014–15): Belief Dies First {#ch16}
+<a id="ch16"></a>
+
+## Chapter 16 — Crash One (2014–15): Belief Dies First
 
 *Chapter 15 froze the frame at the summit. This chapter watches the first fall — the strangest of the five, because almost nothing happened.*
 
@@ -1794,7 +1832,9 @@ The multiple died first. The rooms were next.
 ---
 
 
-## Chapter 17 — The Flood (2016–18): Crash Two {#ch17}
+<a id="ch17"></a>
+
+## Chapter 17 — The Flood (2016–18): Crash Two
 
 *Crash One killed the multiple. Crash Two came for the thing the multiple had been resting on — the rooms.*
 
@@ -1879,7 +1919,9 @@ It got 2019.
 ---
 
 
-## Chapter 18 — Crash Three (2019): The Broken Promise {#ch18}
+<a id="ch18"></a>
+
+## Chapter 18 — Crash Three (2019): The Broken Promise
 
 *Crash Two was a grind the whole sector shared. Crash Three was smaller, sharper, and entirely about one thing: a promise.*
 
@@ -1958,7 +2000,9 @@ The shares ended 2019 near two dollars, less than half the broken ruler's $5. Th
 ---
 
 
-## Chapter 19 — Crash Four (2020): The Halved Slice {#ch19}
+<a id="ch19"></a>
+
+## Chapter 19 — Crash Four (2020): The Halved Slice
 
 *Chapter 18 ended with a forecast deleted by history. This is the deletion — and the crash that did its damage quietly, through the share count.*
 
@@ -2023,7 +2067,9 @@ So G8 exited 2020 as a strange hybrid: shareholders halved, balance sheet secure
 ---
 
 
-## Chapter 20 — The Rebuild (2021–2024) {#ch20}
+<a id="ch20"></a>
+
+## Chapter 20 — The Rebuild (2021–2024)
 
 *Chapter 19 left G8 with clear weather and no excuses. This chapter watches four years of genuine repair — and asks why the one number that mattered refused to follow.*
 
@@ -2104,7 +2150,9 @@ The fifth crash came for the one asset no operating metric measures, no rating c
 ---
 
 
-## Chapter 21 — The Wound (2025– ): The Trust Crisis {#ch21}
+<a id="ch21"></a>
+
+## Chapter 21 — The Wound (2025– ): The Trust Crisis
 
 *Four crashes taught the machine to defend its multiple, its profits, its promises, and its balance sheet. The fifth attacked none of these.*
 
@@ -2165,7 +2213,9 @@ That is where the history ends, because it is where the present begins — the b
 ---
 
 
-## Chapter 22 — The $5 Illusion {#ch22}
+<a id="ch22"></a>
+
+## Chapter 22 — The $5 Illusion
 
 *Five crashes are on the table. This chapter does the arithmetic that beginners skip — and buries the most expensive sentence in investing.*
 
@@ -2241,10 +2291,14 @@ The history is complete. Sixteen years: a magic trick, five crashes — multiple
 
 
 
-# PART IV — BUILDING THE INSTRUMENT PANEL: LEADING INDICATORS {#part4}
+<a id="part4"></a>
+
+# PART IV — BUILDING THE INSTRUMENT PANEL: LEADING INDICATORS
 
 
-## Chapter 23 — The Philosophy {#ch23}
+<a id="ch23"></a>
+
+## Chapter 23 — The Philosophy
 
 *Part III proved the crashes were visible in public data. Part IV builds the instruments. But first: what exactly can instruments do, and what can they never do?*
 
@@ -2329,7 +2383,9 @@ That rule sounds obvious. The next chapter is about how this book's own author b
 ---
 
 
-## Chapter 24 — Correlation Traps {#ch24}
+<a id="ch24"></a>
+
+## Chapter 24 — Correlation Traps
 
 *Chapter 23 ended with a warning about a home-made instrument. This chapter is the confession — told in full, because the mistake is the most instructive object in this book.*
 
@@ -2408,7 +2464,9 @@ And because **humility is an instrument too** — the master instrument. The ana
 ---
 
 
-## Chapter 25 — Build Your Own Gauge: The SO Index {#ch25}
+<a id="ch25"></a>
+
+## Chapter 25 — Build Your Own Gauge: The SO Index
 
 *Chapter 24 demoted the SO index honestly. This chapter builds it properly — labelled as what it is, doing the job it can actually do.*
 
@@ -2487,7 +2545,9 @@ The gauge tells you where the water stands. The next three chapters build the di
 ---
 
 
-## Chapter 26 — Supply Signals (Years of Warning) {#ch26}
+<a id="ch26"></a>
+
+## Chapter 26 — Supply Signals (Years of Warning)
 
 *Golden question one asked what is knowable years ahead. Answer: the seats. This chapter builds the supply dials, from paperwork to tide.*
 
@@ -2558,7 +2618,9 @@ One caution seals the chapter, in Chapter 13's voice: the supply map is reliable
 ---
 
 
-## Chapter 27 — Demand Signals (Months of Warning) {#ch27}
+<a id="ch27"></a>
+
+## Chapter 27 — Demand Signals (Months of Warning)
 
 *Supply gave years of warning. Demand gives months — noisier, shorter, and closer to the decisions that fill rooms. Golden question two gets its dials.*
 
@@ -2623,7 +2685,9 @@ Note the shape of that summary: no forecast, three tensions — and that shape i
 ---
 
 
-## Chapter 28 — Trust Signals (The New Dials) {#ch28}
+<a id="ch28"></a>
+
+## Chapter 28 — Trust Signals (The New Dials)
 
 *The 2025 wound proved the chain's first link can break on its own. No standard dashboard has ever watched it. These dials are built for the new world.*
 
@@ -2702,7 +2766,9 @@ What remains is the machine itself: the company's capacity to survive while ever
 ---
 
 
-## Chapter 29 — Company Vital Signs {#ch29}
+<a id="ch29"></a>
+
+## Chapter 29 — Company Vital Signs
 
 *Every dial so far watches the world around the machine. These watch the machine itself — because a thesis about recovery is worthless if the patient cannot survive the wait.*
 
@@ -2777,7 +2843,9 @@ The instruments are built. One source of signal remains — the kind no spreadsh
 ---
 
 
-## Chapter 30 — Field Work: The Unautomatable Edge {#ch30}
+<a id="ch30"></a>
+
+## Chapter 30 — Field Work: The Unautomatable Edge
 
 *Twenty-nine chapters of documents and data. The last dial requires shoes — because the product is a room full of children, and rooms can be visited.*
 
@@ -2847,10 +2915,14 @@ What the panel cannot do — Chapter 23, always — is decide anything. Dials di
 
 
 
-# PART V — FROM SIGNALS TO DECISIONS {#part5}
+<a id="part5"></a>
+
+# PART V — FROM SIGNALS TO DECISIONS
 
 
-## Chapter 31 — Valuation Without Anchors {#ch31}
+<a id="ch31"></a>
+
+## Chapter 31 — Valuation Without Anchors
 
 *The dashboard reads the world. Part V turns readings into decisions — and the first decision is what the thing is worth, calculated as if no chart had ever existed.*
 
@@ -2923,7 +2995,9 @@ This is valuation without anchors: three stories, three multiplications, one com
 ---
 
 
-## Chapter 32 — The Dilution Nightmare {#ch32}
+<a id="ch32"></a>
+
+## Chapter 32 — The Dilution Nightmare
 
 *Scenario three deserves its own chapter, because for companies like this one, the realistic worst case is not the one beginners fear.*
 
@@ -3002,7 +3076,9 @@ What the watch-list cannot defend against is the holder's own heart — the voic
 ---
 
 
-## Chapter 33 — Fairness Is Not a Price {#ch33}
+<a id="ch33"></a>
+
+## Chapter 33 — Fairness Is Not a Price
 
 *The dashboard defends against the world's surprises. This chapter begins the defence against the analyst's own heart — starting with the two hopes that wear analysis best.*
 
@@ -3065,7 +3141,9 @@ And note who is most susceptible: not the lazy, but the *diligent*. Fairness-hop
 ---
 
 
-## Chapter 34 — Self-Control: Analysis Is Not a Buy Signal {#ch34}
+<a id="ch34"></a>
+
+## Chapter 34 — Self-Control: Analysis Is Not a Buy Signal
 
 *Chapter 33 diagnosed the hopes. This chapter builds the restraints — because the most dangerous moment in this entire book is the moment you finish it.*
 
@@ -3136,7 +3214,9 @@ One page of thesis, a signed list of kills, a size set by the worst branch, an e
 ---
 
 
-## Chapter 35 — Trusting the Dashboard {#ch35}
+<a id="ch35"></a>
+
+## Chapter 35 — Trusting the Dashboard
 
 *The instruments exist; the restraints exist. This chapter is the operating manual: rhythms, conflicts, weights — and the discipline of believing your own dials.*
 
@@ -3209,7 +3289,9 @@ One task remains: compression. Thirty-five chapters of machinery are of no use i
 ---
 
 
-## Chapter 36 — The One-Page Checklist {#ch36}
+<a id="ch36"></a>
+
+## Chapter 36 — The One-Page Checklist
 
 *Thirty-five chapters, compressed to the sheet you will actually use. Print it. The book was always building this page.*
 
@@ -3307,7 +3389,9 @@ The apparatus is complete: a machine understood, a field mapped, a history read,
 ---
 
 
-# Epilogue — The Occupancy Game Is Everywhere {#epilogue}
+<a id="epilogue"></a>
+
+# Epilogue — The Occupancy Game Is Everywhere
 
 *One company, thirty-six chapters. Now look up.*
 
@@ -3333,10 +3417,14 @@ The rooms are out there, filling and emptying. You know how to watch them now.
 
 
 
-# APPENDICES {#appendices}
+<a id="appendices"></a>
+
+# APPENDICES
 
 
-## Appendix A — Data Source Directory {#app-a}
+<a id="app-a"></a>
+
+## Appendix A — Data Source Directory
 
 Every source used or recommended in this book, with location, cost, and update cadence. All were live as at August 2026; addresses drift, but each item is findable by searching the name. Dials reference the chapters that use them.
 
@@ -3395,7 +3483,9 @@ Every source used or recommended in this book, with location, cost, and update c
 ---
 
 
-## Appendix B — The SO Index: Spreadsheet Recipe and Formulas {#app-b}
+<a id="app-b"></a>
+
+## Appendix B — The SO Index: Spreadsheet Recipe and Formulas
 
 The gauge of Chapter 25, as bare instructions. Reminder before use: **the SO index is a lagging depth gauge, not a forecaster** (Chapter 24's confession). Its faults are listed at the end, deliberately.
 
@@ -3465,7 +3555,9 @@ Quarterly, ≈1 hour national + ≈2 hours local once built: download CCS report
 ---
 
 
-## Appendix C — G8 Education Master Timeline, 2010–2026 {#app-c}
+<a id="app-c"></a>
+
+## Appendix C — G8 Education Master Timeline, 2010–2026
 
 Year by year, with the two numbers the book taught you to carry: the share count (the denominator) and occupancy (the machine's fullness). Values marked ≈ are estimates or reported figures the author could not fully re-verify against primary documents; occupancy definitions vary across eras (like-for-like vs group average — Chapter 17) and are labelled where known. Blank cells mean no reliable figure was found; honesty over completeness.
 
@@ -3498,7 +3590,9 @@ From 2014's peak to 2026: the price per share fell over 80%; the whole-company m
 ---
 
 
-## Appendix D — Plain-Words Glossary {#app-d}
+<a id="app-d"></a>
+
+## Appendix D — Plain-Words Glossary
 
 Every term the book taught, alphabetically, each with the chapter that introduced it. The named metaphors — this book's own technical nouns — follow at the end.
 
@@ -3582,7 +3676,9 @@ Every term the book taught, alphabetically, each with the chapter that introduce
 ---
 
 
-## Appendix E — Further Reading: The Capital Cycle Classics {#app-e}
+<a id="app-e"></a>
+
+## Appendix E — Further Reading: The Capital Cycle Classics
 
 Chapter 13 promised the shelf. Each book below extends one of this book's load-bearing ideas; the one-line note says which. Read in any order; the first two are the spine.
 
@@ -3615,7 +3711,9 @@ Chapter 13 promised the shelf. Each book below extends one of this book's load-b
 ---
 
 
-## Endnotes & Sources {#endnotes}
+<a id="endnotes"></a>
+
+## Endnotes & Sources
 
 Every externally verified fact in this book, with its source and the date the author accessed it. Facts marked ≈ in the text are estimates, derivations, or fact-pack figures the author could not fully re-verify against primary documents; they are listed here with that status. Primary sources (company reports, ABS, Department of Education, ACECQA, courts) were preferred; where secondary reporting was used, the outlet is named. Where sources conflicted, the text states ranges rather than choosing silently.
 
