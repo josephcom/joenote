@@ -1,9 +1,9 @@
 ---
 created: 2026-08-16T03:33:33Z
-updated: 2026-08-16T03:34:52Z
+updated: 2026-08-16T03:35:30Z
 ---
 
-# The Role of the Bank
+# Bank
 
 ## A Lender, Not an Owner
 
