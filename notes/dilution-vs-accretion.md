@@ -1,6 +1,6 @@
 ---
 created: 2026-08-14T21:58:22Z
-updated: 2026-08-16T01:18:24Z
+updated: 2026-08-16T01:18:31Z
 ---
 
 # Dilution vs Accretion
@@ -29,7 +29,7 @@ Many times companies raise money to survive a crisis or pay a dept etc. That's *
 
 In a *placement*, the company sells new shares directly to large institutions, fast and quietly. Ordinary shareholders find out afterwards. They were diluted without the chance to buy their share of the new slices.
 
-In an *entitlement offer, every existing shareholder is offered new shares in proportion to their holding. A holder with 1% of the company may buy 1% of the new shares. A holder who takes up the offer keeps their fraction of the pizza. A holder who declines, or who lacks the cash, is diluted like everyone else.
+In an *entitlement offer*, every existing shareholder is offered new shares in proportion to their holding. A holder with 1% of the company may buy 1% of the new shares. A holder who takes up the offer keeps their fraction of the pizza. A holder who declines, or who lacks the cash, is diluted like everyone else.
 
 #fundamental_analysis
 
