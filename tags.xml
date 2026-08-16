@@ -2,7 +2,7 @@
 <joenote version="1">
   <hashtags>
     <hashtag name="business_stories">
-      <parent name="money"/>
+      <parent name="zoney"/>
     </hashtag>
     <hashtag name="consumer_services">
       <parent name="fundamental_analysis"/>
@@ -11,7 +11,7 @@
       <parent name="personal_development"/>
     </hashtag>
     <hashtag name="export">
-      <parent name="money"/>
+      <parent name="zoney"/>
     </hashtag>
     <hashtag name="fundamental_analysis">
       <parent name="stock"/>
@@ -38,7 +38,6 @@
       <parent name="work"/>
     </hashtag>
     <hashtag name="mind"/>
-    <hashtag name="money"/>
     <hashtag name="personal">
       <sibling name="work"/>
     </hashtag>
@@ -57,10 +56,11 @@
       <sibling name="inbox"/>
     </hashtag>
     <hashtag name="stock">
-      <parent name="money"/>
+      <parent name="zoney"/>
     </hashtag>
     <hashtag name="work">
       <sibling name="personal"/>
     </hashtag>
+    <hashtag name="zoney"/>
   </hashtags>
 </joenote>
