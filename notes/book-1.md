@@ -1,6 +1,6 @@
 ---
 created: 2026-08-16T15:30:37Z
-updated: 2026-08-16T15:30:37Z
+updated: 2026-08-16T15:31:37Z
 ---
 
 # From Paddock to Guangzhou
@@ -1824,3 +1824,5 @@ Every rule cited in this book will change: decree numbers, MRLs, grant programs,
 ---
 
 *End of book. All numbers are toy numbers for learning, not market prices. This book is general education, not legal, tax, or financial advice. Get professional advice for your own situation.*
+
+#export
