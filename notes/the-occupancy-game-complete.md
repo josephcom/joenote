@@ -1,6 +1,6 @@
 ---
 created: 2026-08-15T12:37:21Z
-updated: 2026-08-16T00:12:39Z
+updated: 2026-08-16T11:47:52Z
 ---
 
 # THE OCCUPANCY GAME
@@ -918,7 +918,7 @@ Australia registered about 303,000 births in 2010 (≈). Births peaked at 315,14
 
 So the baby supply is roughly flat across fifteen years, and lately falling. Yet the childcare pie grew hugely across the same years. Measured in child-days, demand rose from about 3.1 million each week in 2014 to about 4.0 million in 2024–25 (≈) — growth of roughly 28%, against a flat baby line.
 
-A pie that grows 28% without extra babies needs explaining. Three forces did it, and each one matters to an analyst, because each one has its own future.
+A pie that grows 28% without extra babies needs explaining. Four forces did it, and each one matters to an analyst, because each one has its own future.
 
 ### Force one: more of the children go to care
 
