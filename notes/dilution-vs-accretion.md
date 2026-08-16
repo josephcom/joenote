@@ -1,6 +1,6 @@
 ---
 created: 2026-08-14T21:58:22Z
-updated: 2026-08-16T01:19:17Z
+updated: 2026-08-16T01:23:27Z
 ---
 
 # Dilution vs Accretion
@@ -31,6 +31,13 @@ Many times companies raise money to survive a crisis or pay a dept etc. That's *
 In a **placement**, the company sells new shares directly to large institutions, fast and quietly. Ordinary shareholders find out afterwards. They were diluted without the chance to buy their share of the new slices.
 
 In an **entitlement offer**, every existing shareholder is offered new shares in proportion to their holding. A holder with 1% of the company may buy 1% of the new shares. A holder who takes up the offer keeps their fraction of the pizza. A holder who declines, or who lacks the cash, is diluted like everyone else.
+
+## Dilution vs Buybacks 
+The company creates new shares. The same profit divides across more shares, so each share earns less.
+
+Beginners look at a price that fell from $15 to $5 and feel that $15 is the "real" value, waiting to return. It is not. The old price was old profit multiplied by old confidence — two numbers that no longer exist. And there is a third number that may have changed too: the count of shares itself. When a wounded company creates millions of new shares, old prices stop meaning anything at all.
+
+Buybacks are the reverse. The company buys its own shares from the market and destroys them. The same profit now divides across fewer shares, so each share earns more. The crowd often reads it as a signal too: management believes the shares are cheap, and confidence lifts the multiple.
 
 #fundamental_analysis
 
