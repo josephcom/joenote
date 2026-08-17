@@ -1,6 +1,6 @@
 ---
 created: 2026-08-17T22:19:15Z
-updated: 2026-08-17T22:33:35Z
+updated: 2026-08-17T22:34:05Z
 ---
 
 # Take note or not?
@@ -11,7 +11,7 @@ A text is noisy; meaning it's filled with irrelevant dots and messy lines connec
 Each question we ask is a picture. You have to extract the right dots and lines to answer it. 
 
 ## Bottom line
-Put each point
+Put each point in the text under one of more questions; that's it!
 
 #personal_development
 
