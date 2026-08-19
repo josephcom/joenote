@@ -1,6 +1,6 @@
 ---
 created: 2026-08-19T11:05:55Z
-updated: 2026-08-19T11:19:44Z
+updated: 2026-08-19T11:20:32Z
 ---
 
 # Dirty Notes
@@ -20,7 +20,8 @@ Even problem solving methods are patterns (functions). Usually, the most native 
 *Piece of information* is just an *input*. If surprise, then we offer the new input (i.e. piece of information) to different functions, use the new output to  *connect* and *re-route* until *it makes sense* (i.e. no surprise, i.e. *error* acceptable).
 
 Two types of questions: 
-1. Explanation, *what the hell?*, surprise (
+1. Explanation, *what the hell?*, surprise: wrong prediction of too big of error
+2. Missing piece of information (where, when, who
 
 #god_of_intelligence
 
