@@ -1,6 +1,6 @@
 ---
 created: 2026-08-19T11:05:55Z
-updated: 2026-08-19T11:18:44Z
+updated: 2026-08-19T11:19:44Z
 ---
 
 # Dirty Notes
@@ -18,6 +18,9 @@ If surprise, then we can re-wire the *connections*. *Re-route* the input-output 
 Even problem solving methods are patterns (functions). Usually, the most native methodology works: come up with something (almost random *initiation*), generate output, error? then update and do it over. 
 
 *Piece of information* is just an *input*. If surprise, then we offer the new input (i.e. piece of information) to different functions, use the new output to  *connect* and *re-route* until *it makes sense* (i.e. no surprise, i.e. *error* acceptable).
+
+Two types of questions: 
+1. Explanation, *what the hell?*, surprise (
 
 #god_of_intelligence
 
