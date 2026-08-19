@@ -1,6 +1,6 @@
 ---
 created: 2026-08-19T11:05:55Z
-updated: 2026-08-19T11:17:04Z
+updated: 2026-08-19T11:17:10Z
 ---
 
 # Dirty Notes
@@ -13,7 +13,7 @@ Three components:
 
 Surprise: error between prediction and observation
 
-If surprise, then we can re-wire the*connections*. Re-route the input-output path through other functions until the new path predicts correctly. 
+If surprise, then we can re-wire the *connections*. Re-route the input-output path through other functions until the new path predicts correctly. 
 
 Even problem solving methods are patterns (functions). Usually, the most native methodology works: come up with something (almost random *initiation*), generate output, error? then update and do it over. 
 
