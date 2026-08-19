@@ -1,6 +1,6 @@
 ---
 created: 2026-08-19T11:05:55Z
-updated: 2026-08-19T11:11:48Z
+updated: 2026-08-19T11:12:20Z
 ---
 
 # Dirty Notes
@@ -15,7 +15,9 @@ Surprise: error between prediction and observation
 
 If surprise, then we can re-wire the*connections*. Re-rout the input-output path through other functions until the new path predicts correctly. 
 
-Even problem solving 
+Even problem solving methods are patterns (functions). 
+
+
 
 #god_of_reasoning
 
