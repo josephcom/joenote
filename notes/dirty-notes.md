@@ -1,6 +1,6 @@
 ---
 created: 2026-08-19T11:05:55Z
-updated: 2026-08-19T11:10:28Z
+updated: 2026-08-19T11:10:54Z
 ---
 
 # Dirty Notes
@@ -13,7 +13,7 @@ Three components:
 
 Surprise: error between prediction and observation
 
-If surprise, then we can re-wire the*connections*. Re-rout the input-output path through 
+If surprise, then we can re-wire the*connections*. Re-rout the input-output path through *make-sense functions* (which predic
 
 #god_of_reasoning
 
