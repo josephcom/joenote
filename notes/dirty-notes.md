@@ -1,12 +1,17 @@
 ---
 created: 2026-08-19T11:05:55Z
-updated: 2026-08-19T11:07:16Z
+updated: 2026-08-19T11:08:01Z
 ---
 
 # Dirty Notes
 
-Two components: 
-1. 
+Three components: 
+
+1. Pattern (function)
+2. Input
+3. Connections
+
+
 
 #god_of_reasoning
 
