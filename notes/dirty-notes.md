@@ -1,6 +1,6 @@
 ---
 created: 2026-08-19T11:05:55Z
-updated: 2026-08-19T11:18:14Z
+updated: 2026-08-19T11:18:37Z
 ---
 
 # Dirty Notes
@@ -19,5 +19,5 @@ Even problem solving methods are patterns (functions). Usually, the most native 
 
 *Piece of information* is just an *input*. If surprise, then we offer the new input (i.e. piece of information) to different functions, use the new output to  *connect* and *re-route* until *it makes sense* (i.e. no surprise, i.e. *error* acceptable).
 
-#god_of_reasoning
+#god_of_
 
