@@ -23,6 +23,7 @@
     <hashtag name="gem">
       <parent name="consumer_services"/>
     </hashtag>
+    <hashtag name="god_of_"/>
     <hashtag name="god_of_intelligence">
       <parent name="mind"/>
     </hashtag>
