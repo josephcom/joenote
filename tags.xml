@@ -26,6 +26,7 @@
     <hashtag name="god_of_intelligence">
       <parent name="mind"/>
     </hashtag>
+    <hashtag name="god_of_reasoning"/>
     <hashtag name="gqg">
       <parent name="funds"/>
     </hashtag>
