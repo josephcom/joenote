@@ -1,6 +1,6 @@
 ---
 created: 2026-08-19T11:05:55Z
-updated: 2026-08-19T11:09:01Z
+updated: 2026-08-19T11:09:37Z
 ---
 
 # Dirty Notes
@@ -13,7 +13,7 @@ Three components:
 
 Surprise: error between prediction and observation
 
-
+If surprise, then we can re-wire the connections. 
 
 #god_of_reasoning
 
