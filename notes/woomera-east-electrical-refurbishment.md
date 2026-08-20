@@ -1,6 +1,6 @@
 ---
 created: 2026-08-20T08:05:40Z
-updated: 2026-08-20T08:08:16Z
+updated: 2026-08-20T08:08:33Z
 ---
 
 # Woomera East Electrical Refurbishment
@@ -9,7 +9,7 @@ updated: 2026-08-20T08:08:16Z
 
 Good morning everyone. My name is Joseph, I work as a project engineer for NHP, and I will present and perform the factory acceptance test items for the Woomera East Electrical Refurbishment project. Today also with me are Martin, project delivery manager, and Ali, the project manager.
 
-I'm standing in front of the switchboard, which has been constructed as one continuous switchboard, installed inside an enclosure. The switchboard is air insulated and modular, where each panel has got a defined function, and for this particular project we're dealing with eight panels: seven circuit breakers and one bus VT panel with a bus earthing switch on top of it.
+I'm standing in front of the PSS switchboard, which has been constructed as one continuous switchboard, installed inside an enclosure. The switchboard is air insulated and modular, where each panel has got a defined function, and for this particular project we're dealing with eight panels: seven circuit breakers and one bus VT panel with a bus earthing switch on top of it.
 
 The first panel is the incomer, on which, in addition to the regular remote commands from SCADA, we also receive signals from the transformer. The regular remote signals from SCADA include open and close commands for the circuit breaker and the same two signals for the load break switch. The transformer signals include the oil over-pressure trip, the accumulation trip and the oil over-temperature trip, as well as one signal from the safety valve.
 
