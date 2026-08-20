@@ -1,6 +1,6 @@
 ---
 created: 2026-08-20T08:05:40Z
-updated: 2026-08-20T08:05:56Z
+updated: 2026-08-20T08:06:05Z
 ---
 
 # Woomera East Electrical Refurbishment — Factory Acceptance Test Presentation
@@ -90,5 +90,5 @@ The last component on the LV compartment is this capacitive voltage indicator, w
 As far as the mechanical side of this test schedule is concerned, I think I've already covered all the applicable items in the schedule. If you all agree, it's about time we move on to the second part, which is the electrical function tests.
 
 
-#inbox
+#temporary
 
