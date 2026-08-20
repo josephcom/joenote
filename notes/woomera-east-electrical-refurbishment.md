@@ -1,13 +1,13 @@
 ---
 created: 2026-08-20T08:05:40Z
-updated: 2026-08-20T08:06:18Z
+updated: 2026-08-20T08:08:06Z
 ---
 
 # Woomera East Electrical Refurbishment
 
 ## Introduction
 
-Good morning everyone. My name is Joseph, I work as a project engineer for NHP, and I will present and perform the factory acceptance test items for the Woomera East Electrical Refurbishment project. Today also with me are Martin and the project manager, Ali.
+Good morning everyone. My name is Joseph, I work as a project engineer for NHP, and I will present and perform the factory acceptance test items for the Woomera East Electrical Refurbishment project. Today also with me are Martin, project delivery manager, and the project manager, Ali.
 
 I'm standing in front of the switchboard, which has been constructed as one continuous switchboard, installed inside an enclosure. The switchboard is air insulated and modular, where each panel has got a defined function, and for this particular project we're dealing with eight panels: seven circuit breakers and one bus VT panel with a bus earthing switch on top of it.
 
