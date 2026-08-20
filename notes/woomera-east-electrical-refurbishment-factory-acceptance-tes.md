@@ -1,9 +1,9 @@
 ---
 created: 2026-08-20T08:05:40Z
-updated: 2026-08-20T08:06:05Z
+updated: 2026-08-20T08:06:18Z
 ---
 
-# Woomera East Electrical Refurbishment — Factory Acceptance Test Presentation
+# Woomera East Electrical Refurbishment
 
 ## Introduction
 
