@@ -62,6 +62,7 @@
     <hashtag name="stock">
       <parent name="money"/>
     </hashtag>
+    <hashtag name="temporary"/>
     <hashtag name="work">
       <sibling name="personal"/>
     </hashtag>
