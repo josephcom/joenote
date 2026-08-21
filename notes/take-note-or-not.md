@@ -1,6 +1,6 @@
 ---
 created: 2026-08-17T22:19:15Z
-updated: 2026-08-21T21:38:31Z
+updated: 2026-08-21T21:38:40Z
 ---
 
 # Take note or not?
@@ -19,8 +19,8 @@ You can't give a book to AI and ask questions without missing ***invaluable*** u
 
 ## Bottom-line 
 Here's how you should take note:
-> Put each point in the text under one of more questions.  
-> Set aside a separate section for unknown unknowns 
+> 1. Put each point in the text under one of more questions.  
+> 2. Set aside a separate section for unknown unknowns 
 
 #personal_development
 
