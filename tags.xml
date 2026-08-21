@@ -52,6 +52,7 @@
       <sibling name="reference"/>
     </hashtag>
     <hashtag name="prompt"/>
+    <hashtag name="reading"/>
     <hashtag name="reference">
       <parent name="work"/>
       <sibling name="project"/>
