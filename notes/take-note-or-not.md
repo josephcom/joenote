@@ -1,6 +1,6 @@
 ---
 created: 2026-08-17T22:19:15Z
-updated: 2026-08-21T21:35:06Z
+updated: 2026-08-21T21:35:22Z
 ---
 
 # Take note or not?
@@ -14,6 +14,8 @@ Because **we *see* and *learn* and *remember* pictures, not individual dots and 
 A text is noisy; meaning it's filled with irrelevant dots and messy lines connecting them. Main pictures are burried in them and very difficult to 1) detect 2) remember them. You have to take them out. 
 
 Each question we ask is a picture. You have to extract the right dots and lines to answer it. 
+
+## To find
 
 ## Bottom-line 
 Here's how you should take note:
