@@ -1,6 +1,6 @@
 ---
 created: 2026-08-15T12:37:21Z
-updated: 2026-08-22T11:51:37Z
+updated: 2026-08-22T12:02:17Z
 ---
 
 # THE OCCUPANCY GAME
@@ -1471,7 +1471,7 @@ Read that timeline against the Double-Edged Sword and the two rhythms lock toget
 
 The building's price moves inversely with rates, like a bond, because it is valued off its rent yield. The supply of new competitors moves with the availability of cheap projects. The operator's stock-market multiple moves with the alternative return on money. Three exposures, one tide.
 
-But the *demand* for childcare barely notices rates — care is bought from wages and subsidy, not borrowed money. (Rates pinch families at the edges through mortgages, as the cost-of-living squeeze of 2025 showed, but the effect is second-order.) So the tide moves the sector's supply and its prices while leaving its demand nearly alone. That asymmetry is analytical gold: **rate moves forecast supply conditions years ahead without much muddying the demand you are tracking.** When money got dear in 2022, an analyst could pencil in the 2024–26 pipeline freeze — a tailwind for incumbent occupancy — before a single construction statistic confirmed it. Chapter 26 will make the cash rate a standing dial on the dashboard.
+But the *demand* for childcare barely notices rates — care is bought from wages and subsidy, not borrowed money. (Rates pinch families at the edges through mortgages, as the cost-of-living squeeze of 2025 showed, but the effect is second-order.) So the ==tide moves the sector's supply and its prices while leaving its demand nearly alone.== That asymmetry is analytical gold: **rate moves forecast supply conditions years ahead without much muddying the demand you are tracking.** When money got dear in 2022, an analyst could pencil in the 2024–26 pipeline freeze — a tailwind for incumbent occupancy — before a single construction statistic confirmed it. Chapter 26 will make the cash rate a standing dial on the dashboard.
 
 The watching itself is light work. The RBA announces its cash rate decision on a published schedule, with a statement explaining its lean; the market's own pricing of future rates is published daily; and construction cost indices round out the picture of whether stranded pipelines can refloat. Ten minutes a month keeps the tide dial current — Chapter 26 slots it into the dashboard beside the supply paperwork it governs.
 
