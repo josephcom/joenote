@@ -1,6 +1,6 @@
 ---
 created: 2026-08-15T12:37:21Z
-updated: 2026-08-22T11:25:51Z
+updated: 2026-08-22T11:27:17Z
 ---
 
 # THE OCCUPANCY GAME
@@ -11,9 +11,9 @@ updated: 2026-08-22T11:25:51Z
 
 ---
 
-## ==Before you read: what this book is, and is not==
+## Before you read: what this book is, and is not
 
-==**This book is education, not financial advice.** It teaches a method of analysis, using one real company's public history as the worked example. It does not recommend the purchase or sale of any security, and nothing in it is tailored to any reader's circumstances. The author is not a licensed adviser. Readers make their own decisions and== own their consequences — teaching exactly that is one of the book's aims.
+**This book is education, not financial advice.** It teaches a method of analysis, using one real company's public history as the worked example. It does not recommend the purchase or sale of any security, and nothing in it is tailored to any reader's circumstances. The author is not a licensed adviser. Readers make their own decisions and own their consequences — teaching exactly that is one of the book's aims.
 
 **Its facts were gathered honestly and will age.** Figures were verified against public sources where possible (each is listed in the Endnotes & Sources); estimates and unverified figures are marked ≈ throughout. The story it follows was unresolved when the book was written — deliberately so.
 
