@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T09:03:54Z
-updated: 2026-08-22T21:27:07Z
+updated: 2026-08-22T21:27:39Z
 ---
 
 # Banks
@@ -10,7 +10,7 @@ Banks usually use a collateral like your shares portfolio and lend k% of its val
 
 The above formula works only when D > kV
 
-**Example**
+**Example**  
 You have 100 shares at $1 => V = $100. Bank lends k = 80% => D=80%*$100=**$80**. Share price goes down to $0.90 => V = $90. Now D > kV ($80 > 80%*$90), so you must sell.  
 V_new = 90 − (80 − 72)/0.2 = 90 − 40 = **$50**  
 This means you must keep selling until your portfolio is worth $50. In other words, there will be $50/$0.9=55 shares in your portfolio which means you have to sell 100-55=**45** of your shares and give it to bank!
