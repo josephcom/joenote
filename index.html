@@ -9,7 +9,7 @@
 <!-- ?v= is bumped on every release. Pages serves css/js with a long max-age,
      so without it a returning browser pairs this new HTML with its cached old
      scripts and the app half-works in ways that look like real bugs. -->
-<link rel="stylesheet" href="css/app.css?v=2026-08-16d" />
+<link rel="stylesheet" href="css/app.css?v=2026-08-22a" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%23%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
@@ -22,6 +22,7 @@
   <button id="storage-pill" class="pill destination" type="button" title="Where saves go — click to change"></button>
   <button id="btn-github" class="btn" type="button">GitHub…</button>
   <button id="btn-connect" class="btn" type="button">Folder…</button>
+  <button id="btn-ai" class="btn" type="button" title="Anthropic key, for the 10-word summary">AI…</button>
   <button id="btn-import" class="btn" type="button" title="Import .md files">Import</button>
   <input id="file-import" type="file" accept=".md,.markdown,text/markdown" multiple hidden />
   <button id="btn-new" class="btn primary" type="button" title="New note (n)">New note</button>
@@ -83,6 +84,48 @@
       <div class="topbar-spacer"></div>
       <button class="btn" type="button" id="gh-cancel">Cancel</button>
       <button class="btn primary" type="button" id="gh-save">Connect</button>
+    </footer>
+  </div>
+</div>
+
+<!-- ========================= ANTHROPIC KEY ======================= -->
+<div id="ai-overlay" class="overlay" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="ai-h">
+    <header>
+      <h2 id="ai-h">Key for the 10-word summary</h2>
+      <button class="btn icon" type="button" id="ai-close" title="Close">&times;</button>
+    </header>
+
+    <p class="sheet-lead">
+      Select some text in a note and one of the choices is a summary in under
+      ten words, written by Claude and pinned to the highlight as its note.
+      That is the only thing this key is used for.
+    </p>
+
+    <div class="field">
+      <label for="ai-key">Anthropic API key</label>
+      <input id="ai-key" type="password" spellcheck="false" autocomplete="off" placeholder="sk-ant-&hellip;" />
+    </div>
+
+    <details class="sheet-help">
+      <summary>Where the key goes</summary>
+      <p>The key is kept in this browser's local storage and sent only to
+         <code>api.anthropic.com</code>. JoeNote has no server, so there is
+         nowhere else for it to go &mdash; it is never written into a note, never
+         committed, and never leaves this machine except on the way to
+         Anthropic.</p>
+      <p>That also means anyone with this browser has the key. Make it at
+         <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener noreferrer">console.anthropic.com/settings/keys</a>,
+         and revoke it there the moment you want it gone.</p>
+    </details>
+
+    <p id="ai-msg" class="sheet-msg"></p>
+
+    <footer>
+      <button class="btn danger" type="button" id="ai-clear">Remove</button>
+      <div class="topbar-spacer"></div>
+      <button class="btn" type="button" id="ai-cancel">Cancel</button>
+      <button class="btn primary" type="button" id="ai-save">Save</button>
     </footer>
   </div>
 </div>
@@ -289,12 +332,13 @@
 
 <div id="toast" class="toast" hidden></div>
 
-<script src="js/md.js?v=2026-08-16d"></script>
-<script src="js/sanitize.js?v=2026-08-16d"></script>
-<script src="js/store.js?v=2026-08-16d"></script>
-<script src="js/tags.js?v=2026-08-16d"></script>
-<script src="js/search.js?v=2026-08-16d"></script>
-<script src="js/graph.js?v=2026-08-16d"></script>
-<script src="js/app.js?v=2026-08-16d"></script>
+<script src="js/md.js?v=2026-08-22a"></script>
+<script src="js/sanitize.js?v=2026-08-22a"></script>
+<script src="js/store.js?v=2026-08-22a"></script>
+<script src="js/tags.js?v=2026-08-22a"></script>
+<script src="js/search.js?v=2026-08-22a"></script>
+<script src="js/graph.js?v=2026-08-22a"></script>
+<script src="js/hl.js?v=2026-08-22a"></script>
+<script src="js/app.js?v=2026-08-22a"></script>
 </body>
 </html>

@@ -502,6 +502,7 @@
       case ']': return this.parseCloseBracket();
       case '<': return this.parseAutolinkOrHtml();
       case '&': return this.parseEntity();
+      case '=': return this.parseHighlight();
       case '#': return this.parseHashtag();
       case ':': return this.parseEmoji();
       default:
@@ -767,6 +768,34 @@
     return true;
   };
 
+  /* --- ==highlight== and its note ---------------------------------
+   * ==text== marks a highlight. A note rides directly behind it in
+   * braces - ==text=={why this matters} - so the two are one run of
+   * characters: delete the highlight and the note cannot survive it.
+   * A } inside the note is written \}.
+   * -------------------------------------------------------------- */
+
+  var RE_HL = /^==(?!\s)([\s\S]*?[^\s=])==(?!=)/;
+  var RE_HL_NOTE = /^\{((?:\\.|[^\\}\n])*)\}/;
+
+  InlineParser.prototype.parseHighlight = function () {
+    var rest = this.src.slice(this.pos);
+    var m = RE_HL.exec(rest);
+    if (!m) return false;
+    var node = new Node('mark', '');
+    node.html = new InlineParser(this.ctx).parse(m[1]);
+    node.note = '';
+    var after = rest.slice(m[0].length);
+    var n = RE_HL_NOTE.exec(after);
+    if (n) {
+      node.note = unescapeString(n[1]);
+      this.pos += n[0].length;
+    }
+    this.add(node);
+    this.pos += m[0].length;
+    return true;
+  };
+
   var RE_TAG_INLINE = /^#([\p{L}\p{N}][\p{L}\p{N}_\-\/]*)/u;
   /* a tag needs at least one non-digit, so "#5 bolt" stays plain text */
   var RE_TAG_OK = /[\p{L}_\-\/]/u;
@@ -936,6 +965,11 @@
         case 'em': out += '<em>' + serialize(node.kids, ctx) + '</em>'; break;
         case 'strong': out += '<strong>' + serialize(node.kids, ctx) + '</strong>'; break;
         case 'del': out += '<del>' + serialize(node.kids, ctx) + '</del>'; break;
+        case 'mark':
+          out += '<mark class="hl"' +
+            (node.note ? ' data-note="' + escAttr(node.note) + '"' : '') +
+            '>' + node.html + '</mark>';
+          break;
         case 'hashtag':
           var lower = node.v.toLowerCase();
           ctx.tags.push(lower);
@@ -1137,6 +1171,7 @@
       .replace(/^ {0,3}(`{3,}|~{3,})([^\n]*)\n([\s\S]*?)^ {0,3}\1[ \t]*$/gm, '$3')
       .replace(/!\[([^\]]*)\]\([^)]*\)/g, '$1')
       .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+      .replace(/==([\s\S]*?)==(?:\{((?:\\.|[^\\}\n])*)\})?/g, '$1 $2 ')
       .replace(/[`*_~>#]/g, ' ')
       .replace(/\s+/g, ' ')
       .trim();

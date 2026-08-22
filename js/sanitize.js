@@ -16,6 +16,7 @@
     a: { href: true, target: true, rel: true, 'data-tag': true },
     img: { src: true, alt: true, width: true, height: true, loading: true, 'data-src': true },
     input: { type: true, checked: true, disabled: true },
+    mark: { 'data-note': true },
     td: { colspan: true, rowspan: true, style: true },
     th: { colspan: true, rowspan: true, style: true, scope: true },
     col: { span: true, style: true },

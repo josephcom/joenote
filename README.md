@@ -13,6 +13,14 @@ only**. Open `index.html` and it runs.
 * **Notes are `.md` files.** Edit mode shows raw markdown, view mode renders it.
   The renderer covers the CommonMark spec plus tables, task lists,
   strikethrough, autolinks and footnotes.
+* **Select text and the browser's menu steps aside for JoeNote's.** Three
+  choices: highlight it, copy it, or have Claude sum it up in under ten words.
+  A highlight is `==text==` in the file; click one and you can attach a note
+  to it, which is written in braces directly behind it — `==text=={why this
+  matters}`. The two are one run of characters, so a note can never outlive
+  the highlight it belongs to, and both travel with the `.md` file wherever
+  it goes. The ten-word summary needs an Anthropic key, kept in this browser
+  and sent only to `api.anthropic.com` — the **AI…** button holds it.
 * **Paste images straight in.** With a folder connected they become real files
   under `assets/`; otherwise they are embedded as data URIs.
 * **Hashtags are the only structure.** `#like-this`, anywhere in the body.

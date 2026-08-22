@@ -550,6 +550,112 @@ mark { background: color-mix(in srgb, var(--accent) 28%, transparent); color: in
 }
 .toast.err { background: var(--danger); color: #fff; }
 
+/* ------------------------- highlights and their notes -----------------
+ * A highlight is ==text== in the file. The little dot after one says a
+ * note is tied to it; the note lives in the same run of characters, so
+ * the dot can never outlive the highlight it belongs to.
+ * -------------------------------------------------------------------- */
+
+.markdown-body mark.hl {
+  background: color-mix(in srgb, var(--accent) 24%, transparent);
+  border-radius: 3px;
+  padding: 0 2px;
+  cursor: pointer;
+  transition: background .12s;
+}
+.markdown-body mark.hl:hover,
+.markdown-body mark.hl.open {
+  background: color-mix(in srgb, var(--accent) 42%, transparent);
+}
+.markdown-body mark.hl[data-note]::after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin: 0 1px 0 3px;
+  border-radius: 50%;
+  background: var(--accent);
+  vertical-align: super;
+}
+
+/* the pop-up menus: one for a fresh selection, one for an existing
+   highlight. Both are positioned from JavaScript and never wider than
+   the screen they appear on. */
+.sel-menu {
+  position: absolute;
+  z-index: 60;
+  display: flex;
+  align-items: stretch;
+  gap: 2px;
+  padding: 4px;
+  max-width: calc(100vw - 16px);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  font: 500 13px/1 var(--sans);
+  user-select: none;
+  -webkit-user-select: none;
+}
+.sel-menu.stack { flex-direction: column; align-items: stretch; min-width: 210px; }
+.sel-menu button {
+  font: inherit;
+  color: var(--fg);
+  background: none;
+  border: 0;
+  border-radius: 7px;
+  padding: 8px 11px;
+  cursor: pointer;
+  white-space: nowrap;
+  text-align: left;
+}
+.sel-menu button:hover { background: var(--bg-sunk); }
+.sel-menu button:disabled { color: var(--fg-faint); cursor: default; background: none; }
+.sel-menu button.danger { color: var(--danger); }
+.sel-menu .swatch {
+  display: inline-block;
+  width: 10px; height: 10px;
+  margin-right: 7px;
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--accent) 55%, transparent);
+  vertical-align: -1px;
+}
+.sel-menu .note-read {
+  padding: 7px 11px 9px;
+  max-width: 260px;
+  color: var(--fg-soft);
+  font: 400 13px/1.45 var(--sans);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 2px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.sel-menu textarea {
+  font: 400 13px/1.45 var(--sans);
+  color: var(--fg);
+  background: var(--bg-soft);
+  border: 1px solid var(--line-strong);
+  border-radius: 7px;
+  padding: 7px 9px;
+  width: 260px;
+  min-height: 66px;
+  resize: vertical;
+}
+.sel-menu .row { display: flex; gap: 4px; justify-content: flex-end; padding-top: 4px; }
+.sel-menu .row button { padding: 6px 10px; }
+.sel-menu .row button.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-fg);
+}
+.sel-menu .row button.primary:hover { filter: brightness(1.08); }
+
+/* the note under a highlight, opened by clicking it */
+.hl-note {
+  margin: 0;
+  color: var(--fg-soft);
+}
+
 /* ------------------------------ responsive ---------------------------- */
 
 @media (max-width: 720px) {

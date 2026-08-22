@@ -1404,6 +1404,8 @@
       imgs.forEach(embedImage);
     });
 
+    bindHighlights();
+
     /* keyboard */
     document.addEventListener('keydown', function (e) {
       var inField = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName);
@@ -1442,6 +1444,307 @@
       if (!document.hidden) resyncCurrent();
     });
     window.addEventListener('focus', function () { resyncCurrent(); });
+  }
+
+  /* ====================== highlights and their notes ===================
+   * Select something in a note and a small menu replaces the browser's own:
+   * highlight it, copy it, or have Claude sum it up in under ten words and
+   * pin that summary to the highlight as its note.
+   *
+   * Nothing here keeps state of its own. The highlight *is* the ==text== in
+   * the .md file, and the note *is* the {braces} behind it, so a highlight
+   * and its note travel together through GitHub, a folder, a download and
+   * an import, and neither can be orphaned by the other going missing.
+   *
+   * The one hard part is aiming: the reader selects rendered words, and we
+   * have to point at the same words in the markdown behind them. HL.locate
+   * does that work; everything here checks it landed - the note is
+   * re-rendered and the new highlight must read back exactly as selected,
+   * or the edit is thrown away and nothing is written.
+   * ================================================================== */
+
+  var hlMenu = null;
+
+  function closeHlMenu() {
+    if (hlMenu && hlMenu.parentNode) hlMenu.parentNode.removeChild(hlMenu);
+    hlMenu = null;
+    var open = $('note-view').querySelector('mark.hl.open');
+    if (open) open.classList.remove('open');
+  }
+
+  /* Anchored to the page, not the window, so scrolling does not leave the
+     menu hovering over the wrong paragraph. */
+  function openHlMenu(rect, build, stack) {
+    closeHlMenu();
+    var m = document.createElement('div');
+    m.className = 'sel-menu' + (stack ? ' stack' : '');
+    m.setAttribute('role', 'menu');
+    build(m);
+    m.style.visibility = 'hidden';
+    document.body.appendChild(m);
+    hlMenu = m;
+
+    var pad = 8;
+    var w = m.offsetWidth, h = m.offsetHeight;
+    var left = rect.left + window.scrollX + (rect.width - w) / 2;
+    var top = rect.top + window.scrollY - h - 6;
+    if (top < window.scrollY + pad) top = rect.bottom + window.scrollY + 6;
+    left = Math.max(window.scrollX + pad,
+      Math.min(left, window.scrollX + document.documentElement.clientWidth - w - pad));
+    m.style.left = Math.round(left) + 'px';
+    m.style.top = Math.round(top) + 'px';
+    m.style.visibility = '';
+    return m;
+  }
+
+  function menuButton(label, fn, cls) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    if (cls) b.className = cls;
+    if (typeof label === 'string') b.textContent = label; else b.appendChild(label);
+    b.addEventListener('click', fn);
+    return b;
+  }
+
+  function norm(s) { return String(s).replace(/\s+/g, ' ').trim(); }
+
+  /* ---------------------- writing a highlight in ---------------------- */
+
+  function markTexts(raw) {
+    var probe = document.createElement('div');
+    probe.appendChild(Sanitize.toFragment(MD.render(raw)));
+    return Array.prototype.map.call(probe.querySelectorAll('mark.hl'), function (el) {
+      return norm(el.textContent);
+    });
+  }
+
+  /* Returns true only if the note now renders a highlight reading exactly
+     what was selected. Anything else and the file is left untouched. */
+  function commitHighlight(text, ratio, note) {
+    var current = App.current;
+    if (!current) return false;
+    var at = HL.locate(current.raw, text, ratio);
+    if (!at) {
+      toast('Could not place that in the file — try selecting a shorter run of plain text', true);
+      return false;
+    }
+    var next = HL.wrap(current.raw, at.start, at.end, note || '');
+    var was = markTexts(current.raw), now = markTexts(next);
+    if (now.length !== was.length + 1 || now.indexOf(norm(text)) === -1) {
+      toast('That selection crosses something the file cannot mark — try a shorter one', true);
+      return false;
+    }
+    current.raw = next;
+    renderMarkdown(current.raw);
+    markDirty();
+    return true;
+  }
+
+  /* ------------------- pointing at an existing highlight -------------- */
+
+  function highlightUnder(el) {
+    var all = $('note-view').querySelectorAll('mark.hl');
+    var i = Array.prototype.indexOf.call(all, el);
+    var list = HL.scan(App.current ? App.current.raw : '');
+    if (i === -1 || list.length !== all.length) return null;
+    return list[i];
+  }
+
+  function rewriteHighlight(el, make) {
+    var current = App.current;
+    var hl = current && highlightUnder(el);
+    if (!hl) { toast('Lost track of that highlight — reopen the note and try again', true); return; }
+    current.raw = make(current.raw, hl);
+    renderMarkdown(current.raw);
+    markDirty();
+    closeHlMenu();
+  }
+
+  /* ------------------------- the selection menu ----------------------- */
+
+  function selectionInNote() {
+    if (App.mode !== 'view' || !App.current) return null;
+    var sel = window.getSelection();
+    if (!sel || sel.isCollapsed || !sel.rangeCount) return null;
+    var view = $('note-view');
+    var range = sel.getRangeAt(0);
+    if (!view.contains(range.commonAncestorContainer)) return null;
+    var text = norm(sel.toString());
+    if (text.length < 2) return null;
+
+    /* where the selection sits in the note, 0 to 1 - this is what tells
+       HL.locate which "the quick brown fox" the reader meant */
+    var before = document.createRange();
+    before.selectNodeContents(view);
+    before.setEnd(range.startContainer, range.startOffset);
+    var whole = view.textContent.length || 1;
+
+    return { text: text, ratio: before.toString().length / whole, rect: range.getBoundingClientRect() };
+  }
+
+  function showSelectionMenu(pick, at) {
+    openHlMenu(at || pick.rect, function (m) {
+      var swatch = document.createElement('span');
+      swatch.className = 'swatch';
+      var hi = document.createElement('span');
+      hi.appendChild(swatch);
+      hi.appendChild(document.createTextNode('Highlight'));
+
+      m.appendChild(menuButton(hi, function () {
+        closeHlMenu();
+        if (commitHighlight(pick.text, pick.ratio, '')) window.getSelection().removeAllRanges();
+      }));
+
+      m.appendChild(menuButton('Copy', function () {
+        var done = function () { toast('Copied'); closeHlMenu(); };
+        var fail = function () { toast('This browser would not let JoeNote copy that', true); };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(pick.text).then(done, fail);
+        } else fail();
+      }));
+
+      var ai = menuButton('10-word summary', function () {
+        ai.disabled = true;
+        ai.textContent = 'summarising…';
+        HL.summarize(pick.text).then(function (summary) {
+          closeHlMenu();
+          if (commitHighlight(pick.text, pick.ratio, summary)) {
+            window.getSelection().removeAllRanges();
+            toast(summary);
+          }
+        }).catch(function (e) {
+          closeHlMenu();
+          toast(e.message || String(e), true);
+          if (!HL.key()) openAiSheet();
+        });
+      });
+      m.appendChild(ai);
+    });
+  }
+
+  /* --------------------- the menu on a highlight ---------------------- */
+
+  function showHighlightMenu(el, at) {
+    el.classList.add('open');
+    var note = el.getAttribute('data-note') || '';
+
+    openHlMenu(at || el.getBoundingClientRect(), function (m) {
+      if (note) {
+        var read = document.createElement('div');
+        read.className = 'note-read';
+        read.textContent = note;
+        m.appendChild(read);
+      }
+      m.appendChild(menuButton(note ? 'Edit note' : 'Add a note', function () {
+        showNoteEditor(el, note);
+      }));
+      m.appendChild(menuButton('Remove highlight', function () {
+        rewriteHighlight(el, HL.remove);
+      }, 'danger'));
+    }, true);
+  }
+
+  function showNoteEditor(el, note) {
+    var rect = el.getBoundingClientRect();
+    openHlMenu(rect, function (m) {
+      var ta = document.createElement('textarea');
+      ta.value = note;
+      ta.placeholder = 'A note on this highlight. It lives inside the highlight, so removing the highlight removes it too.';
+      m.appendChild(ta);
+
+      var row = document.createElement('div');
+      row.className = 'row';
+      row.appendChild(menuButton('Cancel', function () { closeHlMenu(); }));
+      row.appendChild(menuButton('Save', function () {
+        var value = ta.value;
+        rewriteHighlight(el, function (raw, hl) { return HL.setNote(raw, hl, value); });
+      }, 'primary'));
+      m.appendChild(row);
+
+      setTimeout(function () { ta.focus(); ta.select(); }, 0);
+    }, true);
+  }
+
+  /* ----------------------------- the key ------------------------------ */
+
+  function openAiSheet() {
+    $('ai-key').value = HL.key();
+    $('ai-overlay').hidden = false;
+    $('ai-msg').textContent = '';
+    setTimeout(function () { $('ai-key').focus(); }, 0);
+  }
+
+  function closeAiSheet() { $('ai-overlay').hidden = true; }
+
+  /* ------------------------------ wiring ------------------------------ */
+
+  function bindHighlights() {
+    var view = $('note-view');
+
+    function offer(at) {
+      var pick = selectionInNote();
+      if (!pick) return false;
+      showSelectionMenu(pick, at);
+      return true;
+    }
+
+    /* A tap or a click on a highlight opens its own menu; the selection
+       menu waits for the pointer to come up, so dragging out a phrase does
+       not flash a menu at every character along the way. */
+    view.addEventListener('click', function (e) {
+      var mark = e.target.closest ? e.target.closest('mark.hl') : null;
+      if (!mark || !view.contains(mark)) return;
+      if (App.mode !== 'view') return;
+      var sel = window.getSelection();
+      if (sel && !sel.isCollapsed) return;      /* they are selecting, not tapping */
+      e.preventDefault();
+      e.stopPropagation();
+      showHighlightMenu(mark);
+    });
+
+    view.addEventListener('mouseup', function () { setTimeout(function () { offer(); }, 0); });
+    view.addEventListener('touchend', function () { setTimeout(function () { offer(); }, 10); });
+
+    /* the browser's own menu steps aside for ours */
+    view.addEventListener('contextmenu', function (e) {
+      if (App.mode !== 'view') return;
+      var pointer = { left: e.clientX, top: e.clientY, right: e.clientX, bottom: e.clientY, width: 0, height: 0 };
+      var mark = e.target.closest ? e.target.closest('mark.hl') : null;
+      if (selectionInNote()) { e.preventDefault(); offer(pointer); return; }
+      if (mark && view.contains(mark)) { e.preventDefault(); showHighlightMenu(mark, pointer); }
+    });
+
+    document.addEventListener('mousedown', function (e) {
+      if (hlMenu && !hlMenu.contains(e.target)) closeHlMenu();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && hlMenu) { closeHlMenu(); return; }
+      if (e.key === 'Escape' && !$('ai-overlay').hidden) closeAiSheet();
+    });
+    window.addEventListener('hashchange', closeHlMenu);
+    window.addEventListener('resize', closeHlMenu);
+    document.addEventListener('scroll', function () { if (hlMenu) closeHlMenu(); }, true);
+
+    /* the key sheet */
+    $('btn-ai').addEventListener('click', openAiSheet);
+    $('ai-close').addEventListener('click', closeAiSheet);
+    $('ai-cancel').addEventListener('click', closeAiSheet);
+    $('ai-clear').addEventListener('click', function () {
+      HL.key('');
+      $('ai-key').value = '';
+      $('ai-msg').textContent = 'Key removed from this browser.';
+      toast('Anthropic key removed');
+    });
+    $('ai-save').addEventListener('click', function () {
+      var v = $('ai-key').value.trim();
+      if (!v) { $('ai-msg').textContent = 'Paste a key first, or press Remove.'; return; }
+      HL.key(v);
+      closeAiSheet();
+      toast('Anthropic key saved in this browser');
+    });
+    $('ai-overlay').addEventListener('click', function (e) {
+      if (e.target === $('ai-overlay')) closeAiSheet();
+    });
   }
 
   /* ================================ boot =============================== */
