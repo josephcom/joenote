@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T09:03:54Z
-updated: 2026-08-22T21:25:09Z
+updated: 2026-08-22T21:25:28Z
 ---
 
 # Banks
@@ -11,7 +11,7 @@ The above formula works only when D > kV
 **Example**
 You have 100 shares at $1 => V = $100. Bank lends k = 80% => D=80%*$100=**$80**. Share price goes down to $0.90 => V = $90. Now D > kV ($80 > 80%*$90), so you must sell.  
 V_new = 90 − (80 − 72)/0.2 = 90 − 40 = **$50**  
-This means you must keep selling until your portfolio is worth $50. In other words, there will be $50/$0.9=
+This means you must keep selling until your portfolio is worth $50. In other words, there will be $50/$0.9=55 
 
 ## Fraud 
 
