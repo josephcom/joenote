@@ -1,6 +1,6 @@
 ---
 created: 2026-08-15T12:37:21Z
-updated: 2026-08-22T12:08:59Z
+updated: 2026-08-22T12:09:26Z
 ---
 
 # THE OCCUPANCY GAME
@@ -1514,7 +1514,7 @@ In beat two, the developer's project genuinely clears its hurdle at current rent
 
 And in beat three, exit is slow for equally rational reasons: sunk costs whisper "hold on", leases bind for years, and hope is cheaper than a write-off. So capacity leaves far more slowly than it arrived. The cycle is not a failure of intelligence. It is what intelligence does when it is distributed and delayed.
 
-For the analyst, this yields the central rule of capital-cycle investing, and it will govern Part V: **==judge an industry by the behaviour of its supply side, not by the strength of its demand.==** Demand forecasts seduce; supply behaviour tells the truth. An industry where capital is flooding in is dangerous at any level of demand. An industry where capital is fleeing is interesting at almost any level of gloom. The question is never "will people need childcare?" — they will. The question is always "what is the money doing?"
+For the analyst, this yields the central rule of capital-cycle investing, and it will govern Part V: **judge an industry by the behaviour of its supply side, not by the strength of its demand.** Demand forecasts seduce; supply behaviour tells the truth. An industry where capital is flooding in is dangerous at any level of demand. An industry where capital is fleeing is interesting at almost any level of gloom. The question is never "will people need childcare?" — they will. The question is always "what is the money doing?"
 
 ### The band and its walls
 
