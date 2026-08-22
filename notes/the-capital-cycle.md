@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T01:23:50Z
-updated: 2026-08-22T01:25:16Z
+updated: 2026-08-22T01:25:24Z
 ---
 
 # The Capital Cycle 
@@ -24,7 +24,8 @@ Two rules control the cycle:
 
 Rule 2 is why the cycle overshoots. Supply does not stop at the correct level. It goes past it, in both directions.
 
-NOTE A **moat** protects returns from new players. A structural change makes a decline permanent, not temporary.
+NOTE A **moat** protects returns from new players. 
+NOTE A structural change makes a decline permanent, not temporary.
 
 #money
 
