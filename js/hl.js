@@ -153,6 +153,63 @@
 
   /* ============================ edits to the file ====================== */
 
+  /* ==text== cannot cross a blank line or a list bullet: markdown ends the
+     paragraph there, and the marks are left stranded on either side of the
+     gap, printed as literal = signs. So a selection running over several
+     paragraphs is cut at those seams and each piece is marked in its own
+     right. The note goes on the first piece - it is where the eye lands,
+     and the one you reach for to take the note away again. */
+
+  var RE_BLOCK_START = /^(?:[ \t]*$|[ \t]{0,3}(?:[-*+]|\d+[.)])[ \t]|[ \t]{0,3}#{1,6}[ \t]|[ \t]*>|[ \t]{0,3}(?:`{3,}|~{3,})|[ \t]{0,3}(?:=+|-+)[ \t]*$)/;
+
+  var RE_MARKER = /^(?:[ \t]{0,3}(?:[-*+]|\d+[.)])[ \t]+|[ \t]{0,3}#{1,6}[ \t]+|[ \t]*>[ \t]?)*/;
+
+  function segments(src, start, end) {
+    var lines = src.slice(start, end).split('\n');
+    var out = [], at = start, from = null, to = null;
+
+    function close() {
+      if (from === null) return;
+      var piece = src.slice(from, to);
+      var lead = /^\s*/.exec(piece)[0], tail = /\s*$/.exec(piece)[0];
+      if (piece.length > lead.length + tail.length) {
+        out.push({ start: from + lead.length, end: to - tail.length });
+      }
+      from = to = null;
+    }
+
+    for (var i = 0; i < lines.length; i++) {
+      var line = lines[i], lineEnd = at + line.length;
+      /* notes written on Windows carry a \r that is part of the line but not
+         part of what the line says, so it is dropped before the block test -
+         otherwise a blank line reads as "\r" and no paragraph ever ends */
+      var said = line.replace(/\r$/, '');
+      /* the first line is whatever the selection began part-way through, so
+         it never counts as opening a block of its own */
+      if (i > 0 && RE_BLOCK_START.test(said)) close();
+      if (said.trim()) {
+        /* a piece that opens on a list bullet, a heading or a quote must
+           start after the marker: ==2. text== is not a numbered item any
+           more, it is the previous item with two literal = signs in it */
+        if (from === null) from = at + RE_MARKER.exec(said)[0].length;
+        to = lineEnd;
+      }
+      at = lineEnd + 1;
+    }
+    close();
+    return out;
+  }
+
+  /* Applied back to front, so an earlier span's offsets are still good once
+     a later one has been rewritten. */
+  function wrapAll(src, spans, note) {
+    var out = src;
+    for (var i = spans.length - 1; i >= 0; i--) {
+      out = wrap(out, spans[i].start, spans[i].end, i === 0 ? note : '');
+    }
+    return out;
+  }
+
   function wrap(src, start, end, note) {
     var taken = src.slice(start, end);
     /* keep any whitespace the selection swept up outside the marks */
@@ -244,6 +301,8 @@
     scan: scan,
     locate: locate,
     wrap: wrap,
+    segments: segments,
+    wrapAll: wrapAll,
     remove: remove,
     setNote: setNote,
     escapeNote: escapeNote,

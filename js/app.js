@@ -1510,30 +1510,49 @@
 
   /* ---------------------- writing a highlight in ---------------------- */
 
-  function markTexts(raw) {
+  function rendered(raw) {
     var probe = document.createElement('div');
     probe.appendChild(Sanitize.toFragment(MD.render(raw)));
-    return Array.prototype.map.call(probe.querySelectorAll('mark.hl'), function (el) {
-      return norm(el.textContent);
-    });
+    return probe;
   }
 
-  /* Returns true only if the note now renders a highlight reading exactly
-     what was selected. Anything else and the file is left untouched. */
+  function markCount(raw) { return rendered(raw).querySelectorAll('mark.hl').length; }
+  function plainOf(raw) { return norm(rendered(raw).textContent); }
+
+  /* A selection over several paragraphs becomes one highlight per paragraph,
+     since markdown will not let a pair of == marks cross a blank line.
+
+     Three things are checked before anything is written, because a
+     half-placed pair of marks is worse than no highlight at all:
+       - the pieces, run together, read as what was selected;
+       - the note gains exactly that many highlights;
+       - and its visible text is character for character what it was, which
+         is what would fail if a == had been left stranded and printed.
+     Any of them off and the file is not touched. */
   function commitHighlight(text, ratio, note) {
     var current = App.current;
     if (!current) return false;
+
     var at = HL.locate(current.raw, text, ratio);
-    if (!at) {
-      toast('Could not place that in the file — try selecting a shorter run of plain text', true);
+    var spans = at ? HL.segments(current.raw, at.start, at.end) : [];
+    if (!spans.length) {
+      toast('Could not find those words in the file — a selection beginning or ' +
+        'ending inside code cannot be marked', true);
       return false;
     }
-    var next = HL.wrap(current.raw, at.start, at.end, note || '');
-    var was = markTexts(current.raw), now = markTexts(next);
-    if (now.length !== was.length + 1 || now.indexOf(norm(text)) === -1) {
+
+    var reads = spans.map(function (s) {
+      return plainOf(current.raw.slice(s.start, s.end));
+    }).join(' ');
+    var next = HL.wrapAll(current.raw, spans, note || '');
+
+    if (norm(reads) !== norm(text) ||
+      markCount(next) !== markCount(current.raw) + spans.length ||
+      plainOf(next) !== plainOf(current.raw)) {
       toast('That selection crosses something the file cannot mark — try a shorter one', true);
       return false;
     }
+
     current.raw = next;
     renderMarkdown(current.raw);
     markDirty();
