@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T01:23:50Z
-updated: 2026-08-22T01:24:24Z
+updated: 2026-08-22T01:24:46Z
 ---
 
 # The Capital Cycle 
@@ -24,9 +24,8 @@ Two rules control the cycle:
 
 Rule 2 is why the cycle overshoots. Supply does not stop at the correct level. It goes past it, in both directions.
 
-The important point is this: watch supply, not demand. Demand gives you a surprise. Supply does not. Supply announces itself years before it arrives — in permits, in orders, in construction data. You can count it.
-
-Two things weaken the cycle. A moat protects returns from new players. A structural change makes a decline permanent, not temporary.
+## Important notes
+A moat protects returns from new players. A structural change makes a decline permanent, not temporary.
 
 #money
 
