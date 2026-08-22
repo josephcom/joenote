@@ -1,6 +1,6 @@
 ---
 created: 2026-08-15T12:37:21Z
-updated: 2026-08-22T12:59:09Z
+updated: 2026-08-22T12:59:45Z
 ---
 
 # THE OCCUPANCY GAME
@@ -1532,7 +1532,7 @@ In most industries, beat four does real demolition. Failed mines close; old ship
 
 Childcare's exit is sticky, for reasons this book has already assembled. The seats outlive the operators: a purpose-built centre is worth little as anything else, so when an operator fails, the landlord — Chapter 11's rationalist — installs the next operator at a discounted rent rather than demolish. The building's ownership changes; its forks stay in the pie. The subsidy floor props the weak: an engine that pays wherever parents enrol keeps marginal centres alive that a harsher market would cull. And the leases bind: a chain wanting to shrink must buy its way out of 15-year commitments — Chapter 19 will price that pain in G8's real accounts.
 
-So in childcare, beat four removes companies but barely removes capacity. ==The cycle's lower turn — the recovery of returns — must come almost entirely from demand growth grinding up to fill the seats, because the seats will not retire to meet it.== That can take years longer than in a normal industry, and it sets the analyst's timetable: when you find an oversupplied childcare market, count the excess seats, divide by the pie's growth rate, and you have the shape of the wait. The fix is a slow flood of children, not a quick cull of centres.
+So in childcare, beat four removes companies but barely removes capacity. The cycle's lower turn — the recovery of returns — must come almost entirely from demand growth grinding up to fill the seats, because the seats will not retire to meet it. That can take years longer than in a normal industry, and it sets the analyst's timetable: when you find an oversupplied childcare market, count the excess seats, divide by the pie's growth rate, and you have the shape of the wait. The fix is a slow flood of children, not a quick cull of centres.
 
 ### Reading the supply side: five telltales
 
