@@ -1,6 +1,6 @@
 ---
 created: 2026-08-15T12:37:21Z
-updated: 2026-08-22T13:00:17Z
+updated: 2026-08-22T13:02:03Z
 ---
 
 # THE OCCUPANCY GAME
@@ -1534,7 +1534,7 @@ Childcare's exit is sticky, for reasons this book has already assembled. The sea
 
 So in childcare, beat four removes companies but barely removes capacity. The ==cycle's lower turn — the recovery of returns — must come almost entirely from demand growth grinding up to fill the seats, because the seats will not retire to meet it. That can take years== longer than in a normal industry, and it sets the analyst's timetable: when you find an oversupplied childcare market, count the excess seats, divide by the pie's growth rate, and you have the shape of the wait. The fix is a slow flood of children, not a quick cull of centres.
 
-### Reading the supply side: five telltales
+### ==Reading the supply side: five telltales==
 
 "Judge the supply side" is a rule; here is its childcare toolkit. Five telltales, each observable from public sources, each mapped to a beat of the cycle.
 
