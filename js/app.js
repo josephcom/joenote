@@ -1742,6 +1742,10 @@
       closeAiSheet();
       toast('Anthropic key saved in this browser');
     });
+    /* paste the key and press Enter - the field is the whole form */
+    $('ai-key').addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') { e.preventDefault(); $('ai-save').click(); }
+    });
     $('ai-overlay').addEventListener('click', function (e) {
       if (e.target === $('ai-overlay')) closeAiSheet();
     });
