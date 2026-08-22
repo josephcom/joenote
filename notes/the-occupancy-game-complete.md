@@ -1,6 +1,6 @@
 ---
 created: 2026-08-15T12:37:21Z
-updated: 2026-08-22T12:54:56Z
+updated: 2026-08-22T12:55:40Z
 ---
 
 # THE OCCUPANCY GAME
@@ -1510,7 +1510,7 @@ The rhythm is ancient and universal, which is what makes it trustworthy. Shipown
 
 Nobody is fooled twice, surely? The cycle survives because at every beat, each participant is behaving rationally — the same disaggregated rationality as Chapter 11's board.
 
-In beat two, the developer's project genuinely clears its hurdle at current rents. The bank's loan is genuinely secure against the current lease. The retail investor's yield genuinely beats her deposit. Nobody's spreadsheet has a row for "everyone else's simultaneous identical decision" — the one variable that will destroy them all. Economists call it a fallacy of composition: what is sensible for each is fatal for all.
+In beat two, the developer's project genuinely clears its hurdle at current rents. The bank's loan is genuinely secure against the current lease. The retail investor's yield genuinely beats her deposit. Nobody's spreadsheet has a row for "everyone else's simultaneous identical decision" — the one variable that will destroy them all. ==Economists call it a fallacy of composition: what is sensible for each is fatal for all.==
 
 And in beat three, exit is slow for equally rational reasons: sunk costs whisper "hold on", leases bind for years, and hope is cheaper than a write-off. So capacity leaves far more slowly than it arrived. The cycle is not a failure of intelligence. It is what intelligence does when it is distributed and delayed.
 
