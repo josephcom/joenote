@@ -1,9 +1,13 @@
 ---
 created: 2026-08-03T09:03:54Z
-updated: 2026-08-22T20:37:28Z
+updated: 2026-08-22T21:14:22Z
 ---
 
 # Banks
+Banks usually use a collateral like your shares portfolio and land k% of its value V. 
+V_new = V − (D − kV)/(1 − k)
+
+## Fraud 
 
 when banks want to lend money, they analyse their customers' financials to see how risky they are. Accordingly, they adjust whether or not they will lend, and if yes, at what interest. This is why some companies, especially capital hungry ones, sometimes are tempted to artificially keep their share prices high and pump up their revenue/profit. As one example, Adani Group allegedly inject its money to secondary companies (offshore, belonging to their family members), then ask them to buy shares and products so share prices and revenues look better! A circle!
 
