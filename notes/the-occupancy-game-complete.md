@@ -1,6 +1,6 @@
 ---
 created: 2026-08-15T12:37:21Z
-updated: 2026-08-22T11:45:30Z
+updated: 2026-08-22T11:51:37Z
 ---
 
 # THE OCCUPANCY GAME
@@ -1411,7 +1411,7 @@ Set the term deposit at 5%. The centre pays 1.5% more, for the trouble of owning
 
 Here is the mechanism in one line: **when rates fall, buyers accept lower yields, so prices of rent-paying assets rise.** If bidding pushes the centre's price to $2.6 million, the same $130,000 rent is a yield of 5% — still handsome against 1% deposits. The rent did not grow. The tide lifted the price.
 
-==Every player upstream of her reads that auction result. The developer of Chapter 11 sees his exit price rising; projects that failed at a 6.5% exit yield succeed at 5%. The bank sees strong collateral and lends into it. The landlord REITs see their portfolios revalue upward and their borrowing costs fall, and they expand. Cheap money does not merely encourage childcare construction. It re-prices the entire chain until construction is the obvious choice.==
+==Every player upstream of her reads that auction result. The developer of Chapter 11 sees his exit price rising; projects that failed at a 6.5% exit yield succeed at 5%. The bank sees strong collateral and lends into it. The landlord REITs see their portfolios revalue upward and their borrowing costs fall, and they expand. Cheap money does not merely encourage childcare construction. It re-prices the entire chain until construction is the obvious choice.=={HOW DOES INTEREST RATE AFFECT PROPERTIES? It starts from people with money. Interest so low they're willing to buy anything that yields a bit higher (to fight inflation). Often they do properties (including childcare centres). Property owners know if they pump another 25% on top of their properties it's still worth it for investors. Propert high => developers start to build and REIT can borrow more and bank can lend more. Bank lend n% of REIT value, so high properties more lending, more profit for banks too. Everybody happy except for operator because of oversupply}
 
 ### The revaluation, in numbers
 
