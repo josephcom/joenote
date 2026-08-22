@@ -656,6 +656,29 @@ mark { background: color-mix(in srgb, var(--accent) 28%, transparent); color: in
   color: var(--fg-soft);
 }
 
+/* the summary sheet: the summary itself is the point, the passage it came
+   from is there only to remind you what you asked about */
+.sheet.narrow { max-width: 460px; }
+.sum-text {
+  margin: 4px 0 14px;
+  font-size: 19px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--fg);
+}
+.sum-of {
+  margin: 0;
+  padding: 10px 12px;
+  border-left: 3px solid var(--line-strong);
+  background: var(--bg-soft);
+  border-radius: 0 7px 7px 0;
+  color: var(--fg-soft);
+  font-size: 13px;
+  line-height: 1.5;
+  max-height: 8.5em;
+  overflow: auto;
+}
+
 /* ------------------------------ responsive ---------------------------- */
 
 @media (max-width: 720px) {
