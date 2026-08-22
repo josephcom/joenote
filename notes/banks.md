@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T09:03:54Z
-updated: 2026-08-22T21:20:23Z
+updated: 2026-08-22T21:20:35Z
 ---
 
 # Banks
@@ -9,10 +9,7 @@ Banks usually use a collateral like your shares portfolio and lend k% of its val
 The above formula works only when D > kV
 
 **Example**
-
-You own 100 shares at $1 → V = $100. Bank lends k = 80% → D = $80.
-
-Price drops to $0.90 → V = $90. Now D > kV ($80 > $72), so you must sell.
+You own 100 shares at $1 → V = $100. Bank lends k = 80% → D = $80. Price drops to $0.90 → V = $90. Now D > kV ($80 > $72), so you must sell.
 
 V_new = 90 − (80 − 72)/0.2 = 90 − 40 = **$50**
 
