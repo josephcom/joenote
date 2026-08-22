@@ -1,11 +1,12 @@
 ---
 created: 2026-08-03T09:03:54Z
-updated: 2026-08-22T21:17:36Z
+updated: 2026-08-22T21:18:07Z
 ---
 
 # Banks
 Banks usually use a collateral like your shares portfolio and lend k% of its value V. What you owe to bank is now your debt or D. As you pay your installment D becomes smaller and smaller. If the value of your portfolio (V) goes down, then you have to force sell the shares untill D/V becomes k% again. The formula is:
-V_new = V − (D − kV)/(1 − k)
+> V_new = V − (D − kV)/(1 − k)
+The above formula works only when 
 
 ## Fraud 
 
