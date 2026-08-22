@@ -14,9 +14,7 @@
     <hashtag name="export">
       <parent name="money"/>
     </hashtag>
-    <hashtag name="fundamental_analysis">
-      <parent name="stock"/>
-    </hashtag>
+    <hashtag name="fundamental_analysis"/>
     <hashtag name="funds">
       <parent name="fundamental_analysis"/>
     </hashtag>
