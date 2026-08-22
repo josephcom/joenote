@@ -13,6 +13,7 @@
  * Public API:
  *   HL.scan(src)                  -> [{start, end, inner, note}, ...]
  *   HL.locate(src, text, ratio)   -> {start, end} | null
+ *   HL.plan(src, start, end)      -> [{start, end}, ...]  (one per piece)
  *   HL.wrap(src, start, end, note)-> new source
  *   HL.remove(src, hl)            -> new source
  *   HL.setNote(src, hl, note)     -> new source
@@ -89,13 +90,14 @@
 
   /* ======================= finding the selected text ===================
    * The reader selects rendered text; we have to point at the same words
-   * in the markdown behind it. The selection is looked for three ways, in
+   * in the markdown behind it. The selection is looked for four ways, in
    * order of how much markup it is allowed to have swallowed:
    *
    *   1. exactly, give or take line breaks
    *   2. with emphasis marks between the words   (the **bold** word)
    *   3. with anything short between the words, inside one paragraph
    *      (a [link](http://…) in the middle)
+   *   4. with emphasis marks between any two letters ((**F**und **U**nder))
    *
    * `ratio` is where the selection sat in the rendered note, 0 to 1. When
    * the same phrase appears more than once, the match nearest that spot in
@@ -106,19 +108,47 @@
 
   function esc(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
 
-  /* Every word is pinned to a word boundary. Without it a one-letter word
-     ("a link mid sentence") matches inside "lazy", and the highlight lands
-     three words to the left of what the reader actually swept over. */
-  function word(w) {
-    return (/\w/.test(w.charAt(0)) ? '\\b' : '') + esc(w) +
+  /* Markup does not only fall between words, it falls inside them. A note
+     that says *dollars*, has a star wedged between the word and its comma,
+     and the reader who swept over "dollars," never saw it. So a word is
+     broken at its own letter-and-punctuation seams too, and the same kind
+     of gap is allowed at those seams as between two whole words.
+
+     Every word is still pinned to a word boundary. Without it a one-letter
+     word ("a link mid sentence") matches inside "lazy", and the highlight
+     lands three words to the left of what the reader swept over. */
+  function word(w, glue, letters) {
+    var parts = letters ? w.split('') : (w.match(/\w+|[\s\S]/g) || [w]);
+    var out = '';
+    for (var i = 0; i < parts.length; i++) out += (i ? glue : '') + esc(parts[i]);
+    return (/\w/.test(w.charAt(0)) ? '\\b' : '') + out +
       (/\w/.test(w.charAt(w.length - 1)) ? '\\b' : '');
   }
 
+  /* Everything that can sit in the middle of a word and print as nothing:
+     the emphasis and code marks, a backslash escape, the [ that opens a
+     link, and the ](target) behind it, which mask() has already blanked to
+     SOFT. A cross-reference written ([Section 5.5](#s55)). reads as eight
+     plain characters and a bracket, and has five of these wedged through
+     the middle of them. */
+  var MARKUP = '*_~=`\\\\\\[\\u0001';
+
+  /* gap: what may sit between two words. glue: what may sit inside one.
+     letters: whether the glue is allowed between any two letters, which is
+     the last thing tried, for a note that bolds a single initial the way
+     (**F**und **U**nder **M**anagement) does. */
+  var TIERS = [
+    { gap: '\\s+', glue: '' },
+    { gap: '[\\s' + MARKUP + ']+', glue: '[' + MARKUP + ']*' },
+    { gap: '(?:(?!\\n[ \\t]*\\n)[\\s\\S]){1,200}?', glue: '[' + MARKUP + ']*' },
+    { gap: '[\\s' + MARKUP + ']+', glue: '[' + MARKUP + ']*', letters: true }
+  ];
+
   function pattern(text, tier) {
-    var gap = tier === 1 ? '\\s+'
-      : tier === 2 ? '[\\s*_~=`\\\\]+'
-        : '(?:(?!\\n[ \\t]*\\n)[\\s\\S]){1,200}?';
-    return new RegExp(text.trim().split(/\s+/).map(word).join(gap), 'g');
+    var t = TIERS[tier - 1];
+    return new RegExp(text.trim().split(/\s+/).map(function (w) {
+      return word(w, t.glue, t.letters);
+    }).join(t.gap), 'g');
   }
 
   function locate(src, text, ratio) {
@@ -128,7 +158,7 @@
     var taken = scan(src);
     var want = Math.round((ratio || 0) * src.length);
 
-    for (var tier = 1; tier <= 3; tier++) {
+    for (var tier = 1; tier <= TIERS.length; tier++) {
       var re = pattern(needle, tier), m, best = null;
       while ((m = re.exec(masked))) {
         if (m[0].indexOf(HARD) !== -1) continue;               /* landed in code */
@@ -162,11 +192,18 @@
 
   var RE_BLOCK_START = /^(?:[ \t]*$|[ \t]{0,3}(?:[-*+]|\d+[.)])[ \t]|[ \t]{0,3}#{1,6}[ \t]|[ \t]*>|[ \t]{0,3}(?:`{3,}|~{3,})|[ \t]{0,3}(?:=+|-+)[ \t]*$)/;
 
-  var RE_MARKER = /^(?:[ \t]{0,3}(?:[-*+]|\d+[.)])[ \t]+|[ \t]{0,3}#{1,6}[ \t]+|[ \t]*>[ \t]?)*/;
+  /* Quotes, then bullets, then at most one hash, and nothing after the hash:
+     in "### 5. So why does the money go there?" the 5. is the heading
+     talking, not a numbered list. Letting the run go round again ate it, and
+     the highlight came back starting one clause late. */
+  var RE_MARKER = /^(?:[ \t]*>[ \t]?)*(?:[ \t]{0,3}(?:[-*+]|\d+[.)])[ \t]+)*(?:[ \t]{0,3}#{1,6}[ \t]+)?/;
 
   function segments(src, start, end) {
     var lines = src.slice(start, end).split('\n');
     var out = [], at = start, from = null, to = null;
+    /* whether the selection began where its first line began, or part-way
+       along it - see the marker test below */
+    var opensLine = start === 0 || src.charAt(start - 1) === '\n';
 
     function close() {
       if (from === null) return;
@@ -190,13 +227,196 @@
       if (said.trim()) {
         /* a piece that opens on a list bullet, a heading or a quote must
            start after the marker: ==2. text== is not a numbered item any
-           more, it is the previous item with two literal = signs in it */
-        if (from === null) from = at + RE_MARKER.exec(said)[0].length;
+           more, it is the previous item with two literal = signs in it.
+
+           Only where the line really does open there, though. In the
+           heading "### 5. So why does the money go there?" a reader who
+           sweeps from the 5 hands us a first line reading "5. So why does",
+           and that 5. is the heading talking. Stripping it as a bullet lost
+           the first two characters of every such highlight. */
+        if (from === null) {
+          from = at + ((i > 0 || opensLine) ? RE_MARKER.exec(said)[0].length : 0);
+        }
         to = lineEnd;
       }
       at = lineEnd + 1;
     }
     close();
+    return out;
+  }
+
+  /* ============================ inline seams ==========================
+   * segments() cuts a selection where markdown ends a paragraph. This cuts
+   * it where markdown ends a *word*, and for the same reason: a pair of ==
+   * marks has to nest with the markup it lands in.
+   *
+   * Take a sentence that opens in bold and runs on out of it:
+   *
+   *     **judge by supply.** Demand seduces.
+   *
+   * and sweep from "judge" to "seduces". Wrapping that span where it sits
+   * threads the marks through the bold - **==judge by supply.** Demand
+   * seduces.== - and interleaved delimiters are not something markdown can
+   * say. All four characters print as themselves and the reader gets two
+   * runs of punctuation in the middle of a sentence and no highlight.
+   *
+   * Two ways out, tried in that order. Where a mark can be stepped outwards
+   * over characters that print as nothing - the ** itself - it is, and the
+   * highlight then encloses the bold whole while still covering exactly the
+   * words that were swept. Where it cannot, because some of the bold was
+   * already there before the selection began, the selection is cut at the
+   * seam and each side marked in its own right.
+   * ================================================================== */
+
+  /* Where the paragraph around a span begins and ends. Emphasis cannot
+     cross a blank line, so there is nothing outside this to pair with. */
+  function paraBounds(masked, s, e) {
+    var re = /\n[ \t]*\r?\n/g, from = 0, to = masked.length, m;
+    while ((m = re.exec(masked))) {
+      var after = m.index + m[0].length;
+      if (after <= s) from = after;
+      else if (m.index >= e) { to = m.index; break; }
+    }
+    return { from: from, to: to };
+  }
+
+  /* The emphasis in one paragraph, as opener/closer pairs. This is the
+     CommonMark rule at its simplest: a run of marks can open if a word
+     follows it and can close if a word precedes it, and a closer takes the
+     nearest opener still waiting. It does not have to be perfect. Whatever
+     it gets wrong is caught downstream, where the note is re-rendered and
+     has to read back character for character before a byte is written. */
+  var EM = ['*', '_', '~'];
+
+  function delimPairs(masked, from, to) {
+    var out = [], k, i;
+
+    for (k = 0; k < EM.length; k++) {
+      var ch = EM[k];
+      var re = new RegExp('\\' + ch + '+', 'g');
+      re.lastIndex = from;
+      var runs = [], m;
+      while ((m = re.exec(masked)) && m.index < to) {
+        var a = m.index, b = a + m[0].length;
+        var prev = a > from ? masked.charAt(a - 1) : '';
+        var next = b < to ? masked.charAt(b) : '';
+        var opens = !!next && !/\s/.test(next);
+        var closes = !!prev && !/\s/.test(prev);
+        /* _inside_a_word_ is not emphasis, it is somebody's variable name */
+        if (ch === '_') {
+          if (/\w/.test(prev)) opens = false;
+          if (/\w/.test(next)) closes = false;
+        }
+        /* only ~~ strikes through; a lone ~ is a tilde */
+        if (ch === '~' && b - a !== 2) { opens = false; closes = false; }
+        runs.push({ a: a, b: b, left: b - a, opens: opens, closes: closes });
+      }
+
+      /* A run of marks is not one delimiter, it is as many as it is long,
+         and a closer takes them from the openers still waiting one at a
+         time. ***both at once*** ends on a run of three that closes a run
+         of one wrapped round a run of two; popping whole runs pairs the
+         wrong ends and leaves the italic looking as if it never closed. */
+      var stack = [];
+      for (i = 0; i < runs.length; i++) {
+        var r = runs[i];
+        if (r.closes) {
+          while (r.left > 0 && stack.length) {
+            var o = stack[stack.length - 1];
+            var use = Math.min(o.left, r.left);
+            out.push({
+              oa: o.a + o.left - use, ob: o.a + o.left,
+              ca: r.b - r.left, cb: r.b - r.left + use
+            });
+            o.left -= use;
+            r.left -= use;
+            if (o.left === 0) stack.pop();
+          }
+        }
+        if (r.opens && r.left > 0) stack.push(r);
+      }
+    }
+
+    /* Link and image text. The ](target) half is already masked SOFT, so a
+       link is a [ and a run of SOFT - the nearest [ still waiting, not the
+       first one in the paragraph. A task list writes "- [ ] do the thing",
+       and that empty checkbox was claiming the target of whatever link came
+       next, which put a seam through the middle of an innocent sentence. */
+    var br = /\[|\u0001+/g, mb, bras = [];
+    br.lastIndex = from;
+    while ((mb = br.exec(masked)) && mb.index < to) {
+      if (mb[0].charAt(0) === '[') { bras.push(mb.index); continue; }
+      if (!bras.length) continue;
+      var oa = bras.pop();
+      out.push({ oa: oa, ob: oa + 1, ca: mb.index, cb: mb.index + mb[0].length });
+    }
+
+    return out;
+  }
+
+  /* A piece worth marking has something in it that prints. */
+  function speaks(src, start, end) {
+    return /[^\s*_~[\]]/.test(src.slice(start, end));
+  }
+
+  function settle(src, masked, start, end, out, depth) {
+    if (start >= end || depth > 8) {
+      if (end > start && speaks(src, start, end)) out.push({ start: start, end: end });
+      return out;
+    }
+
+    var para = paraBounds(masked, start, end);
+    var pairs = delimPairs(masked, para.from, para.to);
+
+    /* stepping one mark outwards can bring the span up against the next
+       piece of markup along, so the set is walked again until a pass
+       changes nothing */
+    for (var pass = 0; pass < 8; pass++) {
+      var moved = false;
+      for (var i = 0; i < pairs.length; i++) {
+        var q = pairs[i];
+
+        /* the span begins inside this construct and ends outside it */
+        if (q.oa < start && start < q.cb && end >= q.cb) {
+          if (start <= q.ob) { start = q.oa; moved = true; continue; }
+          settle(src, masked, start, q.ca, out, depth + 1);
+          settle(src, masked, q.cb, end, out, depth + 1);
+          return out;
+        }
+
+        /* the span ends inside this construct, having begun outside it */
+        if (start <= q.oa && q.oa < end && end < q.cb) {
+          if (end >= q.ca) { end = q.cb; moved = true; continue; }
+          settle(src, masked, start, q.oa, out, depth + 1);
+          settle(src, masked, q.ob, end, out, depth + 1);
+          return out;
+        }
+      }
+      if (!moved) break;
+    }
+
+    if (speaks(src, start, end)) out.push({ start: start, end: end });
+    return out;
+  }
+
+  /* Every piece of file a selection turns into: cut at the paragraph seams
+     first, then at the seams inside each paragraph. */
+  function plan(src, start, end) {
+    var masked = mask(src);
+    var blocks = segments(src, start, end);
+    var out = [], i;
+    for (i = 0; i < blocks.length; i++) {
+      settle(src, masked, blocks[i].start, blocks[i].end, out, 0);
+    }
+    if (!out.length) return blocks;
+
+    /* stepping a mark outwards must never step it onto a highlight that is
+       already there - better to leave the selection where it was and let
+       the check downstream turn it down */
+    var taken = scan(src);
+    for (i = 0; i < out.length; i++) {
+      if (overlaps(out[i], taken)) return blocks;
+    }
     return out;
   }
 
@@ -302,6 +522,7 @@
     locate: locate,
     wrap: wrap,
     segments: segments,
+    plan: plan,
     wrapAll: wrapAll,
     remove: remove,
     setNote: setNote,

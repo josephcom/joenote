@@ -1575,38 +1575,58 @@
     return probe;
   }
 
-  function markCount(raw) { return rendered(raw).querySelectorAll('mark.hl').length; }
   function plainOf(raw) { return norm(rendered(raw).textContent); }
+  function tight(s) { return String(s).replace(/\s+/g, ''); }
+
+  /* What every highlight in the note reads as, in the order they are read. */
+  function marksIn(raw) {
+    var els = rendered(raw).querySelectorAll('mark.hl'), out = [], i;
+    for (i = 0; i < els.length; i++) out.push(norm(els[i].textContent));
+    return out;
+  }
 
   /* A selection over several paragraphs becomes one highlight per paragraph,
-     since markdown will not let a pair of == marks cross a blank line.
+     since markdown will not let a pair of == marks cross a blank line, and
+     one more wherever it crosses a piece of emphasis it cannot nest with.
 
      Three things are checked before anything is written, because a
      half-placed pair of marks is worse than no highlight at all:
-       - the pieces, run together, read as what was selected;
        - the note gains exactly that many highlights;
-       - and its visible text is character for character what it was, which
-         is what would fail if a == had been left stranded and printed.
-     Any of them off and the file is not touched. */
+       - what they read, run together, is what was selected;
+       - and the note's visible text is character for character what it was,
+         which is what fails if a == is left stranded and printed.
+     Any of them off and the file is not touched.
+
+     The reading is taken from the finished note, not from the pieces on
+     their own. A piece rendered on its own is a different document: cut
+     "5. So why does the money go there?" out of its ### heading and it is
+     an ordered list, the 5. becomes a bullet and stops being text, and a
+     perfectly good highlight gets turned down for it. */
   function commitHighlight(text, ratio, note) {
     var current = App.current;
     if (!current) return false;
 
     var at = HL.locate(current.raw, text, ratio);
-    var spans = at ? HL.segments(current.raw, at.start, at.end) : [];
+    var spans = at ? HL.plan(current.raw, at.start, at.end) : [];
     if (!spans.length) {
       toast('Could not find those words in the file — a selection beginning or ' +
         'ending inside code cannot be marked', true);
       return false;
     }
 
-    var reads = spans.map(function (s) {
-      return plainOf(current.raw.slice(s.start, s.end));
-    }).join(' ');
     var next = HL.wrapAll(current.raw, spans, note || '');
+    var before = marksIn(current.raw), after = marksIn(next);
 
-    if (norm(reads) !== norm(text) ||
-      markCount(next) !== markCount(current.raw) + spans.length ||
+    /* the highlights the edit added: everything in the new reading that the
+       old one cannot account for */
+    var spare = before.slice(), gained = [], i, j;
+    for (i = 0; i < after.length; i++) {
+      j = spare.indexOf(after[i]);
+      if (j === -1) gained.push(after[i]); else spare.splice(j, 1);
+    }
+
+    if (after.length !== before.length + spans.length ||
+      tight(gained.join('')) !== tight(text) ||
       plainOf(next) !== plainOf(current.raw)) {
       toast('That selection crosses something the file cannot mark — try a shorter one', true);
       return false;
