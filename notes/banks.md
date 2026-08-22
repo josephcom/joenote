@@ -1,10 +1,10 @@
 ---
 created: 2026-08-03T09:03:54Z
-updated: 2026-08-22T21:16:46Z
+updated: 2026-08-22T21:16:52Z
 ---
 
 # Banks
-Banks usually use a collateral like your shares portfolio and lend k% of its value V. What you owe to bank is now your debt or D. As you pay your installment D becomes smaller and smaller. If the value of your portfolio (V) goes down, then you have to force sell the shares untill k=
+Banks usually use a collateral like your shares portfolio and lend k% of its value V. What you owe to bank is now your debt or D. As you pay your installment D becomes smaller and smaller. If the value of your portfolio (V) goes down, then you have to force sell the shares untill 
 V_new = V − (D − kV)/(1 − k)
 
 ## Fraud 
