@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T09:03:54Z
-updated: 2026-08-03T09:10:41Z
+updated: 2026-08-22T20:36:25Z
 ---
 
 # Fraud
@@ -9,5 +9,5 @@ when banks want to lend money, they analyse their customers' financials to see h
 
 When they are caught red handed, large investors (and people too) naturally run for the exit because fund managers just want to save their position and face; they don't really care too much about whether or not the accusation is real.
 
-#stock
+#fundamental_analysis
 
