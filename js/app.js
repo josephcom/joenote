@@ -1629,7 +1629,7 @@
         ai.textContent = 'summarising…';
         HL.summarize(pick.text).then(function (summary) {
           closeHlMenu();
-          showSummary(summary, pick.text);
+          showSummary(summary);
         }).catch(function (e) {
           closeHlMenu();
           toast(e.message || String(e), true);
@@ -1685,9 +1685,8 @@
 
   /* --------------------------- the summary ---------------------------- */
 
-  function showSummary(summary, of) {
+  function showSummary(summary) {
     $('sum-text').textContent = summary;
-    $('sum-of').textContent = of.length > 220 ? of.slice(0, 220).replace(/\s+\S*$/, '') + '…' : of;
     $('sum-overlay').hidden = false;
     setTimeout(function () { $('sum-ok').focus(); }, 0);
   }
@@ -1755,18 +1754,10 @@
     window.addEventListener('resize', closeHlMenu);
     document.addEventListener('scroll', function () { if (hlMenu) closeHlMenu(); }, true);
 
-    /* the summary sheet - it waits for you, it does not fade */
+    /* the summary box - it waits for you, it does not fade */
     $('sum-ok').addEventListener('click', closeSummary);
-    $('sum-close').addEventListener('click', closeSummary);
     $('sum-overlay').addEventListener('click', function (e) {
       if (e.target === $('sum-overlay')) closeSummary();
-    });
-    $('sum-copy').addEventListener('click', function () {
-      var text = $('sum-text').textContent;
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(text).then(function () { toast('Copied'); },
-          function () { toast('This browser would not let JoeNote copy that', true); });
-      } else toast('This browser would not let JoeNote copy that', true);
     });
 
     /* the key sheet */

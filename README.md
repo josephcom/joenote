@@ -21,8 +21,8 @@ only**. Open `index.html` and it runs.
   it belongs to, and both travel with the `.md` file wherever it goes. A
   selection crossing several paragraphs is marked a paragraph at a time,
   because a pair of marks cannot cross a blank line.
-* **The summary is read, not kept.** It opens in a box and waits for you to
-  dismiss it, and writes nothing to the note — highlights and notes are yours
+* **The summary is read, not kept.** A box with the summary and an OK button,
+  nothing else. It writes nothing to the note — highlights and notes are yours
   to make. It needs an Anthropic key, kept in this browser and sent only to
   `api.anthropic.com`; the **AI…** button holds it.
 * **Hashtags are the only structure.** `#like-this`, anywhere in the body.

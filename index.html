@@ -9,7 +9,7 @@
 <!-- ?v= is bumped on every release. Pages serves css/js with a long max-age,
      so without it a returning browser pairs this new HTML with its cached old
      scripts and the app half-works in ways that look like real bugs. -->
-<link rel="stylesheet" href="css/app.css?v=2026-08-22d" />
+<link rel="stylesheet" href="css/app.css?v=2026-08-22e" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%23%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
@@ -130,24 +130,12 @@
   </div>
 </div>
 
-<!-- =========================== SUMMARY =========================== -->
-<!-- A summary is something you read, not something the note keeps. It
-     stays on screen until you dismiss it and changes nothing in the file. -->
+<!-- =========================== SUMMARY ===========================
+     The summary and a button to dismiss it. Nothing else belongs here. -->
 <div id="sum-overlay" class="overlay" hidden>
-  <div class="sheet narrow" role="dialog" aria-modal="true" aria-labelledby="sum-h">
-    <header>
-      <h2 id="sum-h">In under ten words</h2>
-      <button class="btn icon" type="button" id="sum-close" title="Close">&times;</button>
-    </header>
-
+  <div class="sheet sum" role="dialog" aria-modal="true" aria-labelledby="sum-text">
     <p id="sum-text" class="sum-text"></p>
-    <p id="sum-of" class="sum-of"></p>
-
-    <footer>
-      <div class="topbar-spacer"></div>
-      <button class="btn" type="button" id="sum-copy">Copy</button>
-      <button class="btn primary" type="button" id="sum-ok">OK</button>
-    </footer>
+    <button class="btn primary" type="button" id="sum-ok">OK</button>
   </div>
 </div>
 
@@ -353,13 +341,13 @@
 
 <div id="toast" class="toast" hidden></div>
 
-<script src="js/md.js?v=2026-08-22d"></script>
-<script src="js/sanitize.js?v=2026-08-22d"></script>
-<script src="js/store.js?v=2026-08-22d"></script>
-<script src="js/tags.js?v=2026-08-22d"></script>
-<script src="js/search.js?v=2026-08-22d"></script>
-<script src="js/graph.js?v=2026-08-22d"></script>
-<script src="js/hl.js?v=2026-08-22d"></script>
-<script src="js/app.js?v=2026-08-22d"></script>
+<script src="js/md.js?v=2026-08-22e"></script>
+<script src="js/sanitize.js?v=2026-08-22e"></script>
+<script src="js/store.js?v=2026-08-22e"></script>
+<script src="js/tags.js?v=2026-08-22e"></script>
+<script src="js/search.js?v=2026-08-22e"></script>
+<script src="js/graph.js?v=2026-08-22e"></script>
+<script src="js/hl.js?v=2026-08-22e"></script>
+<script src="js/app.js?v=2026-08-22e"></script>
 </body>
 </html>
