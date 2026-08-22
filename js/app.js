@@ -1464,17 +1464,75 @@
    * ================================================================== */
 
   var hlMenu = null;
+  var hlAnchor = null;      /* where the menu is glued: see anchorTo */
+  var hlOpened = 0;         /* when, so the tap that opened it cannot close it */
 
   function closeHlMenu() {
     if (hlMenu && hlMenu.parentNode) hlMenu.parentNode.removeChild(hlMenu);
     hlMenu = null;
+    hlAnchor = null;
     var open = $('note-view').querySelector('mark.hl.open');
     if (open) open.classList.remove('open');
   }
 
-  /* Anchored to the page, not the window, so scrolling does not leave the
-     menu hovering over the wrong paragraph. */
-  function openHlMenu(rect, build, stack) {
+  function pageRect(r) {
+    return {
+      left: r.left + window.scrollX, top: r.top + window.scrollY,
+      right: r.right + window.scrollX, bottom: r.bottom + window.scrollY,
+      width: r.width, height: r.height
+    };
+  }
+
+  /* A phone fires a scroll and a resize at the drop of a hat - the address
+     bar slides away, the keyboard comes up - and each one used to shut the
+     menu, so on Android it flashed once and was gone. So the menu is not
+     shut when the page moves under it, it is put back where it belongs.
+
+     What it belongs to is one of three things. A highlight or a selection
+     is a live thing: ask it where it is now and the menu stays on its words
+     however the page reflows, and when the element goes the menu goes with
+     it. A right-click, though, points at a spot rather than at anything, so
+     that one is pinned to the page where the pointer was. */
+  function anchorTo(source) {
+    var last = null;
+
+    function keep(r) {
+      /* a range whose text has been re-rendered away measures as nothing;
+         the last place it was is a better answer than the top-left corner */
+      if (r && (r.width || r.height || r.top || r.left)) last = pageRect(r);
+      return last;
+    }
+
+    if (source && source.nodeType === 1) {
+      return function () {
+        if (!document.body.contains(source)) return null;
+        return keep(source.getBoundingClientRect());
+      };
+    }
+    if (source && source.startContainer) {
+      return function () { return keep(source.getBoundingClientRect()); };
+    }
+    last = pageRect(source);
+    return function () { return last; };
+  }
+
+  function placeHlMenu() {
+    if (!hlMenu || !hlAnchor) return;
+    var rect = hlAnchor();
+    if (!rect) { closeHlMenu(); return; }
+
+    var pad = 8;
+    var w = hlMenu.offsetWidth, h = hlMenu.offsetHeight;
+    var left = rect.left + (rect.width - w) / 2;
+    var top = rect.top - h - 6;
+    if (top < window.scrollY + pad) top = rect.bottom + 6;
+    left = Math.max(window.scrollX + pad,
+      Math.min(left, window.scrollX + document.documentElement.clientWidth - w - pad));
+    hlMenu.style.left = Math.round(left) + 'px';
+    hlMenu.style.top = Math.round(top) + 'px';
+  }
+
+  function openHlMenu(source, build, stack) {
     closeHlMenu();
     var m = document.createElement('div');
     m.className = 'sel-menu' + (stack ? ' stack' : '');
@@ -1483,19 +1541,20 @@
     m.style.visibility = 'hidden';
     document.body.appendChild(m);
     hlMenu = m;
-
-    var pad = 8;
-    var w = m.offsetWidth, h = m.offsetHeight;
-    var left = rect.left + window.scrollX + (rect.width - w) / 2;
-    var top = rect.top + window.scrollY - h - 6;
-    if (top < window.scrollY + pad) top = rect.bottom + window.scrollY + 6;
-    left = Math.max(window.scrollX + pad,
-      Math.min(left, window.scrollX + document.documentElement.clientWidth - w - pad));
-    m.style.left = Math.round(left) + 'px';
-    m.style.top = Math.round(top) + 'px';
+    hlAnchor = anchorTo(source);
+    hlOpened = Date.now();
+    placeHlMenu();
     m.style.visibility = '';
     return m;
   }
+
+  /* A tap on a phone arrives as a whole burst of events - touchend, then a
+     pointerdown and a mousedown made up for the sake of old pages, then the
+     click that opens the menu. The made-up ones can land after the menu is
+     already up, and a menu that closes on the tap that opened it is a menu
+     nobody can use. Nothing that happens in the same fifth of a second as
+     the opening counts. */
+  function menuSettled() { return Date.now() - hlOpened > 200; }
 
   function menuButton(label, fn, cls) {
     var b = document.createElement('button');
@@ -1598,11 +1657,11 @@
     before.setEnd(range.startContainer, range.startOffset);
     var whole = view.textContent.length || 1;
 
-    return { text: text, ratio: before.toString().length / whole, rect: range.getBoundingClientRect() };
+    return { text: text, ratio: before.toString().length / whole, range: range.cloneRange() };
   }
 
   function showSelectionMenu(pick, at) {
-    openHlMenu(at || pick.rect, function (m) {
+    openHlMenu(at || pick.range, function (m) {
       var swatch = document.createElement('span');
       swatch.className = 'swatch';
       var hi = document.createElement('span');
@@ -1646,7 +1705,7 @@
     el.classList.add('open');
     var note = el.getAttribute('data-note') || '';
 
-    openHlMenu(at || el.getBoundingClientRect(), function (m) {
+    openHlMenu(at || el, function (m) {
       if (note) {
         var read = document.createElement('div');
         read.className = 'note-read';
@@ -1663,8 +1722,7 @@
   }
 
   function showNoteEditor(el, note) {
-    var rect = el.getBoundingClientRect();
-    openHlMenu(rect, function (m) {
+    openHlMenu(el, function (m) {
       var ta = document.createElement('textarea');
       ta.value = note;
       ta.placeholder = 'A note on this highlight. It lives inside the highlight, so removing the highlight removes it too.';
@@ -1679,7 +1737,13 @@
       }, 'primary'));
       m.appendChild(row);
 
-      setTimeout(function () { ta.focus(); ta.select(); }, 0);
+      /* On a phone the keyboard takes half the screen the moment this is
+         focused, so the box is walked back into what is left of it. */
+      setTimeout(function () {
+        ta.focus();
+        ta.select();
+        if (hlMenu) hlMenu.scrollIntoView({ block: 'center' });
+      }, 0);
     }, true);
   }
 
@@ -1710,6 +1774,9 @@
     var view = $('note-view');
 
     function offer(at) {
+      /* mouseup and touchend both come round to ask, and on a phone the
+         made-up mouse events arrive after the menu is already up */
+      if (hlMenu && !menuSettled()) return false;
       var pick = selectionInNote();
       if (!pick) return false;
       showSelectionMenu(pick, at);
@@ -1742,17 +1809,26 @@
       if (mark && view.contains(mark)) { e.preventDefault(); showHighlightMenu(mark, pointer); }
     });
 
-    document.addEventListener('mousedown', function (e) {
-      if (hlMenu && !hlMenu.contains(e.target)) closeHlMenu();
-    });
+    function closeIfOutside(e) {
+      if (hlMenu && menuSettled() && !hlMenu.contains(e.target)) closeHlMenu();
+    }
+    document.addEventListener('pointerdown', closeIfOutside);
+    document.addEventListener('mousedown', closeIfOutside);
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && hlMenu) { closeHlMenu(); return; }
       if (e.key === 'Escape' && !$('sum-overlay').hidden) { closeSummary(); return; }
       if (e.key === 'Escape' && !$('ai-overlay').hidden) closeAiSheet();
     });
     window.addEventListener('hashchange', closeHlMenu);
-    window.addEventListener('resize', closeHlMenu);
-    document.addEventListener('scroll', function () { if (hlMenu) closeHlMenu(); }, true);
+
+    /* the page moving is not a reason to close - see placeHlMenu */
+    function follow() { if (hlMenu) placeHlMenu(); }
+    window.addEventListener('resize', follow);
+    document.addEventListener('scroll', follow, true);
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', follow);
+      window.visualViewport.addEventListener('scroll', follow);
+    }
 
     /* the summary box - it waits for you, it does not fade */
     $('sum-ok').addEventListener('click', closeSummary);
