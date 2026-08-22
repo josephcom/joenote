@@ -1,9 +1,9 @@
 ---
 created: 2026-08-22T01:23:50Z
-updated: 2026-08-22T01:25:45Z
+updated: 2026-08-22T01:27:09Z
 ---
 
-# The Capital Cycle 
+# Mean Reversion
 
 Something good happens in a sector. Returns go up.
 
