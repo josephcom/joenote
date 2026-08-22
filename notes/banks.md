@@ -1,10 +1,10 @@
 ---
 created: 2026-08-03T09:03:54Z
-updated: 2026-08-22T21:14:22Z
+updated: 2026-08-22T21:15:06Z
 ---
 
 # Banks
-Banks usually use a collateral like your shares portfolio and land k% of its value V. 
+Banks usually use a collateral like your shares portfolio and lend k% of its value V. 
 V_new = V − (D − kV)/(1 − k)
 
 ## Fraud 
