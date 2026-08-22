@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T01:23:50Z
-updated: 2026-08-22T01:27:09Z
+updated: 2026-08-22T01:28:07Z
 ---
 
 # Mean Reversion
@@ -27,5 +27,5 @@ Rule 2 is why the cycle overshoots. Supply does not stop at the correct level. I
 NOTE A **moat** protects returns from new players. 
 NOTE A structural change (e.g. nobody buys analogue cameras anymore) makes a decline permanent, not temporary.
 
-#money
+#fundamental_analysis
 
