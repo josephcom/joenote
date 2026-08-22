@@ -1,6 +1,6 @@
 ---
 created: 2026-08-15T12:37:21Z
-updated: 2026-08-16T11:48:18Z
+updated: 2026-08-22T07:10:52Z
 ---
 
 # THE OCCUPANCY GAME
