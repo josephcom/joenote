@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T09:03:54Z
-updated: 2026-08-22T21:20:52Z
+updated: 2026-08-22T21:21:03Z
 ---
 
 # Banks
@@ -11,10 +11,7 @@ The above formula works only when D > kV
 **Example**
 You own 100 shares at $1 → V = $100. Bank lends k = 80% → D = $80. Price drops to $0.90 → V = $90. Now D > kV ($80 > $72), so you must sell.  
 V_new = 90 − (80 − 72)/0.2 = 90 − 40 = **$50**  
-You sell $40 worth (44.4 shares) to repay, leaving $50 of shares against $40 debt → back to 80%.
-
-Your equity was $10 before and $10 after. The selling cost you nothing — the price drop did.
-
+You sell $40 worth (44.4 shares) to repay, leaving $50 of shares against $40 debt → back to 80%. Your equity was $10 before and $10 after. The selling cost you nothing — the price drop did.
 
 ## Fraud 
 
