@@ -1,9 +1,9 @@
 ---
 created: 2026-08-23T10:31:32Z
-updated: 2026-08-23T10:44:12Z
+updated: 2026-08-23T10:45:00Z
 ---
 
-# GEM
+# Overview
 ## How does G8 charges
 Centrelink checks the parent's income and pays its share straight to the centre. The parent pays the rest. The centre never sees an income statement. Every child in the same room pays the same fee (currently about $144 a day). The subsidy counts only the first $15.19 an hour and for 72 hours a fortnight. The parent pays all of the excess.
 
