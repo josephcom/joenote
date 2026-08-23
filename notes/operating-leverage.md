@@ -1,6 +1,6 @@
 ---
 created: 2026-08-23T08:36:36Z
-updated: 2026-08-23T08:43:28Z
+updated: 2026-08-23T08:43:35Z
 ---
 
 # Operating Leverage
@@ -15,7 +15,8 @@ The easiest way to calculate it is by comparing each year's revenue and profit w
 
 From the above table you can calculate both **fixed costs** and **break-even revenue**:
 
-> Fixed cost = EBIT × (leverage − 1)
+> Fixed cost = EBIT × (leverage − 1)  
+> 
 
 #fundamental_analysis
 
