@@ -1,6 +1,6 @@
 ---
 created: 2026-08-23T10:45:28Z
-updated: 2026-08-23T10:46:32Z
+updated: 2026-08-23T10:46:44Z
 ---
 
 # Leading Indicators
@@ -78,7 +78,7 @@ Macro reaches GEM almost entirely *through* the sector layer, so treat these as 
 
 - Victoria Free Kinder and Pre-Prep hours (16–25 hrs in 2026, scaling to 30 by 2036); QLD Free Kindy; SA 3-year-old preschool from 2026; NSW Start Strong rates ($2,563 for LDC vs $4,456 for community preschools).
 
-#### Notes
+### Notes
 
 The dominant sector fact is a **scissor**: supply growing ~3%/yr into demand shrinking ~2%/yr. Nothing in policy currently closes that gap — the 3 Day Guarantee is too small, and the Building Early Education Fund actively widens it.
 
@@ -86,7 +86,7 @@ The second key fact is the **out-of-pocket CPI at +7.6%**. Government affordabil
 
 On state preschool: these programs are delivered *through* long day care, so they're mostly fee-substitution revenue and an enrolment magnet, not a competitor. The real risk is **age mix** — expanding funded hours in the 3–5 band (profitable, 1:11 ratio) while births fall in the 0–3 band (loss-making, 1:4 ratio) is the worst possible combination for room economics. Watch that mechanism, not the "free kindy" headlines.
 
-### Company Level
+## Company Level
 
 - **Group spot occupancy at each disclosure (Feb / late-Apr AGM / Aug / Nov)** — the master metric. Management's own translation is **~$4–5m of EBIT per 1 percentage point**. FY25 average 65.8%; Feb-26 spot 54.4%; Apr-26 spot 56.4%.
 - **The February spot reading specifically** — the January intake result, published ~10 months ahead of the revenue it drives. October 2025's failed seasonal lift was the exact trigger for the Nov-25 guidance downgrade.
@@ -112,7 +112,7 @@ On state preschool: these programs are delivered *through* long day care, so the
 - Board and management changes — COO changed July 2026; MD Okhovat backed at the April 2026 AGM; FY25 STI nil, 2023 LTIP vesting deferred.
 - **H1 2026 result, 25 August 2026** — the next hard data point, two days away.
 
-#### Notes
+### Notes
 
 Two counter-intuitive points here.
 
