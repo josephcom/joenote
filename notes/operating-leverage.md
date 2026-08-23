@@ -1,6 +1,6 @@
 ---
 created: 2026-08-23T08:36:36Z
-updated: 2026-08-23T09:08:17Z
+updated: 2026-08-23T09:08:31Z
 ---
 
 # Operating Leverage
@@ -13,6 +13,7 @@ Fixed cost: $300
 EBIT (profit before interest and tax): $100
 True leverage = 400 ÷ 100 = **4×**
 
+## Why does it change from year to year?
 Operating leverage changes from year to year because:
 
 1. fixed vs variable costs split changes each year
