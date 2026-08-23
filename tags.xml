@@ -4,6 +4,7 @@
     <hashtag name="business_stories">
       <parent name="money"/>
     </hashtag>
+    <hashtag name="companies"/>
     <hashtag name="consumer_services">
       <parent name="fundamental_analysis"/>
     </hashtag>
