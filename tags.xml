@@ -5,7 +5,9 @@
       <parent name="money"/>
     </hashtag>
     <hashtag name="companies"/>
-    <hashtag name="company_overviews"/>
+    <hashtag name="company_overviews">
+      <parent name="fundamental_analysis"/>
+    </hashtag>
     <hashtag name="consumer_services">
       <parent name="fundamental_analysis"/>
     </hashtag>
