@@ -1,6 +1,6 @@
 ---
 created: 2026-08-23T08:36:36Z
-updated: 2026-08-23T09:07:40Z
+updated: 2026-08-23T09:07:49Z
 ---
 
 # Operating Leverage
@@ -12,6 +12,8 @@ Left over: $400 ← this is contribution margin
 Fixed cost: $300
 EBIT (profit before interest and tax): $100
 True leverage = 400 ÷ 100 = **4×**
+
+
 
 #fundamental_analysis
 
