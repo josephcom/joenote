@@ -1,6 +1,6 @@
 ---
 created: 2026-08-23T08:36:36Z
-updated: 2026-08-23T09:08:57Z
+updated: 2026-08-23T09:09:14Z
 ---
 
 # Operating Leverage
@@ -17,8 +17,8 @@ True leverage = 400 ÷ 100 = **4×**
 Operating leverage changes from year to year because:
 
 1. fixed vs variable costs split changes each year
-2. one-off items like redundancy payouts, legal settlements or asset write-downs may change it
-3. margin per sale can change (higher sell price, lower material)
+2. one-off items (like redundancy payouts, legal settlements or asset write-downs may change it
+3. margin per sale can change (higher sell price, lower material, sell different products etc.)
 
 #fundamental_analysis
 
