@@ -1,11 +1,11 @@
 ---
 created: 2026-08-23T10:45:28Z
-updated: 2026-08-23T10:45:28Z
+updated: 2026-08-23T10:46:32Z
 ---
 
-**ASX:GEM = G8 Education.** Its revenue is basically one equation: **centres × licensed places × occupancy % × daily fee × operating days**, plus government grant income. Price is not fixed by law. G8 sets fees itself and can lift them whenever it wants, as often as it wants. The only brake is the Worker Retention Payment fee-growth cap, and that is a condition of a grant G8 can walk away from. It expires with the program, so 2026-27 is the last year it bites. Occupancy still carries most of the near-term variance, but price is a live lever, not a constant. Every indicator below is judged on whether it moves *before* occupancy or fee does. Research folder was empty, so this is all built from primary and market sources.
+# Leading Indicators
 
-### Market Level
+## Market Level
 
 - Headline & trimmed-mean CPI (monthly ABS) — 3.8% / 3.6% to June 2026. Root of the whole rate chain.
 - (CPI ->) RBA cash rate — 4.35%, +75bp across 2026 after −75bp in 2025. Next decision 28–29 Sep.
@@ -25,11 +25,11 @@ updated: 2026-08-23T10:45:28Z
 - Electoral cycle — Labor holds 94 seats, next election due by July 2028. No policy-reversal risk inside a normal horizon.
 - Business credit spreads and small-cap risk appetite — spreads near 2022 lows, but Small Ordinaries −11% YTD while the ASX 200 prints records. Affects refinancing and any equity raise, not revenue directly.
 
-#### Notes
+### Notes
 
 Macro reaches GEM almost entirely *through* the sector layer, so treat these as second-derivative. Two things worth knowing: childcare is **stickier than most discretionary spend on the way down** (a place is hard to re-secure, so families hold it through short unemployment spells), and the macro squeeze shows up first in **days booked per child**, not in children enrolled. Also note the macro pushes both ways — rising mortgages and rents *increase* the financial need for a second income, which supports demand, while simultaneously making the gap fee harder to pay.
 
-### Sector Level
+## Sector Level
 
 **Demand feedstock**
 
