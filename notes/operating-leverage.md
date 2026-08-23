@@ -1,6 +1,6 @@
 ---
 created: 2026-08-23T08:36:36Z
-updated: 2026-08-23T09:32:50Z
+updated: 2026-08-23T09:32:54Z
 ---
 
 # Operating Leverage
@@ -23,7 +23,16 @@ Operating leverage changes from year to year because:
 ## Real example  
 The following shows ASX:GEM figures:  
 
+| Year | Revenue | Contribution | Fixed cost | Op EBIT | True leverage | Break-even revenue | Cushion |
+|---|---|---|---|---|---|---|---|
+| FY22 | $905.5m | $289.8m | $209.5m | $80.3m | **3.6×** | **$654.6m** | −27.7% |
+| FY23 | $987.0m | $315.8m | $215.2m | $100.6m | **3.1×** | **$672.6m** | −31.9% |
+| FY24 | $1,021.8m | $327.0m | $212.0m | $115.0m | **2.8×** | **$662.4m** | −35.2% |
+| FY25 | $948.2m | $303.4m | $210.1m | $93.3m | **3.3×** | **$656.6m** | −30.8% |
 
+*Break-even revenue = fixed cost ÷ 32%. Cushion = how far revenue can fall before EBIT hits zero, and it equals 1 ÷ leverage.*
+
+Below about $657m, G8 loses money at the EBIT line.
 
 #fundamental_analysis
 
