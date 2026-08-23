@@ -1,6 +1,6 @@
 ---
 created: 2026-08-23T10:45:28Z
-updated: 2026-08-23T10:46:44Z
+updated: 2026-08-23T10:46:55Z
 ---
 
 # Leading Indicators
@@ -122,7 +122,7 @@ Second, **the reported half-year is stale on arrival**. GEM runs a calendar year
 
 Seasonality is severe and worth internalising: late January the 4–5 cohort leaves for school, February is the annual trough, October is normally the peak. February effectively sets the year.
 
-### Other Notes
+## Other Notes
 
 **What GEM does not disclose** — average daily fee, the government-vs-parent revenue split, licensed places affected by the 40 suspensions, and any contingent liability for the abuse claims. The ~70% CCS share of revenue is a sector average, not a G8 disclosure. Treat any per-place fee figure as a derivation.
 
