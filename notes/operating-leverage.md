@@ -1,6 +1,6 @@
 ---
 created: 2026-08-23T08:36:36Z
-updated: 2026-08-23T09:08:31Z
+updated: 2026-08-23T09:08:57Z
 ---
 
 # Operating Leverage
@@ -18,7 +18,7 @@ Operating leverage changes from year to year because:
 
 1. fixed vs variable costs split changes each year
 2. one-off items like redundancy payouts, legal settlements or asset write-downs may change it
-3. margin per sale can change (charge customers more)
+3. margin per sale can change (higher sell price, lower material)
 
 #fundamental_analysis
 
