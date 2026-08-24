@@ -1,6 +1,6 @@
 ---
 created: 2026-08-17T22:19:15Z
-updated: 2026-08-21T21:42:12Z
+updated: 2026-08-24T08:57:53Z
 ---
 
 # Take note or not?
@@ -17,5 +17,6 @@ Each question we ask is a picture. You have to extract the right dots and lines 
 Here's how you should take note:
 > Put each point in the text under one of more questions. That's it!
 
+#persinal_development  
 #reading
 
