@@ -1,9 +1,9 @@
 ---
 created: 2026-08-24T13:11:58Z
-updated: 2026-08-24T13:14:52Z
+updated: 2026-08-24T13:15:03Z
 ---
 
-# Leading Indicator
+# Leading Indicators (GEM)
 
 **The rule of this file:** every node is a number you can read on a public page. Tap the link, see the figure. If something has no page and no number, it is not in a chain.
 
