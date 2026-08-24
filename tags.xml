@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <joenote version="1">
   <hashtags>
+    <hashtag name="adf8"/>
+    <hashtag name="asdff10"/>
     <hashtag name="business_stories">
       <parent name="money"/>
     </hashtag>
@@ -10,6 +12,13 @@
     <hashtag name="consumer_services">
       <parent name="fundamental_analysis"/>
     </hashtag>
+    <hashtag name="dbbdd5"/>
+    <hashtag name="ddd4"/>
+    <hashtag name="ddd6"/>
+    <hashtag name="ddda1"/>
+    <hashtag name="dddt2"/>
+    <hashtag name="dded3"/>
+    <hashtag name="ddyyyd7"/>
     <hashtag name="dirty_notes"/>
     <hashtag name="english">
       <parent name="personal_development"/>
@@ -17,6 +26,7 @@
     <hashtag name="export">
       <parent name="money"/>
     </hashtag>
+    <hashtag name="feew9"/>
     <hashtag name="fundamental_analysis">
       <parent name="money"/>
     </hashtag>
