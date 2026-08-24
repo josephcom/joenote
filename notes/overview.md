@@ -1,6 +1,6 @@
 ---
 created: 2026-08-23T10:31:32Z
-updated: 2026-08-24T08:44:03Z
+updated: 2026-08-24T16:32:37Z
 ---
 
 # Overview
@@ -14,6 +14,9 @@ ASX:GEM = G8 Education. Its revenue is basically one equation:
 If you look carefully at the above formula, you can see the only factor sitting on the *demand* side is **occupancy**! All other factors sit on the *supply* (i.e. *capacity*) side. 
 
 Price is not fixed by law. G8 sets fees itself and can lift them whenever it wants, as often as it wants. The only brake was the Worker Retention Payment fee-growth cap (we pay for 15% pay raise of your educators, but you have to cap the fee raise on kids for 3 years), and that was a condition of a grant G8 could walk away from. It expires with the program, so 2026-27 is the last year it bites. 
+
+## Why has occupancy been going down? 
+
 
 ## Operating Leverage  
 | Year | Revenue | Fixed cost | Op EBIT | True leverage | Break-even revenue | 1% occupancy = revenue |
