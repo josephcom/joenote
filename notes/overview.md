@@ -1,10 +1,10 @@
 ---
 created: 2026-08-23T10:31:32Z
-updated: 2026-08-24T16:34:07Z
+updated: 2026-08-24T16:34:49Z
 ---
 
 # Overview
-## How does G8 charges
+## How does G8 earn?
 Centrelink checks the parent's income and pays its share straight to the centre. The parent pays the rest. The centre never sees an income statement. Every child in the same room pays the same fee (currently about $144 a day). The subsidy counts only the first $15.19 an hour and for 72 hours a fortnight. The parent pays all of the excess.
 
 ASX:GEM = G8 Education. Its revenue is basically one equation:
