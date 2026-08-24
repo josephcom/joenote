@@ -1,6 +1,6 @@
 ---
 created: 2026-08-23T10:45:28Z
-updated: 2026-08-23T10:46:55Z
+updated: 2026-08-24T08:42:46Z
 ---
 
 # Leading Indicators
@@ -139,3 +139,4 @@ Seasonality is severe and worth internalising: late January the 4–5 cohort lea
 I haven't written anything to your GEM folder. Say the word if you want this as a file or a hosted page instead.
 
 #gem
+#fundamental_analysis
