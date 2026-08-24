@@ -1,6 +1,6 @@
 ---
 created: 2026-08-24T11:57:06Z
-updated: 2026-08-24T11:57:06Z
+updated: 2026-08-24T11:58:08Z
 ---
 
 # ASX:GEM (G8 Education) — Revenue Leading Indicators
@@ -222,3 +222,6 @@ This is the cleanest single test of whether the problem is G8 or the industry.
 - [ABS monthly CPI — the childcare component](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation)
 - [ABS Births](https://www.abs.gov.au/statistics/people/population/births-australia/latest-release) and [ABS Overseas Migration](https://www.abs.gov.au/statistics/people/population/overseas-migration/latest-release)
 - [G8 investor announcements](https://g8education.edu.au/)
+
+#fundamental_analysis  
+#gem
