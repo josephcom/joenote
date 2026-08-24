@@ -9,7 +9,7 @@
 <!-- ?v= is bumped on every release. Pages serves css/js with a long max-age,
      so without it a returning browser pairs this new HTML with its cached old
      scripts and the app half-works in ways that look like real bugs. -->
-<link rel="stylesheet" href="css/app.css?v=2026-08-22e" />
+<link rel="stylesheet" href="css/app.css?v=2026-08-24a" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%23%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
@@ -205,9 +205,7 @@
         <div>
           <h4>Fields</h4>
           <ul>
-            <li><code>#work</code> / <code>tag:work</code> — #work or anything under it</li>
-            <li><code>tag:=work</code> — exactly #work</li>
-            <li><code>near:work</code> — #work, its siblings and their children</li>
+            <li><code>#work</code> / <code>tag:work</code> — tagged #work</li>
             <li><code>title:</code> <code>text:</code> <code>file:</code></li>
             <li><code>is:untagged</code> <code>has:image</code> <code>has:link</code> <code>has:code</code></li>
           </ul>
@@ -231,11 +229,6 @@
     <div class="map-wrap">
       <svg id="map" role="img" aria-label="Hashtag map"></svg>
 
-      <div class="map-tools">
-        <button class="btn tiny" type="button" id="btn-fit" title="Fit the map to the window">Fit</button>
-        <button class="btn tiny" type="button" id="btn-relayout" title="Tidy the tree up again">Relayout</button>
-      </div>
-
       <p id="map-empty" class="map-empty" hidden>
         No hashtags yet. Create a note and type <code>#something</code> in it.
       </p>
@@ -247,10 +240,6 @@
           <h3 id="np-title">#tag</h3>
           <button class="btn icon" type="button" id="np-close" title="Close">×</button>
         </header>
-        <label class="np-opt">
-          <input type="checkbox" id="np-descend" checked />
-          include hashtags below it
-        </label>
         <ul id="np-list" class="np-list"></ul>
         <p id="np-empty" class="np-empty" hidden>No notes carry this hashtag yet.</p>
         <a class="btn tiny" id="np-all" href="#/">Open as a full search →</a>
@@ -263,23 +252,6 @@
         </header>
         <p class="tp-count"><span id="tp-count">0</span> notes ·
           <a href="#" id="tp-open">show them</a></p>
-
-        <h4>Parents</h4>
-        <div id="tp-parents" class="chips"></div>
-        <div class="row">
-          <input id="tp-parent-input" list="tag-list" placeholder="add a parent…" />
-          <button class="btn tiny" type="button" id="tp-parent-add">Add</button>
-        </div>
-
-        <h4>Children</h4>
-        <div id="tp-children" class="chips muted"></div>
-
-        <h4>Siblings</h4>
-        <div id="tp-siblings" class="chips"></div>
-        <div class="row">
-          <input id="tp-sibling-input" list="tag-list" placeholder="add a sibling…" />
-          <button class="btn tiny" type="button" id="tp-sibling-add">Add</button>
-        </div>
 
         <h4>Rename</h4>
         <div class="row">
@@ -341,13 +313,13 @@
 
 <div id="toast" class="toast" hidden></div>
 
-<script src="js/md.js?v=2026-08-22e"></script>
-<script src="js/sanitize.js?v=2026-08-22e"></script>
-<script src="js/store.js?v=2026-08-22e"></script>
-<script src="js/tags.js?v=2026-08-22e"></script>
-<script src="js/search.js?v=2026-08-22e"></script>
-<script src="js/graph.js?v=2026-08-22e"></script>
-<script src="js/hl.js?v=2026-08-22e"></script>
-<script src="js/app.js?v=2026-08-22e"></script>
+<script src="js/md.js?v=2026-08-24a"></script>
+<script src="js/sanitize.js?v=2026-08-24a"></script>
+<script src="js/store.js?v=2026-08-24a"></script>
+<script src="js/tags.js?v=2026-08-24a"></script>
+<script src="js/search.js?v=2026-08-24a"></script>
+<script src="js/graph.js?v=2026-08-24a"></script>
+<script src="js/hl.js?v=2026-08-24a"></script>
+<script src="js/app.js?v=2026-08-24a"></script>
 </body>
 </html>

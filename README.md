@@ -26,17 +26,19 @@ only**. Open `index.html` and it runs.
   to make. It needs an Anthropic key, kept in this browser and sent only to
   `api.anthropic.com`; the **AI…** button holds it.
 * **Hashtags are the only structure.** `#like-this`, anywhere in the body.
-* **A hashtag can have many parents and many siblings.** That graph lives in
-  `tags.xml` and is edited from the map.
+* **Every hashtag stands alone.** No parents, no children, no siblings: one
+  tag never implies another. The list of them lives in `tags.xml`.
 * **The home page is just the map and a search box.** Searching supports
   wildcards (`*`, `?`), `AND` / `OR` / `NOT`, parentheses, and dates — either
   typed (`updated:01-08-2026..31-08-2026`) or picked from the **Dates** panel.
 * **Every note records when it was made and last changed.** The two dates live
   in the note's own front matter, so they travel with the `.md` file between
   the three destinations, through a download and back through an import.
-* **Click a bubble and two panes open**: on the left, a scrollable list of every
-  note carrying that hashtag (with a toggle for hashtags below it in the map);
-  on the right, its parents, children and siblings, ready to edit.
+* **The map is a plain listing.** Every hashtag is a box, all drawn alike,
+  in alphabetical order down the first column and on into the next. The wheel
+  zooms, dragging scrolls — down only; there is never anything off to the side.
+* **Click a box and two panes open**: on the left, a scrollable list of every
+  note carrying that hashtag; on the right, the hashtag itself, ready to rename.
 
 ## Where the notes go
 
@@ -92,9 +94,7 @@ proj*                        wildcard: any run of characters
 te?t                         wildcard: exactly one character
 "exact phrase"               literal, wildcards off
 
-#work        tag:work        tagged #work or anything below it in the map
-tag:=work                    exactly #work, ignoring the hierarchy
-near:work                    #work, its siblings, and their descendants
+#work        tag:work        tagged #work
 title:foo  text:foo  file:foo
 is:untagged  is:tagged  is:empty
 has:image  has:tag  has:link  has:code
@@ -160,8 +160,9 @@ Tags are read from the body, never from metadata — which is why a note is
 findable from any editor, not just this one.
 
 A hashtag must contain at least one non-digit, so `#5 bolt` stays plain prose
-while `#q4` and `#work/2026` are tags. `/` nests inside a single tag name; the
-parent/sibling graph in `tags.xml` is what actually builds the map.
+while `#q4` and `#work/2026` are tags. `/` is just another character inside a
+single tag name — it nests nothing. The map draws every hashtag that is on at
+least one note; `tags.xml` is the list of the names.
 
 The file name follows the note's `# H1` title: change the title and the file is
 renamed (a toast tells you), unless the target name is already taken.

@@ -10,9 +10,7 @@
  *   "exact phrase"     quoted literal (no wildcards inside)
  *
  * Fields:
- *   #work / tag:work   tagged #work or any tag below it in the map
- *   tag:=work          exactly #work, ignore the hierarchy
- *   near:work          #work, its siblings, and everything under them
+ *   #work / tag:work   tagged #work
  *   title:foo  text:foo  file:foo
  *   is:untagged  has:image  has:tag  has:link  has:code
  *
@@ -46,7 +44,7 @@
     until: { which: 'e', op: '<=' }
   };
 
-  var FIELDS = ['tag', 'title', 'text', 'body', 'file', 'name', 'is', 'has', 'near', 'in']
+  var FIELDS = ['tag', 'title', 'text', 'body', 'file', 'name', 'is', 'has', 'in']
     .concat(Object.keys(DATE_FIELDS));
 
   function tokenize(q) {
@@ -308,7 +306,7 @@
     return quoted ? literalRe(value, anchored) : globToRe(value, anchored);
   }
 
-  /* note: { name, title, tags:[], expanded:{}, plain, raw, hasImage,
+  /* note: { name, title, tags:[], plain, raw, hasImage,
              created, updated } - the two dates are ms, 0 when unknown */
   function evalNode(node, note) {
     switch (node.op) {
@@ -362,30 +360,18 @@
     if (field === 'text' || field === 'body') return makeMatcher(value, node.quoted, false).test(note.plain);
 
     if (field === 'tag' || field === 'in') {
-      var exact = value.charAt(0) === '=';
-      var pat = exact ? value.slice(1) : value;
-      var re = makeMatcher(pat.toLowerCase(), node.quoted, true);
-      return exact ? anyMatch(note.tags, re) : anyMatch(Object.keys(note.expanded), re);
-    }
-
-    if (field === 'near') {
-      var base = global.Tags.normalize(value);
-      var want = Object.create(null);
-      want[base] = true;
-      global.Tags.siblingsOf(base).forEach(function (s) { want[s] = true; });
-      Object.keys(want).slice().forEach(function (t) {
-        var d = global.Tags.descendants(t);
-        Object.keys(d).forEach(function (x) { want[x] = true; });
-      });
-      for (var i = 0; i < note.tags.length; i++) if (want[note.tags[i]]) return true;
-      return false;
+      /* one hashtag never stands for another, so there is nothing to widen
+         the search to; a leading = is still read and ignored, so queries
+         written back when the map had a hierarchy still do what they say */
+      var pat = value.charAt(0) === '=' ? value.slice(1) : value;
+      return anyMatch(note.tags, makeMatcher(pat.toLowerCase(), node.quoted, true));
     }
 
     /* no field: title, body, filename and tags */
     var m = makeMatcher(value, node.quoted, false);
     if (m.test(note.title) || m.test(note.name) || m.test(note.plain)) return true;
     var mt = makeMatcher(value.toLowerCase(), node.quoted, true);
-    return anyMatch(Object.keys(note.expanded), mt);
+    return anyMatch(note.tags, mt);
   }
 
   /* Literal fragments worth highlighting in the result list. */

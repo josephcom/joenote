@@ -14,9 +14,6 @@
   --accent-fg: #ffffff;
   --danger: #c8342c;
   --ok: #14804a;
-  --root-bg: #e7f6ed;
-  --root-line: #4fac7d;
-  --root-fg: #14684a;
   --radius: 10px;
   --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -37,9 +34,6 @@ html[data-theme="dark"] {
   --accent-fg: #0d0f14;
   --danger: #ff7a70;
   --ok: #4ad07f;
-  --root-bg: #16301f;
-  --root-line: #3f9166;
-  --root-fg: #7fd7a5;
   --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 30px rgba(0, 0, 0, .35);
 }
 
@@ -287,18 +281,11 @@ main { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
 #map { width: 100%; height: 100%; display: block; touch-action: none; cursor: grab; }
 #map:active { cursor: grabbing; }
 
-.map-tools { position: absolute; top: 10px; left: 10px; display: flex; gap: 6px; }
 .map-empty {
   position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
   color: var(--fg-faint); font-size: 14px; pointer-events: none; text-align: center; padding: 20px;
 }
 .map-empty code { font-family: var(--mono); background: var(--bg-sunk); padding: 1px 5px; border-radius: 5px; }
-
-.link { stroke: var(--line-strong); stroke-width: 1.4; }
-.link.sibling { stroke-dasharray: 3 4; opacity: .75; }
-.link.hi { stroke: var(--accent); stroke-width: 2.2; opacity: 1; }
-.arrowhead { fill: var(--line-strong); }
-.arrowhead.hi { fill: var(--accent); }
 
 .node { cursor: pointer; }
 .node rect {
@@ -307,9 +294,7 @@ main { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
   stroke-width: 2;
   transition: fill .12s, stroke .12s;
 }
-/* a hashtag with no parent above it - the top of a branch - goes green */
-.node.root rect { fill: var(--root-bg); stroke: var(--root-line); }
-.node.root .node-label { fill: var(--root-fg); }
+/* every hashtag is drawn the same: none of them outranks any other */
 .node:hover rect { stroke: var(--accent); }
 .node.hi rect { fill: var(--accent); stroke: var(--accent); }
 .node.selected rect { stroke: var(--accent); stroke-width: 3.5; }
@@ -329,10 +314,10 @@ main { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
 
 /* ------------------------------ tag panel ----------------------------- */
 
-/* Notes on the left, relations on the right; both float over the map. */
+/* Notes on the left, the tag itself on the right; both float over the map. */
 .panels {
   position: absolute;
-  inset: 46px 10px 10px;
+  inset: 10px;
   display: flex;
   gap: 10px;
   pointer-events: none;
@@ -352,10 +337,6 @@ main { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
 }
 .panels > #tag-panel { margin-left: auto; overflow: auto; }
 
-.notes-panel .np-opt {
-  display: flex; align-items: center; gap: 6px;
-  font-size: 12px; color: var(--fg-soft); margin: 6px 0 2px;
-}
 .np-list {
   list-style: none; margin: 6px 0 8px; padding: 0;
   overflow-y: auto; flex: 1 1 auto; min-height: 40px;
@@ -372,7 +353,6 @@ main { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
   font-size: 11.5px; color: var(--fg-faint); font-family: var(--mono);
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
-.np-list .np-via { color: var(--accent); }
 .np-empty { font-size: 12.5px; color: var(--fg-faint); margin: 8px 0; }
 #np-all { justify-content: center; }
 
@@ -390,8 +370,6 @@ main { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
 .tag-panel .hint { font-size: 11.5px; color: var(--fg-faint); margin: 6px 0 0; }
 .tag-panel .btn.danger { margin-top: 16px; width: 100%; justify-content: center; }
 
-.chips { display: flex; flex-wrap: wrap; gap: 5px; min-height: 22px; }
-.chips:empty::after { content: "none"; color: var(--fg-faint); font-size: 12px; }
 .chip {
   display: inline-flex; align-items: center; gap: 4px;
   font-family: var(--mono); font-size: 12px;
@@ -404,7 +382,6 @@ main { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
   padding: 0 0 0 2px; opacity: .6;
 }
 .chip button:hover { opacity: 1; }
-.chips.muted .chip { background: var(--bg-sunk); color: var(--fg-soft); border-color: var(--line); }
 
 /* ------------------------------- results ------------------------------ */
 

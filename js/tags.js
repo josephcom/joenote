@@ -1,18 +1,17 @@
 /* JoeNote - js/tags.js
- * The hashtag ontology, stored as XML (tags.xml).
+ * The list of hashtags, stored as XML (tags.xml).
  *
  *   <joenote version="1">
  *     <hashtags>
- *       <hashtag name="project">
- *         <parent name="work"/>
- *         <sibling name="task"/>
- *       </hashtag>
+ *       <hashtag name="project"/>
+ *       <hashtag name="work"/>
  *     </hashtags>
  *   </joenote>
  *
- * A hashtag may have many parents and many siblings. Parent edges are
- * directed and acyclic; sibling edges are symmetric and always stored on
- * both tags.
+ * Hashtags stand alone. There are no parents, children or siblings: one tag
+ * never implies another, and #work tells you nothing about #project. The file
+ * used to carry those links, and any that are still in it are read past and
+ * dropped the next time it is written.
  */
 (function (global) {
   'use strict';
@@ -26,7 +25,7 @@
   }
 
   var Tags = {
-    map: Object.create(null),   /* name -> { name, parents:Set, siblings:Set, count } */
+    map: Object.create(null),   /* name -> { name, count } */
 
     /* ---------------- load / save ---------------- */
 
@@ -38,28 +37,14 @@
         doc = new DOMParser().parseFromString(xmlText, 'application/xml');
       } catch (e) { return this; }
       if (doc.getElementsByTagName('parsererror').length) {
-        console.warn('tags.xml is not well-formed XML; starting from an empty map.');
+        console.warn('tags.xml is not well-formed XML; starting from an empty list.');
         return this;
       }
       var els = doc.getElementsByTagName('hashtag');
       for (var i = 0; i < els.length; i++) {
-        var el = els[i];
-        var name = norm(el.getAttribute('name'));
-        if (!name) continue;
-        var rec = this.ensure(name);
-        var kids = el.children;
-        for (var j = 0; j < kids.length; j++) {
-          var k = kids[j], other = norm(k.getAttribute('name'));
-          if (!other || other === name) continue;
-          if (k.tagName === 'parent') { rec.parents[other] = true; this.ensure(other); }
-          else if (k.tagName === 'child') { this.ensure(other).parents[name] = true; }
-          else if (k.tagName === 'sibling') {
-            rec.siblings[other] = true;
-            this.ensure(other).siblings[name] = true;
-          }
-        }
+        var name = norm(els[i].getAttribute('name'));
+        if (name) this.ensure(name);
       }
-      this.breakCycles();
       return this;
     },
 
@@ -68,35 +53,20 @@
       var host = doc.getElementsByTagName('hashtags')[0];
       var names = Object.keys(this.map).sort();
       for (var i = 0; i < names.length; i++) {
-        var rec = this.map[names[i]];
         var el = doc.createElement('hashtag');
-        el.setAttribute('name', rec.name);
-        var ps = Object.keys(rec.parents).sort();
-        for (var p = 0; p < ps.length; p++) {
-          var pe = doc.createElement('parent');
-          pe.setAttribute('name', ps[p]);
-          el.appendChild(pe);
-        }
-        var ss = Object.keys(rec.siblings).sort();
-        for (var s = 0; s < ss.length; s++) {
-          var se = doc.createElement('sibling');
-          se.setAttribute('name', ss[s]);
-          el.appendChild(se);
-        }
+        el.setAttribute('name', this.map[names[i]].name);
         host.appendChild(el);
       }
       var xml = new XMLSerializer().serializeToString(doc);
       return prettyXML(xml);
     },
 
-    /* ---------------- graph ---------------- */
+    /* ---------------- the list ---------------- */
 
     ensure: function (name) {
       name = norm(name);
       if (!name) return null;
-      if (!this.map[name]) {
-        this.map[name] = { name: name, parents: Object.create(null), siblings: Object.create(null), count: 0 };
-      }
+      if (!this.map[name]) this.map[name] = { name: name, count: 0 };
       return this.map[name];
     },
 
@@ -110,115 +80,13 @@
     rename: function (from, to) {
       from = norm(from); to = norm(to);
       if (!from || !to || from === to || !this.map[from]) return false;
-      var rec = this.map[from];
-      var dest = this.ensure(to);
-      Object.keys(rec.parents).forEach(function (p) { if (p !== to) dest.parents[p] = true; });
-      Object.keys(rec.siblings).forEach(function (s) { if (s !== to) dest.siblings[s] = true; });
       delete this.map[from];
-      var self = this;
-      Object.keys(this.map).forEach(function (n) {
-        if (self.map[n].parents[from]) { delete self.map[n].parents[from]; if (n !== to) self.map[n].parents[to] = true; }
-        if (self.map[n].siblings[from]) { delete self.map[n].siblings[from]; if (n !== to) self.map[n].siblings[to] = true; }
-      });
-      this.breakCycles();
+      this.ensure(to);
       return true;
-    },
-
-    addParent: function (child, parent) {
-      child = norm(child); parent = norm(parent);
-      if (!child || !parent || child === parent) return false;
-      if (this.descendants(child)[parent]) return false;  /* would create a cycle */
-      this.ensure(parent);
-      this.ensure(child).parents[parent] = true;
-      return true;
-    },
-
-    removeParent: function (child, parent) {
-      var rec = this.map[norm(child)];
-      if (rec) delete rec.parents[norm(parent)];
-    },
-
-    addSibling: function (a, b) {
-      a = norm(a); b = norm(b);
-      if (!a || !b || a === b) return false;
-      this.ensure(a).siblings[b] = true;
-      this.ensure(b).siblings[a] = true;
-      return true;
-    },
-
-    removeSibling: function (a, b) {
-      a = norm(a); b = norm(b);
-      if (this.map[a]) delete this.map[a].siblings[b];
-      if (this.map[b]) delete this.map[b].siblings[a];
-    },
-
-    children: function (name) {
-      name = norm(name);
-      var out = [], self = this;
-      Object.keys(this.map).forEach(function (n) { if (self.map[n].parents[name]) out.push(n); });
-      return out.sort();
-    },
-
-    parentsOf: function (name) {
-      var rec = this.map[norm(name)];
-      return rec ? Object.keys(rec.parents).sort() : [];
-    },
-
-    siblingsOf: function (name) {
-      var rec = this.map[norm(name)];
-      return rec ? Object.keys(rec.siblings).sort() : [];
-    },
-
-    /* set of every ancestor of `name` (not including itself) */
-    ancestors: function (name) {
-      var out = Object.create(null), stack = this.parentsOf(name), self = this;
-      while (stack.length) {
-        var n = stack.pop();
-        if (out[n]) continue;
-        out[n] = true;
-        self.parentsOf(n).forEach(function (p) { if (!out[p]) stack.push(p); });
-      }
-      return out;
-    },
-
-    /* set of every descendant of `name` (not including itself) */
-    descendants: function (name) {
-      var out = Object.create(null), stack = this.children(name), self = this;
-      while (stack.length) {
-        var n = stack.pop();
-        if (out[n]) continue;
-        out[n] = true;
-        self.children(n).forEach(function (c) { if (!out[c]) stack.push(c); });
-      }
-      return out;
-    },
-
-    roots: function () {
-      var self = this;
-      return Object.keys(this.map).filter(function (n) {
-        return Object.keys(self.map[n].parents).length === 0;
-      }).sort();
-    },
-
-    breakCycles: function () {
-      var self = this;
-      Object.keys(this.map).forEach(function (n) {
-        Object.keys(self.map[n].parents).forEach(function (p) {
-          /* if p is reachable downward from n, the edge n->p closes a loop */
-          var seen = Object.create(null), stack = [p];
-          while (stack.length) {
-            var cur = stack.pop();
-            if (cur === n) { delete self.map[n].parents[p]; return; }
-            if (seen[cur]) continue;
-            seen[cur] = true;
-            Object.keys((self.map[cur] || { parents: {} }).parents).forEach(function (x) { stack.push(x); });
-          }
-        });
-      });
     },
 
     /* Register tags discovered in notes so they show on the map even when
-       they have no declared relations yet. */
+       they are not in tags.xml yet. */
     syncCounts: function (notes) {
       var self = this;
       Object.keys(this.map).forEach(function (n) { self.map[n].count = 0; });
@@ -228,18 +96,6 @@
           if (rec) rec.count++;
         });
       });
-    },
-
-    /* Tags of a note plus all their ancestors - used by tag: searches. */
-    expand: function (tagList) {
-      var out = Object.create(null), self = this;
-      (tagList || []).forEach(function (t) {
-        t = norm(t);
-        out[t] = true;
-        var anc = self.ancestors(t);
-        Object.keys(anc).forEach(function (a) { out[a] = true; });
-      });
-      return out;
     },
 
     normalize: norm,

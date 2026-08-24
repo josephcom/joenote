@@ -136,7 +136,6 @@
       stamped: stamped,      /* false = guessed from the file, not recorded */
       title: title || name,
       tags: tags,
-      expanded: Object.create(null),
       plain: MD.toPlainText(raw),
       hasImage: /!\[[^\]]*\]\(/.test(fm.body) || /<img[\s>]/i.test(fm.body),
       meta: fm.meta
@@ -147,7 +146,6 @@
     App.byName = Object.create(null);
     App.notes.forEach(function (n) { App.byName[n.name] = n; });
     Tags.syncCounts(App.notes);
-    App.notes.forEach(function (n) { n.expanded = Tags.expand(n.tags); });
     refreshTagList();
   }
 
@@ -311,7 +309,6 @@
     setView('view-home');
     syncDateFilter();
     renderMap();
-    setTimeout(function () { if (App.graph) App.graph.fit(); }, 30);
   }
 
   function renderMap() {
@@ -328,17 +325,12 @@
     applyLiveHighlight();
   }
 
-  /* A hashtag earns a place on the map by leading to at least one note -
-     either directly, or through a hashtag below it. Anything that leads
-     nowhere stays in tags.xml but is not drawn. */
+  /* A hashtag earns a place on the map by being on at least one note.
+     Anything that is on none stays in tags.xml but is not drawn. */
   function visibleTags() {
     var out = Object.create(null);
     Object.keys(Tags.map).forEach(function (name) {
-      if (Tags.map[name].count > 0) { out[name] = Tags.map[name]; return; }
-      var below = Tags.descendants(name);
-      for (var k in below) {
-        if (Tags.map[k] && Tags.map[k].count > 0) { out[name] = Tags.map[name]; return; }
-      }
+      if (Tags.map[name].count > 0) out[name] = Tags.map[name];
     });
     return out;
   }
@@ -1059,29 +1051,19 @@
   var panelTag = null;
 
   /* Left pane: every note carrying this hashtag. */
-  function notesForTag(tag, withDescendants) {
-    var want = Object.create(null);
-    want[tag] = true;
-    if (withDescendants) {
-      Object.keys(Tags.descendants(tag)).forEach(function (d) { want[d] = true; });
-    }
+  function notesForTag(tag) {
     return App.notes.filter(function (n) {
-      for (var i = 0; i < n.tags.length; i++) if (want[n.tags[i]]) return true;
-      return false;
-    }).map(function (n) {
-      var via = n.tags.filter(function (t) { return want[t] && t !== tag; });
-      return { note: n, via: via };
-    });
+      return n.tags.indexOf(tag) !== -1;
+    }).map(function (n) { return { note: n }; });
   }
 
   function renderNotesPanel() {
     if (!panelTag) return;
-    var deep = $('np-descend').checked;
-    var rows = notesForTag(panelTag, deep);
+    var rows = notesForTag(panelTag);
 
     $('notes-panel').hidden = false;
     $('np-title').textContent = '#' + panelTag;
-    $('np-all').href = '#/q/' + encodeURIComponent(deep ? '#' + panelTag : 'tag:=' + panelTag);
+    $('np-all').href = '#/q/' + encodeURIComponent('tag:' + panelTag);
 
     var list = $('np-list');
     list.innerHTML = '';
@@ -1099,12 +1081,6 @@
       s.className = 'np-sub';
       s.textContent = fmtDate(row.note.updated) + ' · ' + row.note.name;
       s.title = datesTooltip(row.note);
-      if (row.via.length) {
-        var via = document.createElement('span');
-        via.className = 'np-via';
-        via.textContent = '  via #' + row.via.join(' #');
-        s.appendChild(via);
-      }
       a.appendChild(s);
 
       li.appendChild(a);
@@ -1112,9 +1088,7 @@
     });
 
     $('np-empty').hidden = rows.length > 0;
-    $('np-empty').textContent = deep
-      ? 'No notes carry #' + panelTag + ' or anything below it yet.'
-      : 'No notes carry #' + panelTag + ' itself. Try including the hashtags below it.';
+    $('np-empty').textContent = 'No notes carry #' + panelTag + ' yet.';
   }
 
   function openTagPanel(name) {
@@ -1127,16 +1101,6 @@
     $('tp-count').textContent = rec.count;
     $('tp-open').href = '#/tag/' + encodeURIComponent(panelTag);
     $('tp-rename-input').value = '';
-    $('tp-parent-input').value = '';
-    $('tp-sibling-input').value = '';
-
-    chips($('tp-parents'), Tags.parentsOf(panelTag), function (p) {
-      Tags.removeParent(panelTag, p); commitTags();
-    });
-    chips($('tp-children'), Tags.children(panelTag), null);
-    chips($('tp-siblings'), Tags.siblingsOf(panelTag), function (s) {
-      Tags.removeSibling(panelTag, s); commitTags();
-    });
   }
 
   function closeTagPanel() {
@@ -1144,30 +1108,6 @@
     $('tag-panel').hidden = true;
     $('notes-panel').hidden = true;
     if (App.graph) App.graph.select(null);
-  }
-
-  function chips(host, names, onRemove) {
-    host.innerHTML = '';
-    names.forEach(function (n) {
-      var chip = document.createElement('span');
-      chip.className = 'chip';
-      var label = document.createElement('a');
-      label.href = '#';
-      label.textContent = '#' + n;
-      label.style.color = 'inherit';
-      label.style.textDecoration = 'none';
-      label.addEventListener('click', function (e) { e.preventDefault(); openTagPanel(n); });
-      chip.appendChild(label);
-      if (onRemove) {
-        var x = document.createElement('button');
-        x.type = 'button';
-        x.textContent = '×';
-        x.title = 'Remove';
-        x.addEventListener('click', function (e) { e.preventDefault(); onRemove(n); });
-        chip.appendChild(x);
-      }
-      host.appendChild(chip);
-    });
   }
 
   function commitTags() {
@@ -1325,39 +1265,15 @@
       b.addEventListener('click', function () { setPreset(b.getAttribute('data-range')); });
     });
 
-    /* map tools */
-    $('btn-fit').addEventListener('click', function () { App.graph && App.graph.fit(); });
-    $('btn-relayout').addEventListener('click', function () {
-      if (!App.graph) return;
-      App.graph.relayout();
-      App.graph.fit();
-    });
     /* notes pane */
     $('np-close').addEventListener('click', function () { $('notes-panel').hidden = true; });
-    $('np-descend').addEventListener('change', renderNotesPanel);
 
     /* tag panel */
     $('tp-close').addEventListener('click', closeTagPanel);
-    $('tp-parent-add').addEventListener('click', function () {
-      var v = Tags.normalize($('tp-parent-input').value);
-      if (!v || !panelTag) return;
-      if (!Tags.addParent(panelTag, v)) { toast('That would make a loop in the hierarchy', true); return; }
-      commitTags();
-    });
-    $('tp-sibling-add').addEventListener('click', function () {
-      var v = Tags.normalize($('tp-sibling-input').value);
-      if (!v || !panelTag) return;
-      Tags.addSibling(panelTag, v);
-      commitTags();
-    });
-    ['tp-parent-input', 'tp-sibling-input', 'tp-rename-input'].forEach(function (id) {
-      $(id).addEventListener('keydown', function (e) {
-        if (e.key !== 'Enter') return;
-        e.preventDefault();
-        if (id === 'tp-parent-input') $('tp-parent-add').click();
-        else if (id === 'tp-sibling-input') $('tp-sibling-add').click();
-        else $('tp-rename').click();
-      });
+    $('tp-rename-input').addEventListener('keydown', function (e) {
+      if (e.key !== 'Enter') return;
+      e.preventDefault();
+      $('tp-rename').click();
     });
     $('tp-rename').addEventListener('click', function () {
       if (!panelTag) return;
@@ -1435,7 +1351,7 @@
     });
 
     window.addEventListener('resize', function () {
-      if (App.graph && !$('view-home').hidden) App.graph.paint();
+      if (App.graph && !$('view-home').hidden) App.graph.resize();
     });
 
     /* coming back to the tab is the moment to check the note is still what

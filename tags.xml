@@ -3,15 +3,9 @@
   <hashtags>
     <hashtag name="adf8"/>
     <hashtag name="asdff10"/>
-    <hashtag name="business_stories">
-      <parent name="money"/>
-    </hashtag>
-    <hashtag name="companies">
-      <parent name="fundamental_analysis"/>
-    </hashtag>
-    <hashtag name="consumer_services">
-      <parent name="fundamental_analysis"/>
-    </hashtag>
+    <hashtag name="business_stories"/>
+    <hashtag name="companies"/>
+    <hashtag name="consumer_services"/>
     <hashtag name="dbbdd5"/>
     <hashtag name="ddd4"/>
     <hashtag name="ddd6"/>
@@ -20,67 +14,30 @@
     <hashtag name="dded3"/>
     <hashtag name="ddyyyd7"/>
     <hashtag name="dirty_notes"/>
-    <hashtag name="english">
-      <parent name="personal_development"/>
-    </hashtag>
-    <hashtag name="export">
-      <parent name="money"/>
-    </hashtag>
+    <hashtag name="english"/>
+    <hashtag name="export"/>
     <hashtag name="feew9"/>
-    <hashtag name="fundamental_analysis">
-      <parent name="money"/>
-    </hashtag>
-    <hashtag name="funds">
-      <parent name="fundamental_analysis"/>
-    </hashtag>
-    <hashtag name="gem">
-      <parent name="consumer_services"/>
-    </hashtag>
+    <hashtag name="fundamental_analysis"/>
+    <hashtag name="funds"/>
+    <hashtag name="gem"/>
     <hashtag name="god_of_"/>
-    <hashtag name="god_of_intelligence">
-      <parent name="mind"/>
-    </hashtag>
+    <hashtag name="god_of_intelligence"/>
     <hashtag name="god_of_reasoning"/>
-    <hashtag name="gqg">
-      <parent name="funds"/>
-    </hashtag>
-    <hashtag name="inbox">
-      <sibling name="someday"/>
-    </hashtag>
-    <hashtag name="joenote">
-      <parent name="project"/>
-    </hashtag>
-    <hashtag name="meeting">
-      <parent name="work"/>
-    </hashtag>
+    <hashtag name="gqg"/>
+    <hashtag name="inbox"/>
+    <hashtag name="joenote"/>
+    <hashtag name="meeting"/>
     <hashtag name="mind"/>
     <hashtag name="money"/>
-    <hashtag name="personal">
-      <sibling name="work"/>
-    </hashtag>
+    <hashtag name="personal"/>
     <hashtag name="personal_development"/>
-    <hashtag name="project">
-      <parent name="personal"/>
-      <parent name="work"/>
-      <sibling name="reference"/>
-    </hashtag>
+    <hashtag name="project"/>
     <hashtag name="prompt"/>
-    <hashtag name="reading">
-      <parent name="personal_development"/>
-    </hashtag>
-    <hashtag name="reference">
-      <parent name="work"/>
-      <sibling name="project"/>
-    </hashtag>
-    <hashtag name="someday">
-      <sibling name="inbox"/>
-    </hashtag>
-    <hashtag name="stock">
-      <parent name="money"/>
-    </hashtag>
+    <hashtag name="reading"/>
+    <hashtag name="reference"/>
+    <hashtag name="someday"/>
+    <hashtag name="stock"/>
     <hashtag name="temporary"/>
-    <hashtag name="work">
-      <sibling name="personal"/>
-    </hashtag>
+    <hashtag name="work"/>
   </hashtags>
 </joenote>
