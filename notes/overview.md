@@ -1,6 +1,6 @@
 ---
 created: 2026-08-23T10:31:32Z
-updated: 2026-08-23T10:45:00Z
+updated: 2026-08-24T08:44:03Z
 ---
 
 # Overview
@@ -24,4 +24,4 @@ Price is not fixed by law. G8 sets fees itself and can lift them whenever it wan
 | FY25 | $948.2m | $210.1m | $93.3m | 3.3× | $656.6m | $14.0m |
 
 #gem
-
+#fundamental_analysis
