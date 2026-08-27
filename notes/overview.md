@@ -1,6 +1,6 @@
 ---
 created: 2026-08-23T10:31:32Z
-updated: 2026-08-24T16:34:49Z
+updated: 2026-08-27T08:59:36Z
 ---
 
 # Overview
@@ -27,6 +27,9 @@ G8 blames cost-of-living pressure, fewer births, and too many new centres [Busin
 | FY23 | $987.0m | $215.2m | $100.6m | 3.1× | $672.6m | $13.7m |
 | FY24 | $1,021.8m | $212.0m | $115.0m | 2.8× | $662.4m | $14.0m |
 | FY25 | $948.2m | $210.1m | $93.3m | 3.3× | $656.6m | $14.0m |
+
+## Who else is in the sector?
+
 
 #gem
 #fundamental_analysis
