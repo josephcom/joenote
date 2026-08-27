@@ -1,10 +1,9 @@
 ---
 created: 2026-08-27T10:05:14Z
-updated: 2026-08-27T10:06:03Z
+updated: 2026-08-27T10:06:44Z
 ---
 
 # Fundamental Analysis: Steps
-First try to know
-1. Business model
+1. Understand the business model, break-even revenue, operating leverage
 #fundamental_analysis
 
