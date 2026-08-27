@@ -1,6 +1,6 @@
 ---
 created: 2026-08-23T10:31:32Z
-updated: 2026-08-27T09:05:02Z
+updated: 2026-08-27T09:57:24Z
 ---
 
 # Overview
@@ -29,7 +29,34 @@ G8 blames cost-of-living pressure, fewer births, and too many new centres [Busin
 | FY25 | $948.2m | $210.1m | $93.3m | 3.3× | $656.6m | $14.0m |
 
 ## Competitors
+Sector = centre-based day care services approved for CCS, at March each year. Company counts at 31 December (August for 2026).
 
+|                    | 2022     | 2023     | 2024     | 2025     | 2026     |
+| ------------------ | -------- | -------- | -------- | -------- | -------- |
+| **Sector centres** | 8,770    | 8,983    | 9,273    | 9,643    | 9,920    |
+| **GEM**            | 438      | 430      | 406      | 395      | ~350     |
+| GEM share          | **5.0%** | **4.8%** | **4.4%** | **4.1%** | **3.5%** |
+| **EVO**            | 24       | 24       | 38       | 39       | 39       |
+| EVO share          | 0.27%    | 0.27%    | 0.41%    | 0.40%    | 0.39%    |
+| **MFD**            | 36       | ~38      | 45       | 45       | 45       |
+| MFD share          | 0.41%    | 0.42%    | 0.49%    | 0.47%    | 0.45%    |
+| **All three**      | **5.7%** | **5.5%** | **5.3%** | **5.0%** | **4.4%** |
+
+### The kids themselves
+
+| Children per week            | 2022    | 2023     | 2024    | 2025     | 2026     |
+| ---------------------------- | ------- | -------- | ------- | -------- | -------- |
+| **Sector, in long day care** | n/a     | ~840,800 | 851,210 | ~858,000 | ~873,000 |
+| **GEM**                      | ~50,000 | 45,000+  | 41,000+ | 36,000+  | 29,000+  |
+| **EVO**                      | n/d     | ~1,800   | ~2,800  | ~2,700   | n/d      |
+| **MFD**                      | n/d     | n/d      | n/d     | 3,600+   | n/d      |
+
+* EVO owns 49.8% of MFD.
+* **Goodstart** is bigger than GEM — 677 centres and 64,000 children, and it's a not-for-profit. GEM is the largest *listed* operator, which is a much smaller claim than it sounds.
+* GEM has lost 30% of its share since 2022 while the sector grew 13%. That's the whole story in one line. It went from 438 centres to about 350, and 50,000 children to 29,000. Weekly children fell 42% while the sector's grew.
+* There is no published national series for approved places in long day care — ACECQA doesn't collect it and RoGS has no table, so any places-based share is your own derivation. 
+* GEM stopped disclosing licensed places after 33,032 at December 2025.
+* MFD has more centres — 45 versus 39 — and more places. The gap isn't about size. It's about occupancy and debt. Occupancy is the whole story. EVO runs at ~80%. MFD ran at 54% in FY25. Break-even in this sector sits between 50% and 85%. EVO is comfortably above it; MFD is scraping the bottom of it. Also, MFD's break-even revenue was $95M vs $91.4M of actual revenue; that's loss. So, it's been borrowing only to pay the wages etc. Finally, MFD has *Going-concern warning* in thir accounting records. That means the auditors aren't sure MDF can make it to the end of the year! Not certain, but just a warning. 
 
 #gem
 #fundamental_analysis
