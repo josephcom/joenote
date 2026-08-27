@@ -1,6 +1,6 @@
 ---
 created: 2026-08-23T10:31:32Z
-updated: 2026-08-27T09:57:24Z
+updated: 2026-08-27T10:00:45Z
 ---
 
 # Overview
@@ -19,6 +19,12 @@ Price is not fixed by law. G8 sets fees itself and can lift them whenever it wan
 Occupancy has fallen for about 18 months. It began to slip in early 2025, when February spot occupancy sat 3.5 points below the year before [G8 Education](https://g8education.edu.au/wp-content/uploads/2025/02/g8-education-limited-fy24-results-10044554-250225-transcription.pdf) , then dropped hard. Full-year occupancy went from 70.7% (2024) to 65.8% (2025). By late April 2026 spot occupancy was 56.4%, and G8 suspended 40 centres [Business News Australia](https://www.businessnewsaustralia.com/articles/g8-education-to-suspend-40-childcare-centres-as-occupancy-slumps-7-percentage-points.html).
 
 G8 blames cost-of-living pressure, fewer births, and too many new centres [Business News Australia](https://www.businessnewsaustralia.com/articles/g8-education-to-suspend-40-childcare-centres-as-occupancy-slumps-7-percentage-points.html). But the biggest single cause is lost trust: child abuse allegations at its centres, plus similar cases elsewhere, hit family confidence across Australia [ABC News](https://www.abc.net.au/news/2026-04-29/childcare-group-g8-to-close-10-per-cent-of-centres/106620512).
+
+|                    | 2022     | 2023     | 2024     | 2025     | 2026     |
+| ------------------ | -------- | -------- | -------- | -------- | -------- |
+| **Sector centres** | 8,770    | 8,983    | 9,273    | 9,643    | 9,920    |
+| **GEM**            | 438      | 430      | 406      | 395      | ~350     |
+| GEM share          | **5.0%** | **4.8%** | **4.4%** | **4.1%** | **3.5%** |
 
 ## Operating Leverage  
 | Year | Revenue | Fixed cost | Op EBIT | True leverage | Break-even revenue | 1% occupancy = revenue |
