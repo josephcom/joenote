@@ -1,6 +1,6 @@
 ---
 created: 2026-08-23T10:31:32Z
-updated: 2026-08-27T10:00:45Z
+updated: 2026-08-27T10:00:56Z
 ---
 
 # Overview
@@ -25,6 +25,11 @@ G8 blames cost-of-living pressure, fewer births, and too many new centres [Busin
 | **Sector centres** | 8,770    | 8,983    | 9,273    | 9,643    | 9,920    |
 | **GEM**            | 438      | 430      | 406      | 395      | ~350     |
 | GEM share          | **5.0%** | **4.8%** | **4.4%** | **4.1%** | **3.5%** |
+
+| Children per week            | 2022    | 2023     | 2024    | 2025     | 2026     |
+| ---------------------------- | ------- | -------- | ------- | -------- | -------- |
+| **Sector, in long day care** | n/a     | ~840,800 | 851,210 | ~858,000 | ~873,000 |
+| **GEM**                      | ~50,000 | 45,000+  | 41,000+ | 36,000+  | 29,000+  |
 
 ## Operating Leverage  
 | Year | Revenue | Fixed cost | Op EBIT | True leverage | Break-even revenue | 1% occupancy = revenue |
