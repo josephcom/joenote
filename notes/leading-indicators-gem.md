@@ -1,6 +1,6 @@
 ---
 created: 2026-08-24T13:11:58Z
-updated: 2026-08-24T13:15:03Z
+updated: 2026-08-27T08:54:33Z
 ---
 
 # Leading Indicators (GEM)
@@ -126,6 +126,13 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 **What:** The paid leave settings are the weeks of government-paid leave for new parents. The age mix is the share of children in care by age band, from the quarterly report.
 **How it predicts:** Longer paid leave keeps babies home longer, which empties the baby rooms. Free preschool hours pull demand into the 3–5 rooms. A baby room needs one carer for four children; a preschool room needs one for eleven. So the mix can push profit down even when total headcount holds. Watch the age split, not the "free kindy" headlines.
 **Lead:** the policy settings are known a year or more ahead; the mix shifts over one to two years.
+
+**S10 — The first unpaid bill**
+[Arena REIT announcements](https://www.asx.com.au/markets/company/arf) and [Charter Hall Social Infrastructure announcements](https://www.asx.com.au/markets/company/cqe) → [Insolvencies, Education & Training industry](https://www.asic.gov.au/about-asic/corporate-publications/statistics/insolvency-statistics) → [Number of approved services](https://snapshots.acecqa.gov.au/Snapshot/index.html) → feeds S6
+
+**What:** These two trusts own childcare buildings and rent them to the operators. Their results give the rent collection rate, the rent-to-revenue ratio, and the name of any tenant in default. Rent-to-revenue is the share of a centre's takings that goes to the landlord.
+**How it predicts:** Rent is a fixed cost, so a centre stops paying rent before it stops trading. If a trust names a tenant in default, then that operator is broke in all but name, and its centres will leave the register. If rent-to-revenue climbs across the portfolio, then more defaults follow. Most rivals are private and publish nothing, so this is the only public read on them.
+**Lead:** a default notice lands months before the insolvency statistics count it, and a year or more before the closures reach the service count.
 
 ---
 
