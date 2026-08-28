@@ -1,6 +1,6 @@
 ---
 created: 2026-08-23T10:31:32Z
-updated: 2026-08-27T10:00:56Z
+updated: 2026-08-28T23:07:36Z
 ---
 
 # Overview
@@ -52,8 +52,6 @@ Sector = centre-based day care services approved for CCS, at March each year. Co
 | **MFD**            | 36       | ~38      | 45       | 45       | 45       |
 | MFD share          | 0.41%    | 0.42%    | 0.49%    | 0.47%    | 0.45%    |
 | **All three**      | **5.7%** | **5.5%** | **5.3%** | **5.0%** | **4.4%** |
-
-### The kids themselves
 
 | Children per week            | 2022    | 2023     | 2024    | 2025     | 2026     |
 | ---------------------------- | ------- | -------- | ------- | -------- | -------- |
