@@ -1,6 +1,6 @@
 ---
 created: 2026-08-23T10:31:32Z
-updated: 2026-08-28T23:57:45Z
+updated: 2026-08-28T23:57:57Z
 ---
 
 # Overview
@@ -35,7 +35,7 @@ G8 blames cost-of-living pressure, fewer births, and too many new centres [Busin
 | FY24 | $1,021.8m | $212.0m | $115.0m | 2.8× | $662.4m | $14.0m |
 | FY25 | $948.2m | $210.1m | $93.3m | 3.3× | $656.6m | $14.0m |
 
-## Competitors
+## Market Size
 Sector = centre-based day care services approved for CCS, at March each year. Company counts at 31 December (August for 2026).
 
 |                    | 2022     | 2023     | 2024     | 2025     | 2026     |
