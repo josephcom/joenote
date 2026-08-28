@@ -1,6 +1,6 @@
 ---
 created: 2026-08-23T10:31:32Z
-updated: 2026-08-28T23:17:41Z
+updated: 2026-08-28T23:18:06Z
 ---
 
 # Overview
@@ -22,7 +22,6 @@ Occupancy has fallen for about 18 months. It began to slip in early 2025, when F
 | -------------------- | ------- | ------------- | ----- | ------------- | -------- |
 | **Sector occupancy** | n/d     | 81.8%         | n/d   | 76.1%         | n/d      |
 | **GEM occupancy**    | 71.0% * | 70.4%         | 70.7% | 65.8%         | 57.0% ** |
-| **GEM gap**          | —       | **−11.4 pts** | —     | **−10.3 pts** | —        |
 
 **The sector only publishes two data points.** Dec 2023 and Dec 2025 are the only national occupancy figures in the public record, and they're December-quarter readings against GEM's full-year average. Directional, not exact.
 
