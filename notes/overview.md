@@ -1,6 +1,6 @@
 ---
 created: 2026-08-23T10:31:32Z
-updated: 2026-08-28T23:18:28Z
+updated: 2026-08-28T23:18:53Z
 ---
 
 # Overview
@@ -21,9 +21,9 @@ Occupancy has fallen for about 18 months. It began to slip in early 2025, when F
 |                      | 2022    | 2023          | 2024  | 2025          | 2026     |
 | -------------------- | ------- | ------------- | ----- | ------------- | -------- |
 | **Sector occupancy** | n/d     | 81.8%         | n/d   | 76.1%         | n/d      |
-| **GEM occupancy**    | 71.0%   | 70.4%         | 70.7% | 65.8%         | 57.0% ** |
+| **GEM occupancy**    | 71.0%   | 70.4%         | 70.7% | 65.8%         | 57.0%    |
 
-**The sector only publishes two data points.** Dec 2023 and Dec 2025 are the only national occupancy figures in the public record, and they're December-quarter readings against GEM's full-year average. Directional, not exact.
+**NOTE** - The sector only publishes two data points. Dec 2023 and Dec 2025 are the only national occupancy figures in the public record, and they're December-quarter readings against GEM's full-year average. Directional, not exact.
 
 G8 blames cost-of-living pressure, fewer births, and too many new centres [Business News Australia](https://www.businessnewsaustralia.com/articles/g8-education-to-suspend-40-childcare-centres-as-occupancy-slumps-7-percentage-points.html). But the biggest single cause is lost trust: child abuse allegations at its centres, plus similar cases elsewhere, hit family confidence across Australia [ABC News](https://www.abc.net.au/news/2026-04-29/childcare-group-g8-to-close-10-per-cent-of-centres/106620512).
 
