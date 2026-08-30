@@ -1,6 +1,6 @@
 ---
 created: 2026-08-30T12:44:40Z
-updated: 2026-08-30T12:46:56Z
+updated: 2026-08-30T12:47:01Z
 ---
 
 # Stock Trading Strategies
@@ -25,7 +25,7 @@ The steps are:
 6. Wait for repair signs.
 7. Buy only after the signs are confirmed.
 
-## Tips & Traps
+### Tips & Traps
 
 - **Value trap:** A value trap is a stock that looks cheap but stays cheap forever, because the problem is permanent. Ask one test question: do people still need the product? If the answer is no, then reject the company.
 - **Debt:** Debt is the main killer. A company with heavy debt can die before the repair ends. Check when the debt is due. If big payments come soon, then the risk is high.
