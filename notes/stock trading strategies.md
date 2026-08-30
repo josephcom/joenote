@@ -1,13 +1,13 @@
 ---
 created: 2026-08-30T12:44:40Z
-updated: 2026-08-30T12:48:06Z
+updated: 2026-08-30T12:48:28Z
 ---
 
 # Stock Trading Strategies
 
 This file explains three strategies: Broken Hunt, Fear Hunt, and Cyclic Hunt. It is for study. It is not financial advice.
 
-## Broken Hunt
+## 1- Broken Hunt
 
 ### Overview
 
