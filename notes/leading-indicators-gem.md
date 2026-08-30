@@ -1,6 +1,6 @@
 ---
 created: 2026-08-24T13:11:58Z
-updated: 2026-08-30T01:28:26Z
+updated: 2026-08-30T01:39:37Z
 ---
 
 # Leading Indicators (GEM)
@@ -149,12 +149,11 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 | Factor | Frequency | When |
 |---|---|---|
 | [Award pay guide, current rates](https://portal.fairwork.gov.au/ArticleDocuments/872/childrens-services-award-ma000120-pay-guide.pdf.aspx) | Yearly (each July) | Each July, when the new award rates start |
-| [Minimum rates under the wage grant](https://www.education.gov.au/early-childhood/providers/workforce/wages/minimum-rates) | As policy changes | Only when the policy changes. Program extended to 30 June 2028; award step 4.75% from 1 July 2026 |
+| [Minimum rates under the wage grant](https://www.education.gov.au/early-childhood/providers/workforce/wages/minimum-rates) | As policy changes | Only when the policy changes. Program runs to 30 June 2028 |
 | [Average hourly fee charged](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) | Quarterly | Roughly January, April, July and October |
 
 **What:** The pay guide is the legal minimum wage table for childcare workers. The grant minimum rates are the higher wages a provider must pay to keep the government wage grant. The [fee growth cap in the grant conditions](https://www.education.gov.au/early-childhood/providers/workforce/worker-retention-payment/eligibility-and-conditions) is the brake on the last step.
-**How it predicts:** Wages are a centre's biggest cost. If mandated wages step up, then fees must follow, which feeds the parent-price squeeze in S3. The wage steps are published long before they apply, so you can see the fee pressure coming. The brake only binds while a provider takes the grant.
-**Updated 30 Aug 2026:** the grant was extended to **30 June 2028**, so the brake is not gone after 2026-27 as this file first assumed. The live cap is **5.8%** for **8 Aug 2026 – 7 Aug 2027**, set against a **4.75% award increase from 1 July 2026**. Costs are allowed to rise faster than the wage step, but not by much — that narrow spread is the thing to watch, because it is where margin dies.
+**How it predicts:** Wages are a centre's biggest cost. If mandated wages step up, then fees must follow, which feeds the parent-price squeeze in S3. The wage steps are published long before they apply, so you can see the fee pressure coming. The brake only binds while a provider takes the grant, and the program runs to 30 June 2028. The live cap is 5.8%, covering 8 August 2026 to 7 August 2027, against an award rise of 4.75% from 1 July 2026. Costs are allowed to climb a little faster than fees, and that narrow spread is where the margin dies.
 **Lead:** wage steps are known a year or more ahead; fees follow within about two quarters of each step.
 
 **S5 — Competitor supply pipeline**
@@ -201,11 +200,10 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 | Factor | Frequency | When |
 |---|---|---|
 | [Compliance actions and staffing waivers](https://snapshots.acecqa.gov.au/Snapshot/index.html) | Quarterly | Roughly February, May, August and November |
-| [Quality rating conditions on grant money](https://www.education.gov.au/early-childhood/providers/workforce/worker-retention-payment/eligibility-and-conditions) | As policy changes | Only when the policy changes. **Quality Area 2 compliance becomes mandatory July 2027** |
+| [Quality rating conditions on grant money](https://www.education.gov.au/early-childhood/providers/workforce/worker-retention-payment/eligibility-and-conditions) | As policy changes | Only when the policy changes. Quality Area 2 becomes mandatory July 2027 |
 
-**What:** Compliance actions are regulator penalties and orders. Staffing waivers are permissions to run below required staffing. The quality condition ties the wage grant to a service's safety rating.
-**Updated 30 Aug 2026:** this condition acquires teeth on a known date. **From July 2027, meeting Quality Area 2 (child health and safety) becomes a mandatory condition of the Worker Retention Payment** — services that fall short face reduced or suspended funding. That converts a rating into lost cash on a fixed timetable, and it is a company-level risk for GEM, not just a sector one. Read it with C2 and with the state concentration of G8's ratings.
-**How it predicts:** If enforcement counts rise, then the regulator is pushing weak services out. That removes supply, which helps survivors, but it also feeds the news cycle, which hurts trust. The quality condition turns a bad rating straight into lost cash.
+**What:** Compliance actions are regulator penalties and orders. Staffing waivers are permissions to run below required staffing. The quality condition ties the wage grant to a service's safety rating: from July 2027, meeting Quality Area 2 (child health and safety) is a mandatory condition of the Worker Retention Payment, and a service that falls short has its funding reduced or suspended.
+**How it predicts:** If enforcement counts rise, then the regulator is pushing weak services out. That removes supply, which helps survivors, but it also feeds the news cycle, which hurts trust. The quality condition turns a bad rating straight into lost cash, on a fixed date. For GEM that is a company risk, not only a sector one, so read it with C2.
 **Lead:** enforcement counts are quarterly; the funding and exit effects land within a year.
 
 **S9 — The age-mix trap**
@@ -282,12 +280,11 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 
 | Factor | Frequency | When |
 |---|---|---|
-| [Fee growth cap in the grant conditions](https://www.education.gov.au/early-childhood/providers/workforce/worker-retention-payment/eligibility-and-conditions) | As policy changes | Only when the policy changes. Current cap 5.8%, runs 8 Aug 2026 – 7 Aug 2027 |
+| [Fee growth cap in the grant conditions](https://www.education.gov.au/early-childhood/providers/workforce/worker-retention-payment/eligibility-and-conditions) | As policy changes | Only when the policy changes. Current cap 5.8%, to 7 August 2027 |
 | [G8's fee announcement](https://www.asx.com.au/markets/company/gem) | Yearly | Once a year, late in the year |
 
-**What:** The cap is the fee-rise limit G8 accepted to keep the wage grant. The fee announcement is G8's yearly rise notice.
-**Updated 30 Aug 2026:** the cap in force is **5.8%**, covering **8 Aug 2026 – 7 Aug 2027** for existing services.
-**How it predicts:** The cap tells you the ceiling; the announcement tells you the rise chosen. Together they fix the price side of revenue for the year ahead. G8 can break the cap and hand back the grant, and that move itself would be a loud signal. When the program ends, the cap disappears — but **that is now 30 June 2028, not 2027**, because the program was extended on 18 June 2026. Price is a choice G8 does not get to make freely for another two years, which matters because with occupancy this weak, price is the only lever left on the revenue formula that management controls outright.
+**What:** The cap is the fee-rise limit G8 accepted to keep the wage grant, currently 5.8% for the year from 8 August 2026 to 7 August 2027. The fee announcement is G8's yearly rise notice.
+**How it predicts:** The cap tells you the ceiling; the announcement tells you the rise chosen. Together they fix the price side of revenue for the year ahead. G8 can break the cap and hand back the grant, and that move itself would be a loud signal. The cap disappears when the program ends on 30 June 2028. Until then, price is the one lever on the revenue formula that management controls outright and still cannot pull freely.
 **Lead:** the cap is known about a year ahead; the chosen rise is known weeks before it applies and then runs all year.
 
 **C5 — Staffing, which reads backwards**
