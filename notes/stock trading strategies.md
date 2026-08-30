@@ -1,6 +1,6 @@
 ---
 created: 2026-08-30T12:44:40Z
-updated: 2026-08-30T12:47:01Z
+updated: 2026-08-30T12:47:05Z
 ---
 
 # Stock Trading Strategies
@@ -36,7 +36,7 @@ The steps are:
 - **Strange numbers:** If the accounts look strange, then reject the company. If the auditor resigns, then also reject it. (The auditor is the outside firm that checks the accounts.)
 - **Position size:** Keep each bet small. Many of these companies fail. Make many small bets, so one failure cannot hurt you badly.
 
-## Screening
+### Screening
 
 A screener is a free web tool that filters stocks by numbers. Use a screener with these filters:
 
