@@ -1,6 +1,6 @@
 ---
 created: 2026-08-30T12:44:40Z
-updated: 2026-08-30T12:47:09Z
+updated: 2026-08-30T12:47:23Z
 ---
 
 # Stock Trading Strategies
@@ -60,9 +60,9 @@ For each candidate, write four things on the watch list: the cause of the fall, 
 - Famous users are Howard Marks, who buys troubled debt, and David Tepper, who bought bank shares in 2009.
 - Keep notes on every idea, also on the ideas you skip. Review the notes each year. The notes show if your signs come too late.
 
-# Part 2: Fear Hunt
+## Fear Hunt
 
-## Overview
+### Overview
 
 You make a list of strong companies at normal prices. You do not buy them. You wait for a market-wide panic. Examples are war fears, virus headlines, election shocks, or sudden rate fears. In a panic, almost all prices fall together. Strong companies fall with the weak ones. Their P/E then drops to an attractive level, and you buy.
 
