@@ -1,15 +1,15 @@
 ---
 created: 2026-08-30T12:44:40Z
-updated: 2026-08-30T12:46:16Z
+updated: 2026-08-30T12:46:56Z
 ---
 
 # Stock Trading Strategies
 
 This file explains three strategies: Broken Hunt, Fear Hunt, and Cyclic Hunt. It is for study. It is not financial advice.
 
-# Part 1: Broken Hunt
+## Part 1: Broken Hunt
 
-## Overview
+### Overview
 
 You look for companies in deep trouble. The share price is down very hard, often 50 percent or more. The market hates the company. You study the company, and you decide if the trouble is temporary or permanent. If the trouble is temporary, then the company goes on your watch list. You do not buy yet. You wait for early signs of repair. When the signs are confirmed, you buy.
 
