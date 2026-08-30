@@ -1,6 +1,6 @@
 ---
 created: 2026-08-30T12:44:40Z
-updated: 2026-08-30T12:48:02Z
+updated: 2026-08-30T12:48:06Z
 ---
 
 # Stock Trading Strategies
@@ -151,7 +151,7 @@ Useful screens and numbers:
 
 Pick only two or three numbers per industry. More numbers give noise, not truth.
 
-## Miscellaneous
+### Miscellaneous
 
 - Cycles have different lengths. Chip cycles run about three to four years. Housing cycles can run ten years or more.
 - The position size sits between the other two strategies: bigger than in Broken Hunt, smaller than in Fear Hunt.
