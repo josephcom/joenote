@@ -1,10 +1,10 @@
 ---
 created: 2026-08-30T22:39:56Z
-updated: 2026-08-30T22:41:10Z
+updated: 2026-08-30T22:41:21Z
 ---
 
 # FORCE of all!
-All the "moves" were eventually initiated by "a" force
+All the "moves" were eventually initiated by "a" force. What's that 
 
 #philosophy
 
