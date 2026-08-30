@@ -1,6 +1,6 @@
 ---
 created: 2026-08-30T12:44:40Z
-updated: 2026-08-30T12:48:44Z
+updated: 2026-08-30T12:48:55Z
 ---
 
 # Stock Trading Strategies
@@ -108,7 +108,7 @@ Set a price alert in your broker app for each green price. The alert does the wa
 - You can hold these companies for many years. Sell only if the quality breaks, or if the price becomes extreme.
 - A panic price also lifts the dividend yield. (A dividend is cash that the company pays to the shareholders.) So the company pays you while you wait.
 
-## Cyclic Hunt
+## 3- Cyclic Hunt
 
 ### Overview
 
