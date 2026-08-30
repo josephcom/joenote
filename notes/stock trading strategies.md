@@ -1,6 +1,6 @@
 ---
 created: 2026-08-30T12:44:40Z
-updated: 2026-08-30T12:47:54Z
+updated: 2026-08-30T12:48:02Z
 ---
 
 # Stock Trading Strategies
@@ -120,14 +120,14 @@ The strategy has three steps. First, learn which lever moves each industry. Seco
 
 One fact is important. The market moves 6 to 12 months before the official data. If you wait for good numbers in the news, then you miss much of the gain. So you act on early signs, not on confirmed good news.
 
-## Tips & Traps
+### Tips & Traps
 
 - **The P/E trap:** The P/E works backward in cyclical stocks. At the top of the cycle, the profit is at a peak, so the P/E looks low. At the bottom, the profit collapsed, so the P/E looks high. Do not use the plain P/E here. Use the price-to-book ratio instead, or use the average profit of a full cycle. (Price-to-book compares the price with the recorded net assets of the company.)
 - **"This time is different":** At the bottom, everybody says that the industry will never come back. That mood usually marks the buy zone. But test it, because a cycle is not the same as a permanent decline. Print newspapers never came back. Steel always did.
 - **Too early:** The dark phase can last longer than your patience, and longer than a weak company's cash. So buy only the strongest company in the industry. The strongest one survives the dark phase, and it takes the customers of the dead rivals.
 - **Too long:** Plan to sell. You do not hold cyclical stocks forever. Hold through the up phase. Sell when the industry builds new capacity everywhere and everybody is happy again.
 
-## Screening
+### Screening
 
 First, map each industry to its main lever:
 
