@@ -1,6 +1,6 @@
 ---
 created: 2026-08-30T12:44:40Z
-updated: 2026-08-30T12:44:40Z
+updated: 2026-08-30T12:46:09Z
 ---
 
 # Stock Trading Strategies
@@ -158,3 +158,5 @@ Pick only two or three numbers per industry. More numbers give noise, not truth.
 - The strategies combine well. A market panic (Fear Hunt) often marks the bottom of a cycle (Cyclic Hunt).
 - Keep a cycle journal. Write where each industry stands now: rise, top, decline, or bottom. Update the journal every quarter.
 - Howard Marks wrote a full book about this idea: "Mastering the Market Cycle". Peter Lynch also described cyclical stocks in "One Up on Wall Street".
+
+#stock
