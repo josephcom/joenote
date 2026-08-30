@@ -1,6 +1,6 @@
 ---
 created: 2026-08-30T12:44:40Z
-updated: 2026-08-30T12:47:05Z
+updated: 2026-08-30T12:47:09Z
 ---
 
 # Stock Trading Strategies
@@ -53,7 +53,7 @@ Other good sources are:
 
 For each candidate, write four things on the watch list: the cause of the fall, the sign that confirms repair, the price you will pay, and the rule that makes you sell.
 
-## Miscellaneous
+### Miscellaneous
 
 - A repair usually needs one to three years. Be patient.
 - Expect many small losses. A few big winners pay for all of them.
