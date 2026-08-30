@@ -1,6 +1,6 @@
 ---
 created: 2026-08-23T10:31:32Z
-updated: 2026-08-30T01:30:36Z
+updated: 2026-08-30T01:39:57Z
 ---
 
 # Overview
@@ -13,7 +13,7 @@ ASX:GEM = G8 Education. Its revenue is basically one equation:
 
 If you look carefully at the above formula, you can see the only factor sitting on the *demand* side is **occupancy**! All other factors sit on the *supply* (i.e. *capacity*) side. 
 
-Price is not fixed by law. G8 sets fees itself and can lift them whenever it wants, as often as it wants. The only brake is the Worker Retention Payment fee-growth cap (we pay for 15% pay raise of your educators, but you have to cap the fee raise on kids), and that is a condition of a grant G8 could walk away from. **Corrected 30 Aug 2026:** this file previously said the cap expires with the program and that 2026-27 is the last year it bites. That is no longer true. On 18 June 2026 the program was extended to **30 June 2028** ($3.6bn, making the 15% rise permanent). The cap therefore binds for another two years, not one. The current limit is **5.8%**, running **8 August 2026 to 7 August 2027** for existing services. So G8's price lever is still bolted down through 2027. 
+Price is not fixed by law. G8 sets fees itself and can lift them whenever it wants, as often as it wants. The only brake is the Worker Retention Payment fee-growth cap (we pay for 15% pay raise of your educators, but you have to cap the fee raise on kids), and that is a condition of a grant G8 could walk away from. The program runs to 30 June 2028, so the cap bites through 2027-28. The current limit is 5.8%, and it runs from 8 August 2026 to 7 August 2027. 
 
 ## Why has occupancy been going down? 
 Occupancy has fallen for about 18 months. It began to slip in early 2025, when February spot occupancy sat 3.5 points below the year before [G8 Education](https://g8education.edu.au/wp-content/uploads/2025/02/g8-education-limited-fy24-results-10044554-250225-transcription.pdf) , then dropped hard. Full-year occupancy went from 70.7% (2024) to 65.8% (2025). By late April 2026 spot occupancy was 56.4%, and G8 suspended 40 centres [Business News Australia](https://www.businessnewsaustralia.com/articles/g8-education-to-suspend-40-childcare-centres-as-occupancy-slumps-7-percentage-points.html).
