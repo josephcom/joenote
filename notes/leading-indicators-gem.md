@@ -1,6 +1,6 @@
 ---
 created: 2026-08-24T13:11:58Z
-updated: 2026-08-27T08:54:33Z
+updated: 2026-08-30T00:46:06Z
 ---
 
 # Leading Indicators (GEM)
@@ -16,14 +16,14 @@ updated: 2026-08-27T08:54:33Z
 **M1 — The cash squeeze**
 [Monthly CPI](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/monthly-consumer-price-index-indicator/latest-release) → [RBA cash rate](https://www.rba.gov.au/statistics/cash-rate/) → [Variable mortgage rates](https://www.rba.gov.au/statistics/interest-rates/) → [Mortgage stress %](https://www.roymorgan.com/findings) → [Household saving ratio](https://www.abs.gov.au/statistics/economy/national-accounts/australian-national-accounts-national-income-expenditure-and-product/latest-release) → [Monthly household spending](https://www.abs.gov.au/statistics/economy/finance/monthly-household-spending-indicator/latest-release)
 
-| Factor | Frequency | Next release |
+| Factor | Frequency | When |
 |---|---|---|
-| [Monthly CPI](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/monthly-consumer-price-index-indicator/latest-release) | Monthly | 30 September 2026 |
-| [RBA cash rate](https://www.rba.gov.au/statistics/cash-rate/) | 8 times a year | 29 September 2026 |
-| [Variable mortgage rates](https://www.rba.gov.au/statistics/interest-rates/) | Monthly | September 2026 |
-| [Mortgage stress %](https://www.roymorgan.com/findings) | Monthly | September 2026 |
-| [Household saving ratio](https://www.abs.gov.au/statistics/economy/national-accounts/australian-national-accounts-national-income-expenditure-and-product/latest-release) | Quarterly | 2 September 2026 |
-| [Monthly household spending](https://www.abs.gov.au/statistics/economy/finance/monthly-household-spending-indicator/latest-release) | Monthly | Late September 2026 |
+| [Monthly CPI](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/monthly-consumer-price-index-indicator/latest-release) | Monthly | Late each month, usually the last Wednesday, for the month before |
+| [RBA cash rate](https://www.rba.gov.au/statistics/cash-rate/) | 8 times a year | Eight board meetings a year, about every six weeks, February to December |
+| [Variable mortgage rates](https://www.rba.gov.au/statistics/interest-rates/) | Monthly | Each month, a few weeks after the month it covers |
+| [Mortgage stress %](https://www.roymorgan.com/findings) | Monthly | Around the middle of each month |
+| [Household saving ratio](https://www.abs.gov.au/statistics/economy/national-accounts/australian-national-accounts-national-income-expenditure-and-product/latest-release) | Quarterly | First week of March, June, September and December |
+| [Monthly household spending](https://www.abs.gov.au/statistics/economy/finance/monthly-household-spending-indicator/latest-release) | Monthly | Last week of each month, for the month before |
 
 **What:** CPI is the official measure of price rises. The cash rate is the base interest rate the RBA sets. Variable mortgage rates are what banks charge home borrowers. Mortgage stress is the share of borrowers whose repayments eat too much of their income (search "mortgage stress" on the Roy Morgan page; it is a monthly release). The saving ratio is the share of income households keep. Household spending is what they spend each month.
 **How it predicts:** If CPI rises, then the RBA lifts the cash rate. Banks pass the rise to variable loans within weeks, because almost no Australian mortgage is fixed. Repayments rise, stress rises, savings drain, and spending falls. The childcare gap fee comes out of that same shrinking wallet.
@@ -32,12 +32,12 @@ updated: 2026-08-27T08:54:33Z
 **M2 — The job chain**
 [RBA cash rate](https://www.rba.gov.au/statistics/cash-rate/) → [Job vacancies](https://www.abs.gov.au/statistics/labour/jobs/job-vacancies-australia/latest-release) → [Unemployment and underemployment](https://www.abs.gov.au/statistics/labour/employment-and-unemployment/labour-force-australia/latest-release) → [Participation rate](https://www.abs.gov.au/statistics/labour/employment-and-unemployment/labour-force-australia/latest-release)
 
-| Factor | Frequency | Next release |
+| Factor | Frequency | When |
 |---|---|---|
-| [RBA cash rate](https://www.rba.gov.au/statistics/cash-rate/) | 8 times a year | 29 September 2026 |
-| [Job vacancies](https://www.abs.gov.au/statistics/labour/jobs/job-vacancies-australia/latest-release) | Quarterly | 1 October 2026 |
-| [Unemployment and underemployment](https://www.abs.gov.au/statistics/labour/employment-and-unemployment/labour-force-australia/latest-release) | Monthly | 24 September 2026 |
-| [Participation rate](https://www.abs.gov.au/statistics/labour/employment-and-unemployment/labour-force-australia/latest-release) | Monthly | 24 September 2026 |
+| [RBA cash rate](https://www.rba.gov.au/statistics/cash-rate/) | 8 times a year | Eight board meetings a year, about every six weeks, February to December |
+| [Job vacancies](https://www.abs.gov.au/statistics/labour/jobs/job-vacancies-australia/latest-release) | Quarterly | Roughly mid-January, late March, late June and early October |
+| [Unemployment and underemployment](https://www.abs.gov.au/statistics/labour/employment-and-unemployment/labour-force-australia/latest-release) | Monthly | A Thursday in the second half of each month, for the month before |
+| [Participation rate](https://www.abs.gov.au/statistics/labour/employment-and-unemployment/labour-force-australia/latest-release) | Monthly | A Thursday in the second half of each month, for the month before |
 
 **What:** Job vacancies count advertised unfilled jobs. Unemployment is the share of people who want work and have none. Underemployment is people who want more hours. Participation is the share of adults working or looking.
 **How it predicts:** A family buys childcare so the parents can work. If vacancies fall, then hiring slows, and some parents lose work or hours. A parent who loses hours cuts care days first and the place second.
@@ -46,11 +46,11 @@ updated: 2026-08-27T08:54:33Z
 **M3 — Is the second income worth it**
 [Wage Price Index](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/wage-price-index-australia/latest-release) minus [CPI](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/monthly-consumer-price-index-indicator/latest-release) = real wage growth → [Average weekly hours per child in care](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports)
 
-| Factor | Frequency | Next release |
+| Factor | Frequency | When |
 |---|---|---|
-| [Wage Price Index](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/wage-price-index-australia/latest-release) | Quarterly | 18 November 2026 |
-| [CPI](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/monthly-consumer-price-index-indicator/latest-release) | Monthly | 30 September 2026 |
-| [Average weekly hours per child in care](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) | Quarterly | October 2026 |
+| [Wage Price Index](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/wage-price-index-australia/latest-release) | Quarterly | Mid-February, mid-May, mid-August and mid-November |
+| [CPI](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/monthly-consumer-price-index-indicator/latest-release) | Monthly | Late each month, usually the last Wednesday, for the month before |
+| [Average weekly hours per child in care](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) | Quarterly | Roughly January, April, July and October |
 
 **What:** The Wage Price Index measures how fast pay rises. CPI measures how fast prices rise. Their difference is real wage growth — whether pay beats prices. Hours per child is the average weekly care a child uses. You compute the first node yourself from the two releases.
 **How it predicts:** The family's gain from a second job is that pay minus the gap fee. If real wages are negative, then the gain shrinks, and the family drops a care day. Fewer days per child cuts revenue before any child actually leaves.
@@ -60,12 +60,12 @@ updated: 2026-08-27T08:54:33Z
 [Daily home value index](https://www.cotality.com/au/our-data/indices) → [Consumer sentiment index](https://melbourneinstitute.unimelb.edu.au/research/macroeconomics/latest-news/index-of-consumer-sentiment)
 In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmresearch.com.au/graph_vacancy.php) → [Weekly asking rents](https://sqmresearch.com.au/property)
 
-| Factor | Frequency | Next release |
+| Factor | Frequency | When |
 |---|---|---|
-| [Daily home value index](https://www.cotality.com/au/our-data/indices) | Daily | Next business day |
-| [Consumer sentiment index](https://melbourneinstitute.unimelb.edu.au/research/macroeconomics/latest-news/index-of-consumer-sentiment) | Monthly | Early September 2026 |
-| [Rental vacancy rate](https://sqmresearch.com.au/graph_vacancy.php) | Monthly | Mid-September 2026 |
-| [Weekly asking rents](https://sqmresearch.com.au/property) | Weekly | Next week |
+| [Daily home value index](https://www.cotality.com/au/our-data/indices) | Daily | Every business day |
+| [Consumer sentiment index](https://melbourneinstitute.unimelb.edu.au/research/macroeconomics/latest-news/index-of-consumer-sentiment) | Monthly | Early each month, usually the second Tuesday |
+| [Rental vacancy rate](https://sqmresearch.com.au/graph_vacancy.php) | Monthly | Around the middle of each month |
+| [Weekly asking rents](https://sqmresearch.com.au/property) | Weekly | Every week |
 
 **What:** The home value index tracks house prices daily. Consumer sentiment is a monthly survey of how households feel about money. Rental vacancy is the share of empty rentals. Asking rents are what landlords advertise.
 **How it predicts:** If house prices fall, then owners feel poorer, mood falls, and families hesitate before signing up for a new repeat cost. If vacancy is low, then rents rise, and renters have less left for the gap fee. Both hit new enrolments before existing ones.
@@ -74,11 +74,11 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 **M5 — Future children from migration**
 [Permanent Migration Program stats](https://www.homeaffairs.gov.au/research-and-statistics/statistics/visa-statistics/live/migration-program) → [Net overseas migration](https://www.abs.gov.au/statistics/people/population/overseas-migration/latest-release) → [0–4 population](https://www.abs.gov.au/statistics/people/population/national-state-and-territory-population/latest-release)
 
-| Factor | Frequency | Next release |
+| Factor | Frequency | When |
 |---|---|---|
-| [Permanent Migration Program stats](https://www.homeaffairs.gov.au/research-and-statistics/statistics/visa-statistics/live/migration-program) | Monthly | September 2026 |
-| [Net overseas migration](https://www.abs.gov.au/statistics/people/population/overseas-migration/latest-release) | Quarterly | September 2026 |
-| [0–4 population](https://www.abs.gov.au/statistics/people/population/national-state-and-territory-population/latest-release) | Quarterly | September 2026 |
+| [Permanent Migration Program stats](https://www.homeaffairs.gov.au/research-and-statistics/statistics/visa-statistics/live/migration-program) | Monthly | Once a month |
+| [Net overseas migration](https://www.abs.gov.au/statistics/people/population/overseas-migration/latest-release) | Quarterly | March, June, September and December |
+| [0–4 population](https://www.abs.gov.au/statistics/people/population/national-state-and-territory-population/latest-release) | Quarterly | March, June, September and December |
 
 **What:** Planning levels are the permanent visa places the government sets each year. Net overseas migration is arrivals minus departures. The 0–4 population is the official count of children under five.
 **How it predicts:** Family and partner visas bring people who form families here. If those lines shrink, then there are fewer future babies and toddlers, so fewer future enrolments. Read the family lines, not the headline — students do not fill childcare rooms.
@@ -87,10 +87,10 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 **M6 — Where the work happens**
 [Share of people working from home](https://www.abs.gov.au/statistics/labour/earnings-and-working-conditions/working-arrangements/latest-release) → [Average weekly hours per child in care](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports)
 
-| Factor | Frequency | Next release |
+| Factor | Frequency | When |
 |---|---|---|
-| [Share of people working from home](https://www.abs.gov.au/statistics/labour/earnings-and-working-conditions/working-arrangements/latest-release) | Yearly | December 2026 |
-| [Average weekly hours per child in care](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) | Quarterly | October 2026 |
+| [Share of people working from home](https://www.abs.gov.au/statistics/labour/earnings-and-working-conditions/working-arrangements/latest-release) | Yearly | Once a year, in December |
+| [Average weekly hours per child in care](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) | Quarterly | Roughly January, April, July and October |
 
 **What:** The working-from-home share is the official count of who works from home. Hours per child is as in M3.
 **How it predicts:** If employers demand more office days, then the child needs more care days. The link is direct: booked days rise with office days. This is the one demand chain that currently helps GEM.
@@ -107,11 +107,11 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 **S1 — The feedstock**
 [Births and fertility rate](https://www.abs.gov.au/statistics/people/population/births-australia/latest-release) → [0–4 population](https://www.abs.gov.au/statistics/people/population/national-state-and-territory-population/latest-release) → [Children in approved care](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports)
 
-| Factor | Frequency | Next release |
+| Factor | Frequency | When |
 |---|---|---|
-| [Births and fertility rate](https://www.abs.gov.au/statistics/people/population/births-australia/latest-release) | Yearly | October 2026 |
-| [0–4 population](https://www.abs.gov.au/statistics/people/population/national-state-and-territory-population/latest-release) | Quarterly | September 2026 |
-| [Children in approved care](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) | Quarterly | October 2026 |
+| [Births and fertility rate](https://www.abs.gov.au/statistics/people/population/births-australia/latest-release) | Yearly | Once a year, in October |
+| [0–4 population](https://www.abs.gov.au/statistics/people/population/national-state-and-territory-population/latest-release) | Quarterly | March, June, September and December |
+| [Children in approved care](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) | Quarterly | Roughly January, April, July and October |
 
 **What:** Births count babies born each year. The fertility rate is babies per woman. Children in approved care is the official quarterly count of kids using subsidised care.
 **How it predicts:** A baby born today enters a baby room in about a year and a preschool room in three to four. If births fall now, then rooms empty later, with near certainty. No marketing fixes a missing cohort.
@@ -120,10 +120,10 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 **S2 — Who is free to work**
 [Female participation rate](https://www.abs.gov.au/statistics/labour/employment-and-unemployment/labour-force-australia/latest-release) → [Children in approved care](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports)
 
-| Factor | Frequency | Next release |
+| Factor | Frequency | When |
 |---|---|---|
-| [Female participation rate](https://www.abs.gov.au/statistics/labour/employment-and-unemployment/labour-force-australia/latest-release) | Monthly | 24 September 2026 |
-| [Children in approved care](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) | Quarterly | October 2026 |
+| [Female participation rate](https://www.abs.gov.au/statistics/labour/employment-and-unemployment/labour-force-australia/latest-release) | Monthly | A Thursday in the second half of each month, for the month before |
+| [Children in approved care](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) | Quarterly | Roughly January, April, July and October |
 
 **What:** Female participation is the share of women working or looking for work.
 **How it predicts:** More working parents means more demand for care. The rate sits near its ceiling, so the chain now mostly warns on the downside: if participation falls, enrolments follow. Do not model more upside.
@@ -132,12 +132,12 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 **S3 — The affordability scissor**
 [CCS hourly rate cap](https://www.servicesaustralia.gov.au/type-child-care-you-use-can-affect-child-care-subsidy?context=41186) vs [Average hourly fee charged](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) → [Childcare line in quarterly CPI](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release) → [Children in care and hours per child](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports)
 
-| Factor | Frequency | Next release |
+| Factor | Frequency | When |
 |---|---|---|
-| [CCS hourly rate cap](https://www.servicesaustralia.gov.au/type-child-care-you-use-can-affect-child-care-subsidy?context=41186) | Yearly (each July) | July 2027 |
-| [Average hourly fee charged](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) | Quarterly | October 2026 |
-| [Childcare line in quarterly CPI](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release) | Quarterly | 28 October 2026 |
-| [Children in care and hours per child](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) | Quarterly | October 2026 |
+| [CCS hourly rate cap](https://www.servicesaustralia.gov.au/type-child-care-you-use-can-affect-child-care-subsidy?context=41186) | Yearly (each July) | Each July, at the start of the financial year |
+| [Average hourly fee charged](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) | Quarterly | Roughly January, April, July and October |
+| [Childcare line in quarterly CPI](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release) | Quarterly | Late January, late April, late July and late October |
+| [Children in care and hours per child](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) | Quarterly | Roughly January, April, July and October |
 
 **What:** The rate cap is the highest hourly fee the subsidy covers; it resets each July. The average fee is what providers actually charge, from the quarterly report. The childcare CPI line is the price parents pay after subsidy. [Income thresholds](https://www.servicesaustralia.gov.au/your-income-can-affect-child-care-subsidy?context=41186) decide each family's subsidy rate and sit on the same chain.
 **How it predicts:** The cap grows with general inflation; fees grow with provider costs. If fees outgrow the cap, then every extra dollar lands fully on the parent. When the parent price runs about twice general inflation, families cut days, then places. This is the best price signal there is.
@@ -146,11 +146,11 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 **S4 — The cost push behind the fee**
 [Award pay guide, current rates](https://portal.fairwork.gov.au/ArticleDocuments/872/childrens-services-award-ma000120-pay-guide.pdf.aspx) → [Minimum rates under the wage grant](https://www.education.gov.au/early-childhood/providers/workforce/wages/minimum-rates) → [Average hourly fee charged](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) → feeds S3
 
-| Factor | Frequency | Next release |
+| Factor | Frequency | When |
 |---|---|---|
-| [Award pay guide, current rates](https://portal.fairwork.gov.au/ArticleDocuments/872/childrens-services-award-ma000120-pay-guide.pdf.aspx) | Yearly (each July) | July 2027 |
-| [Minimum rates under the wage grant](https://www.education.gov.au/early-childhood/providers/workforce/wages/minimum-rates) | As policy changes | No set date |
-| [Average hourly fee charged](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) | Quarterly | October 2026 |
+| [Award pay guide, current rates](https://portal.fairwork.gov.au/ArticleDocuments/872/childrens-services-award-ma000120-pay-guide.pdf.aspx) | Yearly (each July) | Each July, when the new award rates start |
+| [Minimum rates under the wage grant](https://www.education.gov.au/early-childhood/providers/workforce/wages/minimum-rates) | As policy changes | Only when the policy changes |
+| [Average hourly fee charged](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) | Quarterly | Roughly January, April, July and October |
 
 **What:** The pay guide is the legal minimum wage table for childcare workers. The grant minimum rates are the higher wages a provider must pay to keep the government wage grant. The [fee growth cap in the grant conditions](https://www.education.gov.au/early-childhood/providers/workforce/worker-retention-payment/eligibility-and-conditions) is the brake on the last step.
 **How it predicts:** Wages are a centre's biggest cost. If mandated wages step up, then fees must follow, which feeds the parent-price squeeze in S3. The wage steps are published long before they apply, so you can see the fee pressure coming. The brake only binds while a provider takes the grant; when the program ends, it is gone.
@@ -159,11 +159,11 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 **S5 — Competitor supply pipeline**
 [RBA cash rate](https://www.rba.gov.au/statistics/cash-rate/) → [Building approvals](https://www.abs.gov.au/statistics/industry/building-and-construction/building-approvals-australia/latest-release) → [Number of approved services](https://snapshots.acecqa.gov.au/Snapshot/index.html)
 
-| Factor | Frequency | Next release |
+| Factor | Frequency | When |
 |---|---|---|
-| [RBA cash rate](https://www.rba.gov.au/statistics/cash-rate/) | 8 times a year | 29 September 2026 |
-| [Building approvals](https://www.abs.gov.au/statistics/industry/building-and-construction/building-approvals-australia/latest-release) | Monthly | Early September 2026 |
-| [Number of approved services](https://snapshots.acecqa.gov.au/Snapshot/index.html) | Quarterly | November 2026 |
+| [RBA cash rate](https://www.rba.gov.au/statistics/cash-rate/) | 8 times a year | Eight board meetings a year, about every six weeks, February to December |
+| [Building approvals](https://www.abs.gov.au/statistics/industry/building-and-construction/building-approvals-australia/latest-release) | Monthly | Early each month |
+| [Number of approved services](https://snapshots.acecqa.gov.au/Snapshot/index.html) | Quarterly | Roughly February, May, August and November |
 
 **What:** Building approvals count buildings cleared for construction each month. The approved services count is the regulator's tally of licensed centres.
 **How it predicts:** Cheap money makes new centres worth building. A centre approved today opens years from now and takes occupancy then. If the cash rate stays high, then the pipeline dries up, and future competition eases.
@@ -172,11 +172,11 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 **S6 — The scissor and its self-correction**
 [Service count growth](https://snapshots.acecqa.gov.au/Snapshot/index.html) minus [children-in-care growth](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) = the occupancy drag → [Insolvencies, Education & Training industry](https://www.asic.gov.au/about-asic/corporate-publications/statistics/insolvency-statistics) → service count falls → occupancy recovers for survivors
 
-| Factor | Frequency | Next release |
+| Factor | Frequency | When |
 |---|---|---|
-| [Service count growth](https://snapshots.acecqa.gov.au/Snapshot/index.html) | Quarterly | November 2026 |
-| [children-in-care growth](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) | Quarterly | October 2026 |
-| [Insolvencies, Education & Training industry](https://www.asic.gov.au/about-asic/corporate-publications/statistics/insolvency-statistics) | Monthly | September 2026 |
+| [Service count growth](https://snapshots.acecqa.gov.au/Snapshot/index.html) | Quarterly | Roughly February, May, August and November |
+| [children-in-care growth](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) | Quarterly | Roughly January, April, July and October |
+| [Insolvencies, Education & Training industry](https://www.asic.gov.au/about-asic/corporate-publications/statistics/insolvency-statistics) | Monthly | Each month, for the month before |
 
 **What:** Service count growth is new supply. Children-in-care growth is demand. Their difference is the occupancy drag every centre feels on average. The insolvency statistics count failing companies, split by industry.
 **How it predicts:** If supply grows while demand shrinks, then average occupancy falls sector-wide, no matter how well anyone operates. Falling occupancy sends weak centres broke; closures remove supply; survivors' occupancy recovers. Watch the sign of the difference first, then watch closures. This is the best occupancy chain in the file.
@@ -185,10 +185,10 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 **S7 — Trust**
 [Search interest in childcare safety](https://trends.google.com/trends/explore?geo=AU&q=childcare%20abuse) → [Children in approved care](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports)
 
-| Factor | Frequency | Next release |
+| Factor | Frequency | When |
 |---|---|---|
-| [Search interest in childcare safety](https://trends.google.com/trends/explore?geo=AU&q=childcare%20abuse) | Daily | Next day |
-| [Children in approved care](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) | Quarterly | October 2026 |
+| [Search interest in childcare safety](https://trends.google.com/trends/explore?geo=AU&q=childcare%20abuse) | Daily | Every day |
+| [Children in approved care](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) | Quarterly | Roughly January, April, July and October |
 
 **What:** Google Trends counts how often people search a term, updated daily.
 **How it predicts:** A safety scandal spikes searches within days. Scared parents stop enquiring, and enrolments follow. One bad case resets trust for the whole country, not just one operator. Search interest is the earliest visible trace of a trust shock.
@@ -197,10 +197,10 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 **S8 — Regulatory tightening**
 [Compliance actions and staffing waivers](https://snapshots.acecqa.gov.au/Snapshot/index.html) → [Quality rating conditions on grant money](https://www.education.gov.au/early-childhood/providers/workforce/worker-retention-payment/eligibility-and-conditions) → weak services lose funding and exit → feeds S6
 
-| Factor | Frequency | Next release |
+| Factor | Frequency | When |
 |---|---|---|
-| [Compliance actions and staffing waivers](https://snapshots.acecqa.gov.au/Snapshot/index.html) | Quarterly | November 2026 |
-| [Quality rating conditions on grant money](https://www.education.gov.au/early-childhood/providers/workforce/worker-retention-payment/eligibility-and-conditions) | As policy changes | No set date |
+| [Compliance actions and staffing waivers](https://snapshots.acecqa.gov.au/Snapshot/index.html) | Quarterly | Roughly February, May, August and November |
+| [Quality rating conditions on grant money](https://www.education.gov.au/early-childhood/providers/workforce/worker-retention-payment/eligibility-and-conditions) | As policy changes | Only when the policy changes |
 
 **What:** Compliance actions are regulator penalties and orders. Staffing waivers are permissions to run below required staffing. The quality condition ties the wage grant to a service's safety rating.
 **How it predicts:** If enforcement counts rise, then the regulator is pushing weak services out. That removes supply, which helps survivors, but it also feeds the news cycle, which hurts trust. The quality condition turns a bad rating straight into lost cash.
@@ -209,10 +209,10 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 **S9 — The age-mix trap**
 [Paid parental leave settings](https://www.servicesaustralia.gov.au/parental-leave-pay) and free state preschool hours → [Age mix of children in care](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports)
 
-| Factor | Frequency | Next release |
+| Factor | Frequency | When |
 |---|---|---|
-| [Paid parental leave settings](https://www.servicesaustralia.gov.au/parental-leave-pay) | Yearly (each July) | July 2027 |
-| [Age mix of children in care](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) | Quarterly | October 2026 |
+| [Paid parental leave settings](https://www.servicesaustralia.gov.au/parental-leave-pay) | Yearly (each July) | Each July, at the start of the financial year |
+| [Age mix of children in care](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) | Quarterly | Roughly January, April, July and October |
 
 **What:** The paid leave settings are the weeks of government-paid leave for new parents. The age mix is the share of children in care by age band, from the quarterly report.
 **How it predicts:** Longer paid leave keeps babies home longer, which empties the baby rooms. Free preschool hours pull demand into the 3–5 rooms. A baby room needs one carer for four children; a preschool room needs one for eleven. So the mix can push profit down even when total headcount holds. Watch the age split, not the "free kindy" headlines.
@@ -221,12 +221,12 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 **S10 — The first unpaid bill**
 [Arena REIT announcements](https://www.asx.com.au/markets/company/arf) and [Charter Hall Social Infrastructure announcements](https://www.asx.com.au/markets/company/cqe) → [Insolvencies, Education & Training industry](https://www.asic.gov.au/about-asic/corporate-publications/statistics/insolvency-statistics) → [Number of approved services](https://snapshots.acecqa.gov.au/Snapshot/index.html) → feeds S6
 
-| Factor | Frequency | Next release |
+| Factor | Frequency | When |
 |---|---|---|
-| [Arena REIT announcements](https://www.asx.com.au/markets/company/arf) | Half-yearly results | February 2027 |
-| [Charter Hall Social Infrastructure announcements](https://www.asx.com.au/markets/company/cqe) | Half-yearly results | February 2027 |
-| [Insolvencies, Education & Training industry](https://www.asic.gov.au/about-asic/corporate-publications/statistics/insolvency-statistics) | Monthly | September 2026 |
-| [Number of approved services](https://snapshots.acecqa.gov.au/Snapshot/index.html) | Quarterly | November 2026 |
+| [Arena REIT announcements](https://www.asx.com.au/markets/company/arf) | Half-yearly results | February and August, with each half-year result |
+| [Charter Hall Social Infrastructure announcements](https://www.asx.com.au/markets/company/cqe) | Half-yearly results | February and August, with each half-year result |
+| [Insolvencies, Education & Training industry](https://www.asic.gov.au/about-asic/corporate-publications/statistics/insolvency-statistics) | Monthly | Each month, for the month before |
+| [Number of approved services](https://snapshots.acecqa.gov.au/Snapshot/index.html) | Quarterly | Roughly February, May, August and November |
 
 **What:** These two trusts own childcare buildings and rent them to the operators. Their results give the rent collection rate, the rent-to-revenue ratio, and the name of any tenant in default. Rent-to-revenue is the share of a centre's takings that goes to the landlord.
 **How it predicts:** Rent is a fixed cost, so a centre stops paying rent before it stops trading. If a trust names a tenant in default, then that operator is broke in all but name, and its centres will leave the register. If rent-to-revenue climbs across the portfolio, then more defaults follow. Most rivals are private and publish nothing, so this is the only public read on them.
@@ -239,10 +239,10 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 **C1 — The master chain**
 [Enquiry volume and conversion](https://www.asx.com.au/markets/company/gem) → [Spot occupancy](https://www.asx.com.au/markets/company/gem) → EBIT
 
-| Factor | Frequency | Next release |
+| Factor | Frequency | When |
 |---|---|---|
-| [Enquiry volume and conversion](https://www.asx.com.au/markets/company/gem) | Half-yearly results and AGM | February 2027 |
-| [Spot occupancy](https://www.asx.com.au/markets/company/gem) | Half-yearly results and AGM | February 2027 |
+| [Enquiry volume and conversion](https://www.asx.com.au/markets/company/gem) | Half-yearly results and AGM | February and August results, plus the AGM |
+| [Spot occupancy](https://www.asx.com.au/markets/company/gem) | Half-yearly results and AGM | February and August results, plus the AGM |
 
 **What:** Enquiry volume is how many families contact G8. Conversion is the share of them that enrol. Spot occupancy is the share of licensed places filled on a given day. All three appear only in GEM's results and AGM presentations on that announcements page.
 **How it predicts:** Every enrolment starts as an enquiry. If enquiries hold but conversion falls, then G8 has a price problem. If enquiries themselves fall, then G8 has a trust problem. Occupancy follows enquiries, and revenue follows occupancy — apply management's per-point EBIT sensitivity to the spot number, never the annual average.
@@ -251,12 +251,12 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 **C2 — Legal news cycles**
 [County Court lists](https://www.countycourt.vic.gov.au/court-schedule) and [Federal Court lists](https://www.fedcourt.gov.au/court-calendar/daily-court-lists) → [Search interest in G8](https://trends.google.com/trends/explore?geo=AU&q=g8%20education) → [Enquiry volume](https://www.asx.com.au/markets/company/gem)
 
-| Factor | Frequency | Next release |
+| Factor | Frequency | When |
 |---|---|---|
-| [County Court lists](https://www.countycourt.vic.gov.au/court-schedule) | Daily | Next business day |
-| [Federal Court lists](https://www.fedcourt.gov.au/court-calendar/daily-court-lists) | Daily | Next business day |
-| [Search interest in G8](https://trends.google.com/trends/explore?geo=AU&q=g8%20education) | Daily | Next day |
-| [Enquiry volume](https://www.asx.com.au/markets/company/gem) | Half-yearly results and AGM | February 2027 |
+| [County Court lists](https://www.countycourt.vic.gov.au/court-schedule) | Daily | Every business day |
+| [Federal Court lists](https://www.fedcourt.gov.au/court-calendar/daily-court-lists) | Daily | Every business day |
+| [Search interest in G8](https://trends.google.com/trends/explore?geo=AU&q=g8%20education) | Daily | Every day |
+| [Enquiry volume](https://www.asx.com.au/markets/company/gem) | Half-yearly results and AGM | February and August results, plus the AGM |
 
 **What:** Court lists show upcoming hearing dates — the abuse case sits in the County list, the workplace case in the Federal list. Search interest shows public attention. The [state regulator's charges against G8 itself](https://www.vecra.vic.gov.au/criminal-charges-against-g8-education-limited-allegedly-putting-childs-safety-risk) and [Fair Work Ombudsman media releases](https://www.fairwork.gov.au/newsroom/media-releases) run in parallel.
 **How it predicts:** Each hearing produces headlines, headlines scare parents, and scared parents do not enquire. The court calendar is public, so you know the dates of the next news cycle before the news exists.
@@ -265,11 +265,11 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 **C3 — Network shrinkage**
 [Live centre count and enforcement tally on the public register](https://startingblocks.gov.au/large-providers/g8-education) → [G8's own network update page](https://g8education.edu.au/update-on-centre-network-operations) → [Revenue in results](https://www.asx.com.au/markets/company/gem)
 
-| Factor | Frequency | Next release |
+| Factor | Frequency | When |
 |---|---|---|
-| [Live centre count and enforcement tally on the public register](https://startingblocks.gov.au/large-providers/g8-education) | Live | Any time |
-| [G8's own network update page](https://g8education.edu.au/update-on-centre-network-operations) | As needed | No set date |
-| [Revenue in results](https://www.asx.com.au/markets/company/gem) | Half-yearly results | February 2027 |
+| [Live centre count and enforcement tally on the public register](https://startingblocks.gov.au/large-providers/g8-education) | Live | Any time, because the page is live |
+| [G8's own network update page](https://g8education.edu.au/update-on-centre-network-operations) | As needed | Only when G8 posts an update |
+| [Revenue in results](https://www.asx.com.au/markets/company/gem) | Half-yearly results | February and August, with each half-year result |
 
 **What:** The register lists every licensed G8 centre, live. The network update page is G8's own list of suspended sites. Net debt and leverage in the results show how long loss-making centres can be carried.
 **How it predicts:** A centre that leaves the register stops earning. The register moves before any ASX announcement, so you watch capacity shrink in real time. If debt headroom tightens, then more closures follow.
@@ -278,10 +278,10 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 **C4 — Price, which is a choice**
 [Fee growth cap in the grant conditions](https://www.education.gov.au/early-childhood/providers/workforce/worker-retention-payment/eligibility-and-conditions) → [G8's fee announcement](https://www.asx.com.au/markets/company/gem)
 
-| Factor | Frequency | Next release |
+| Factor | Frequency | When |
 |---|---|---|
-| [Fee growth cap in the grant conditions](https://www.education.gov.au/early-childhood/providers/workforce/worker-retention-payment/eligibility-and-conditions) | As policy changes | No set date |
-| [G8's fee announcement](https://www.asx.com.au/markets/company/gem) | Yearly | Late 2026 |
+| [Fee growth cap in the grant conditions](https://www.education.gov.au/early-childhood/providers/workforce/worker-retention-payment/eligibility-and-conditions) | As policy changes | Only when the policy changes |
+| [G8's fee announcement](https://www.asx.com.au/markets/company/gem) | Yearly | Once a year, late in the year |
 
 **What:** The cap is the fee-rise limit G8 accepted to keep the wage grant. The fee announcement is G8's yearly rise notice.
 **How it predicts:** The cap tells you the ceiling; the announcement tells you the rise chosen. Together they fix the price side of revenue for the year ahead. G8 can break the cap and hand back the grant, and that move itself would be a loud signal. When the program ends, the cap disappears.
@@ -290,9 +290,9 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 **C5 — Staffing, which reads backwards**
 [Live G8 job ads on Seek](https://www.seek.com.au/G8-Education-jobs) → is G8 staffing for recovery or for shrinkage
 
-| Factor | Frequency | Next release |
+| Factor | Frequency | When |
 |---|---|---|
-| [Live G8 job ads on Seek](https://www.seek.com.au/G8-Education-jobs) | Daily | Next day |
+| [Live G8 job ads on Seek](https://www.seek.com.au/G8-Education-jobs) | Daily | Every day |
 
 **What:** The Seek count is the number of live G8 job ads, filterable by state, updated daily.
 **How it predicts:** A company hires ahead of the demand it expects. If ads rise in a state, then G8 expects to fill rooms there; if ads dry up, it does not. Read it as management's real bet, placed with money. The annual-report staffing metrics (retention, engagement) improved while occupancy fell, so they warn you of nothing — they only show the loss is not a quality problem.
@@ -301,11 +301,11 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 **C6 — Separating GEM from the sector**
 [GEM spot occupancy](https://www.asx.com.au/markets/company/gem) minus the sector read from [children in care](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) ÷ [approved places](https://snapshots.acecqa.gov.au/Snapshot/index.html) = the GEM gap
 
-| Factor | Frequency | Next release |
+| Factor | Frequency | When |
 |---|---|---|
-| [GEM spot occupancy](https://www.asx.com.au/markets/company/gem) | Half-yearly results and AGM | February 2027 |
-| [children in care](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) | Quarterly | October 2026 |
-| [approved places](https://snapshots.acecqa.gov.au/Snapshot/index.html) | Quarterly | November 2026 |
+| [GEM spot occupancy](https://www.asx.com.au/markets/company/gem) | Half-yearly results and AGM | February and August results, plus the AGM |
+| [children in care](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) | Quarterly | Roughly January, April, July and October |
+| [approved places](https://snapshots.acecqa.gov.au/Snapshot/index.html) | Quarterly | Roughly February, May, August and November |
 
 **What:** GEM's own occupancy against the sector's implied occupancy, which you compute as children in care divided by approved places.
 **How it predicts:** If the gap widens, then the damage is G8's own — trust and brand. If it narrows, then the problem is the industry's. This is a diagnostic, not a warning: it tells you which of the chains above to weight most.
@@ -333,4 +333,4 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 5. [The quarterly CPI childcare line](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release) — the out-of-pocket squeeze.
 
 #fundamental_analysis  
-#gem 
+#gem
