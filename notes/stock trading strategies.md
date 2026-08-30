@@ -1,6 +1,6 @@
 ---
 created: 2026-08-30T12:44:40Z
-updated: 2026-08-30T12:47:28Z
+updated: 2026-08-30T12:47:54Z
 ---
 
 # Stock Trading Strategies
@@ -72,7 +72,7 @@ The key point is simple. The problem sits in the mood of the market, not in the 
 
 Speed matters. Panics are short, often days or weeks. So you prepare in calm times. You keep a ready list with a buy price for each company. When the panic comes, you follow the list.
 
-## Tips & Traps
+### Tips & Traps
 
 - **False discounts:** First ask if the scare can cut the real profit. If the profit falls, then the low P/E is false, because the price is from today and the profit is from the past. A headline passes. A recession does not.
 - **Too early:** A panic can go deeper than you expect. Do not spend all your cash on day one. Buy in steps, for example in three equal parts.
@@ -81,7 +81,7 @@ Speed matters. Panics are short, often days or weeks. So you prepare in calm tim
 - **Your own fear:** In a real panic, the fear also infects you. The written list beats your emotions. Follow it.
 - **The perfect bottom:** Nobody catches the exact bottom. A good price beats a perfect price that you never get.
 
-## Screening
+### Screening
 
 Build the quality list in calm times. Test each company on four points:
 
@@ -100,7 +100,7 @@ Watch these panic signs:
 
 Set a price alert in your broker app for each green price. The alert does the watching for you.
 
-## Miscellaneous
+### Miscellaneous
 
 - Warren Buffett is the most famous user. He bought American Express in 1963 and Bank of America in 2011, both in panics.
 - Small panics come almost every year. Big ones come about once per decade.
@@ -108,9 +108,9 @@ Set a price alert in your broker app for each green price. The alert does the wa
 - You can hold these companies for many years. Sell only if the quality breaks, or if the price becomes extreme.
 - A panic price also lifts the dividend yield. (A dividend is cash that the company pays to the shareholders.) So the company pays you while you wait.
 
-# Part 3: Cyclic Hunt
+## Cyclic Hunt
 
-## Overview
+### Overview
 
 Some industries swing with the economy in long waves. Examples are banks, house builders, carmakers, airlines, steel, chips, and oil. A cycle is that wave: some years of growth, then some years of decline, then growth again.
 
