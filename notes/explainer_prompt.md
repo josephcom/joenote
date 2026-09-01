@@ -1,7 +1,9 @@
 ---
 created: 2026-09-01T21:52:57Z
-updated: 2026-09-01T21:53:42Z
+updated: 2026-09-01T21:54:06Z
 ---
+
+#
 
 Build me an "explorable explanation" of [TOPIC] as ONE self-contained HTML file.
 
