@@ -1,6 +1,6 @@
 ---
 created: 2026-09-01T21:52:57Z
-updated: 2026-09-01T21:52:57Z
+updated: 2026-09-01T21:53:42Z
 ---
 
 Build me an "explorable explanation" of [TOPIC] as ONE self-contained HTML file.
@@ -20,3 +20,5 @@ PICTURE RULES. Use only rectangles, circles, lines, arrows, and text. Use no dec
 TECHNICAL RULES. Deliver one .html file with inline CSS and vanilla JavaScript. Use no external libraries, no network requests, no web fonts, and no localStorage. Give the SVG width 100% and a locked CSS aspect-ratio, readable at a 380 pixel phone width. Support light and dark themes with CSS variables on :root, a prefers-color-scheme media query, and an explicit body background. Respect prefers-reduced-motion. Structure the code as a scenes array of {stage, view, highlight, title, text, run}, with helper functions fly, flash, loop, and after, and with a generation counter that cancels every timer, animation frame, and temporary node on each step change, so steps never leak into each other. Build large dot clouds once and keep them.
 
 BEFORE YOU DELIVER, CHECK ALL OF THIS: every sentence, including every SVG label, has a verb or is a permitted name tag; every term is defined before its first use; every claim comes with its reason; the dimming and the zooming point at exactly what the text discusses; every animation loops and stops cleanly on step change; and the page works in light mode, in dark mode, and at phone width.
+
+#prompt
