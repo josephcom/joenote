@@ -1,6 +1,6 @@
 ---
 created: 2026-09-03T20:49:53Z
-updated: 2026-09-03T20:59:00Z
+updated: 2026-09-03T20:59:11Z
 ---
 
 # Cash & Debt Ratios
@@ -83,7 +83,7 @@ Look at what happened. Sales fell by 20%. EBITDA fell by 80%. Net debt to EBITDA
 
 Bolt broke the covenant. The bank can now demand all 600 back at once. A poor sales year turned into a survival event, and it did so in twelve months.
 
-**The lesson:** the ratio today is not the point. The point is ==how far the ratio moves in a bad year==. If a company has high fixed costs, then a small sales fall causes a huge ratio jump.
+**The lesson:** the ratio today is not the point. The point is ==how far the ratio moves in a bad year==. If a company has ==high fixed costs==, then a small sales fall causes a huge ratio jump.
 
 ## 4. Group B: can the company actually pay?
 
