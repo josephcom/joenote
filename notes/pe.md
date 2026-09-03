@@ -1,6 +1,6 @@
 ---
 created: 2026-08-14T22:35:36Z
-updated: 2026-08-15T23:33:48Z
+updated: 2026-09-03T11:11:10Z
 ---
 
 # PE
@@ -35,5 +35,5 @@ Beginners look at a price that fell from $15 to $5 and feel that $15 is the "rea
 
 Buybacks are the reverse. The company buys its own shares from the market and destroys them. The same profit now divides across fewer shares, so each share earns more. The crowd often reads it as a signal too: management believes the shares are cheap, and confidence lifts the multiple.
 
-#fundamental_analysis
+#stock_market
 
