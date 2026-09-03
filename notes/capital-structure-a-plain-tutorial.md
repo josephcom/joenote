@@ -1,6 +1,6 @@
 ---
 created: 2026-09-03T11:46:33Z
-updated: 2026-09-03T11:47:14Z
+updated: 2026-09-03T11:47:32Z
 ---
 
 # Capital Structure: A Plain Tutorial
@@ -23,8 +23,6 @@ This gives you the one equation that everything else sits on:
 That is the whole idea. Everything below is detail on top of it.
 
 ## 2. The funding menu is longer than two items
-
-You named a bank loan and new shares. Here is the fuller list. It helps to sort it by the two buckets above.
 
 **Debt (you must pay it back):**
 
