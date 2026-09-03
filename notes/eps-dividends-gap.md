@@ -1,6 +1,6 @@
 ---
 created: 2026-09-03T21:48:18Z
-updated: 2026-09-03T21:49:09Z
+updated: 2026-09-03T21:49:22Z
 ---
 
 # EPS-Dividends Gap
@@ -33,7 +33,7 @@ The contract decides. There are three common shapes:
 
 A bullet loan creates refinancing risk. If Bolt cannot borrow again on the due date, then Bolt must find 600 in cash at once.
 
-## 4. So EPS is not spendable money
+## 4. EPS is not spendable money
 
 Say Bolt earns a net profit of 200, and Bolt has 100 shares. The EPS is 2.
 
