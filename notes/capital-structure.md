@@ -1,6 +1,6 @@
 ---
 created: 2026-09-03T11:46:33Z
-updated: 2026-09-03T11:49:46Z
+updated: 2026-09-03T11:50:36Z
 ---
 
 # Capital Structure
@@ -78,7 +78,7 @@ Now make it worse. The profit falls to 2.
 - With no debt: the owners earn 2%. The company survives.
 - With 50 debt: interest is 3 and profit is 2. The company cannot pay. The bank can seize assets or force a sale.
 
-This is the key point of the whole tutorial. **Debt does not change the average outcome. It widens the range of outcomes.** The good years get better and the bad years get fatal. A loan creates a *fixed cost* and, as a result, makes the company more *leveraged*.
+This is the key point of the whole tutorial. **Debt does not change the average outcome. It widens the range of outcomes.** The good years get better and the bad years get fatal. ==A loan creates a *fixed cost* and, as a result, makes the company more *leveraged*.==
 
 ## 5. So how much debt is too much?
 
