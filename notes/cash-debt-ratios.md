@@ -1,6 +1,6 @@
 ---
 created: 2026-09-03T20:49:53Z
-updated: 2026-09-03T20:59:11Z
+updated: 2026-09-03T20:59:43Z
 ---
 
 # Cash & Debt Ratios
@@ -67,7 +67,7 @@ That 50 is ==the only money that Bolt can use to repay debt, to pay a dividend, 
 
 **Debt to equity** = 600 ÷ 400 = **1.5**. Lenders funded more than the owners did.
 
-**Net debt to EBITDA** = 500 ÷ 200 = **2.5**. This says that 2.5 years of cash profit would clear the debt. It is the number the ==market quotes most==.
+**==Net debt to EBITDA==** = 500 ÷ 200 = **2.5**. This says that 2.5 years of cash profit would clear the debt. It is the number the ==market quotes most==.
 
 ### What happens if you ignore it
 
