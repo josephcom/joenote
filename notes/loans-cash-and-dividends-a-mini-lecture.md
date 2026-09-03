@@ -1,9 +1,9 @@
 ---
 created: 2026-09-03T21:48:18Z
-updated: 2026-09-03T21:48:38Z
+updated: 2026-09-03T21:49:09Z
 ---
 
-# # Loans, Cash and Dividends: A Mini-Lecture
+# EPS-Dividends Gap
 
 ## 1. A loan has two parts
 
