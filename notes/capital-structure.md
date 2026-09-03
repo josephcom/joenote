@@ -1,6 +1,6 @@
 ---
 created: 2026-09-03T11:46:33Z
-updated: 2026-09-03T11:55:02Z
+updated: 2026-09-03T11:56:34Z
 ---
 
 # Capital Structure
@@ -88,7 +88,7 @@ There is no single number. The honest answer is a rule, not a number.
 
 Not its best year. Not its average year. Its bad year. So the safe level of debt depends on how steady the cash flow is.
 
-Two companies with the same profit can have very different safe limits:
+==Two companies== with the same profit can have very different safe limits:
 
 - A water utility sells water. Demand does not fall in a recession. Its cash flow next year looks like this year. It can carry a lot of debt.
 - A steel maker sells into a cycle. Its profit can fall by 80% in two years. It must carry much less debt.
