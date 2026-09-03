@@ -1,6 +1,6 @@
 ---
 created: 2026-09-03T11:46:33Z
-updated: 2026-09-03T11:53:27Z
+updated: 2026-09-03T11:53:45Z
 ---
 
 # Capital Structure
@@ -53,7 +53,7 @@ There are three reasons, and they build on each other.
 
 **Reason one: debt is cheaper than equity.** A lender takes less risk than an owner. The lender gets paid first, and often holds security over an asset. Less risk means the lender accepts a lower return. An owner takes all the leftover risk, so an owner demands more.
 
-**Reason two: the tax shield.** A company pays interest before it pays tax. So interest cuts the tax bill. Dividends do not. If a company pays 100 in interest and the tax rate is 25, then the real cost is only 75. Governments quietly subsidise borrowing.
+**Reason two: ==the tax shield.==** ==A company pays interest before it pays tax. So interest cuts the tax bill.== Dividends do not. If a company pays 100 in interest and the tax rate is 25, then the real cost is only 75. Governments quietly subsidise borrowing.
 
 **Reason three: debt does not dilute the owners.** If you issue new shares, then the existing owners hold a smaller slice. If you borrow, then they keep their full slice.
 
