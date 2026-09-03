@@ -1,6 +1,6 @@
 ---
 created: 2026-09-03T20:49:53Z
-updated: 2026-09-03T21:52:36Z
+updated: 2026-09-03T21:53:45Z
 ---
 
 # Cash & Debt Ratios
@@ -161,7 +161,7 @@ The three groups above ask whether the company survives. ==This group asks wheth
 - Invested capital = 600 debt + 400 equity = 1,000
 - ROIC = 100 ÷ 1,000 = **10%**
 
-ROIC is 10% and WACC is 10%. Bolt earns exactly what its money costs. It creates no value at all.
+==ROIC is 10% and WACC is 10%. Bolt earns exactly what its money costs. It creates no value at all.==
 
 ### What happens if you ignore it
 
