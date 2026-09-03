@@ -1,6 +1,6 @@
 ---
 created: 2026-09-03T11:46:33Z
-updated: 2026-09-03T11:53:45Z
+updated: 2026-09-03T11:55:02Z
 ---
 
 # Capital Structure
@@ -84,7 +84,7 @@ This is the key point of the whole tutorial. **Debt does not change the average 
 
 There is no single number. The honest answer is a rule, not a number.
 
-**A company can carry as much debt as its worst likely year can service.**
+**A company can carry as much debt as its ==worst likely year== can service.**
 
 Not its best year. Not its average year. Its bad year. So the safe level of debt depends on how steady the cash flow is.
 
