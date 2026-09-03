@@ -1,6 +1,6 @@
 ---
 created: 2026-08-23T08:36:36Z
-updated: 2026-08-23T10:30:26Z
+updated: 2026-09-03T11:11:10Z
 ---
 
 # Operating Leverage
@@ -30,5 +30,5 @@ The following shows ASX:GEM figures:
 | FY24 | $1,021.8m | $212.0m | $115.0m | **2.8×** | $662.4m |
 | FY25 | $948.2m | $210.1m | $93.3m | **3.3×** | $656.6m |
 
-#fundamental_analysis
+#stock_market
 
