@@ -1,11 +1,9 @@
 ---
 created: 2026-09-03T20:49:53Z
-updated: 2026-09-03T20:50:37Z
+updated: 2026-09-03T20:50:52Z
 ---
 
 # Cash & Debt Ratios
-# The Ratios, Learned Through One Bakery
-
 ## 1. Meet the company
 
 We use one company for the whole tutorial. It is **Bolt Bakery**. It bakes bread and sells it to supermarkets. All the numbers are in thousands, and they are round on purpose.
