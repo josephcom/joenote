@@ -1,6 +1,6 @@
 ---
 created: 2026-09-03T20:49:53Z
-updated: 2026-09-03T21:52:03Z
+updated: 2026-09-03T21:52:36Z
 ---
 
 # Cash & Debt Ratios
@@ -150,7 +150,7 @@ The three groups above ask whether the company survives. ==This group asks wheth
 
 **WACC** is the weighted average cost of capital. It is the blended price of all the money in the business.
 
-- Debt costs 10%. Interest cuts the tax bill, so the real cost is about 7% after tax.
+- Debt costs 10%. ==Interest cuts the tax bill, so the real cost is about 7% after tax.==
 - Equity costs about 15%. Owners take more risk, so they demand more.
 - Debt is 60% of the funding. Equity is 40%.
 - WACC = (0.6 × 7%) + (0.4 × 15%) = 4.2% + 6.0% = **about 10%**
