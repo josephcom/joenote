@@ -1,12 +1,12 @@
 ---
 created: 2026-09-03T11:59:02Z
-updated: 2026-09-03T11:59:28Z
+updated: 2026-09-03T12:00:01Z
 ---
 
 # Tutorial 
 
 Tutorial: **Capital Structure**
-Style: layman casual tone, ASD-STE100 style, between 2000 to 3000 words, build from foundation up and develop each building block on top of the previous ones
+Style: layman casual tone, ASD-STE100 style, between 2000 to 3000 words, build from foundation up and develop each building block on top of the previous ones, use toy examples with round numbers
 
-#inbox
+#prompt
 
