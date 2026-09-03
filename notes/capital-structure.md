@@ -1,6 +1,6 @@
 ---
 created: 2026-09-03T11:46:33Z
-updated: 2026-09-03T11:57:26Z
+updated: 2026-09-03T12:02:05Z
 ---
 
 # Capital Structure
@@ -113,7 +113,7 @@ These are the warning signs. Any one of them deserves attention. Two or more tog
 1. **The company borrows to pay interest on old debt.** This is the clearest danger sign there is.
 2. **The company borrows to pay a dividend or to buy back its own shares.** It is moving money from lenders to owners, and it is not building anything.
 3. **The maturities do not match.** The company funds a long term asset with short term loans. It must refinance often, and it can fail at the worst moment.
-4. **Debt grows faster than earnings.** Track debt and EBITDA for five years. If the ratio climbs every year, then the trend matters more than the level.
+4. **Debt grows faster than earnings.** ==Track debt and EBITDA for five years. If the ratio climbs== every year, then the trend matters more than the level.
 5. **A large amount of debt matures in one single year.** People call this a maturity wall. The company must refinance in whatever market exists on that date.
 6. **The debt is at a floating rate in a rising rate world.** The interest cost can double while sales stay flat.
 7. **The debt is in a foreign currency and the income is not.** A fall in the local currency raises the debt without raising the income.
