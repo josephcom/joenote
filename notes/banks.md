@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T09:03:54Z
-updated: 2026-08-22T21:28:22Z
+updated: 2026-09-03T11:11:10Z
 ---
 
 # Banks
@@ -21,5 +21,5 @@ when banks want to lend money, they analyse their customers' financials to see h
 
 When they are caught red handed, large investors (and people too) naturally run for the exit because fund managers just want to save their position and face; they don't really care too much about whether or not the accusation is real.
 
-#fundamental_analysis
+#stock_market
 
