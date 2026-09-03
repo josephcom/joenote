@@ -1,6 +1,6 @@
 ---
 created: 2026-09-03T11:46:33Z
-updated: 2026-09-03T11:52:59Z
+updated: 2026-09-03T11:53:27Z
 ---
 
 # Capital Structure
