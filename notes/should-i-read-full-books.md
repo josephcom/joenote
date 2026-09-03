@@ -1,6 +1,6 @@
 ---
 created: 2026-08-21T21:43:00Z
-updated: 2026-08-24T08:57:33Z
+updated: 2026-09-03T11:10:38Z
 ---
 
 # Should I read full books? 
@@ -8,6 +8,6 @@ updated: 2026-08-24T08:57:33Z
 ## Unknown unknowns 
 You can't give a book to AI and ask questions without missing ***invaluable*** unknown unknowns. Unknown unknowns are *gaps* in your knowledge. Filling them *permanently* improves your judgements.
 
-#personal_development  
+#stock_market  
 #reading
 
