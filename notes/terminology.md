@@ -1,6 +1,6 @@
 ---
 created: 2026-08-30T05:34:32Z
-updated: 2026-08-30T05:37:49Z
+updated: 2026-09-03T11:11:10Z
 ---
 
 # Terminology
@@ -14,5 +14,5 @@ updated: 2026-08-30T05:37:49Z
 
 **real wages** — Pay rises minus inflation. Negative means pay went up but prices went up more, so households can buy less than a year ago.
 
-#fundamental_analysis
+#stock_market
 
