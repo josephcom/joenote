@@ -1,6 +1,6 @@
 ---
 created: 2026-09-03T20:49:53Z
-updated: 2026-09-03T21:11:42Z
+updated: 2026-09-03T21:52:03Z
 ---
 
 # Cash & Debt Ratios
@@ -146,7 +146,7 @@ Bolt still holds 1,000 of assets on paper. It still cannot pay 200 next month. Y
 
 ## 6. Group D: does the debt create any value?
 
-The three groups above ask whether the company survives. This group asks whether the company is worth owning.
+The three groups above ask whether the company survives. ==This group asks whether the company is worth owning.==
 
 **WACC** is the weighted average cost of capital. It is the blended price of all the money in the business.
 
