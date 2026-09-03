@@ -1,6 +1,6 @@
 ---
 created: 2026-09-03T11:46:33Z
-updated: 2026-09-03T13:17:23Z
+updated: 2026-09-03T13:17:30Z
 ---
 
 # Capital Structure
@@ -155,7 +155,7 @@ Sort them into four groups. Each group answers a different question.
 
 - **Debt to equity** = total debt divided by shareholders' equity. It is the classic measure. It is easy to distort, because equity is an accounting number and can be small or even negative after buybacks.
 - **Net debt** = total debt minus cash. Cash can repay debt, so subtract it.
-- **Net debt to EBITDA** is the ==most used measure in the market==. EBITDA is a rough proxy for cash profit before interest, tax and the accounting charges for wear and tear. The ratio answers a simple question: how many years of cash profit would it take to repay the debt? Below 2 is comfortable for most industries. Above 4 needs a good reason. ==Above 6 is high risk== outside of utilities and property.
+- **Net debt to EBITDA** is the ==most used measure in the market==. EBITDA is a rough proxy for cash profit before interest, tax and the accounting charges for wear and tear. The ratio answers a simple question: how many years of cash profit would it take to repay the debt? Below 2 is comfortable for most industries. Above 4 needs a good reason. Above 6 is high risk outside of utilities and property.
 - **Debt to total assets** shows the share of the company that lenders funded.
 
 ### Group B: can the company pay?
