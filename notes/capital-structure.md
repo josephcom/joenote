@@ -1,6 +1,6 @@
 ---
 created: 2026-09-03T11:46:33Z
-updated: 2026-09-03T13:15:16Z
+updated: 2026-09-03T13:16:01Z
 ---
 
 # Capital Structure
@@ -139,7 +139,7 @@ No. It depends on who is issuing and why.
 
 There is a useful idea here called **==signalling==**. Managers know more about their company than you do. They tend to issue shares when they think the shares are expensive, and they tend to borrow when they think the shares are cheap. So the market often marks the price down on the news of a share issue. That reaction is a suspicion, and not a verdict.
 
-This leads to the **pecking order**. Most managers fund a company in this order:
+This leads to the **==pecking order==**. Most managers fund a company in this order:
 
 1. Retained profit first, because it is easy and it signals nothing.
 2. Debt second, because it is cheap and it does not dilute owners.
