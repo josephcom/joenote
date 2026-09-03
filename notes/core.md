@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:01:52Z
-updated: 2026-08-24T08:48:50Z
+updated: 2026-09-03T11:06:16Z
 ---
 # Core
 
@@ -112,5 +112,4 @@ Immediately something came to my mind (we call this **guess**), then I went into
 ### Is the following correct?
 * I use the word *information* all the time, yet, when asked to define it, I have no idea what it is. It opposes idea->word or word-> idea dilemma, there is no idea! In this case I have no idea what information is. I just *use it in the same context and form I heard and I am hearing it*. The pattern is formed in my brain but *backed by no idea*. 
 
-#mind  
-#god_of_intelligence
+#philosophy
