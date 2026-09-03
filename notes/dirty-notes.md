@@ -1,6 +1,6 @@
 ---
 created: 2026-08-19T11:05:55Z
-updated: 2026-09-03T11:11:53Z
+updated: 2026-09-03T11:12:17Z
 ---
 
 # Dirty Notes
@@ -23,6 +23,6 @@ Two types of questions:
 1. Explanation, *what the hell?*, surprise: wrong prediction of too big of error
 2. Missing piece of information (where, when, who, yes or no?)
 
-#mind
+#philosophy
 #philosophy
 
