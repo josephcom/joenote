@@ -1,6 +1,6 @@
 ---
 created: 2026-09-03T20:49:53Z
-updated: 2026-09-03T20:58:15Z
+updated: 2026-09-03T20:58:29Z
 ---
 
 # Cash & Debt Ratios
@@ -53,7 +53,7 @@ Profit is an opinion. Cash is a fact. Here is the difference in Bolt's own numbe
 
 But Bolt cannot stop there. Ovens wear out. Vans die. Bolt must spend 60 this year to replace them and to add a little capacity. We call this spending **capital expenditure**, or **capex**.
 
-**Free cash flow** is the cash that is truly free after all of that:
+**==Free cash flow==** is the cash that is truly free after all of that:
 
 - Operating cash flow: 110
 - Capex: −60
