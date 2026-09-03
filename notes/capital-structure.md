@@ -1,6 +1,6 @@
 ---
 created: 2026-09-03T11:46:33Z
-updated: 2026-09-03T11:57:00Z
+updated: 2026-09-03T11:57:26Z
 ---
 
 # Capital Structure
@@ -93,7 +93,7 @@ Not its best year. Not its average year. Its bad year. So the safe level of debt
 - A water utility sells water. Demand does not fall in a recession. Its cash flow next year looks like this year. It can carry a lot of debt.
 - A steel maker sells into a cycle. Its profit can fall by 80% in two years. It must carry much less debt.
 
-The academic view says the same thing. Debt gives a tax benefit, and that benefit grows with more debt. Debt also raises the chance of financial distress, and that cost grows faster with more debt. The best level sits where the two effects balance. In practice, nobody can measure that point exactly, so managers use industry norms and the opinion of the rating agencies.
+The academic view says the same thing. Debt gives a tax benefit, and that benefit grows with more debt. Debt also raises the chance of financial distress, and that cost grows faster with more debt. The best level sits where the two effects balance. In practice, ==nobody can measure== that point exactly, so ==managers use industry norms== and the opinion of the rating agencies.
 
 ## 6. When borrowing is a good idea
 
