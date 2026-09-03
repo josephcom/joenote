@@ -1,6 +1,6 @@
 ---
 created: 2026-08-24T13:11:58Z
-updated: 2026-08-30T01:39:37Z
+updated: 2026-09-03T11:11:10Z
 ---
 
 # Leading Indicators (GEM)
@@ -332,5 +332,5 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 4. [The regulator snapshot](https://snapshots.acecqa.gov.au/Snapshot/index.html) — supply, waivers, compliance.
 5. [The quarterly CPI childcare line](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release) — the out-of-pocket squeeze.
 
-#fundamental_analysis  
+#stock_market  
 #gem 
