@@ -1,9 +1,9 @@
 ---
 created: 2026-09-03T11:46:33Z
-updated: 2026-09-03T11:47:32Z
+updated: 2026-09-03T11:47:54Z
 ---
 
-# Capital Structure: A Plain Tutorial
+# Capital Structure
 
 ## 1. The foundation: every company runs on other people's money
 
