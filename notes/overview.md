@@ -1,6 +1,6 @@
 ---
 created: 2026-08-23T10:31:32Z
-updated: 2026-08-30T01:39:57Z
+updated: 2026-09-03T11:11:10Z
 ---
 
 # Overview
@@ -64,4 +64,4 @@ Sector = centre-based day care services approved for CCS, at March each year. Co
 * MFD has more centres — 45 versus 39 — and more places. The gap isn't about size. It's about occupancy and debt. Occupancy is the whole story. EVO runs at ~80%. MFD ran at 54% in FY25. Break-even in this sector sits between 50% and 85%. EVO is comfortably above it; MFD is scraping the bottom of it. Also, MFD's break-even revenue was $95M vs $91.4M of actual revenue; that's loss. So, it's been borrowing only to pay the wages etc. Finally, MFD has *Going-concern warning* in thir accounting records. That means the auditors aren't sure MDF can make it to the end of the year! Not certain, but just a warning. 
 
 #gem
-#fundamental_analysis
+#stock_market
