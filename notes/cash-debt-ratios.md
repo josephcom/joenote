@@ -1,6 +1,6 @@
 ---
 created: 2026-09-03T20:49:53Z
-updated: 2026-09-03T20:58:42Z
+updated: 2026-09-03T20:59:00Z
 ---
 
 # Cash & Debt Ratios
@@ -71,7 +71,7 @@ That 50 is ==the only money that Bolt can use to repay debt, to pay a dividend, 
 
 ### What happens if you ignore it
 
-Bolt's bank agreed a **covenant**. A covenant is a promise inside the loan contract. Bolt ==promised that net debt to EBITDA will stay below 3.5==. Today it is 2.5, so there is room.
+Bolt's bank agreed a **==covenant==**. A covenant is a promise inside the loan contract. Bolt ==promised that net debt to EBITDA will stay below 3.5==. Today it is 2.5, so there is room.
 
 Now a supermarket drops Bolt and sales fall by 20%, from 1,000 to 800.
 
