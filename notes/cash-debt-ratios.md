@@ -1,6 +1,6 @@
 ---
 created: 2026-09-03T20:49:53Z
-updated: 2026-09-03T21:11:32Z
+updated: 2026-09-03T21:11:42Z
 ---
 
 # Cash & Debt Ratios
@@ -95,7 +95,7 @@ This means Bolt earns 2.5 times its interest bill. Above 5 is comfortable. Bolt 
 
 In the bad year, EBIT = 40 − 50 = **−10**. Interest cover is now negative. Bolt must pay 60 of interest out of a loss.
 
-**Debt service cover** goes one step further. Interest is not the only payment. Bolt must also repay 100 of loan principal this year. **NOTE** that this $100 didn't appear under the income statement. Repaying principal is not a cost. It only shrinks the loan. So it never appears on the income statement, only in cash flow statement.
+**Debt service cover** goes one step further. Interest is not the only payment. Bolt must also repay 100 of loan principal this year. **NOTE** that this $100 didn't appear under the income statement. Repaying principal is not a cost. It only shrinks the loan. So it never appears on the income statement, only in *cash flow* statement.
 
 - Cash available before financing = EBITDA 200 − tax 30 = 170
 - Total owed this year = interest 60 + repayment 100 = 160
