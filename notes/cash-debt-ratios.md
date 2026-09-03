@@ -1,6 +1,6 @@
 ---
 created: 2026-09-03T20:49:53Z
-updated: 2026-09-03T20:50:52Z
+updated: 2026-09-03T20:51:44Z
 ---
 
 # Cash & Debt Ratios
@@ -59,7 +59,7 @@ But Bolt cannot stop there. Ovens wear out. Vans die. Bolt must spend 60 this ye
 - Capex: −60
 - **Free cash flow: 50**
 
-That 50 is the only money that Bolt can use to repay debt, to pay a dividend, or to buy back shares. Hold on to that number. It is much smaller than the EBITDA of 200, and that gap causes most of the mistakes below.
+That 50 is ==the only money that Bolt can use to repay debt, to pay a dividend, or to buy back shares.== Hold on to that number. It is much smaller than the EBITDA of 200, and that gap causes most of the mistakes below.
 
 ## 3. Group A: how much debt is there?
 
