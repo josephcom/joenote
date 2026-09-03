@@ -1,6 +1,6 @@
 ---
 created: 2026-09-03T11:46:33Z
-updated: 2026-09-03T12:02:29Z
+updated: 2026-09-03T13:15:16Z
 ---
 
 # Capital Structure
@@ -137,7 +137,7 @@ No. It depends on who is issuing and why.
 - The shares are sold at a deep discount to the market price.
 - The share count grows every year, but the profit does not. Each old owner then holds less of the same pie.
 
-There is a useful idea here called **signalling**. Managers know more about their company than you do. They tend to issue shares when they think the shares are expensive, and they tend to borrow when they think the shares are cheap. So the market often marks the price down on the news of a share issue. That reaction is a suspicion, and not a verdict.
+There is a useful idea here called **==signalling==**. Managers know more about their company than you do. They tend to issue shares when they think the shares are expensive, and they tend to borrow when they think the shares are cheap. So the market often marks the price down on the news of a share issue. That reaction is a suspicion, and not a verdict.
 
 This leads to the **pecking order**. Most managers fund a company in this order:
 
