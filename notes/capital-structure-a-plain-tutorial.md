@@ -1,6 +1,6 @@
 ---
 created: 2026-09-03T11:46:33Z
-updated: 2026-09-03T11:46:55Z
+updated: 2026-09-03T11:47:14Z
 ---
 
 # Capital Structure: A Plain Tutorial
@@ -230,10 +230,6 @@ The practical rule is short. Compare a company with its own industry, and with i
 7. Read the covenant terms and measure the headroom.
 
 If the trend is stable, the cover is wide and the returns beat the cost of capital, then the debt is a tool. If the trend is worse each year and the cover is thin, then the debt is a countdown.
-
----
-
-*This tutorial explains general concepts for education. It is not financial advice. I am not a financial adviser. Please check any specific decision with a qualified professional.*
 
 #stock_market
 
