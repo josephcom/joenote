@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T00:00:00Z
-updated: 2026-09-04T22:59:41Z
+updated: 2026-09-04T23:00:03Z
 ---
 
 # Overview
@@ -49,7 +49,7 @@ Two things move this demand that are easy to miss:
 **Supply is not the three co-owners.** It has three layers, and only the first is closed:
 
 1. **Inside IELTS**, the three owners split the world by territory. IDP delivers in about 60 countries, including all of India. The British Council has most of the rest. That split moves: ==IDP bought the British Council's India== business in 2021 for **£130m**, and entered China in December 2024. So ==IDP's share of IELTS is not fixed== at a third of anything.
-2. **Between tests**, supply is every test a government accepts. Australia went from five accepted tests to **nine** on 7 August 2025. A government adds supply by decree, and IELTS loses share at flat volume. Duolingo is a fifth of the price and sits on **none** of the Australian, Canadian or UK lists, so the low price buys it nothing here.
+2. **Between tests**, supply is every test a government accepts. ==Australia went from five accepted tests to **nine**== on 7 August 2025. A government adds supply by decree, and IELTS loses share at flat volume. Duolingo is a fifth of the price and sits on **none** of the Australian, Canadian or UK lists, so the low price buys it nothing here.
 3. **Physical seats** are not a limit and never have been. IDP cut its venues by about 60% in FY26 and still met all demand.
 
 **One supply event could take out a large part of this line.** The UK Home Office is buying a **single supplier** for its visa English test, worth about £1.13bn. The British Council delivers close to **90%** of the world's UK-visa tests through the IELTS consortium, and the present contract is estimated to end **19 April 2027**. If the consortium loses it, a known block of IELTS volume goes on a known date.
