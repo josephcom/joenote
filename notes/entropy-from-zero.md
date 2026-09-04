@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T04:55:35Z
-updated: 2026-09-04T05:34:55Z
+updated: 2026-09-04T05:35:03Z
 ---
 
 ---
@@ -81,7 +81,7 @@ Step 3 annoyed everybody. No engine skips it. Some heat always escapes into the 
 > The engine dumps 600 joules into the cold tank.
 > ```
 >
-> The energy balances, because 800 equals 200 plus 600.
+> The energy balances, because 800 equals 200 plus 600. By the way, 
 
 The energy balances, and it always does. But that balance does not tell you how big step 3 must be. Energy is perfectly happy with 800 joules in, 800 joules of work, and nothing dumped at all. Real engines never manage that. So something other than energy sets the size of the dumped heat.
 
