@@ -1,6 +1,6 @@
 ---
 created: 2026-08-30T12:44:40Z
-updated: 2026-09-04T10:45:53Z
+updated: 2026-09-04T12:56:55Z
 ---
 
 # Stock Trading Strategies
@@ -23,20 +23,19 @@ The steps are:
 2. Read the news and the reports, and find the exact cause of the fall.
 3. Decide if the cause is temporary or permanent.
 4. Check the cash and the debt. The company must survive two years without new money.
-5. Write the plan: the cause, the signs you wait for, the price for each step, and the rule that makes you sell.
+5. Write the plan: the cause, the signs you wait for, the price and size for each step, the rule that makes you sell at a loss, and the exit for a win.
 6. Buy step one when the bad news is fully out. See "Exhaustion signs".
 7. Buy step two when the company changes from the inside. See "Leading signs".
 8. Buy step three when the numbers confirm the repair. See "Confirmation signs".
 
-Each step is one third of the planned bet. Never buy a full bet in one step.
+Step one is the smallest and step three is the biggest, for example 20, 30 and 50 percent of the planned bet. Step one fails most often, so it must be small. Never buy a full bet in one step.
 
 ### Exhaustion signs
 
 Exhaustion means that the sellers are done. These are public events. If you see two or more together, then you are in the zone for step one:
 
-- The company writes off assets, cuts the dividend, and resets the profit guidance to a wide range. This is the "kitchen sink". All the bad news comes out at once.
+- The company writes off assets, cuts the dividend, and resets the profit guidance to a wide range. This is the "kitchen sink". All the bad news comes out at once. But a new CEO often does the kitchen sink first and raises capital weeks later. If the company has debt, then the kitchen sink is a warning of a raise, not a buy sign. Wait for the raise.
 - The company completes a capital raise at a low price. The dilution is then over, and the fear of dilution is gone. The raise price often marks the bottom zone.
-- The last broker cuts the stock to Sell. When nobody is left to downgrade, nobody is left to sell.
 - Short sellers start to close. The short position falls from its peak. (A short seller borrows shares and sells them. They must buy them back later. That buying lifts the price.)
 - Tax-loss selling ends. The Australian tax year ends on 30 June. Beaten stocks often make their low in late June and bounce in July.
 - A new piece of bad news no longer makes a new low.
@@ -68,22 +67,25 @@ This is hindsight. It shows the order of the signs, not a promise.
 - February: the company cuts guidance, appoints a new CEO, and the lenders relax a covenant. (Leading sign.)
 - March: the company raises $200 million at $0.60 per share. The new CEO buys 500,000 shares at $0.76. (Exhaustion sign and leading sign.)
 - May: the company flags big write-offs. The price makes its low at $0.36. Big funds add through May, June and July. (Exhaustion sign and leading sign.)
-- July and August: the last brokers rate the stock Sell. (Exhaustion sign.)
+- July and August: the last brokers rate the stock Sell. This comes months after the low. Broker ratings lag, so they are not a sign.
 - 27 August: the results confirm the repair. The price rises 20 percent in one day and about 50 percent in one week, to about $0.70. (Confirmation sign.)
 
 The old rule bought at $0.55 to $0.70 after the results. The new rule buys step one and step two between $0.36 and $0.60, and step three after the results.
 
 ### Tips & Traps
 
-- **Value trap:** A value trap is a stock that looks cheap but stays cheap forever, because the problem is permanent. Ask one test question: do people still need the product? If the answer is no, then reject the company.
+- **Value trap:** A value trap is a stock that looks cheap but stays cheap forever, because the problem is permanent. Ask one test question: can the company win back its customers and its old margin? If a rival took the customers, then they rarely come back. People still need clothes, yet many retailers stay cheap forever. If the answer is no, then reject the company.
+- **Repeated one-offs:** A one-off cost is a cost that the company says will not come back. If a company reports one-off costs twice, then the problem is permanent. Reject it.
 - **Debt:** Debt is the main killer. A company with heavy debt can die before the repair ends. Check when the debt is due. If big payments come soon, then the risk is high. A lender reset turns this trap into a leading sign.
-- **Dilution:** Dilution means the company sells many new shares at a low price to survive. Your piece of the company then shrinks. If a raise is likely, then wait for it. Buy after the raise, never before it.
+- **Dilution:** Dilution means the company sells many new shares at a low price to survive. Your piece of the company then shrinks. If a raise is likely, then wait for it. Buy after the raise, never before it. The one exception is the tiny parcel in "Share purchase plan" below. After a raise, think in market value, not share price. (Market value is the share price multiplied by the number of shares.) If the share count doubles, then the old high is gone forever. Set every target in market value.
+- **Share purchase plan:** On the ASX, a raise often comes with a share purchase plan for existing holders. Each holder can buy up to $30,000 of new shares at the raise price, or lower. A tiny parcel bought before the raise gives you that access. Keep the parcel tiny, because the price can still fall before the raise.
 - **Early is wrong for a while:** A leading sign does not stop the fall at once. Bapcor's CEO bought at $0.76 in March. The low was $0.36 in May. So step one and step two must be small, and you must accept a paper loss for months. If a paper loss makes you sell, then this strategy is not for you.
 - **Adding to a loser:** Add only when a new sign appears. Never add only because the price fell.
 - **Broken reason:** If your original reason breaks, then sell all steps. Do not wait for the next sign.
 - **Strange numbers:** If the accounts look strange, then reject the company. If the auditor resigns, then also reject it. (The auditor is the outside firm that checks the accounts.)
 - **Position size:** Keep each bet small. Many of these companies fail. Make many small bets, so one failure cannot hurt you badly.
 - **Time stop:** If no new sign appears within twelve months after step one, then sell step one. Your read was wrong.
+- **Exit for a win:** The plan needs a sell rule for a win, not only for a loss. Write it before you buy. A good exit is a market value based on a normal year of profit, not the old share price. If the price reaches the exit, then sell.
 
 ### Screening
 
@@ -100,11 +102,10 @@ Then watch these sources every week. They show the signs months before the resul
 - Director trade notices (Appendix 3Y). The ASX publishes them within five business days.
 - ASIC short position reports. ASIC publishes them daily, four days late. They show when the shorts start to close.
 - Capital raise and trading halt announcements. A completed raise at a low price is a screen in itself.
-- Broker downgrades. Count them. The last downgrade is your friend.
 - Lists of stocks at 52-week lows, especially in late June.
 - Bad news itself. Profit warnings, scandals, recalls, and lawsuits all create candidates.
 
-For each candidate, write five things on the watch list: the cause of the fall, the exhaustion signs you see, the leading sign you wait for, the price for each step, and the rule that makes you sell.
+For each candidate, write six things on the watch list: the cause of the fall, the exhaustion signs you see, the leading sign you wait for, the price and size for each step, the rule that makes you sell at a loss, and the exit for a win.
 
 ### Miscellaneous
 
