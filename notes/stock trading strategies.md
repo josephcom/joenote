@@ -1,6 +1,6 @@
 ---
 created: 2026-08-30T12:44:40Z
-updated: 2026-09-04T12:56:55Z
+updated: 2026-09-04T12:58:20Z
 ---
 
 # Stock Trading Strategies
@@ -78,7 +78,7 @@ The old rule bought at $0.55 to $0.70 after the results. The new rule buys step 
 - **Repeated one-offs:** A one-off cost is a cost that the company says will not come back. If a company reports one-off costs twice, then the problem is permanent. Reject it.
 - **Debt:** Debt is the main killer. A company with heavy debt can die before the repair ends. Check when the debt is due. If big payments come soon, then the risk is high. A lender reset turns this trap into a leading sign.
 - **Dilution:** Dilution means the company sells many new shares at a low price to survive. Your piece of the company then shrinks. If a raise is likely, then wait for it. Buy after the raise, never before it. The one exception is the tiny parcel in "Share purchase plan" below. After a raise, think in market value, not share price. (Market value is the share price multiplied by the number of shares.) If the share count doubles, then the old high is gone forever. Set every target in market value.
-- **Share purchase plan:** On the ASX, a raise often comes with a share purchase plan for existing holders. Each holder can buy up to $30,000 of new shares at the raise price, or lower. A tiny parcel bought before the raise gives you that access. Keep the parcel tiny, because the price can still fall before the raise.
+- **==Share purchase plan==:** On the ASX, a raise often comes with a share purchase plan for existing holders. Each holder can buy up to $30,000 of new shares at the raise price, or lower. A tiny parcel bought before the raise gives you that access. Keep the parcel tiny, because the price can still fall before the raise.
 - **Early is wrong for a while:** A leading sign does not stop the fall at once. Bapcor's CEO bought at $0.76 in March. The low was $0.36 in May. So step one and step two must be small, and you must accept a paper loss for months. If a paper loss makes you sell, then this strategy is not for you.
 - **Adding to a loser:** Add only when a new sign appears. Never add only because the price fell.
 - **Broken reason:** If your original reason breaks, then sell all steps. Do not wait for the next sign.
