@@ -1,6 +1,6 @@
 ---
 created: 2026-08-24T13:11:58Z
-updated: 2026-09-03T11:11:10Z
+updated: 2026-09-04T23:35:25Z
 ---
 
 # Leading Indicators (GEM)
@@ -130,16 +130,16 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 **Lead:** one to two quarters.
 
 **S3 — The affordability scissor**
-[CCS hourly rate cap](https://www.servicesaustralia.gov.au/type-child-care-you-use-can-affect-child-care-subsidy?context=41186) vs [Average hourly fee charged](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) → [Childcare line in quarterly CPI](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release) → [Children in care and hours per child](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports)
+[CCS hourly rate cap](https://www.servicesaustralia.gov.au/type-child-care-you-use-can-affect-child-care-subsidy?context=41186) vs [Average hourly fee charged](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) → [Childcare line in the monthly CPI](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/monthly-consumer-price-index-indicator/latest-release) → [Children in care and hours per child](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports)
 
 | Factor | Frequency | When |
 |---|---|---|
 | [CCS hourly rate cap](https://www.servicesaustralia.gov.au/type-child-care-you-use-can-affect-child-care-subsidy?context=41186) | Yearly (each July) | Each July, at the start of the financial year |
 | [Average hourly fee charged](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) | Quarterly | Roughly January, April, July and October |
-| [Childcare line in quarterly CPI](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release) | Quarterly | Late January, late April, late July and late October |
+| [Childcare line in the monthly CPI](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/monthly-consumer-price-index-indicator/latest-release) | Monthly | Late each month, usually the last Wednesday, for the month before |
 | [Children in care and hours per child](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) | Quarterly | Roughly January, April, July and October |
 
-**What:** The rate cap is the highest hourly fee the subsidy covers; it resets each July. The average fee is what providers actually charge, from the quarterly report. The childcare CPI line is the price parents pay after subsidy. [Income thresholds](https://www.servicesaustralia.gov.au/your-income-can-affect-child-care-subsidy?context=41186) decide each family's subsidy rate and sit on the same chain.
+**What:** The rate cap is the highest hourly fee the subsidy covers; it resets each July. The average fee is what providers actually charge, from the quarterly report. The childcare CPI line is the price parents pay after subsidy, and it now reads monthly; the quarterly figures sit in tables 17 and 18 of that same monthly publication. [Income thresholds](https://www.servicesaustralia.gov.au/your-income-can-affect-child-care-subsidy?context=41186) decide each family's subsidy rate and sit on the same chain.
 **How it predicts:** The cap grows with general inflation; fees grow with provider costs. If fees outgrow the cap, then every extra dollar lands fully on the parent. When the parent price runs about twice general inflation, families cut days, then places. This is the best price signal there is.
 **Lead:** you can see the fee-vs-cap gap each quarter; enrolments respond over the following two to four quarters.
 
@@ -165,21 +165,22 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 | [Building approvals](https://www.abs.gov.au/statistics/industry/building-and-construction/building-approvals-australia/latest-release) | Monthly | Early each month |
 | [Number of approved services](https://snapshots.acecqa.gov.au/Snapshot/index.html) | Quarterly | Roughly February, May, August and November |
 
-**What:** Building approvals count buildings cleared for construction each month. The approved services count is the regulator's tally of licensed centres.
+**What:** Building approvals count buildings cleared for construction each month. The web release gives only a total non-residential value, so the education and childcare split needs the non-residential data cubes, tables 51 and 52, which download as a spreadsheet. The approved services count is the regulator's tally of licensed centres.
 **How it predicts:** Cheap money makes new centres worth building. A centre approved today opens years from now and takes occupancy then. If the cash rate stays high, then the pipeline dries up, and future competition eases.
 **Lead:** two to four years from approval to open doors.
 
 **S6 — The scissor and its self-correction**
-[Service count growth](https://snapshots.acecqa.gov.au/Snapshot/index.html) minus [children-in-care growth](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) = the occupancy drag → [Insolvencies, Education & Training industry](https://www.asic.gov.au/about-asic/corporate-publications/statistics/insolvency-statistics) → service count falls → occupancy recovers for survivors
+[Long day care service count growth](https://www.acecqa.gov.au/resources/snapshot-and-reports/nqf-snapshots) minus [children-in-care growth](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) = the occupancy drag → [Insolvencies, Education & Training industry](https://www.asic.gov.au/about-asic/corporate-publications/statistics/insolvency-statistics) → long day care service count falls → occupancy recovers for survivors
 
 | Factor | Frequency | When |
 |---|---|---|
-| [Service count growth](https://snapshots.acecqa.gov.au/Snapshot/index.html) | Quarterly | Roughly February, May, August and November |
+| [Long day care service count growth](https://www.acecqa.gov.au/resources/snapshot-and-reports/nqf-snapshots) | Quarterly | Roughly February, May, August and November |
+| [Daily national service register](https://www.acecqa.gov.au/resources/national-registers/services) | Live | Any time, because this register does update every day |
 | [children-in-care growth](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) | Quarterly | Roughly January, April, July and October |
 | [Insolvencies, Education & Training industry](https://www.asic.gov.au/about-asic/corporate-publications/statistics/insolvency-statistics) | Monthly | Each month, for the month before |
 
-**What:** Service count growth is new supply. Children-in-care growth is demand. Their difference is the occupancy drag every centre feels on average. The insolvency statistics count failing companies, split by industry.
-**How it predicts:** If supply grows while demand shrinks, then average occupancy falls sector-wide, no matter how well anyone operates. Falling occupancy sends weak centres broke; closures remove supply; survivors' occupancy recovers. Watch the sign of the difference first, then watch closures. This is the best occupancy chain in the file.
+**What:** Service count growth is new supply. You must read it by service type, because long day care is the only type GEM sells into. The quarterly snapshot gives that split; the daily register gives a faster but coarser read. Children-in-care growth is demand. Their difference is the occupancy drag every centre feels on average. The insolvency statistics count failing companies, split by industry.
+**How it predicts:** If supply grows while demand shrinks, then average occupancy falls sector-wide, no matter how well anyone operates. Falling occupancy sends weak centres broke. Only a closure removes supply, and only removed supply lifts the survivors. An operator that enters administration and is then sold keeps every centre on the register, so the chain stalls at the insolvency step. Watch the sign of the difference first, then count closed centres rather than failed companies. This is the best occupancy chain in the file.
 **Lead:** the drag is visible every quarter, about half a year before the occupancy it causes; the self-correction takes a year or more.
 
 **S7 — Trust**
@@ -187,10 +188,10 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 
 | Factor | Frequency | When |
 |---|---|---|
-| [Search interest in childcare safety](https://trends.google.com/trends/explore?geo=AU&q=childcare%20abuse) | Daily | Every day |
+| [Search interest in childcare safety](https://trends.google.com/trends/explore?geo=AU&q=childcare%20abuse) | Daily | Every day, but the page needs a browser and refuses every automated fetch |
 | [Children in approved care](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) | Quarterly | Roughly January, April, July and October |
 
-**What:** Google Trends counts how often people search a term, updated daily.
+**What:** Google Trends counts how often people search a term, updated daily. The site blocks robots, so no script can read it. Open it by hand, or take the reading from a paid trends tool.
 **How it predicts:** A safety scandal spikes searches within days. Scared parents stop enquiring, and enrolments follow. One bad case resets trust for the whole country, not just one operator. Search interest is the earliest visible trace of a trust shock.
 **Lead:** days to weeks ahead of enquiries; one to two quarters ahead of the enrolment numbers.
 
@@ -255,25 +256,25 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 |---|---|---|
 | [County Court lists](https://www.countycourt.vic.gov.au/court-schedule) | Daily | Every business day |
 | [Federal Court lists](https://www.fedcourt.gov.au/court-calendar/daily-court-lists) | Daily | Every business day |
-| [Search interest in G8](https://trends.google.com/trends/explore?geo=AU&q=g8%20education) | Daily | Every day |
+| [Search interest in G8](https://trends.google.com/trends/explore?geo=AU&q=g8%20education) | Daily | Every day, but the page needs a browser and refuses every automated fetch |
 | [Enquiry volume](https://www.asx.com.au/markets/company/gem) | Half-yearly results and AGM | February and August results, plus the AGM |
 
-**What:** Court lists show upcoming hearing dates — the abuse case sits in the County list, the workplace case in the Federal list. Search interest shows public attention. The [state regulator's charges against G8 itself](https://www.vecra.vic.gov.au/criminal-charges-against-g8-education-limited-allegedly-putting-childs-safety-risk) and [Fair Work Ombudsman media releases](https://www.fairwork.gov.au/newsroom/media-releases) run in parallel.
+**What:** Court lists show upcoming hearing dates — the abuse case sits in the County list, the workplace case in the Federal list. Search interest shows public attention, and you must open that page by hand because it blocks robots. The [state regulator's charges against G8 itself](https://www.vecra.vic.gov.au/criminal-charges-against-g8-education-limited-allegedly-putting-childs-safety-risk) and [Fair Work Ombudsman media releases](https://www.fairwork.gov.au/newsroom/media-releases) run in parallel.
 **How it predicts:** Each hearing produces headlines, headlines scare parents, and scared parents do not enquire. The court calendar is public, so you know the dates of the next news cycle before the news exists.
 **Lead:** hearing dates appear days to months ahead; the enrolment dent shows about a quarter after each cycle.
 
 **C3 — Network shrinkage**
-[Live centre count and enforcement tally on the public register](https://startingblocks.gov.au/large-providers/g8-education) → [G8's own network update page](https://g8education.edu.au/update-on-centre-network-operations) → [Revenue in results](https://www.asx.com.au/markets/company/gem)
+[Centre count and enforcement tally on the public register](https://startingblocks.gov.au/large-providers/g8-education) → [G8's own network update page](https://g8education.edu.au/update-on-centre-network-operations) → [Revenue in results](https://www.asx.com.au/markets/company/gem)
 
 | Factor | Frequency | When |
 |---|---|---|
-| [Live centre count and enforcement tally on the public register](https://startingblocks.gov.au/large-providers/g8-education) | Live | Any time, because the page is live |
+| [Centre count and enforcement tally on the public register](https://startingblocks.gov.au/large-providers/g8-education) | Twice a year | Before each large provider reporting period, as the page itself states |
 | [G8's own network update page](https://g8education.edu.au/update-on-centre-network-operations) | As needed | Only when G8 posts an update |
 | [Revenue in results](https://www.asx.com.au/markets/company/gem) | Half-yearly results | February and August, with each half-year result |
 
-**What:** The register lists every licensed G8 centre, live. The network update page is G8's own list of suspended sites. Net debt and leverage in the results show how long loss-making centres can be carried.
-**How it predicts:** A centre that leaves the register stops earning. The register moves before any ASX announcement, so you watch capacity shrink in real time. If debt headroom tightens, then more closures follow.
-**Lead:** days to weeks ahead of announcements; each closure cuts revenue immediately. The earliest company-specific read there is.
+**What:** The register lists every licensed G8 centre, with the count of services under a condition and the count under enforcement action. It refreshes only twice a year, so it is a periodic audit and not a live feed. The network update page is G8's own list of suspended sites. Net debt and leverage in the results show how long loss-making centres can be carried.
+**How it predicts:** A centre that leaves the register stops earning. The register also shows how much of the network sits under a regulator's condition, and that is where the next closures come from. If debt headroom tightens, then more closures follow. For a faster read on capacity, use the daily national register in S6.
+**Lead:** the network update page moves days to weeks ahead of announcements; the register confirms the damage twice a year. Each closure cuts revenue immediately.
 
 **C4 — Price, which is a choice**
 [Fee growth cap in the grant conditions](https://www.education.gov.au/early-childhood/providers/workforce/worker-retention-payment/eligibility-and-conditions) → [G8's fee announcement](https://www.asx.com.au/markets/company/gem)
@@ -321,16 +322,18 @@ In parallel, the same wallet also pays rent: [Rental vacancy rate](https://sqmre
 
 - A February spot occupancy and an annual average are different animals. February is the seasonal trough. Never compare them.
 - Sector "centre counts" differ by source. The [quarterly subsidy report](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) and the [regulator snapshot](https://snapshots.acecqa.gov.au/Snapshot/index.html) count different populations. Pick one and stay with it.
+- A fall in the total service count is not a fall in GEM's supply. Family day care and outside-school-hours care move that total on their own. Read the long day care line, or you will read a supply correction that is not there.
+- Administration is not closure. An operator in administration keeps trading, and a sale hands its centres to a new owner. The register does not move, and no room of GEM's fills. Count closed centres, not failed companies.
 - The share price, the small-cap index, credit spreads and the goodwill write-down are not revenue indicators. They move the multiple, not the top line.
 - GEM does not disclose its average daily fee, its government-vs-parent revenue split, or the places lost to suspensions. Any such figure is your own derivation.
 
 # If you only check five pages
 
 1. [GEM announcements](https://www.asx.com.au/markets/company/gem) — spot occupancy, enquiries, conversion.
-2. [The public register's G8 page](https://startingblocks.gov.au/large-providers/g8-education) — live centre count.
+2. [The public register's G8 page](https://startingblocks.gov.au/large-providers/g8-education) — centre count, and the services under conditions. Refreshed twice a year.
 3. [The quarterly subsidy report](https://www.education.gov.au/early-childhood/about/data-and-reports/quarterly-reports) — demand, hours, fees, age mix.
 4. [The regulator snapshot](https://snapshots.acecqa.gov.au/Snapshot/index.html) — supply, waivers, compliance.
-5. [The quarterly CPI childcare line](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release) — the out-of-pocket squeeze.
+5. [The monthly CPI childcare line](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/monthly-consumer-price-index-indicator/latest-release) — the out-of-pocket squeeze.
 
-#stock_market  
+#fundamental_analysis  
 #gem 
