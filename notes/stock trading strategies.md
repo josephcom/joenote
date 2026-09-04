@@ -1,6 +1,6 @@
 ---
 created: 2026-08-30T12:44:40Z
-updated: 2026-09-04T13:11:25Z
+updated: 2026-09-04T15:38:22Z
 ---
 
 # Stock Trading Strategies
@@ -22,13 +22,13 @@ The steps are:
 1. Find a company with a share price that is down 50 percent or more.
 2. Read the news and the reports, and find the exact cause of the fall.
 3. Decide if the cause is temporary or permanent.
-4. Check the cash and the debt. The company must survive two years without new money.
-5. Write the plan: the cause, the signs you wait for, the price and size for each step, the rule that makes you sell at a loss, and the exit for a win.
+4. Check the cash and the debt. If a raise is likely, then wait for the raise, and check again after it. After the last raise, the company must survive two years without new money.
+5. Write the plan: the cause, the signs you wait for, the price and size for each step, the rule that makes you sell at a loss, the exit for a win, and your answer to a takeover bid.
 6. Buy step one when you see two or more signs together. See "Exhaustion signs" and "Leading signs". If a raise is likely, then wait for the raise first.
-7. Buy step two on the next new sign, whatever its type. The signs do not come in a fixed order.
+7. Buy step two on the next new strong sign, or on the next two new weak signs together. See "Strong and weak signs". The signs do not come in a fixed order.
 8. Buy step three when the numbers confirm the repair. See "Confirmation signs".
 
-Step one is the smallest and step two is the biggest, for example 20, 50 and 30 percent of the planned bet. Step one fails most often, so it must be small. Step three comes after the price has moved, so it is only a top-up. If step three is the biggest, then your average price is close to the old rule. Never buy a full bet in one step.
+Step one is the smallest and step two is the biggest, for example 20, 50 and 30 percent of the planned bet. Step one fails most often, so it must be small. Step two is the biggest, so a weak sign alone must not fire it. Step three comes after the price has moved, so it is only a top-up. If step three is the biggest, then your average price is close to the old rule. Never buy a full bet in one step.
 
 ### Causes
 
@@ -52,8 +52,8 @@ These causes usually do not heal:
 
 Exhaustion means that the sellers are done. These are public events. A leading sign can come before an exhaustion sign, so both types count. If you see two or more signs together, from this list or from "Leading signs", then you are in the zone for step one:
 
-- The company writes off assets, cuts the dividend, and resets the profit guidance to a wide range. This is the "kitchen sink". All the bad news comes out at once. But a new CEO often does the kitchen sink first and raises capital weeks later. If the company has debt, then the kitchen sink is a warning of a raise, not a buy sign. Wait for the raise.
-- The company completes a capital raise at a low price. The dilution is then over, and the fear of dilution is gone. A raise is a survival sign, not a price sign. The price often stays below the raise price for months, because the raise often comes before the last bad news.
+- The company writes off assets, cuts the dividend, and resets the profit guidance to a wide range. This is the "kitchen sink". All the bad news comes out at once. But a new CEO often does the kitchen sink first and raises capital weeks later. If the company has debt and has not raised yet, then the kitchen sink is a warning of a raise, not a buy sign. Wait for the raise. If the raise is done and it passed the second-raise test, then a later kitchen sink is a sign. See "Second raise" in "Tips & Traps".
+- The company completes a capital raise at a low price. The dilution is then over, and the fear of dilution is gone. A raise is a survival sign, not a price sign. The price often stays below the raise price for months, because the raise often comes before the last bad news. Count the raise only if it passes the second-raise test.
 - The stock leaves the ASX 200 or the ASX 300. Index funds must sell on that day. The low often forms that week.
 - Short sellers start to close. The short position falls from its peak. (A short seller borrows shares and sells them. They must buy them back later. That buying lifts the price.)
 - Tax-loss selling ends. The Australian tax year ends on 30 June. Beaten stocks often make their low in late June and bounce in July.
@@ -63,11 +63,26 @@ Exhaustion means that the sellers are done. These are public events. A leading s
 
 A leading sign is a change inside the company that comes before better numbers. Each one is public within days, and usually months before the results. A leading sign can trigger step one or step two:
 
-- The lenders reset the loan terms: a covenant waiver, a longer maturity, or a new facility. (A covenant is a promise in a loan contract.) This removes the risk of death.
+- The lenders reset the loan terms: a covenant waiver, a longer maturity, or a new facility. (A covenant is a promise in a loan contract.) This delays the risk of death. It does not remove the risk. A waiver often runs only to the next test date. Read the end date. If the waiver ends within a year and no raise came with it, then expect a raise at a low price.
 - A new CEO buys a large parcel of shares on market with their own money. Large means more than half a year of their salary.
-- Big funds raise their stakes through the fall. A fund must file a substantial holder notice within two business days when it crosses 5 percent or moves by 1 percent. Two or more funds that add during the fall is a strong sign.
+- Big funds raise their stakes through the fall. A fund must file a substantial holder notice within two business days when it crosses 5 percent or moves by 1 percent. This is a weak sign. Big funds add to failures often, and they add far too early. After a raise, some notices come from banks and funds that bought the unsold shares as underwriters. They sell fast. Read the reason in each notice, and count only buys on market.
+- An activist fund takes a stake and demands a change in public: a new CEO, a split of the chair and CEO roles, or a new board. (An activist fund is a fund that buys shares and then forces changes.) This is a strong sign, because the change usually comes.
 - The company sells a non-core asset for cash at a fair price.
 - A trading update reports operating fixes before profit: lower staff turnover, better stock availability, less discounting, or better customer scores. These come one or two quarters before profit.
+
+### Strong and weak signs
+
+Signs are not equal. A strong sign changes the cash, the debt, the management, or the operations. A weak sign shows the mood of the market, not the repair.
+
+The strong signs are:
+
+- The lenders reset the loan terms.
+- The company completes a raise that passes the second-raise test.
+- An activist fund demands a change in public.
+- The company sells a non-core asset for cash at a fair price.
+- A trading update reports operating fixes.
+
+All other signs are weak. Step one needs two or more signs of any type. Step two needs one new strong sign, or two new weak signs together. A weak sign alone must not fire the biggest buy.
 
 ### Confirmation signs
 
@@ -78,17 +93,20 @@ These signs come from the results. They come last, and the price has often moved
 - The debt falls without new shares.
 - Directors keep buying after the results.
 
-### Example: Bapcor, 2026
+### Example: Bapcor, 2024 to 2026
 
 This is hindsight. It shows the order of the signs, not a promise.
 
-- February: the company cuts guidance, appoints a new CEO, and the lenders relax a covenant. (Leading sign.)
-- March: the company raises $200 million at $0.60 per share. The new CEO buys 500,000 shares at $0.76. (Exhaustion sign and leading sign.)
-- May: the company flags big write-offs. The price makes its low at $0.36, which is 40 percent below the raise price. Big funds add through May, June and July. (Exhaustion sign and leading sign.)
-- July and August: the last brokers rate the stock Sell. This comes months after the low. Broker ratings lag, so they are not a sign.
-- 27 August: the results confirm the repair. The price rises 20 percent in one day and about 50 percent in one week, to about $0.70. (Confirmation sign.)
+- 2024: the board rejects a takeover bid of $5.40 per share. The bidder walks away. (Not a sign. See "Takeover approach".)
+- July to November 2025: the company cuts guidance twice. Big funds add after the first cut at about $3.70. New funds cross 5 percent at about $2.50, one day before the second cut. (Leading sign, weak, and far too early.)
+- November 2025: an activist fund votes against a director and demands a split of the chair and CEO roles. (Leading sign, strong.) But the debt is high next to the falling profit, so a raise is likely. You wait for the raise.
+- February 2026: the company cuts guidance, appoints a new CEO, announces a raise, and the lenders relax a covenant. (Leading sign, strong.)
+- March 2026: the company completes the raise of $200 million at $0.60 per share. The net debt was $387 million, so the raise cuts it by about half. The rest is under three years of normal profit after tax, so the second-raise test passes. (Exhaustion sign, strong.) The new CEO buys 500,000 shares at $0.76. (Leading sign, weak.) The raise is done and the count is above two, so step one buys.
+- May 2026: the company flags big write-offs. The raise passed the test, so this kitchen sink counts. (Exhaustion sign, weak.) Big funds add through May, June and July. (Leading sign, weak.) Two new weak signs together fire step two. The price makes its low at $0.36, which is 40 percent below the raise price.
+- July and August 2026: the last brokers rate the stock Sell. This comes months after the low. Broker ratings lag, so they are not a sign.
+- 27 August 2026: the results confirm the repair. The price rises 20 percent in one day and about 50 percent in one week, to about $0.70. (Confirmation sign.) Step three buys.
 
-The leading signs came before the exhaustion signs. This is common. So the steps follow the count of signs, not the sign types.
+The leading signs came before the exhaustion signs. This is common. So step one follows the count of signs, not the sign types. Step two follows the strength of the signs.
 
 The old rule bought at $0.55 to $0.70 after the results. The new rule buys step one and step two, 70 percent of the bet, between $0.36 and $0.60, and the step-three top-up after the results.
 
@@ -96,16 +114,16 @@ The old rule bought at $0.55 to $0.70 after the results. The new rule buys step 
 
 - **Value trap:** A value trap is a stock that looks cheap but stays cheap forever, because the problem is permanent. Ask one test question: can the company win back its customers and its old margin? If a rival took the customers, then they rarely come back. People still need clothes, yet many retailers stay cheap forever. If the answer is no, then reject the company.
 - **Repeated one-offs:** A one-off cost is a cost that the company says will not come back. If a company reports one-off costs twice, then the problem is permanent. Reject it.
-- **Debt:** Debt is the main killer. A company with heavy debt can die before the repair ends. Check when the debt is due. If big payments come soon, then the risk is high. Measure the debt against a normal year of profit, not against equity. Write-offs shrink equity, so the debt-to-equity ratio looks worst at the exact time you want to buy. A lender reset turns this trap into a leading sign.
-- **Second raise:** Compare the raise size with the debt. If the raise does not clear the debt, then a second raise often comes within a year. If the raise only patches the hole, then wait for the second raise.
-- **Takeover approach:** A takeover approach shows that an informed buyer sees value. But a rejected approach is a weak sign. The bidder often walks away, and the price falls back. Do not count it as a sign.
+- **Debt:** Debt is the main killer. A company with heavy debt can die before the repair ends. Check when the debt is due. If big payments come soon, then the risk is high. Measure the debt against a normal year of profit, not against equity. Write-offs shrink equity, so the debt-to-equity ratio looks worst at the exact time you want to buy. A lender reset turns this trap into a leading sign for the length of the waiver.
+- **Second raise:** Measure the debt after the raise against a normal year of profit after tax. If the debt after the raise is still more than three years of that profit, then a second raise often comes within a year. Wait for the second raise. This test decides. A count of signs does not override it. Bapcor passed the test in March 2026, so the write-offs in May were a sign and not a warning.
+- **Takeover approach:** A takeover approach shows that an informed buyer sees value. But a rejected approach is a weak sign. The bidder often walks away, and the price falls back. Do not count it as a sign. A bid also caps the win. A buyer often bids only 30 to 40 percent above the low, and that is far below a normal-year exit. Decide before you buy if you will accept a bid at that level, and write the answer in the plan.
 - **Dilution:** Dilution means the company sells many new shares at a low price to survive. Your piece of the company then shrinks. If a raise is likely, then wait for it. Buy after the raise, never before it. The one exception is the tiny parcel in "Share purchase plan" below. After a raise, think in market value, not share price. (Market value is the share price multiplied by the number of shares.) If the share count doubles, then the old high is gone forever. Set every target in market value.
 - **Share purchase plan:** ==On the ASX, a raise often comes with a share purchase plan for existing holders. Each holder can buy up to $30,000 of new shares at the raise price, or lower. A tiny parcel bought before the raise gives you that access. Keep the parcel tiny, because the price can still fall before the raise.==
 - **Early is wrong for a while:** A leading sign does not stop the fall at once. Bapcor's CEO bought at $0.76 in March. The low was $0.36 in May. So step one must be small, and you must accept a paper loss for months. If a paper loss makes you sell, then this strategy is not for you.
 - **Adding to a loser:** Add only when a new sign appears. Never add only because the price fell.
 - **Broken reason:** If your original reason breaks, then sell all steps. Do not wait for the next sign.
 - **Strange numbers:** If the accounts look strange, then reject the company. If the auditor resigns, then also reject it. (The auditor is the outside firm that checks the accounts.)
-- **Position size:** Keep each bet small. Many of these companies fail. Make many small bets, so one failure cannot hurt you badly.
+- **Position size:** Keep each bet small. Many of these companies fail. Make many small bets over the years, so one failure cannot hurt you badly. But deep reading limits you to a few names at a time. So keep the watch list short, and spread the bets over time.
 - **Time stop:** If no new sign appears within twelve months after step one, then sell step one. Your read was wrong.
 - **Exit for a win:** The plan needs a sell rule for a win, not only for a loss. Write it before you buy. A good exit is a market value based on a normal year of profit, not the old share price. If the price reaches the exit, then sell.
 
@@ -115,12 +133,12 @@ A screener is a free web tool that filters stocks by numbers. Use a screener wit
 
 - The price is 50 percent or more below the 52-week high.
 - The company has a positive gross profit. (Gross profit is sales minus the direct cost of the product.)
-- The cash covers at least two years of losses.
+- The cash covers at least two years of losses, or a raise is likely and you will wait for it. After the raise, test the cash again.
 - The debt is small next to a normal year of profit. Do not compare the debt with the equity, because write-offs shrink the equity. (Equity is the part of the company that belongs to the shareholders.)
 
 Then watch these sources every week. They show the signs months before the results:
 
-- Substantial holder notices (Forms 603 and 604). They show which funds add through the fall.
+- Substantial holder notices (Forms 603 and 604). They show which funds add through the fall. Read the reason in each notice. After a raise, some notices come from underwriters who took the unsold shares, and they sell fast. Also watch for an activist fund that demands changes in public.
 - Director trade notices (Appendix 3Y). The ASX publishes them within five business days.
 - ASIC short position reports. ASIC publishes them daily, four days late. They show when the shorts start to close.
 - Capital raise and trading halt announcements. A completed raise at a low price is a screen in itself.
@@ -128,7 +146,7 @@ Then watch these sources every week. They show the signs months before the resul
 - Lists of stocks at 52-week lows, especially in late June.
 - Bad news itself. Profit warnings, scandals, recalls, and lawsuits all create candidates.
 
-For each candidate, write six things on the watch list: the cause of the fall, the exhaustion signs you see, the leading sign you wait for, the price and size for each step, the rule that makes you sell at a loss, and the exit for a win.
+For each candidate, write seven things on the watch list: the cause of the fall, the exhaustion signs you see, the leading sign you wait for, the price and size for each step, the rule that makes you sell at a loss, the exit for a win, and your answer to a takeover bid.
 
 ### Miscellaneous
 
