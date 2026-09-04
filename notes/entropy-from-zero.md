@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T04:55:35Z
-updated: 2026-09-04T05:12:19Z
+updated: 2026-09-04T05:13:12Z
 ---
 
 # Entropy from zero
@@ -19,7 +19,7 @@ Heat is energy that moves from a hot thing to a cold thing. It is an amount, and
 >
 > You have two cups of water. Both sit at 50 degrees, so both have the same temperature. The first cup holds 100 grams of water, and the second holds 200 grams. The second cup carries twice as much heat energy. The level is the same, and the amount is not.
 
-## How do we measure heat and temperature?
+### How do we measure heat and temperature?
 
 We measure heat in joules. If you lift an apple by one metre, then you spend about one joule.
 
