@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T00:00:00Z
-updated: 2026-09-04T23:17:36Z
+updated: 2026-09-04T23:26:23Z
 ---
 
 # Overview
@@ -71,6 +71,17 @@ Two things move this demand that are easy to miss:
 **"Known block, known date"** means we can already guess the size and the timing. Most risks give you neither. No winner has been announced yet.
 
 ## Why are volumes falling?
+
+Placement volumes fell 27% in FY26; IELTS fell 8%.
+
+But read the shape, not one year. IELTS crashed first and is slowing: −18%, −18%, then −8%. Placement peaked later and is still getting worse.
+
+And IELTS is the bigger line — $388.9m against placement's $362.9m.
+
+So placement is the acute problem. IELTS is the chronic one that is levelling off, and it carries the binary UK contract risk.
+
+That section only lists visa numbers, which drive placement. It does not say IELTS is fine.
+
 | | FY22 | FY23 | FY24 | FY25 | FY26 |
 | ---------------------- | ------- | ------- | ------- | ------- | ------- |
 | **Placements** | 55,400 | 84,600 | 98,900 | 70,100 | **54,200** |
