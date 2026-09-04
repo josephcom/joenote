@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T00:00:00Z
-updated: 2026-09-04T23:11:59Z
+updated: 2026-09-04T23:17:07Z
 ---
 
 # Overview
@@ -66,7 +66,7 @@ Two things move this demand that are easy to miss:
 
 **Why it matters.** If IELTS is not chosen, then IELTS stops being a UK-visa test. Every person who was buying IELTS only to get a UK visa buys the winner's test instead. That demand does not shrink. It moves.
 
-**Who loses what.** The British Council takes most of the direct hit, because it runs most of those sessions. It is IDP's partner, not IDP. IDP sells UK-visa IELTS too, but less of it. The bigger risk for IDP is the brand: IELTS is valuable because governments accept it, and losing a government is the worst thing that can happen to it.
+**Who loses what.** The British Council takes most of the direct hit, because it runs most of those sessions. It is IDP's partner, not IDP. IDP sells UK-visa IELTS too, but less of it (1% ~ 3% of their revenue). The bigger risk for IDP is the brand: IELTS is valuable because governments accept it, and losing a government is the worst thing that can happen to it.
 
 **"Known block, known date"** means we can already guess the size and the timing. Most risks give you neither. No winner has been announced yet.
 
