@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T04:55:35Z
-updated: 2026-09-04T05:35:37Z
+updated: 2026-09-04T06:22:47Z
 ---
 
 ---
@@ -51,23 +51,43 @@ Work is energy that moves something. If an engine lifts a weight, then it did wo
 
 Heat and work are both energy. You can turn work into heat with no loss. You rub your hands together, and all of your work becomes heat. The other direction is the hard one. Nobody can turn a pile of heat fully back into work.
 
-## 03 What Rudolf Clausius was up to
+### 03 What Rudolf Clausius was up to
 
-### He was trying to fix steam engines
+#### He was chasing the coal bill
 
-Rudolf Clausius worked in the 1850s. Steam engines ran the factories of his time. Engineers wanted better ones, so they asked one plain question. How much work can you get out of a given amount of heat?
+Rudolf Clausius worked in the 1850s. Steam engines ran the factories of his time, and coal ran the engines. Coal cost money, so every factory owner watched the bill.
+
+The bill looked wrong. Most of the coal did not become useful work. Most of it left the engine as warm water and warm air.
+
+Engineers had an explanation. They blamed the build quality. Steam escapes from a bad joint. A dry bearing rubs and gets hot. A thin wall lets warmth out. Every one of those faults is fixable, so the engineers kept fixing them. They sealed the joints, they oiled the bearings, and they thickened the walls. The waste dropped a little, and then it stopped dropping.
+
+Clausius asked a different question. Is this waste a bad build, or is it a hard limit? You can fix a bad build. You cannot fix a hard limit.
+
+#### Name the two places
 
 Every steam engine does three things.
 
-1. It takes heat out of a hot place. We call that place the hot tank.
+1. It takes heat out of a hot place. We call that place the hot tank. In a real engine, the hot tank is the fire and the boiler.
 2. It turns part of that heat into work.
-3. It dumps the rest of the heat into a cold place. We call that place the cold tank.
+3. It dumps the rest of the heat into a cold place. We call that place the cold tank. **The cold tank is the world outside the engine.** It is the river, or the cooling tower, or the air in the room. Nobody builds it, and it is there already.
 
-Step 3 annoyed everybody. No engine skips it. Some heat always escapes into the cold tank, and it does no useful job. Clausius wanted to know what forced it to happen.
+Step 3 is the waste, and step 3 annoyed everybody. No engine skips it.
 
-## 04 The discovery: energy alone does not tell you enough
+#### The clue that started him off
 
-### Divide by the temperature, and the books close
+Sadi Carnot gave Clausius the clue. Carnot was a French engineer, and he died in 1832. He wrote one small book in 1824, and almost nobody read it.
+
+Carnot asked his readers to imagine a perfect engine. It has no leaks, no friction, and no sloppy work. Then he worked out how much work that perfect engine gives you.
+
+The answer was not "all of it". The answer was a fixed number, and only the two temperatures decided it. The material made no difference. The design made no difference.
+
+That answer is the trigger. If a perfect engine still dumps heat, then the dump is not a fault. You cannot seal it out, because there is nothing to seal.
+
+Clausius read that book about twenty years later. He accepted the result, and then he asked why. Why do the two temperatures decide everything?
+
+### 04 The discovery: energy alone does not tell you enough
+
+#### Divide by the temperature, and the books close
 
 > **Toy example — the best engine that physics allows**
 >
@@ -79,9 +99,11 @@ Step 3 annoyed everybody. No engine skips it. Some heat always escapes into the 
 > The engine dumps 600 joules into the cold tank.
 > ```
 >
-> The energy balances, because 800 equals 200 plus 600. By the way, At the end of the above, the temperature of the cold tank is a bit higher and the hot tank a bit lower. The Engine continues to work until the temperature of the two tanks are the same. 
+> The energy balances, because 800 equals 200 plus 600.
 
-The energy balances, and it always does. But that balance does not tell you how big step 3 must be. Energy is perfectly happy with 800 joules in, 800 joules of work, and nothing dumped at all. Real engines never manage that. So something other than energy sets the size of the dumped heat.
+A note about those two temperatures. We hold them still at 400 and 300, so that the arithmetic stays clean. Real tanks drift. If you pull heat out of a real hot tank, then it cools a little, and the cold tank warms a little. The gap closes, and each cycle then gives you less work. When the two temperatures meet, the engine stops. Both tanks still hold plenty of energy at that moment, and none of it is any use to you.
+
+Now look at the problem with energy. Energy balances, and it always balances. But it does not tell you how big step 3 must be. Energy is perfectly happy with 800 joules in, 800 joules of work, and nothing dumped at all. No real engine manages that, and Carnot's perfect engine does not manage it either. So something other than energy sets the size of the dump.
 
 Clausius then tried one small trick. He divided each amount of heat by the temperature of its tank.
 
@@ -92,9 +114,23 @@ Clausius then tried one small trick. He divided each amount of heat by the tempe
 > Cold side: 600 joules ÷ 300 kelvin = 2
 > ```
 >
-> The two numbers match. Energy said nothing about the split, and heat divided by temperature does.
+> The two numbers match.
 
-That match is the seed of the whole subject. It forces the dumped heat to be 600 joules, and not zero. Clausius decided that the divided quantity deserved a name.
+#### What the match is telling you
+
+Read the match as a price.
+
+Heat does not travel alone. It drags something along with it, and the division counts that something. The hot tank hands over 2 units of it. The cold tank must take those same 2 units. Nothing else can hold them. The work carries none of them, and the engine finishes each cycle exactly where it started, so the engine keeps none either.
+
+Now look at the price. At 400 kelvin, 2 units cost 800 joules of heat. At 300 kelvin, the same 2 units cost only 600 joules. The temperature sets the price, and the cold tank is the cheaper end.
+
+So the engine collects 800 joules at the dear end, pays 600 joules at the cheap end, and keeps the 200 joule difference as work.
+
+That is why the dump can never be zero. If you dumped zero joules, then the 2 units would go nowhere at all. They would have to vanish, and they never vanish.
+
+So chapter 3 has its answer. The waste is a hard limit, and it is not a bad build. The engine dumps heat because it must park those units somewhere, and the only place is the world outside.
+
+Clausius decided that the divided quantity deserved a name. He called it entropy.
 
 ## 05 What dS = dQ/T means
 
