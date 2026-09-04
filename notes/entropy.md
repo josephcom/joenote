@@ -1,11 +1,9 @@
 ---
 created: 2026-09-04T04:55:35Z
-updated: 2026-09-04T06:43:19Z
+updated: 2026-09-04T06:43:27Z
 ---
 
 # Entropy
-
-*A short book that starts with hot water and ends with a formula. It assumes nothing.*
 
 ## 01 Heat and temperature are two different things
 
