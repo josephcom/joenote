@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T04:55:35Z
-updated: 2026-09-04T06:22:47Z
+updated: 2026-09-04T06:24:37Z
 ---
 
 ---
@@ -51,9 +51,9 @@ Work is energy that moves something. If an engine lifts a weight, then it did wo
 
 Heat and work are both energy. You can turn work into heat with no loss. You rub your hands together, and all of your work becomes heat. The other direction is the hard one. Nobody can turn a pile of heat fully back into work.
 
-### 03 What Rudolf Clausius was up to
+## 03 What Rudolf Clausius was up to
 
-#### He was chasing the coal bill
+### He was chasing the coal bill
 
 Rudolf Clausius worked in the 1850s. Steam engines ran the factories of his time, and coal ran the engines. Coal cost money, so every factory owner watched the bill.
 
@@ -63,7 +63,7 @@ Engineers had an explanation. They blamed the build quality. Steam escapes from 
 
 Clausius asked a different question. Is this waste a bad build, or is it a hard limit? You can fix a bad build. You cannot fix a hard limit.
 
-#### Name the two places
+### Name the two places
 
 Every steam engine does three things.
 
@@ -73,7 +73,7 @@ Every steam engine does three things.
 
 Step 3 is the waste, and step 3 annoyed everybody. No engine skips it.
 
-#### The clue that started him off
+### The clue that started him off
 
 Sadi Carnot gave Clausius the clue. Carnot was a French engineer, and he died in 1832. He wrote one small book in 1824, and almost nobody read it.
 
@@ -85,9 +85,9 @@ That answer is the trigger. If a perfect engine still dumps heat, then the dump 
 
 Clausius read that book about twenty years later. He accepted the result, and then he asked why. Why do the two temperatures decide everything?
 
-### 04 The discovery: energy alone does not tell you enough
+## 04 The discovery: energy alone does not tell you enough
 
-#### Divide by the temperature, and the books close
+### Divide by the temperature, and the books close
 
 > **Toy example — the best engine that physics allows**
 >
