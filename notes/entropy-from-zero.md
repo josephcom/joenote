@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T04:55:35Z
-updated: 2026-09-04T05:26:10Z
+updated: 2026-09-04T05:26:31Z
 ---
 
 ---
@@ -26,9 +26,7 @@ Heat is energy that moves from a hot thing to a cold thing. It is an amount, and
 
 ### A warning about the word "heat"
 
-In everyday speech, heat is all the energy stored in the body (solid, fluid, gas). Physics is stricter. Internal energy is a stock. It sits in the body. The atoms hold it as motion. Heat is a ***flow***. It only exists while energy crosses the boundary.
-
-So heat is a verb-like word, and internal energy is a noun-like word.
+In everyday speech, heat is all the energy stored in the body (solid, fluid, gas). Physics is stricter. Internal energy is a stock. It sits in the body. The atoms hold it as motion. Heat is a ***flow***. It only exists while energy crosses the boundary. The boundary is the surface you draw around the thing you decided to study.o heat is a verb-like word, and internal energy is a noun-like word.
 
 Toy example. A cup holds 2100 joules of internal energy. It sits on the table, and it touches nothing cold. It still holds 2100 joules, and no heat exists anywhere.
 
