@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T04:55:35Z
-updated: 2026-09-04T05:07:15Z
+updated: 2026-09-04T05:09:10Z
 ---
 
 # Entropy from zero
@@ -22,6 +22,8 @@ Heat is energy that moves from a hot thing to a cold thing. It is an amount, and
 We measure heat in joules. If you lift an apple by one metre, then you spend about one joule.
 
 We measure temperature in kelvin. A kelvin is the same size as a Celsius degree, but the scale starts at the coldest point that can exist. A warm room sits at about 300 kelvin.
+
+
 
 ## 02 Work is the useful part of energy
 
