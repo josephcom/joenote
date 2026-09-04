@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T00:00:00Z
-updated: 2026-09-04T23:11:02Z
+updated: 2026-09-04T23:11:21Z
 ---
 
 # Overview
@@ -55,6 +55,18 @@ Two things move this demand that are easy to miss:
 ##### One BIG threat to IELTS!
 
 **One supply event could take out a large part of this line.** The UK Home Office is buying a **single supplier** for its visa English test, worth about £1.13bn. The British Council delivers close to **90%** of the world's UK-visa tests through the IELTS consortium, and the present contract is estimated to end **19 April 2027**. If the consortium loses it, a known block of IELTS volume goes on a known date.
+
+**The rule first.** If you want a UK visa, you must prove your English. The UK government does not accept any test you like. It keeps a short approved list. Only tests on that list count.
+
+**Today.** Four suppliers sit on that list. IELTS is one of them. IELTS is run jointly by three owners, and the British Council does most of the actual test sessions — close to 90% of all UK-visa English tests in the world.
+
+**The change.** The UK now wants to stop using four suppliers. It wants **one** supplier, running a test with the government's own name on it. The contract is worth about £1.13bn. The present arrangement is thought to end on 19 April 2027.
+
+**Why it matters.** If IELTS is not chosen, then IELTS stops being a UK-visa test. Every person who was buying IELTS only to get a UK visa buys the winner's test instead. That demand does not shrink. It moves.
+
+**Who loses what.** The British Council takes most of the direct hit, because it runs most of those sessions. It is IDP's partner, not IDP. IDP sells UK-visa IELTS too, but less of it. The bigger risk for IDP is the brand: IELTS is valuable because governments accept it, and losing a government is the worst thing that can happen to it.
+
+**"Known block, known date"** means we can already guess the size and the timing. Most risks give you neither. No winner has been announced yet.
 
 **Price is IDP's, and IDP uses it.** The India fee went ₹17,000 → ₹18,000 on 1 March 2025 → ₹19,000 on 1 April 2026. The fee per test rose **7%** in FY26 while volumes fell 8%.
 
