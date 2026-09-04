@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T00:00:00Z
-updated: 2026-09-04T23:11:21Z
+updated: 2026-09-04T23:11:33Z
 ---
 
 # Overview
@@ -67,8 +67,6 @@ Two things move this demand that are easy to miss:
 **Who loses what.** The British Council takes most of the direct hit, because it runs most of those sessions. It is IDP's partner, not IDP. IDP sells UK-visa IELTS too, but less of it. The bigger risk for IDP is the brand: IELTS is valuable because governments accept it, and losing a government is the worst thing that can happen to it.
 
 **"Known block, known date"** means we can already guess the size and the timing. Most risks give you neither. No winner has been announced yet.
-
-**Price is IDP's, and IDP uses it.** The India fee went ₹17,000 → ₹18,000 on 1 March 2025 → ₹19,000 on 1 April 2026. The fee per test rose **7%** in FY26 while volumes fell 8%.
 
 ## Why are volumes falling?
 | | FY22 | FY23 | FY24 | FY25 | FY26 |
