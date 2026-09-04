@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T00:00:00Z
-updated: 2026-09-04T23:02:31Z
+updated: 2026-09-04T23:02:58Z
 ---
 
 # Overview
@@ -30,7 +30,7 @@ Six foreign governments set the supply of *places to study abroad* by law. Austr
 
 IDP itself sells a matching service into that market. Its own two sides are different:
 
-* **Demand** is the students the governments let through. A government quota is therefore a ceiling on IDP's demand. It is not a limit on IDP's supply.
+* ==**Demand** is the students the governments let through==. A government quota is therefore a ceiling on IDP's demand. It is not a limit on IDP's supply.
 * **Supply** is IDP and its rivals — Crizac, ApplyBoard, and each university's own direct-application team. None of them is capacity-limited, so supply here is competitive and it is not shrinking.
 
 **The quota does not bind today.** Australia allowed 295,000 and granted about 193,000 offshore visas. The limits that bite are the refusal rate and the student's appetite, and both sit well below the ceiling. The fall is demand, not the cap.
