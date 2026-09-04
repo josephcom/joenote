@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T04:55:35Z
-updated: 2026-09-04T05:34:45Z
+updated: 2026-09-04T05:34:55Z
 ---
 
 ---
@@ -41,6 +41,7 @@ Do you know how they actually measure heat? They measure a temperature rise inst
 > Temperature rise: 5 kelvin  
 > Specific heat of water: 4.2 joules per gram per kelvin  
 > Heat = 100 × 4.2 × 5 = **2100 joules**
+> ```
 
 Specific heat is a measured property of the material. It tells you how many joules one gram needs for one degree.
 
