@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T04:55:35Z
-updated: 2026-09-04T04:56:00Z
+updated: 2026-09-04T05:07:15Z
 ---
 
 # Entropy from zero
@@ -53,28 +53,23 @@ Step 3 annoyed everybody. No engine skips it. Some heat always escapes into the 
 >
 > ```
 > Hot tank sits at 400 kelvin.
->
->  Cold tank sits at 300 kelvin.
->
->  The engine takes 400 joules out of the hot tank.
->
->  The engine does 100 joules of work.
->
->  The engine dumps 300 joules into the cold tank.
+> Cold tank sits at 300 kelvin.
+> The engine takes 800 joules out of the hot tank.
+> The engine does 200 joules of work.
+> The engine dumps 600 joules into the cold tank.
 > ```
 >
-> The energy balances, because 400 equals 100 plus 300.
+> The energy balances, because 800 equals 200 plus 600.
 
-Now look at the heat alone. The hot tank lost 400 joules, and the cold tank gained 300. Those numbers do not match. So heat by itself is not a quantity that stays the same.
+Now look at the heat alone. The hot tank lost 800 joules, and the cold tank gained 600. Those numbers do not match. So heat by itself is not a quantity that stays the same.
 
 Clausius then tried one small trick. He divided each amount of heat by the temperature of its tank.
 
 > **The same toy example, divided**
 >
 > ```
-> Hot side: 400 joules ÷ 400 kelvin = 1
->
->  Cold side: 300 joules ÷ 300 kelvin = 1
+> Hot side: 800 joules ÷ 400 kelvin = 2
+> Cold side: 600 joules ÷ 300 kelvin = 2
 > ```
 >
 > The two numbers match. Heat did not balance, and heat divided by temperature did.
@@ -113,16 +108,14 @@ Now remove the engine. Let the heat leak straight from the hot tank into the col
 > **Toy example — a plain leak**
 >
 > ```
-> 400 joules leave the hot tank at 400 kelvin: −1.00
->
->  400 joules enter the cold tank at 300 kelvin: +1.33
->
->  Total change: +0.33
+> 600 joules leave the hot tank at 400 kelvin: −1.5
+> 600 joules enter the cold tank at 300 kelvin: +2.0
+> Total change: +0.5
 > ```
 >
 > The total went up. The same heat is worth more entropy at a low temperature than at a high one.
 
-Now run that backwards. The heat would leave the cold tank and climb into the hot tank on its own. The total would drop by 0.33. Nobody has ever seen that happen.
+Now run that backwards. The heat would leave the cold tank and climb into the hot tank on its own. The total would drop by 0.5. Nobody has ever seen that happen.
 
 So Clausius wrote the second law. In a closed system, the total entropy never falls. It rises, or it stays the same.
 
@@ -144,14 +137,10 @@ Ludwig Boltzmann worked in the 1870s. He made one guess. Entropy counts the arra
 >
 > ```
 > 0 heads: 1 arrangement
->
->  1 head: 4 arrangements
->
->  2 heads: 6 arrangements
->
->  3 heads: 4 arrangements
->
->  4 heads: 1 arrangement
+> 1 head: 4 arrangements
+> 2 heads: 6 arrangements
+> 3 heads: 4 arrangements
+> 4 heads: 1 arrangement
 > ```
 >
 > You throw the coins again and again. You land on "2 heads" more often than on anything else. That group is the biggest, so it catches the most throws. No force pulls the coins there.
@@ -172,17 +161,15 @@ Counts do not add. Counts multiply.
 >
 > ```
 > Box A has 4 arrangements.
->
->  Box B has 8 arrangements.
->
->  Both boxes together have 4 × 8 = 32 arrangements.
+> Box B has 8 arrangements.
+> Both boxes together have 4 × 8 = 32 arrangements.
 > ```
 >
 > Now take logarithms. ln 4 = 1.386, and ln 8 = 2.079. Those two add to 3.466. And ln 32 = 3.466 as well. The logarithm turns multiplying into adding.
 
 So entropy must be some constant, multiplied by ln W. Clausius already fixed the units as joules per kelvin, so the constant carries those units. Match the counting against the thermometer, and the constant comes out as 0.0000000000000000000000138 joules per kelvin. We call it k, and it is Boltzmann's constant.
 
-$$ S = k ln W $$
+**S = k ln W**
 
 Max Planck wrote the formula in this shape in 1900. It now sits on Boltzmann's gravestone.
 
