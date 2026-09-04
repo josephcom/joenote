@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T00:00:00Z
-updated: 2026-09-04T23:27:08Z
+updated: 2026-09-04T23:28:08Z
 ---
 
 # Overview
@@ -72,15 +72,7 @@ Two things move this demand that are easy to miss:
 
 ## Why are volumes falling?
 
-Placement volumes fell 27% in FY26; IELTS fell 8%.
-
-But read the shape, not one year. IELTS crashed first and is slowing: −18%, −18%, then −8%. Placement peaked later and is still getting worse.
-
-And IELTS is the bigger line — $388.9m against placement's $362.9m.
-
-So placement is the acute problem. IELTS is the chronic one that is levelling off, and it carries the binary UK contract risk.
-
-That section only lists visa numbers, which drive placement. It does not say IELTS is fine.
+Placement volumes fell 27% in FY26; IELTS fell 8%. But read the shape, not one year. IELTS crashed first and is slowing: −18%, −18%, then −8%. Placement peaked later and is still getting worse. And IELTS is the bigger line — $388.9m against placement's $362.9m. So placement is the acute problem. IELTS is the chronic one that is levelling off, and it carries the binary UK contract risk. That section only lists visa numbers, which drive placement. It does not say IELTS is fine.
 
 | | FY22 | FY23 | FY24 | FY25 | FY26 |
 | ---------------------- | ------- | ------- | ------- | ------- | ------- |
