@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T04:55:35Z
-updated: 2026-09-04T06:46:15Z
+updated: 2026-09-04T06:46:32Z
 ---
 
 # Entropy
@@ -127,7 +127,7 @@ So chapter 3 has its answer. The waste is a hard limit, and it is not a bad buil
 
 ## 05 What dS = dQ/T means
 
-Note, Clausius chose **S** for **S**adi Carnot. He honoured the man.
+Note, Clausius chose **S** for entropy in honour of **S**adi Carnot. He honoured the man.
 
 ### Read the letters one by one
 
