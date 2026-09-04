@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T00:00:00Z
-updated: 2026-09-04T23:11:43Z
+updated: 2026-09-04T23:11:59Z
 ---
 
 # Overview
@@ -54,7 +54,7 @@ Two things move this demand that are easy to miss:
 
 **Price is IDP's, and IDP uses it.** The India fee went ₹17,000 → ₹18,000 on 1 March 2025 → ₹19,000 on 1 April 2026. The fee per test rose **7%** in FY26 while volumes fell 8%.
 
-##### One BIG threat to IELTS!
+##### ==One BIG threat to IELTS!==
 
 **One supply event could take out a large part of this line.** The UK Home Office is buying a **single supplier** for its visa English test, worth about £1.13bn. The British Council delivers close to **90%** of the world's UK-visa tests through the IELTS consortium, and the present contract is estimated to end **19 April 2027**. If the consortium loses it, a known block of IELTS volume goes on a known date.
 
