@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T04:55:35Z
-updated: 2026-09-04T05:27:15Z
+updated: 2026-09-04T05:28:42Z
 ---
 
 ---
@@ -36,9 +36,9 @@ We measure temperature in kelvin. A kelvin is the same size as a Celsius degree,
 
 Do you know how they actually measure heat? They measure a temperature rise instead. Heat equals mass, times specific heat, times that rise. 
 
-> Water: 100 grams
-> Temperature rise: 5 kelvin
-> Specific heat of water: 4.2 joules per gram per kelvin
+> Water: 100 grams  
+> Temperature rise: 5 kelvin  
+> Specific heat of water: 4.2 joules per gram per kelvin  
 > Heat = 100 × 4.2 × 5 = **2100 joules**
 
 Specific heat is a measured property of the material. It tells you how many joules one gram needs for one degree.
