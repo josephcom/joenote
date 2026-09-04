@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T00:00:00Z
-updated: 2026-09-04T23:28:08Z
+updated: 2026-09-04T23:30:49Z
 ---
 
 # Overview
@@ -72,7 +72,7 @@ Two things move this demand that are easy to miss:
 
 ## Why are volumes falling?
 
-Placement volumes fell 27% in FY26; IELTS fell 8%. But read the shape, not one year. IELTS crashed first and is slowing: −18%, −18%, then −8%. Placement peaked later and is still getting worse. And IELTS is the bigger line — $388.9m against placement's $362.9m. So placement is the acute problem. IELTS is the chronic one that is levelling off, and it carries the binary UK contract risk. That section only lists visa numbers, which drive placement. It does not say IELTS is fine.
+Placement volumes fell 27% in FY26; IELTS fell 8%. But read the shape, not one year. IELTS crashed first and is slowing: −18%, −18%, then −8%. Placement peaked later and is still getting worse. And IELTS is the bigger line — $388.9m against placement's $362.9m. So placement is the acute problem. IELTS is the chronic one that is levelling off, and it carries the binary UK contract risk. The list below is only visa numbers, and visa numbers drive placement. It does not say IELTS is fine.
 
 | | FY22 | FY23 | FY24 | FY25 | FY26 |
 | ---------------------- | ------- | ------- | ------- | ------- | ------- |
@@ -92,6 +92,8 @@ For placement, the cause is policy, in all four large destinations at once.
 * **Canada** capped itself. About **73,800** new study permits were issued in 2025 against a target of 305,900 — 24% of it. IDP's Canada placements fell **80%** in FY26.
 * **The United States** issued **34%** fewer F-1 visas in 2025 than 2024, with India down 76% against 2023. IDP's US placements fell **67%**.
 * **The United Kingdom** granted **383,455** sponsored study visas in the year to June 2026, −11%, and **−41%** against the 2023 peak.
+
+For IELTS, the cause is two things, not one. Almost every visa application needs an English test, so falling applications cut test volume everywhere. On top of that, governments keep adding accepted tests, so IELTS can lose share even when the market holds. Australia went from five accepted tests to nine on 7 August 2025.
 
 India is the hinge. It is **37%** of IDP's placements, up from 31%, and its largest testing market. Indian students going abroad fell from about 908,000 in 2023 to **626,000 in 2025**. India IELTS volumes fell 50% in FY25 and a further 22% in FY26.
 
