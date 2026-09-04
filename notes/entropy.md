@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T04:55:35Z
-updated: 2026-09-04T06:44:23Z
+updated: 2026-09-04T06:45:01Z
 ---
 
 # Entropy
@@ -123,7 +123,7 @@ That is why the dump can never be zero. If you dumped zero joules, then the 2 un
 
 So chapter 3 has its answer. The waste is a hard limit, and it is not a bad build. The engine dumps heat because it must park those units somewhere, and the only place is the world outside.
 
-Clausius decided that the divided quantity deserved a name. He called it entropy.
+==Clausius decided that the divided quantity deserved a name. He called it entropy.==
 
 ## 05 What dS = dQ/T means
 
