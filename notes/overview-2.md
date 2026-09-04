@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T00:00:00Z
-updated: 2026-09-04T23:11:33Z
+updated: 2026-09-04T23:11:43Z
 ---
 
 # Overview
@@ -51,6 +51,8 @@ Two things move this demand that are easy to miss:
 1. **Inside IELTS**, the three owners split the world by territory. IDP delivers in about 60 countries, including all of India. The British Council has most of the rest. That split moves: ==IDP bought the British Council's India== business in 2021 for **£130m**, and entered China in December 2024. So ==IDP's share of IELTS is not fixed== at a third of anything.
 2. **Between tests**, supply is every test a government accepts. ==Australia went from five accepted tests to **nine**== on 7 August 2025. A government adds supply by decree, and IELTS loses share at flat volume. ==Duolingo is a fifth of the price and sits on **none** of the Australian, Canadian or UK lists, so the low price buys it nothing here.==
 3. **Physical seats** are not a limit and never have been. IDP cut its venues by about 60% in FY26 and still met all demand.
+
+**Price is IDP's, and IDP uses it.** The India fee went ₹17,000 → ₹18,000 on 1 March 2025 → ₹19,000 on 1 April 2026. The fee per test rose **7%** in FY26 while volumes fell 8%.
 
 ##### One BIG threat to IELTS!
 
