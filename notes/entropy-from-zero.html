@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entropy from zero</title>
+<style>
+:root{
+  --bg:#fdfdfb;
+  --ink:#1b1d21;
+  --muted:#63696f;
+  --rule:#d5d3cc;
+  --boxbg:#f2f1ec;
+  --mark:#1c4fd8;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#101317;
+    --ink:#e7e9ec;
+    --muted:#98a0a8;
+    --rule:#2e343b;
+    --boxbg:#191d22;
+    --mark:#82a8ff;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+  font-size:18px;
+  line-height:1.62;
+}
+main{max-width:34rem;margin:0 auto;padding:46px 20px 80px}
+.title{font-size:2rem;line-height:1.15;margin:0 0 6px;font-weight:600;letter-spacing:-0.01em}
+.standfirst{color:var(--muted);margin:0 0 8px;font-size:1.02rem}
+.standfirst{padding-bottom:24px;margin-bottom:30px;border-bottom:1px solid var(--rule)}
+h2{
+  font-size:.8rem;
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight:600;
+  color:var(--muted);
+  margin:38px 0 4px;
+}
+h2 span{color:var(--mark)}
+h3{font-size:1.24rem;line-height:1.3;margin:0 0 14px;font-weight:600}
+p{margin:0 0 15px}
+ol,ul{margin:0 0 15px;padding-left:1.3em}
+li{margin-bottom:6px}
+.toy{
+  background:var(--boxbg);
+  border-left:3px solid var(--mark);
+  padding:16px 18px;
+  margin:0 0 18px;
+}
+.toy p:last-child{margin-bottom:0}
+.toy .head{
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:.76rem;
+  color:var(--muted);
+  margin-bottom:8px;
+}
+.sum{
+  font-family:"SF Mono",Menlo,Consolas,monospace;
+  font-size:.92rem;
+  line-height:1.75;
+  margin:0 0 12px;
+}
+.f{
+  text-align:center;
+  font-size:1.3rem;
+  margin:22px 0;
+  letter-spacing:.02em;
+}
+.end{
+  margin-top:44px;
+  padding-top:22px;
+  border-top:1px solid var(--rule);
+  color:var(--muted);
+  font-size:.95rem;
+}
+@media (max-width:480px){
+  body{font-size:17px}
+  main{padding:32px 16px 60px}
+  .title{font-size:1.6rem}
+}
+</style>
+</head>
+<body>
+<main>
+
+<h1 class="title">Entropy from zero</h1>
+<p class="standfirst">A short book that starts with hot water and ends with a formula. It assumes nothing.</p>
+
+
+<h2><span>01</span> — Heat and temperature are two different things</h2>
+<h3>A level is not an amount</h3>
+<p>Temperature tells you how hot a thing is. It is a level, and you read it with a thermometer.</p>
+<p>Heat is energy that moves from a hot thing to a cold thing. It is an amount, and not a level.</p>
+<div class="toy">
+  <p class="head">Toy example</p>
+  <p>You have two cups of water. Both sit at 50 degrees, so both have the same temperature. The first cup holds 100 grams of water, and the second holds 200 grams. The second cup carries twice as much heat energy. The level is the same, and the amount is not.</p>
+</div>
+<p>We measure heat in joules. If you lift an apple by one metre, then you spend about one joule.</p>
+<p>We measure temperature in kelvin. A kelvin is the same size as a Celsius degree, but the scale starts at the coldest point that can exist. A warm room sits at about 300 kelvin.</p>
+
+<h2><span>02</span> — Work is the useful part of energy</h2>
+<h3>You can always go one way, and not the other</h3>
+<p>Work is energy that moves something. If an engine lifts a weight, then it did work. We measure work in joules too.</p>
+<p>Heat and work are both energy. You can turn work into heat with no loss. You rub your hands together, and all of your work becomes heat. The other direction is the hard one. Nobody can turn a pile of heat fully back into work.</p>
+
+<h2><span>03</span> — What Rudolf Clausius was up to</h2>
+<h3>He was trying to fix steam engines</h3>
+<p>Rudolf Clausius worked in the 1850s. Steam engines ran the factories of his time. Engineers wanted better ones, so they asked one plain question. How much work can you get out of a given amount of heat?</p>
+<p>Every steam engine does three things.</p>
+<ol>
+  <li>It takes heat out of a hot place. We call that place the hot tank.</li>
+  <li>It turns part of that heat into work.</li>
+  <li>It dumps the rest of the heat into a cold place. We call that place the cold tank.</li>
+</ol>
+<p>Step 3 annoyed everybody. No engine skips it. Some heat always escapes into the cold tank, and it does no useful job. Clausius wanted to know what forced it to happen.</p>
+
+<h2><span>04</span> — The discovery: heat alone does not balance</h2>
+<h3>Divide by the temperature, and the books close</h3>
+<div class="toy">
+  <p class="head">Toy example — the best engine that physics allows</p>
+  <p class="sum">Hot tank sits at 400 kelvin.<br>
+  Cold tank sits at 300 kelvin.<br>
+  The engine takes 400 joules out of the hot tank.<br>
+  The engine does 100 joules of work.<br>
+  The engine dumps 300 joules into the cold tank.</p>
+  <p>The energy balances, because 400 equals 100 plus 300.</p>
+</div>
+<p>Now look at the heat alone. The hot tank lost 400 joules, and the cold tank gained 300. Those numbers do not match. So heat by itself is not a quantity that stays the same.</p>
+<p>Clausius then tried one small trick. He divided each amount of heat by the temperature of its tank.</p>
+<div class="toy">
+  <p class="head">The same toy example, divided</p>
+  <p class="sum">Hot side: 400 joules ÷ 400 kelvin = 1<br>
+  Cold side: 300 joules ÷ 300 kelvin = 1</p>
+  <p>The two numbers match. Heat did not balance, and heat divided by temperature did.</p>
+</div>
+<p>That match is the seed of the whole subject. Clausius decided that the divided quantity deserved a name.</p>
+
+<h2><span>05</span> — What dS = dQ/T means</h2>
+<h3>Read the letters one by one</h3>
+<ul>
+  <li><strong>Q</strong> is heat, measured in joules.</li>
+  <li><strong>T</strong> is temperature, measured in kelvin.</li>
+  <li><strong>S</strong> is the new quantity. Clausius named it entropy in 1865.</li>
+  <li><strong>d</strong> means "a small amount of".</li>
+</ul>
+<p>So the line reads like this. A small amount of entropy equals a small amount of heat, divided by the temperature at which it moves.</p>
+<p>Why small amounts? The temperature changes while the heat flows. So you cut the flow into thin slices. Each slice moves at one temperature, so each slice gets one clean division. Then you add the slices together.</p>
+<p>The units follow from the division. We measure entropy in joules per kelvin.</p>
+
+<h2><span>06</span> — Why entropy is a real property</h2>
+<h3>It depends on where you are, not on how you got there</h3>
+<p>Think about your height above sea level while you walk in hills. If you finish where you started, then your total change in height is zero. The route makes no difference. Height belongs to the place, and not to the walk.</p>
+<p>Entropy passed the same test. Run the perfect engine around one full cycle, add up every small dQ/T, and the total comes out as zero. So entropy is a property of the state that the material is in, in the same way that pressure and volume are.</p>
+<h2><span>07</span> — The one-way rule</h2>
+<h3>Break the engine, and the total goes up</h3>
+<p>Now remove the engine. Let the heat leak straight from the hot tank into the cold tank, and let it do no work.</p>
+<div class="toy">
+  <p class="head">Toy example — a plain leak</p>
+  <p class="sum">400 joules leave the hot tank at 400 kelvin: −1.00<br>
+  400 joules enter the cold tank at 300 kelvin: +1.33<br>
+  Total change: +0.33</p>
+  <p>The total went up. The same heat is worth more entropy at a low temperature than at a high one.</p>
+</div>
+<p>Now run that backwards. The heat would leave the cold tank and climb into the hot tank on its own. The total would drop by 0.33. Nobody has ever seen that happen.</p>
+<p>So Clausius wrote the second law. In a closed system, the total entropy never falls. It rises, or it stays the same.</p>
+
+<h2><span>08</span> — The gap that Clausius left</h2>
+<h3>He knew how to measure it, and not what it was</h3>
+<p>Clausius could measure entropy with a thermometer. He could not say what entropy was made of. Heat is motion, and pressure is pushing, but entropy was only a number that behaved well. That gap stayed open for about twenty years.</p>
+
+<h2><span>09</span> — Boltzmann fills the gap</h2>
+<h3>Entropy counts arrangements</h3>
+<p>Ludwig Boltzmann worked in the 1870s. He made one guess. Entropy counts the arrangements that match what you see.</p>
+<div class="toy">
+  <p class="head">Toy example — four coins</p>
+  <p>You throw four coins. Each coin shows heads or tails, so there are 16 arrangements. Now sort them by the number of heads.</p>
+  <p class="sum">0 heads: 1 arrangement<br>
+  1 head: 4 arrangements<br>
+  2 heads: 6 arrangements<br>
+  3 heads: 4 arrangements<br>
+  4 heads: 1 arrangement</p>
+  <p>You throw the coins again and again. You land on "2 heads" more often than on anything else. That group is the biggest, so it catches the most throws. No force pulls the coins there.</p>
+</div>
+<p>Boltzmann called that count W. So W counts the exact arrangements that fit your rough description.</p>
+<p>This explains the one-way rule. Systems drift towards the big groups, because big groups catch more throws. The drift needs no push.</p>
+
+<h2><span>10</span> — Why the formula needs a logarithm and a constant</h2>
+<h3>One fixes the arithmetic, and one fixes the units</h3>
+<p>Clausius already proved that entropy adds. Put two tanks side by side, and the total is the first plus the second.</p>
+<p>Counts do not add. Counts multiply.</p>
+<div class="toy">
+  <p class="head">Toy example — two boxes</p>
+  <p class="sum">Box A has 4 arrangements.<br>
+  Box B has 8 arrangements.<br>
+  Both boxes together have 4 × 8 = 32 arrangements.</p>
+  <p>Now take logarithms. ln 4 = 1.386, and ln 8 = 2.079. Those two add to 3.466. And ln 32 = 3.466 as well. The logarithm turns multiplying into adding.</p>
+</div>
+<p>So entropy must be some constant, multiplied by ln W. Clausius already fixed the units as joules per kelvin, so the constant carries those units. Match the counting against the thermometer, and the constant comes out as 0.0000000000000000000000138 joules per kelvin. We call it k, and it is Boltzmann's constant.</p>
+<p class="f">S = k ln W</p>
+<p>Max Planck wrote the formula in this shape in 1900. It now sits on Boltzmann's gravestone.</p>
+
+<h2><span>11</span> — Why none of this is made up</h2>
+<h3>Two people started at opposite ends and met</h3>
+<p>Clausius never counted anything. He measured heat and temperature in engines, and he built entropy from those readings.</p>
+<p>Boltzmann never touched a thermometer for this. He counted arrangements on paper.</p>
+<p>Both men produced the same number for the same gas. The thermometer had every chance to disagree with the counting, and it did not. A definition that somebody invents for himself does not predict a reading that he never took.</p>
+
+<h2><span>12</span> — What "entropy increases" means</h2>
+<h3>One sentence, at last</h3>
+<p>The pile of arrangements that match your description gets bigger. That is all.</p>
+<p>Nothing flows out of the box. Nothing new appears inside it. The atoms keep doing what they always did. Only the size of the matching pile grows, because the bigger pile catches more throws.</p>
+
+<p class="end">The two definitions are one thing seen from two sides. Use dS = dQ/T when you can measure heat. Use S = k ln W when you can count arrangements.</p>
+
+</main>
+</body>
+</html>
