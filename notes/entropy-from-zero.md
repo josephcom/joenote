@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T04:55:35Z
-updated: 2026-09-04T06:24:37Z
+updated: 2026-09-04T06:24:43Z
 ---
 
 ---
@@ -116,7 +116,7 @@ Clausius then tried one small trick. He divided each amount of heat by the tempe
 >
 > The two numbers match.
 
-#### What the match is telling you
+### What the match is telling you
 
 Read the match as a price.
 
