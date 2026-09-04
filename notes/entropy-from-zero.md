@@ -1,11 +1,6 @@
 ---
 created: 2026-09-04T04:55:35Z
-updated: 2026-09-04T06:28:12Z
----
-
----
-created: 2026-09-04T04:55:35Z
-updated: 2026-09-04T05:13:12Z
+updated: 2026-09-04T06:42:22Z
 ---
 
 # Entropy from zero
