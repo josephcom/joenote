@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T00:00:00Z
-updated: 2026-09-04T23:26:23Z
+updated: 2026-09-04T23:27:08Z
 ---
 
 # Overview
@@ -94,7 +94,7 @@ That section only lists visa numbers, which drive placement. It does not say IEL
 
 **NOTE** — IDP restated FY25 on 18 December 2025 after a voluntary revenue-recognition change. Restated FY25 placements are about 74,300, not 70,100. Management quotes FY26 changes against the restated base, so its "−27%" and "Australia −9%" do not reconcile with the reported row above. Pick one base and stay with it.
 
-The cause is policy, in all four large destinations at once.
+For placement, the cause is policy, in all four large destinations at once.
 
 * **Australia** grants fewer visas and refuses more. Offshore grants ran about **193,000** in FY2025-26, −8%, the lowest since 2016-17. In **July 2026** higher-education grants were **−40%** on July 2025, at a 66% offshore grant rate — the worst July in at least 21 years. Evidence levels for India, Nepal, Bangladesh and Bhutan were raised in January 2026, and offshore grant rates that month ran India 48%, Bangladesh 19%, Nepal 13%.
 * **Canada** capped itself. About **73,800** new study permits were issued in 2025 against a target of 305,900 — 24% of it. IDP's Canada placements fell **80%** in FY26.
