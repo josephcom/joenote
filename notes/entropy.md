@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T04:55:35Z
-updated: 2026-09-04T06:43:27Z
+updated: 2026-09-04T06:44:23Z
 ---
 
 # Entropy
@@ -62,7 +62,7 @@ Every steam engine does three things.
 
 1. It takes heat out of a hot place. We call that place the hot tank. In a real engine, the hot tank is the fire and the boiler.
 2. It turns part of that heat into work.
-3. It dumps the rest of the heat into a cold place. We call that place the cold tank. **The cold tank is the world outside the engine.** It is the river, or the cooling tower, or the air in the room. Nobody builds it, and it is there already.
+3. It dumps the rest of the heat into a cold place. We call that place the cold tank. **==The cold tank is the world outside the engine==.** It is the river, or the cooling tower, or the air in the room. Nobody builds it, and it is there already.
 
 Step 3 is the waste, and step 3 annoyed everybody. No engine skips it.
 
