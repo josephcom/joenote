@@ -1,9 +1,9 @@
 ---
 created: 2026-09-04T04:55:35Z
-updated: 2026-09-04T06:42:49Z
+updated: 2026-09-04T06:43:19Z
 ---
 
-# Entropy from zero
+# Entropy
 
 *A short book that starts with hot water and ends with a formula. It assumes nothing.*
 
