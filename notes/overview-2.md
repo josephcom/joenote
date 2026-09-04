@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T00:00:00Z
-updated: 2026-09-04T23:17:07Z
+updated: 2026-09-04T23:17:28Z
 ---
 
 # Overview
@@ -62,7 +62,7 @@ Two things move this demand that are easy to miss:
 
 **Today.** Four suppliers sit on that list. IELTS is one of them. IELTS is run jointly by three owners, and the British Council does most of the actual test sessions — close to 90% of all UK-visa English tests in the world.
 
-**The change.** The UK now wants to stop using four suppliers. It wants **one** supplier, running a test with the government's own name on it. The contract is worth about £1.13bn. The present arrangement is thought to end on 19 April 2027.
+**The change.** The UK now wants to stop using four suppliers. It wants **one** supplier, running a test with the government's own name on it. The contract is worth about £1.13bn. The present arrangement is thought to end on ==19 April 2027==.
 
 **Why it matters.** If IELTS is not chosen, then IELTS stops being a UK-visa test. Every person who was buying IELTS only to get a UK visa buys the winner's test instead. That demand does not shrink. It moves.
 
