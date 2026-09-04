@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T04:55:35Z
-updated: 2026-09-04T06:45:01Z
+updated: 2026-09-04T06:46:07Z
 ---
 
 # Entropy
@@ -126,6 +126,8 @@ So chapter 3 has its answer. The waste is a hard limit, and it is not a bad buil
 ==Clausius decided that the divided quantity deserved a name. He called it entropy.==
 
 ## 05 What dS = dQ/T means
+
+Note, Clausius chose **S** for Sadi Carnot. He honoured the man.
 
 ### Read the letters one by one
 
