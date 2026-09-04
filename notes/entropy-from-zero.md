@@ -1,5 +1,10 @@
 ---
 created: 2026-09-04T04:55:35Z
+updated: 2026-09-04T05:21:56Z
+---
+
+---
+created: 2026-09-04T04:55:35Z
 updated: 2026-09-04T05:13:12Z
 ---
 
@@ -19,13 +24,17 @@ Heat is energy that moves from a hot thing to a cold thing. It is an amount, and
 >
 > You have two cups of water. Both sit at 50 degrees, so both have the same temperature. The first cup holds 100 grams of water, and the second holds 200 grams. The second cup carries twice as much heat energy. The level is the same, and the amount is not.
 
+### A warning about the word "heat"
+
+In everyday speech, heat is all the energy stored in the body (solid, fluid, gas). Physics is stricter. It calls that stored energy the internal energy. It keeps the word heat for the energy that crosses a boundary. So a body holds internal energy, and it gives off heat. The two cups above hold different internal energies, so they give off different amounts of heat.
+
 ### How do we measure heat and temperature?
 
 We measure heat in joules. If you lift an apple by one metre, then you spend about one joule.
 
 We measure temperature in kelvin. A kelvin is the same size as a Celsius degree, but the scale starts at the coldest point that can exist. A warm room sits at about 300 kelvin.
 
-Do you know how do they actually measure heat? They measure a temperature rise instead. Heat equals mass, times specific heat, times that rise. 
+Do you know how they actually measure heat? They measure a temperature rise instead. Heat equals mass, times specific heat, times that rise. 
 
 > Water: 100 grams
 > Temperature rise: 5 kelvin
@@ -56,7 +65,7 @@ Every steam engine does three things.
 
 Step 3 annoyed everybody. No engine skips it. Some heat always escapes into the cold tank, and it does no useful job. Clausius wanted to know what forced it to happen.
 
-## 04 The discovery: heat alone does not balance
+## 04 The discovery: energy alone does not tell you enough
 
 ### Divide by the temperature, and the books close
 
@@ -72,7 +81,7 @@ Step 3 annoyed everybody. No engine skips it. Some heat always escapes into the 
 >
 > The energy balances, because 800 equals 200 plus 600.
 
-Now look at the heat alone. The hot tank lost 800 joules, and the cold tank gained 600. Those numbers do not match. So heat by itself is not a quantity that stays the same.
+The energy balances, and it always does. But that balance does not tell you how big step 3 must be. Energy is perfectly happy with 800 joules in, 800 joules of work, and nothing dumped at all. Real engines never manage that. So something other than energy sets the size of the dumped heat.
 
 Clausius then tried one small trick. He divided each amount of heat by the temperature of its tank.
 
@@ -83,9 +92,9 @@ Clausius then tried one small trick. He divided each amount of heat by the tempe
 > Cold side: 600 joules ÷ 300 kelvin = 2
 > ```
 >
-> The two numbers match. Heat did not balance, and heat divided by temperature did.
+> The two numbers match. Energy said nothing about the split, and heat divided by temperature does.
 
-That match is the seed of the whole subject. Clausius decided that the divided quantity deserved a name.
+That match is the seed of the whole subject. It forces the dumped heat to be 600 joules, and not zero. Clausius decided that the divided quantity deserved a name.
 
 ## 05 What dS = dQ/T means
 
@@ -134,7 +143,7 @@ So Clausius wrote the second law. In a closed system, the total entropy never fa
 
 ### He knew how to measure it, and not what it was
 
-Clausius could measure entropy with a thermometer. He could not say what entropy was made of. Heat is motion, and pressure is pushing, but entropy was only a number that behaved well. That gap stayed open for about twenty years.
+Clausius could measure entropy with a thermometer and a heat measurement. He could not say what entropy was made of. Heat is motion, and pressure is pushing, but entropy was only a number that behaved well. That gap stayed open for about twenty years.
 
 ## 09 Boltzmann fills the gap
 
@@ -206,5 +215,6 @@ Nothing flows out of the box. Nothing new appears inside it. The atoms keep doin
 
 The two definitions are one thing seen from two sides. Use dS = dQ/T when you can measure heat. Use S = k ln W when you can count arrangements.
 
+#physics
 #physics
 
