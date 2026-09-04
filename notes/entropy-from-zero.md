@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T04:55:35Z
-updated: 2026-09-04T05:11:48Z
+updated: 2026-09-04T05:12:05Z
 ---
 
 # Entropy from zero
@@ -25,7 +25,7 @@ We measure heat in joules. If you lift an apple by one metre, then you spend abo
 
 We measure temperature in kelvin. A kelvin is the same size as a Celsius degree, but the scale starts at the coldest point that can exist. A warm room sits at about 300 kelvin.
 
-You know how to measure temperature. But, do you know how do they measure heat? They measure a temperature rise instead. Heat equals mass, times specific heat, times that rise. 
+Do you know how do they measure heat? They measure a temperature rise instead. Heat equals mass, times specific heat, times that rise. 
 
 > Water: 100 grams
 > Temperature rise: 5 kelvin
