@@ -1,6 +1,6 @@
 ---
 created: 2026-08-23T10:31:32Z
-updated: 2026-09-03T11:11:10Z
+updated: 2026-09-04T23:35:51Z
 ---
 
 # Overview
@@ -45,9 +45,9 @@ Sector = centre-based day care services approved for CCS, at March each year. Co
 | GEM share          | **5.0%** | **4.8%** | **4.4%** | **4.1%** | **3.5%** |
 | **EVO**            | 24       | 24       | 38       | 39       | 39       |
 | EVO share          | 0.27%    | 0.27%    | 0.41%    | 0.40%    | 0.39%    |
-| **MFD**            | 36       | ~38      | 45       | 45       | 45       |
-| MFD share          | 0.41%    | 0.42%    | 0.49%    | 0.47%    | 0.45%    |
-| **All three**      | **5.7%** | **5.5%** | **5.3%** | **5.0%** | **4.4%** |
+| **MFD**            | 36       | ~38      | 45       | 45       | 42       |
+| MFD share          | 0.41%    | 0.42%    | 0.49%    | 0.47%    | 0.42%    |
+| **All three**      | **5.7%** | **5.5%** | **5.3%** | **5.0%** | **4.3%** |
 
 | Children per week            | 2022    | 2023     | 2024    | 2025     | 2026     |
 | ---------------------------- | ------- | -------- | ------- | -------- | -------- |
@@ -56,12 +56,12 @@ Sector = centre-based day care services approved for CCS, at March each year. Co
 | **EVO**                      | n/d     | ~1,800   | ~2,800  | ~2,700   | n/d      |
 | **MFD**                      | n/d     | n/d      | n/d     | 3,600+   | n/d      |
 
-* EVO owns 49.8% of MFD.
+* EVO owns 49.8% of MFD. That stake is what turned EVO's own numbers red. EVO's centres still earn — centre EBITDA was $8.7M in the first half of 2026 — but the group reported a $12.7M loss after writing $11.4M off the MFD holding.
 * **Goodstart** is bigger than GEM — 677 centres and 64,000 children, and it's a not-for-profit. GEM is the largest *listed* operator, which is a much smaller claim than it sounds.
 * GEM has lost 30% of its share since 2022 while the sector grew 13%. That's the whole story in one line. It went from 438 centres to about 350, and 50,000 children to 29,000. Weekly children fell 42% while the sector's grew.
 * There is no published national series for approved places in long day care — ACECQA doesn't collect it and RoGS has no table, so any places-based share is your own derivation. 
 * GEM stopped disclosing licensed places after 33,032 at December 2025.
-* MFD has more centres — 45 versus 39 — and more places. The gap isn't about size. It's about occupancy and debt. Occupancy is the whole story. EVO runs at ~80%. MFD ran at 54% in FY25. Break-even in this sector sits between 50% and 85%. EVO is comfortably above it; MFD is scraping the bottom of it. Also, MFD's break-even revenue was $95M vs $91.4M of actual revenue; that's loss. So, it's been borrowing only to pay the wages etc. Finally, MFD has *Going-concern warning* in thir accounting records. That means the auditors aren't sure MDF can make it to the end of the year! Not certain, but just a warning. 
+* MFD has more centres — 42 versus 39 — and more places. The gap isn't about size. It's about occupancy and debt. Occupancy is the whole story. EVO runs at ~80%. MFD ran at 54% in FY25, and averaged 51.3% in the first half of 2026. Break-even in this sector sits between 50% and 85%. EVO is comfortably above it; MFD is scraping the bottom of it. Also, MFD's break-even revenue was $95M vs $91.4M of actual revenue; that's loss. So, it's been borrowing only to pay the wages etc. It lost $31.9M in the first half of 2026, after a $29.0M write-off. Finally, MFD has *Going-concern warning* in thir accounting records. That means the auditors aren't sure MDF can make it to the end of the year! Not certain, but just a warning. Westpac has since extended MFD's facility to September 2027 with new occupancy covenants, so MFD has another year and its centres stay open. 
 
 #gem
-#stock_market
+#fundamental_analysis
