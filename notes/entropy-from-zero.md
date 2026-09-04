@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T04:55:35Z
-updated: 2026-09-04T06:42:22Z
+updated: 2026-09-04T06:42:49Z
 ---
 
 # Entropy from zero
@@ -246,6 +246,5 @@ Nothing flows out of the box. Nothing new appears inside it. The atoms keep doin
 
 The two definitions are one thing seen from two sides. Use dS = dQ/T when you can measure heat. Use S = k ln W when you can count arrangements.
 
-#physics
 #physics
 
