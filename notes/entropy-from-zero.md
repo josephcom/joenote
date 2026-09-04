@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T04:55:35Z
-updated: 2026-09-04T05:10:06Z
+updated: 2026-09-04T05:10:11Z
 ---
 
 # Entropy from zero
@@ -25,7 +25,7 @@ We measure temperature in kelvin. A kelvin is the same size as a Celsius degree,
 
 You know how to measure temperature. But, do you know how do they measure heat? They measure a temperature rise instead. Heat equals mass, times specific heat, times that rise. 
 
-Water: 100 grams
+> Water: 100 grams
 Temperature rise: 5 kelvin
 Specific heat of water: 4.2 joules per gram per kelvin
 
