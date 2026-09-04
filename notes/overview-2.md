@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T00:00:00Z
-updated: 2026-09-04T00:00:00Z
+updated: 2026-09-04T22:57:29Z
 ---
 
 # Overview
@@ -19,11 +19,42 @@ ASX:IEL = IDP Education. Revenue is three multiplications and one contract book:
 
 FY26 was 54,200 placements at $5,586 each, 1,195,400 tests at $325 each, and 108,400 course enrolments at about $366 each.
 
-**Look at what is on each side.** Every volume term is pure *demand*. Every yield term is pure *price*, and IDP sets it. There is no capacity term at all, because capacity has never been the limit: in FY26 IDP cut its IELTS venues from about 1,500 to fewer than 600 and its headcount by 1,250 people (20%), and still served every customer it wanted.
+### Supply and Demand
+**Look at what is on each side.** Every volume term is *demand*. Every yield term is *price*, and IDP sets it. There is no capacity term, because capacity has never been the limit. In FY26 IDP cut its IELTS venues from about 1,500 to fewer than 600, and its headcount by 1,250 people (20%). It still served every customer it wanted.
 
-The *supply* constraint in this business is not IDP's. It belongs to six foreign governments. Australia sets a National Planning Level of **295,000** new student commencements. Canada plans for **155,000** study permit arrivals. Those are quotas. When a government rations student visas, the market's supply is fixed by law, and no amount of demand can lift IDP's volume above it.
+#### Students Placement
 
-So both sides are outside the company's control, and both are shrinking. Demand falls because a foreign degree costs more and returns less. Supply falls because governments cut it. Yield is the only number IDP owns, and it has raised it every single year through the collapse.
+The service here is student-university matching. Buyer is universities and seller is IDP. 
+
+Six foreign governments set the supply of *places to study abroad* by law. Australia allows a National Planning Level of **295,000** new student commencements. Canada plans for **155,000** study permit arrivals. The demand is the students who want to go.
+
+IDP itself sells a matching service into that market. Its own two sides are different:
+
+* **Demand** is the students the governments let through. A government quota is therefore a ceiling on IDP's demand. It is not a limit on IDP's supply.
+* **Supply** is IDP and its rivals — Crizac, ApplyBoard, and each university's own direct-application team. None of them is capacity-limited, so supply here is competitive and it is not shrinking.
+
+**The quota does not bind today.** Australia allowed 295,000 and granted about 193,000 offshore visas. The limits that bite are the refusal rate and the student's appetite, and both sit well below the ceiling. The fall is demand, not the cap.
+
+#### IELTS
+
+The good is one test seat, on one day. The buyer is the **test taker** (not a university) and seller is IDP. 
+
+**Demand is wider than the placement market.** Migrants, nurses and work-visa applicants sit the same test. So test demand does not move in step with placement demand: in FY26 IDP's India volumes fell **22%** while everything outside India fell only **3%**. IDP does not publish the split between study and migration takers, so any such split is your own estimate.
+
+Two things move this demand that are easy to miss:
+
+* **A higher required score raises demand per person.** Australia lifted the student score from IELTS 5.5 to **6.0** in March 2024, and the graduate score to 6.5. A person who misses the mark sits again. So a rule that cuts the number of students can raise the number of tests each one buys. IELTS One Skill Retake sells that second attempt at a lower price.
+* **A government can delete the demand outright.** If a visa does not ask for a test, nobody buys one.
+
+**Supply is not the three co-owners.** It has three layers, and only the first is closed:
+
+1. **Inside IELTS**, the three owners split the world by territory. IDP delivers in about 60 countries, including all of India. The British Council has most of the rest. That split moves: IDP bought the British Council's India business in 2021 for **£130m**, and entered China in December 2024. So IDP's share of IELTS is not fixed at a third of anything.
+2. **Between tests**, supply is every test a government accepts. Australia went from five accepted tests to **nine** on 7 August 2025. A government adds supply by decree, and IELTS loses share at flat volume. Duolingo is a fifth of the price and sits on **none** of the Australian, Canadian or UK lists, so the low price buys it nothing here.
+3. **Physical seats** are not a limit and never have been. IDP cut its venues by about 60% in FY26 and still met all demand.
+
+**One supply event could take out a large part of this line.** The UK Home Office is buying a **single supplier** for its visa English test, worth about £1.13bn. The British Council delivers close to **90%** of the world's UK-visa tests through the IELTS consortium, and the present contract is estimated to end **19 April 2027**. If the consortium loses it, a known block of IELTS volume goes on a known date.
+
+**Price is IDP's, and IDP uses it.** The India fee went ₹17,000 → ₹18,000 on 1 March 2025 → ₹19,000 on 1 April 2026. The fee per test rose **7%** in FY26 while volumes fell 8%.
 
 ## Why are volumes falling?
 | | FY22 | FY23 | FY24 | FY25 | FY26 |
