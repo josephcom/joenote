@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T00:00:00Z
-updated: 2026-09-04T22:58:05Z
+updated: 2026-09-04T22:58:13Z
 ---
 
 # Overview
@@ -44,7 +44,7 @@ The good is one test seat, on one day. The buyer is the **test taker** (not a un
 Two things move this demand that are easy to miss:
 
 * **A higher required score raises demand per person.** Australia lifted the student score from IELTS 5.5 to **6.0** in March 2024, and the graduate score to 6.5. ==A person who misses the mark sits again==. So a rule that cuts the number of students can raise the number of tests each one buys. IELTS One Skill Retake sells that second attempt at a lower price.
-* **A government can delete the demand outright.** If a visa does not ask for a test, nobody buys one.
+* **A government can delete the demand outright.** ==If a visa does not ask for a test, nobody buys one.==
 
 **Supply is not the three co-owners.** It has three layers, and only the first is closed:
 
