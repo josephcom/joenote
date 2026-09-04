@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T04:55:35Z
-updated: 2026-09-04T05:10:37Z
+updated: 2026-09-04T05:10:47Z
 ---
 
 # Entropy from zero
@@ -28,7 +28,7 @@ You know how to measure temperature. But, do you know how do they measure heat? 
 > Water: 100 grams
 > Temperature rise: 5 kelvin
 > Specific heat of water: 4.2 joules per gram per kelvin
-> Heat = 100 × 4.2 × 5 = 2100 joules.
+> Heat = 100 × 4.2 × 5 = **2100 joules**
 
 ## 02 Work is the useful part of energy
 
