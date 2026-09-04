@@ -1,6 +1,6 @@
 ---
 created: 2026-08-30T12:44:40Z
-updated: 2026-08-30T12:48:55Z
+updated: 2026-09-04T10:45:53Z
 ---
 
 # Stock Trading Strategies
@@ -11,30 +11,79 @@ This file explains three strategies: Broken Hunt, Fear Hunt, and Cyclic Hunt. It
 
 ### Overview
 
-You look for companies in deep trouble. The share price is down very hard, often 50 percent or more. The market hates the company. You study the company, and you decide if the trouble is temporary or permanent. If the trouble is temporary, then the company goes on your watch list. You do not buy yet. You wait for early signs of repair. When the signs are confirmed, you buy.
+You look for companies in deep trouble. The share price is down very hard, often 50 percent or more. The market hates the company. You study the company, and you decide if the trouble is temporary or permanent. If the trouble is temporary, then the company goes on your watch list.
 
-The idea works because fear pushes prices too far. Bad news makes people sell at any price. The price then falls below the real value of the company. If the company recovers, then the price can rise many times over.
+The results and the share price show the past. When the results confirm a repair, the price has already moved. So you do not wait for the results. You buy on signs that come before the results. You buy in three steps, because an early buy can fall further before it rises.
+
+The idea works because fear pushes prices too far. Bad news makes people sell at any price. The price then falls below the real value of the company. The last sellers leave before the numbers improve. If you buy when the last sellers leave, then you get the full recovery.
 
 The steps are:
 
 1. Find a company with a share price that is down 50 percent or more.
 2. Read the news and the reports, and find the exact cause of the fall.
 3. Decide if the cause is temporary or permanent.
-4. Check the cash and the debt. The company must survive long enough to recover.
-5. Put the company on a watch list with a written plan.
-6. Wait for repair signs.
-7. Buy only after the signs are confirmed.
+4. Check the cash and the debt. The company must survive two years without new money.
+5. Write the plan: the cause, the signs you wait for, the price for each step, and the rule that makes you sell.
+6. Buy step one when the bad news is fully out. See "Exhaustion signs".
+7. Buy step two when the company changes from the inside. See "Leading signs".
+8. Buy step three when the numbers confirm the repair. See "Confirmation signs".
+
+Each step is one third of the planned bet. Never buy a full bet in one step.
+
+### Exhaustion signs
+
+Exhaustion means that the sellers are done. These are public events. If you see two or more together, then you are in the zone for step one:
+
+- The company writes off assets, cuts the dividend, and resets the profit guidance to a wide range. This is the "kitchen sink". All the bad news comes out at once.
+- The company completes a capital raise at a low price. The dilution is then over, and the fear of dilution is gone. The raise price often marks the bottom zone.
+- The last broker cuts the stock to Sell. When nobody is left to downgrade, nobody is left to sell.
+- Short sellers start to close. The short position falls from its peak. (A short seller borrows shares and sells them. They must buy them back later. That buying lifts the price.)
+- Tax-loss selling ends. The Australian tax year ends on 30 June. Beaten stocks often make their low in late June and bounce in July.
+- A new piece of bad news no longer makes a new low.
+
+### Leading signs
+
+A leading sign is a change inside the company that comes before better numbers. Each one is public within days, and usually months before the results:
+
+- The lenders reset the loan terms: a covenant waiver, a longer maturity, or a new facility. (A covenant is a promise in a loan contract.) This removes the risk of death.
+- A new CEO buys a large parcel of shares on market with their own money. Large means more than half a year of their salary.
+- Big funds raise their stakes through the fall. A fund must file a substantial holder notice within two business days when it crosses 5 percent or moves by 1 percent. Two or more funds that add during the fall is a strong sign.
+- The company sells a non-core asset for cash at a fair price.
+- A trading update reports operating fixes before profit: lower staff turnover, better stock availability, less discounting, or better customer scores. These come one or two quarters before profit.
+- The company rejects a takeover approach. An informed buyer sees value.
+
+### Confirmation signs
+
+These signs come from the results. They come last, and the price has often moved already. Use them only for step three:
+
+- The profit margin becomes stable or rises.
+- The company reports its first profitable half after the fall.
+- The debt falls without new shares.
+- Directors keep buying after the results.
+
+### Example: Bapcor, 2026
+
+This is hindsight. It shows the order of the signs, not a promise.
+
+- February: the company cuts guidance, appoints a new CEO, and the lenders relax a covenant. (Leading sign.)
+- March: the company raises $200 million at $0.60 per share. The new CEO buys 500,000 shares at $0.76. (Exhaustion sign and leading sign.)
+- May: the company flags big write-offs. The price makes its low at $0.36. Big funds add through May, June and July. (Exhaustion sign and leading sign.)
+- July and August: the last brokers rate the stock Sell. (Exhaustion sign.)
+- 27 August: the results confirm the repair. The price rises 20 percent in one day and about 50 percent in one week, to about $0.70. (Confirmation sign.)
+
+The old rule bought at $0.55 to $0.70 after the results. The new rule buys step one and step two between $0.36 and $0.60, and step three after the results.
 
 ### Tips & Traps
 
 - **Value trap:** A value trap is a stock that looks cheap but stays cheap forever, because the problem is permanent. Ask one test question: do people still need the product? If the answer is no, then reject the company.
-- **Debt:** Debt is the main killer. A company with heavy debt can die before the repair ends. Check when the debt is due. If big payments come soon, then the risk is high.
-- **Dilution:** Dilution means the company sells many new shares at a low price to survive. Your piece of the company then shrinks. The company can recover while your shares do not. Watch the share count. If it grows fast, then be careful.
-- **Early buys:** Do not buy only because the price fell fast. A price that falls fast can fall more. Wait for your signs.
-- **Good signs:** Trust these signs: insiders buy shares with their own money, the profit margin becomes stable or rises, the lenders extend the debt, a proven manager takes charge, or the company reports its first profitable quarter.
-- **Broken reason:** If your original reason breaks, then sell. Do not buy more shares to lower your average price.
+- **Debt:** Debt is the main killer. A company with heavy debt can die before the repair ends. Check when the debt is due. If big payments come soon, then the risk is high. A lender reset turns this trap into a leading sign.
+- **Dilution:** Dilution means the company sells many new shares at a low price to survive. Your piece of the company then shrinks. If a raise is likely, then wait for it. Buy after the raise, never before it.
+- **Early is wrong for a while:** A leading sign does not stop the fall at once. Bapcor's CEO bought at $0.76 in March. The low was $0.36 in May. So step one and step two must be small, and you must accept a paper loss for months. If a paper loss makes you sell, then this strategy is not for you.
+- **Adding to a loser:** Add only when a new sign appears. Never add only because the price fell.
+- **Broken reason:** If your original reason breaks, then sell all steps. Do not wait for the next sign.
 - **Strange numbers:** If the accounts look strange, then reject the company. If the auditor resigns, then also reject it. (The auditor is the outside firm that checks the accounts.)
 - **Position size:** Keep each bet small. Many of these companies fail. Make many small bets, so one failure cannot hurt you badly.
+- **Time stop:** If no new sign appears within twelve months after step one, then sell step one. Your read was wrong.
 
 ### Screening
 
@@ -45,20 +94,24 @@ A screener is a free web tool that filters stocks by numbers. Use a screener wit
 - The cash covers at least two years of losses.
 - The debt is small next to the equity. (Equity is the part of the company that belongs to the shareholders.)
 
-Other good sources are:
+Then watch these sources every week. They show the signs months before the results:
 
-- Lists of stocks at 52-week lows.
-- Insider-purchase trackers. In the US, insiders must report each purchase in a public form (Form 4).
+- Substantial holder notices (Forms 603 and 604). They show which funds add through the fall.
+- Director trade notices (Appendix 3Y). The ASX publishes them within five business days.
+- ASIC short position reports. ASIC publishes them daily, four days late. They show when the shorts start to close.
+- Capital raise and trading halt announcements. A completed raise at a low price is a screen in itself.
+- Broker downgrades. Count them. The last downgrade is your friend.
+- Lists of stocks at 52-week lows, especially in late June.
 - Bad news itself. Profit warnings, scandals, recalls, and lawsuits all create candidates.
 
-For each candidate, write four things on the watch list: the cause of the fall, the sign that confirms repair, the price you will pay, and the rule that makes you sell.
+For each candidate, write five things on the watch list: the cause of the fall, the exhaustion signs you see, the leading sign you wait for, the price for each step, and the rule that makes you sell.
 
 ### Miscellaneous
 
-- A repair usually needs one to three years. Be patient.
+- A repair usually needs one to three years. Be patient. The first year can show a loss.
 - Expect many small losses. A few big winners pay for all of them.
 - Famous users are Howard Marks, who buys troubled debt, and David Tepper, who bought bank shares in 2009.
-- Keep notes on every idea, also on the ideas you skip. Review the notes each year. The notes show if your signs come too late.
+- Keep notes on every idea, also on the ideas you skip. Review the notes each year. Write which sign came first and which came too late. Drop the late signs from your list.
 
 ## 2- Fear Hunt
 
