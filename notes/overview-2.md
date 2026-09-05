@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T00:00:00Z
-updated: 2026-09-05T01:56:33Z
+updated: 2026-09-05T05:49:57Z
 ---
 
 # Overview
@@ -86,7 +86,7 @@ Placement volumes fell 27% in FY26; IELTS fell 8%. But read the shape, not one y
 | **IELTS tests** | 1,915,600 | 1,932,500 | 1,584,100 | 1,293,800 | **1,195,400** |
 | Fee per test | $267 | $282 | $306 | $317 | **$325** |
 
-**NOTE** — IDP restated FY25 on 18 December 2025 after a voluntary revenue-recognition change. Restated FY25 placements are about 74,300, not 70,100. Management quotes FY26 changes against the restated base, so its "−27%" and "Australia −9%" do not reconcile with the reported row above. Pick one base and stay with it.
+**NOTE** — IDP restated FY25 on 18 December 2025 after a voluntary revenue-recognition change. Restated FY25 placements are 73,900, not 70,100, and they split 35,000 into Australia and 38,900 to other destinations. Management quotes FY26 changes against the restated base, so its "−27%" and "Australia −9%" do not reconcile with the reported row above. Pick one base and stay with it.
 
 For placement, the cause is policy, in all four large destinations at once.
 
@@ -143,12 +143,6 @@ Test volumes, in millions. Fiscal years do not align: IDP ends June, the British
 * The placement channel is consolidating. **Study Group** went into administration in May 2026 and was sold to Arete Education. **INTO** is loss-making at several of its university joint ventures. **ApplyBoard** cut more than 150 staff in June 2025.
 
 **Balance sheet.** Net debt **$118.6m**, net leverage **1.0×**, $341m undrawn, facilities maturing 2028, 2029 and 2030. Cash conversion 139%. A $50m buyback runs to 30 June 2027. Debt is not the near-term risk. IDP left the S&P/ASX 200 on 22 June 2026.
-
-## Miscellaneous
-
-* IDP also left the ASX 200 on 22 June, which forces index funds to sell. 
-* Short interest is 2.90%, down from a 17% peak in May 2024, so the bear trade is mostly over — but covering a short is not buying.
-* $50m buyback makes the company itself a daily buyer, which in the tape looks a lot like fund demand.
 
 #iel
 #fundamental_analysis
