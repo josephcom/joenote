@@ -1,6 +1,6 @@
 ---
 created: 2026-09-05T13:46:02Z
-updated: 2026-09-05T13:52:39Z
+updated: 2026-09-05T13:53:00Z
 ---
 
 # EBITDA, EBIT, Profit, Operating cash flow  
@@ -12,7 +12,7 @@ updated: 2026-09-05T13:52:39Z
 | Profit | EBIT minus interest and tax | What owners keep. It is the bottom line |
 | Operating cash flow | Real cash from trading, after interest and tax | Cash pays debt. Profit does not |
 
-EBIT and profit are opinions about timing. Operating cash flow is a bank balance. **If profit rises but cash does not, then something is wrong**. For example:  
+EBIT and profit are opinions about timing. Operating cash flow is a bank balance. **==If profit rises but cash does not, then something is wrong==**. For example:  
 
 - Parents owe more and pay later. Sales are booked, but no cash arrives.
 - The company counts revenue too early, before it earns it.
