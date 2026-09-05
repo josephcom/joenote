@@ -1,6 +1,6 @@
 ---
 created: 2026-09-05T12:50:00Z
-updated: 2026-09-05T13:54:51Z
+updated: 2026-09-05T14:58:19Z
 ---
 
 # Financial Snapshot (GEM)
@@ -112,8 +112,7 @@ Facilities, from Note 9 of the half-year accounts: a club debt facility with tot
 limits of **$240.0m** including a $40.0m bank guarantee facility, of which **$200.0m is
 revolving** in two $100m tranches. The first tranche was extended during H1 CY26 from
 December 2027 to **January 2029**; the second runs to December 2029. **$160.0m drawn and
-$40.0m unused at 30 June 2026**, against $155.0m drawn and $45m unused at 31 December
-2025.
+$40.0m unused at 30 June 2026**, against $155.0m drawn and $45m unused at 31 December 2025.
 
 **The borrowings are secured, and they always have been in this file's window** —
 $114.0m secured at 31 December 2024, $140.0m at 30 June 2025, $155.0m at 31 December
