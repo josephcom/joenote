@@ -1,6 +1,6 @@
 ---
 created: 2026-09-05T13:46:02Z
-updated: 2026-09-05T14:12:21Z
+updated: 2026-09-05T14:12:47Z
 ---
 
 # EBITDA, EBIT, Profit, Operating cash flow  
@@ -32,7 +32,7 @@ Banks use EBIT because depreciation is the honest yearly guess at the capex you 
 EBITDA: هزار میلیارد سود کردیم  
 EBIT: شب دراز است و قلندر بیدار
 
-## Why "EBIT"? Why not "profit"?
+## Why EBIT? Why not Profit?
 
 Because bank says *no profit no tax. If something happens and I get hold of the money, then no tax, no interest either. Therefore, EBIT is the money I can get!*.
 
