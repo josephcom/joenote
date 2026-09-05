@@ -1,9 +1,9 @@
 ---
 created: 2026-09-05T13:46:02Z
-updated: 2026-09-05T13:46:50Z
+updated: 2026-09-05T13:47:28Z
 ---
 
-# EBITDA, EBIT, Profit
+# EBITDA, EBIT, Profit, Operating cash flow
 | Term | What it is | Why it matters |
 |---|---|---|
 | EBITDA | Profit before interest, tax, depreciation, amortisation | Rough cash from trading. It ignores the cost of assets |
