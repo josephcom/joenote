@@ -1,9 +1,9 @@
 ---
 created: 2026-09-04T00:00:00Z
-updated: 2026-09-05T05:49:57Z
+updated: 2026-09-05T13:16:49Z
 ---
 
-# Overview
+# Overview (IDP)
 ## How does IDP earn?
 IDP sells three things and bills three different people.
 
