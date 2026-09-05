@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T00:00:00Z
-updated: 2026-09-05T01:55:57Z
+updated: 2026-09-05T01:56:33Z
 ---
 
 # Overview
@@ -148,6 +148,7 @@ Test volumes, in millions. Fiscal years do not align: IDP ends June, the British
 
 * IDP also left the ASX 200 on 22 June, which forces index funds to sell. 
 * Short interest is 2.90%, down from a 17% peak in May 2024, so the bear trade is mostly over — but covering a short is not buying.
+* $50m buyback makes the company itself a daily buyer, which in the tape looks a lot like fund demand.
 
 #iel
 #fundamental_analysis
