@@ -1,6 +1,6 @@
 ---
 created: 2026-09-05T13:46:02Z
-updated: 2026-09-05T14:10:56Z
+updated: 2026-09-05T14:11:07Z
 ---
 
 # EBITDA, EBIT, Profit, Operating cash flow  
@@ -32,7 +32,7 @@ Banks use EBIT because depreciation is the honest yearly guess at the capex you 
 EBITDA: هزار میلیارد سود کردیم  
 EBIT: شب دراز است و قلندر بیدار
 
-## Why EBIT? Why not 
+## Why EBIT? Why not "profit" 
 
 #stock_market
 
