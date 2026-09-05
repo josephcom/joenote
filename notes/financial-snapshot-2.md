@@ -1,12 +1,12 @@
 ---
 created: 2026-09-05T12:50:00Z
-updated: 2026-09-05T12:50:00Z
+updated: 2026-09-05T13:54:13Z
 ---
 
 # Financial Snapshot (GEM)
 
 **What this file is for.** The chains in `leading-indicators.md` forecast revenue.
-They never say what the business is worth, or what it can survive. This file does
+They never say what ==the business is worth==, or what it can survive. This file does
 that. It is built once, rebuilt yearly, and refreshed at each half-year for net
 debt, leverage and cover, because those three move and those three are the ones
 that kill you.
