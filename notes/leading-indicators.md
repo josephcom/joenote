@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T00:00:00Z
-updated: 2026-09-05T01:11:43Z
+updated: 2026-09-05T05:50:13Z
 ---
 
 # Leading Indicators (IEL)
@@ -303,7 +303,7 @@ IDP's visa approval rate minus the market's → is the fall share loss or market
 
 # Traps
 
-- **FY25 was restated.** A voluntary revenue-recognition change on 18 December 2025 lifted FY25 revenue by $9.2m and moved placement volumes to about 74,300 from a reported 70,100. Management quotes FY26 changes against the restated base. Mixing the two bases produces wrong percentages every time.
+- **FY25 was restated.** A voluntary revenue-recognition change on 18 December 2025 lifted FY25 revenue by $9.2m and moved placement volumes to 73,900 from a reported 70,100. Management quotes FY26 changes against the restated base. Mixing the two bases produces wrong percentages every time.
 - **Adjusted is not clean.** FY26 adjusted NPAT was $57.1m and statutory NPAT was $13.3m. The $61.1m gap is mostly restructuring, and about $40m more is guided for FY27. A cost that recurs for three years is not a significant item.
 - **A rising yield can be a falling business.** Australia went from 43% to 58% of placements because the other destinations collapsed. Part of the 11% yield rise is that mix. Never quote the yield rise as proof of pricing power without checking the mix.
 - **Canada's monthly open data is a stock, not a flow.** It counts permit holders, and extensions were 77% of approvals. Only new permits reach IDP's revenue.
@@ -313,6 +313,8 @@ IDP's visa approval rate minus the market's → is the fall share loss or market
 - **IDP has never published its IELTS stake, the revenue split or any royalty.** The "one third each" figure is trade press. Do not put it in a briefing as a company figure.
 - **marketindex.com.au renders IEL as "HALTED SUSPENDED" with a stale June 2025 price.** It is a page artifact, confirmed again on 4 September 2026, and the same fault the GEM file records. The stock trades normally.
 - **stockanalysis.com's market cap does not match its own share count.** On 31 August 2026 it showed $505.77m against 277.90m shares at $1.765, which multiplies to $490m. Always compute shares × price yourself.
+- **stockanalysis.com's IEL statements stop at FY25 and carry no FY26 at all.** Its "TTM" column is December 2025 and its "Current" column is dated 11 August 2026, which is before the result. Anything it labels FY25 is also the pre-restatement base. Read FY26 out of [the FY26 financial report](https://investors.idp.com/FormBuilder/_Resource/_module/v1AiEHYL20-_Rje11PzkYA/financial-reports/FY26-Full-Year-Results.pdf) instead; the combined Appendix 4E and Annual Report PDF truncates before the statements, and that separate file does not.
+- **stockanalysis.com counts only plant as capex, and IDP's capex is mostly capitalised intangibles.** It shows FY25 capex of $9.3m and free cash flow of $123.4m against the true $60.9m and $71.7m, so it overstates free cash flow by about 70%. Capex is payments for plant **plus** payments for intangibles and development costs.
 - **Australian grant rates saw-tooth from month to month.** The offshore rate ran about 67% in February 2026, 59% in March, 83% in April and 66% in July. Processing priority moves it, not demand. Read lodgements for demand, and read the grant rate over a quarter or more.
 - **The Australian and English data pages block robots.** data.gov.au and education.gov.au both refuse automated fetches and serve spreadsheets. HESA refuses everything. Plan to download by hand or read a secondary that quotes them.
 
