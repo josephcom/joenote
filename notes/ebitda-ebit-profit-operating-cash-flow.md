@@ -1,6 +1,6 @@
 ---
 created: 2026-09-05T13:46:02Z
-updated: 2026-09-05T13:52:18Z
+updated: 2026-09-05T13:52:39Z
 ---
 
 # EBITDA, EBIT, Profit, Operating cash flow  
