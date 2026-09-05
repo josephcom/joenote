@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T00:00:00Z
-updated: 2026-09-04T23:31:46Z
+updated: 2026-09-05T01:11:21Z
 ---
 
 # Overview
@@ -56,23 +56,25 @@ Two things move this demand that are easy to miss:
 
 ##### ==One BIG threat to IELTS!==
 
-**One supply event could take out a large part of this line.** The UK Home Office is buying a **single supplier** for its visa English test, worth about £1.13bn. The British Council delivers close to **90%** of the world's UK-visa tests through the IELTS consortium, and the present contract is estimated to end **19 April 2027**. If the consortium loses it, a known block of IELTS volume goes on a known date.
+**One supply event will take out a large part of this line.** The UK Home Office is buying a **single supplier** for its visa English test, worth about £680m before tax. The British Council delivers close to **90%** of the world's UK-visa tests through the IELTS consortium. ==The consortium withdrew from the tender on 17 March 2026==, so IELTS will not be the single supplier. A known block of IELTS volume goes. Only the date is still open.
 
 **The rule first.** If you want a UK visa, you must prove your English. The UK government does not accept any test you like. It keeps a short approved list. Only tests on that list count.
 
 **Today.** Four suppliers sit on that list. IELTS is one of them. IELTS is run jointly by three owners, and the British Council does most of the actual test sessions — close to 90% of all UK-visa English tests in the world.
 
-**The change.** The UK now wants to stop using four suppliers. It wants **one** supplier, running a test with the government's own name on it. The contract is worth about £1.13bn. The present arrangement is thought to end on ==19 April 2027==.
+**The change.** The UK now wants to stop using four suppliers. It wants **one** supplier, running a fully remote test with the government's own name on it. The contract is worth **£680m** before tax, or £816m with it. The Home Office plans to decide on ==16 November 2026==. The new contract is written to start on ==1 December 2026== and to run five years, with options to 2034.
 
-**Why it matters.** If IELTS is not chosen, then IELTS stops being a UK-visa test. Every person who was buying IELTS only to get a UK visa buys the winner's test instead. That demand does not shrink. It moves.
+**Why IELTS is out.** The three owners withdrew their bid on 17 March 2026. They said that a fully remote test cannot hold the security which a high-stakes test needs. They will look again if the Home Office changes the design, and the Home Office has not changed it. So this is no longer a contest that IDP might win.
+
+**Why it matters.** When the new supplier takes over, IELTS stops being a UK-visa test. Every person who was buying IELTS only to get a UK visa buys the winner's test instead. That demand does not shrink. It moves.
 
 **Who loses what.** The British Council takes most of the direct hit, because it runs most of those sessions. It is IDP's partner, not IDP. ==IDP sells UK-visa IELTS too, but less of it (1% ~ 3% of their revenue). The bigger risk for IDP is the brand: IELTS is valuable== because governments accept it, and losing a government is the worst thing that can happen to it.
 
-**"Known block, known date"** means we can already guess the size and the timing. Most risks give you neither. No winner has been announced yet.
+**"Known block, known date"** means we can already guess the size and the timing. Most risks give you neither. Here we have both. Watch the award on 16 November 2026 for the winner, and watch the approved-test list for the day IELTS leaves it, because a handover can run past the contract start.
 
 ## Why are volumes falling?
 
-Placement volumes fell 27% in FY26; IELTS fell 8%. But read the shape, not one year. IELTS crashed first and is slowing: −18%, −18%, then −8%. Placement peaked later and is still getting worse. And IELTS is the bigger line — $388.9m against placement's $362.9m. So placement is the acute problem. IELTS is the chronic one that is levelling off, and it carries the binary UK contract risk. The list below is only visa numbers, and visa numbers drive placement. It does not say IELTS is fine.
+Placement volumes fell 27% in FY26; IELTS fell 8%. But read the shape, not one year. IELTS crashed first and is slowing: −18%, −18%, then −8%. Placement peaked later and is still getting worse. And IELTS is the bigger line — $388.9m against placement's $362.9m. So placement is the acute problem. IELTS is the chronic one that is levelling off, and it carries a dated UK contract loss. The list below is only visa numbers, and visa numbers drive placement. It does not say IELTS is fine.
 
 | | FY22 | FY23 | FY24 | FY25 | FY26 |
 | ---------------------- | ------- | ------- | ------- | ------- | ------- |
@@ -93,7 +95,7 @@ For placement, the cause is policy, in all four large destinations at once.
 * **The United States** issued **34%** fewer F-1 visas in 2025 than 2024, with India down 76% against 2023. IDP's US placements fell **67%**.
 * **The United Kingdom** granted **383,455** sponsored study visas in the year to June 2026, −11%, and **−41%** against the 2023 peak.
 
-==For IELTS, the cause is== two things, not one. Almost every visa application needs an English test, so falling applications cut test volume everywhere. On top of that, governments keep adding accepted tests, so IELTS can lose share even when the market holds. Australia went from five accepted tests to nine on 7 August 2025.
+For IELTS, the cause is two things, not one. Almost every visa application needs an English test, so falling applications cut test volume everywhere. On top of that, governments keep adding accepted tests, so IELTS can lose share even when the market holds. Australia went from five accepted tests to nine on 7 August 2025.
 
 India is the hinge. It is **37%** of IDP's placements, up from 31%, and its largest testing market. Indian students going abroad fell from about 908,000 in 2023 to **626,000 in 2025**. India IELTS volumes fell 50% in FY25 and a further 22% in FY26.
 
@@ -137,7 +139,7 @@ Test volumes, in millions. Fiscal years do not align: IDP ends June, the British
 * **Crizac** (India-listed, IPO July 2025) is the only listed pure comparable. The UK is 97% of its revenue. In the year to March 2026 its revenue rose **22.7%**, applications rose 43%, and its share of UK study visas went from 3.5% to **6.0%** — while IDP shrank 11%. Then in the June 2026 quarter Crizac's income fell 4%, its first fall. Read the sequence: part of IDP's FY26 decline was share loss, and by mid-2026 the whole market was going down together.
 * **Pearson** is losing PTE volume more slowly than IDP is losing IELTS volume. That gap is share.
 * **Duolingo's** test is cheap and growing nowhere. It is on **none** of the Australian, Canadian or UK government approved lists. Governments rejecting at-home tests is IELTS's main defence.
-* **The British Council** is a co-owner, not a rival, and it is in trouble: a £51m loss in 2024-25, a **£197m** government loan with no principal repaid since April 2024, and no return to profit expected before 2029-30. It delivers close to 90% of the world's UK-visa English tests, and the UK Home Office is running a **£1.13bn** procurement to move that to a single supplier.
+* **The British Council** is a co-owner, not a rival, and it is in trouble: a £51m loss in 2024-25, a **£197m** government loan with no principal repaid since April 2024, and no return to profit expected before 2029-30. It delivers close to 90% of the world's UK-visa English tests, and the UK Home Office is running a **£680m** procurement to move that to a single supplier. The IELTS consortium is not bidding for it.
 * The placement channel is consolidating. **Study Group** went into administration in May 2026 and was sold to Arete Education. **INTO** is loss-making at several of its university joint ventures. **ApplyBoard** cut more than 150 staff in June 2025.
 
 **Balance sheet.** Net debt **$118.6m**, net leverage **1.0×**, $341m undrawn, facilities maturing 2028, 2029 and 2030. Cash conversion 139%. A $50m buyback runs to 30 June 2027. Debt is not the near-term risk. IDP left the S&P/ASX 200 on 22 June 2026.
