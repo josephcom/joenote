@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T00:00:00Z
-updated: 2026-09-05T01:11:21Z
+updated: 2026-09-05T01:55:35Z
 ---
 
 # Overview
@@ -143,6 +143,10 @@ Test volumes, in millions. Fiscal years do not align: IDP ends June, the British
 * The placement channel is consolidating. **Study Group** went into administration in May 2026 and was sold to Arete Education. **INTO** is loss-making at several of its university joint ventures. **ApplyBoard** cut more than 150 staff in June 2025.
 
 **Balance sheet.** Net debt **$118.6m**, net leverage **1.0×**, $341m undrawn, facilities maturing 2028, 2029 and 2030. Cash conversion 139%. A $50m buyback runs to 30 June 2027. Debt is not the near-term risk. IDP left the S&P/ASX 200 on 22 June 2026.
+
+## Miscellaneous
+
+* IDP also left the ASX 200 on 22 June, which forces index funds to sell.
 
 #iel
 #fundamental_analysis
