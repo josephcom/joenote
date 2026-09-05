@@ -1,6 +1,6 @@
 ---
 created: 2026-09-05T13:46:02Z
-updated: 2026-09-05T14:03:54Z
+updated: 2026-09-05T14:04:03Z
 ---
 
 # EBITDA, EBIT, Profit, Operating cash flow  
@@ -26,6 +26,8 @@ The first three are warning signs. The last two are normal, but you must know wh
 
 Caoex and depreciation are the two side of the same coin. They are the same money, seen twice. Capex is the cash you pay now. Depreciation spreads that cost over the years.
 Banks use EBIT because depreciation is the honest yearly guess at the capex you must keep paying.
+
+
 
 #stock_market
 
