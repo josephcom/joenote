@@ -1,6 +1,6 @@
 ---
 created: 2026-09-04T00:00:00Z
-updated: 2026-09-04T00:00:00Z
+updated: 2026-09-05T01:11:43Z
 ---
 
 # Leading Indicators (IEL)
@@ -9,7 +9,7 @@ updated: 2026-09-04T00:00:00Z
 
 **How to read:** `→` means "this number moves before that number". The last node in each chain is the one closest to IDP's revenue. Under each chain: **What** defines the indicators, **How it predicts** gives the mechanics, and **Lead** says how far ahead the warning comes.
 
-**One thing to hold on to before you start.** IDP's revenue is volume × price in three product lines. It has no capacity limit of its own. The limit is set by six foreign governments who decide how many student visas exist. So most of this file reads immigration policy, not company operations.
+**One thing to hold on to before you start.** IDP's revenue is volume × price in three product lines. It has no capacity limit of its own. Its volume is the students that six foreign governments let through, so a quota is a ceiling on IDP's demand, not a limit on IDP's supply — and today the quotas do not bind, because refusals and student appetite hold the numbers well below them. IDP's supply side is its rivals, plus every English test a government adds to its accepted list. So most of this file reads immigration policy, not company operations.
 
 ---
 
@@ -181,16 +181,17 @@ Chinese gaokao registrations → Indian students going abroad → [Visa grants b
 **Lead:** immediate. A list change moves bookings the same month, and the old-results grace period tells you when the full effect lands.
 
 **S8 — The UK Home Office test contract**
-[Find a Tender notices](https://www.find-tender.service.gov.uk/Notice/027422-2024) → [the secure English test list](https://www.gov.uk/guidance/prove-your-english-language-abilities-with-a-secure-english-language-test-selt) → British Council and IDP IELTS volumes
+[Find a Tender notices](https://www.find-tender.service.gov.uk/Notice/001247-2026) → [the secure English test list](https://www.gov.uk/guidance/prove-your-english-language-abilities-with-a-secure-english-language-test-selt) → British Council and IDP IELTS volumes
 
 | Factor | Frequency | When |
 |---|---|---|
-| [Find a Tender notices](https://www.find-tender.service.gov.uk/Notice/027422-2024) | As the procurement moves | No award notice had appeared as at 4 September 2026 |
-| The current concession | One contract | Estimated to end **19 April 2027**, with two optional one-year extensions |
+| [Find a Tender notices](https://www.find-tender.service.gov.uk/Notice/001247-2026) | As the procurement moves | Notice published 28 November 2025. Award decision due **16 November 2026** |
+| The new contract | One contract | Written to start **1 December 2026**, five years, with options to 2034 |
+| The IELTS bid | Settled | The consortium **withdrew on 17 March 2026** |
 
-**What:** The Home Office is running a procurement worth about **£1.13bn** to replace today's four-provider concession with a single supplier and a Home Office-branded test. The current concession is the one under which IELTS is a UK visa test.
-**How it predicts:** The British Council delivers close to **90%** of the world's UK-visa English tests through the IELTS consortium. If a single supplier wins and it is not that consortium, a very large block of IELTS volume disappears on a known date. It would hit IDP's co-owner directly and IDP's brand indirectly. This is the largest single binary risk to the testing half of the company, and it has a public paper trail.
-**Lead:** an award notice would come months before the changeover. Check the notice pages each session until it appears.
+**What:** The Home Office is running a procurement worth **£680m** before tax to replace today's four-provider concession with a single supplier and a Home Office-branded remote test. The current concession is the one under which IELTS is a UK visa test.
+**How it predicts:** The British Council delivers close to **90%** of the world's UK-visa English tests through the IELTS consortium. The consortium withdrew its bid on 17 March 2026, because it will not deliver a high-stakes test fully remotely. So the winner will not be IELTS, and a very large block of IELTS volume goes when the new supplier takes over. It hits IDP's co-owner directly and IDP's brand indirectly. This is the largest single risk to the testing half of the company. It is now a question of date and size, not of whether.
+**Lead:** the award comes first, then the changeover. Watch the notice page for the winner and for the handover date, and watch the approved-test list for the day IELTS leaves it.
 
 **S9 — What the competitors' volumes say**
 [Pearson results](https://plc.pearson.com/en-GB/investors/performance) and [Duolingo quarterly filings](https://investors.duolingo.com/financials) and [the British Council annual report](https://www.britishcouncil.org/sites/default/files/britishcouncil_annualreport_2024-25.pdf) → IDP's share
@@ -295,7 +296,7 @@ IDP's visa approval rate minus the market's → is the fall share loss or market
 **Lead:** none by itself. It tells you which of the chains above to trust.
 
 **Standalone (company)**
-- **Sell-side targets** are unusually far apart and worth knowing so you are not surprised by a headline. In the same month of 2026, Macquarie moved to Underperform at $2.35 calling the decline structural, while Jefferies held Buy at $7.80 calling it cyclical. A 3.3× spread means there is no settled view. They move the price, not the revenue.
+- **Sell-side targets** collapsed onto the market price after the FY26 result. UBS moved from Buy to Neutral and cut its target from $5.15 to $1.95; Morgans cut from $3.42 to $1.75. Both now sit at or below the traded price, so the wide spread of early 2026 is gone, and a single upgrade would stand out against that. Targets move the price, not the revenue.
 - **The AGM**, about late October, is the only company update between the August and February results, and it usually carries the first read on the February Australian intake.
 
 ---
@@ -312,6 +313,7 @@ IDP's visa approval rate minus the market's → is the fall share loss or market
 - **IDP has never published its IELTS stake, the revenue split or any royalty.** The "one third each" figure is trade press. Do not put it in a briefing as a company figure.
 - **marketindex.com.au renders IEL as "HALTED SUSPENDED" with a stale June 2025 price.** It is a page artifact, confirmed again on 4 September 2026, and the same fault the GEM file records. The stock trades normally.
 - **stockanalysis.com's market cap does not match its own share count.** On 31 August 2026 it showed $505.77m against 277.90m shares at $1.765, which multiplies to $490m. Always compute shares × price yourself.
+- **Australian grant rates saw-tooth from month to month.** The offshore rate ran about 67% in February 2026, 59% in March, 83% in April and 66% in July. Processing priority moves it, not demand. Read lodgements for demand, and read the grant rate over a quarter or more.
 - **The Australian and English data pages block robots.** data.gov.au and education.gov.au both refuse automated fetches and serve spreadsheets. HESA refuses everything. Plan to download by hand or read a secondary that quotes them.
 
 # If you only check five pages
