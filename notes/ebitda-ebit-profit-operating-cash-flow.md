@@ -1,6 +1,6 @@
 ---
 created: 2026-09-05T13:46:02Z
-updated: 2026-09-05T13:53:30Z
+updated: 2026-09-05T14:02:30Z
 ---
 
 # EBITDA, EBIT, Profit, Operating cash flow  
@@ -21,6 +21,10 @@ EBIT and profit are opinions about timing. Operating cash flow is a bank balance
 - Interest and tax payments rise, and they sit below EBIT.
 
 The first three are warning signs. The last two are normal, but you must know which one you have.
+
+## EBIT vs EBITDA
+
+
 
 #stock_market
 
