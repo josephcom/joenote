@@ -1,6 +1,6 @@
 ---
 created: 2026-09-05T13:46:02Z
-updated: 2026-09-05T14:11:37Z
+updated: 2026-09-05T14:11:43Z
 ---
 
 # EBITDA, EBIT, Profit, Operating cash flow  
@@ -34,7 +34,7 @@ EBIT: شب دراز است و قلندر بیدار
 
 ## Why "EBIT"? Why not "profit"?
 
-Because bank says no profit no tax. If something happens and I get hold of the money, then no tax, no interest either. Therefore I can get all the EBIT
+Because bank says *no profit no tax. If something happens and I get hold of the money, then no tax, no interest either. Therefore I can get all the EBIT
 
 #stock_market
 
