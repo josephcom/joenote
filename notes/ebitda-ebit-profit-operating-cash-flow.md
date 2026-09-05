@@ -1,6 +1,6 @@
 ---
 created: 2026-09-05T13:46:02Z
-updated: 2026-09-05T13:47:28Z
+updated: 2026-09-05T13:47:42Z
 ---
 
 # EBITDA, EBIT, Profit, Operating cash flow
@@ -12,5 +12,5 @@ updated: 2026-09-05T13:47:28Z
 | Operating cash flow | Real cash from trading, after interest and tax | Cash pays debt. Profit does not |
 
 EBIT and profit are opinions about timing. Operating cash flow is a bank balance. If profit rises but cash does not, then something is wrong.
-#inbox
+#stock_market
 
