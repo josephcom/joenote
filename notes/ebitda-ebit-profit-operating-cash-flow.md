@@ -1,6 +1,6 @@
 ---
 created: 2026-09-05T13:46:02Z
-updated: 2026-09-05T14:06:16Z
+updated: 2026-09-05T14:06:40Z
 ---
 
 # EBITDA, EBIT, Profit, Operating cash flow  
@@ -28,6 +28,8 @@ Caoex and depreciation are the two side of the same coin. They are the same mone
 Banks use EBIT because depreciation is the honest yearly guess at the capex you must keep paying.
 
 **Example** - A centre needs a new fit-out every 5 years. It costs $50. So depreciation is $10 a year. EBITDA is $30. EBIT is $20. The bank sees you must spend $50 every fifth year. Over 5 years, EBITDA says $150. Real cash left is $100, because the fit-out took $50. EBIT of $20 a year predicted that.
+
+EBITDA: 
 
 #stock_market
 
