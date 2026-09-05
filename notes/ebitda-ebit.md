@@ -1,9 +1,9 @@
 ---
 created: 2026-09-05T13:46:02Z
-updated: 2026-09-05T13:46:39Z
+updated: 2026-09-05T13:46:50Z
 ---
 
-# EBITDA, EBIT, 
+# EBITDA, EBIT, Profit
 | Term | What it is | Why it matters |
 |---|---|---|
 | EBITDA | Profit before interest, tax, depreciation, amortisation | Rough cash from trading. It ignores the cost of assets |
